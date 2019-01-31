@@ -12,7 +12,7 @@
             "name": "Launch localhost",
             "url": "http://localhost/index.html:8000",
             "webRoot": "${workspaceFolder}",
-            "file": "/home/kevin/Downloads/mapa-de-kernel-brumandinho/www"
+            "file": "/home/kevin/Downloads/mapa-de-kernel-brumandinho/www/index.html"
         },
         {
             "type": "node",
