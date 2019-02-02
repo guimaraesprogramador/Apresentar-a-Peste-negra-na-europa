@@ -1,5 +1,5 @@
 let initialCoordinates = [-20.1515, -44.2011]; // brumandinho
-//                          latitute e longitute
+//                       latitude e a longitude
 var initialZoomLevel = 13;
 
 // create a map in the "map" div, set the view to a given place and zoom
@@ -9,18 +9,28 @@ var map = L.map('map').setView(initialCoordinates, initialZoomLevel);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; Contribuidores do <a href="http://osm.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+var poup = L.popup();
+function marcar(e){
+  poup.setLatLng(e.latlng)
+  .setContent("latitude e a longitude " + e.latlng.toString())
+        .openOn(map);
+  var marcador = L.marker(e.latlng).addTo(map);
+  marcador.bindPopup("<h3>brumandinho</h3>");
 
+}
+map.on('click', marcar);
+/* teve uma ideia de fazer uma reconhecimento da area
+de brumadinho com os Dados do Sicar - Sistema Nacional de Cadastro Ambiental Rural
+,o codigo precisa ser trabalhado muito para marcar as localização de latitude e 
+a longitude de cada area mas estou com problema em calcular essas posições, se estivem com voltade 
+pode ser um grande ajuda então obrigado pela  oportunidade de ajuda vocês.
+ 
+*/
 var grupo = [];
-// corrigir mapa de brumandinho
-d3.csv("/home/kevin/Downloads/mapa-de-kernel-brumandinho/programa/3109006.csv").then(function(data){
-    //falta corrigir os datos dos pontos 
+d3.csv("../programa/3109006.csv").then(function(data){ 
   
   for(var i = 0;i<data.length;i++){
 grupo.push(data[i].area);
   }
 //
 })
-console.log(grupo);
-var coordenadas = [-20.1515,grupo[1]];
-L.marker([-20.1515,grupo[1]]).addTo(map);
-
