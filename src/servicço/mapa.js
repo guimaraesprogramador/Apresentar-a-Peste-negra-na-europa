@@ -15,7 +15,7 @@ function marcar(e){
   .setContent("latitude e a longitude " + e.latlng.toString())
         .openOn(map);
   var marcador = L.marker(e.latlng).addTo(map);
-  marcador.bindPopup("<h3>brumandinho</h3>");
+  marcador.bindPopup(e.latlng.toString());
 
 }
 map.on('click', marcar);
