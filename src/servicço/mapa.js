@@ -27,10 +27,11 @@ pode ser um grande ajuda então obrigado pela  oportunidade de ajuda vocês.
  
 */
 var grupo = [];
-d3.csv("../programa/3109006.csv").then(function(data){ 
+d3.csv("../programa/Homicdio-Consumado.csv").then(function(data){ 
   
-  for(var i = 0;i<data.length;i++){
+  /*for(var i = 0;i<data.length;i++){
 grupo.push(data[i].area);
-  }
+  }*/
+  console.log(data);
 //
 })
