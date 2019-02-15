@@ -1,6 +1,6 @@
-let initialCoordinates = [-20.1515, -44.2011]; // brumandinho
+let initialCoordinates = [-18.512178, -44.555031]; // brumandinho
 //                       latitude e a longitude
-var initialZoomLevel = 13;
+var initialZoomLevel = 8;
 
 // create a map in the "map" div, set the view to a given place and zoom
 var map = L.map('map').setView(initialCoordinates, initialZoomLevel);
@@ -26,12 +26,28 @@ a longitude de cada area mas estou com problema em calcular essas posições, se
 pode ser um grande ajuda então obrigado pela  oportunidade de ajuda vocês.
  
 */
-var grupo = [];
+let grupo2 = [];
+d3.json("../programa/municipios.json").then(function(resp){
+  for(var i = 0;i<resp.length;i++){
+    grupo2.push(resp[i]);
+  }
+
+});
+let grupo = [];
 d3.csv("../programa/Homicdio-Consumado.csv").then(function(data){ 
-  
-  /*for(var i = 0;i<data.length;i++){
-grupo.push(data[i].area);
-  }*/
-  console.log(data);
+  for(var i = 0;i<data.length;i++){
+      grupo.push(data[i]);
+    
+
+  }
 //
 })
+grupo2.forEach(function(value,index,array){
+  console.log(index + value.latitude);
+  L.marker([value.latitude,value.longitude]).addTo(map).bindPopup("ok em teste");
+
+})
+/*for(var i = 0;i<grupo2.length;i++){
+  
+}*/
+
