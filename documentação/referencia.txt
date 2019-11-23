@@ -1,0 +1,1 @@
+o arquivo "Basico-MG.xls" na coluna "Cod_municipio" tem referencia a coluna "cd_geocodm" do arquivo "Centroids_MG.xls".
