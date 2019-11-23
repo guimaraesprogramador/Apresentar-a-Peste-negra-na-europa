@@ -2,9 +2,6 @@ class cidadão{
     constructor(){
         
     }
-    thread_principal(){
-
-    }
     thread_homens(){
 
     }
