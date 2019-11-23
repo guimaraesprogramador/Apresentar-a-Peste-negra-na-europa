@@ -1,6 +1,6 @@
-let initialCoordinates = [-19.8157, -43.9542]; // estado de minas gerais
+let initialCoordinates = [-15.3561,-51.2831]; // mapa do Brasil
 //                       latitude e a longitude
-var initialZoomLevel = 5;
+var initialZoomLevel = 4;
 
 // create a map in the "map" div, set the view to a given place and zoom
 var map = L.map('map').setView(initialCoordinates, initialZoomLevel);
@@ -9,13 +9,13 @@ var map = L.map('map').setView(initialCoordinates, initialZoomLevel);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; Contribuidores do <a href="http://osm.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-var poup = L.popup();
-function marcar(e){
-  poup.setLatLng(e.latlng)
-  .setContent("latitude e a longitude " + e.latlng.toString())
-        .openOn(map);
-  var marcador = L.marker(e.latlng).addTo(map);
-  marcador.bindPopup(e.latlng.toString());
+// var poup = L.popup();
+// function marcar(e){
+//   poup.setLatLng(e.latlng)
+//   .setContent("latitude e a longitude " + e.latlng.toString())
+//         .openOn(map);
+//   var marcador = L.marker(e.latlng).addTo(map);
+//   marcador.bindPopup(e.latlng.toString());
 
-}
-map.on('click', marcar);
+// }
+// map.on('click', marcar);
