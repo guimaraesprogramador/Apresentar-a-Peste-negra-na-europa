@@ -1,6 +1,6 @@
-let initialCoordinates = [-20.1515, -44.2011]; // brumandinho
+let initialCoordinates = [-19.8157, -43.9542]; // estado de minas gerais
 //                       latitude e a longitude
-var initialZoomLevel = 10;
+var initialZoomLevel = 5;
 
 // create a map in the "map" div, set the view to a given place and zoom
 var map = L.map('map').setView(initialCoordinates, initialZoomLevel);
