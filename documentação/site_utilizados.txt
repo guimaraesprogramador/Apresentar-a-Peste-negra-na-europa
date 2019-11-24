@@ -1,3 +1,8 @@
 http://learnjsdata.com/read_data.html
 
-http://www.convertfiles.com/
+https://cdnjs.com/libraries/leaflet.heat
+
+https://www.patrick-wied.at/static/heatmapjs/example-heatmap-leaflet.html
+
+https://cdn.jsdelivr.net/npm/alasql@0.5
+
