@@ -2,4 +2,7 @@ o arquivo "Basico-MG.xls" na coluna "Cod_municipio" tem referencia a coluna "cd_
 
 o arquivo "Basico-MG.xls" na coluna "cod_setor" tem referencia a coluna de "codigo_setores" de alfabetização e pessoas.
 
-o arquivo "Pessoa02_UF.xls" a partir do V002 até V077 são homens e  o resto são mulheres. 
+o arquivo "Pessoa02_UF-homens.xl" são os dados do homens.
+
+o arquivo "Pessoa02_UF -mulheres.xls" são os dados das mulheres.
+
