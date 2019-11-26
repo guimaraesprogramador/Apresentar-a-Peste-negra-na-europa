@@ -3,7 +3,7 @@ class cidadão{
         
     }
     thread_homens(){
-var homens_censo_2010 = new XMLHttpRequest();
+
 
     }
     thread_mulheres(){

@@ -1,17 +1,17 @@
 var banco = {
-    dados:function() {
-        this.cidade = function(){
+    dados:class sql {
+        cidade = function(){
             alasql("create table cidade(cod_municipio number, cod_uf string, cod_setor string,"+
             "nome_uf string);");   
         }
-        this.homens = function(){
+        homens = function(){
             alasql("create table homens(idade number,sexo string);");
             importScripts("src/")
         }
-        this.mulheres = function(){
+        mulheres = function(){
             alasql("create table mulheres(idade number,sexo string);");
         }
-        this.mapa = function(){
+        mapa = function(){
             let initialCoordinates = [-15.3561,-51.2831]; // mapa do Brasil
                //latitude e a longitude
             var initialZoomLevel = 4;
@@ -27,5 +27,5 @@ var banco = {
 
     }
 }
-var mapa = banco.dados();
+var mapa =  new banco.dados();
 mapa.mapa();

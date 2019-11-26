@@ -12,7 +12,7 @@
             "name": "Launch localhost",
             "url": "http://localhost/index.html:8000",
             "webRoot": "${workspaceFolder}",
-            "file": "${workspaceFolder}/www/index.html"
+            "file": "${workspaceFolder}/index.html"
         },
         {
             "type": "node",
