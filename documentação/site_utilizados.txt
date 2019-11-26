@@ -6,3 +6,4 @@ https://www.patrick-wied.at/static/heatmapjs/example-heatmap-leaflet.html
 
 https://cdn.jsdelivr.net/npm/alasql@0.5
 
+https://braziljs.org/artigos/javascript-multi-threading-com-web-workers-2/
