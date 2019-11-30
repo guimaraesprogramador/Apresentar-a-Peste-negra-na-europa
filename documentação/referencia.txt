@@ -1,8 +1,0 @@
-o arquivo "Basico-MG.xls" na coluna "Cod_municipio" tem referencia a coluna "cd_geocodm" do arquivo "Centroids_MG.xls".
-
-o arquivo "Basico-MG.xls" na coluna "cod_setor" tem referencia a coluna de "codigo_setores" de alfabetização e pessoas.
-
-o arquivo "Pessoa02_UF-homens.xl" são os dados do homens.
-
-o arquivo "Pessoa02_UF -mulheres.xls" são os dados das mulheres.
-

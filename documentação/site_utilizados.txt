@@ -9,3 +9,7 @@ https://cdn.jsdelivr.net/npm/alasql@0.5
 https://braziljs.org/artigos/javascript-multi-threading-com-web-workers-2/
 
 https://www.w3schools.com/js/js_ajax_http.asp
+
+https://raw.githubusercontent.com/wakkoedu/kml-brasil/master/lib/2010/pais/json/Brasil_Municipios.json
+
+

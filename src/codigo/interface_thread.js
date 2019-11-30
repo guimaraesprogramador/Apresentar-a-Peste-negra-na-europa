@@ -5,8 +5,9 @@ var banco = {
             "nome_uf string);");   
         }
         homens = function(){
+            importScripts("src/codigo/interface_thread.js");
             alasql("create table homens(idade number,sexo string);");
-            importScripts("src/")
+            
         }
         mulheres = function(){
             alasql("create table mulheres(idade number,sexo string);");
