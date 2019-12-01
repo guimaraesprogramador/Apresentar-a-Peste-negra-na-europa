@@ -1,17 +1,6 @@
 var banco = {
     dados:class sql {
-        cidade = function(){
-            alasql("create table cidade(cod_municipio number, cod_uf string, cod_setor string,"+
-            "nome_uf string);");   
-        }
-        homens = function(){
-            importScripts("src/codigo/interface_thread.js");
-            alasql("create table homens(idade number,sexo string);");
-            
-        }
-        mulheres = function(){
-            alasql("create table mulheres(idade number,sexo string);");
-        }
+        
         mapa = function(){
             let initialCoordinates = [-15.3561,-51.2831]; // mapa do Brasil
                //latitude e a longitude
