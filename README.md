@@ -28,6 +28,8 @@ Meu motivo para a realização desse projeto pessoal, foi a grande confusação e o 
 
 Sendo esse trabalho tem foco não que esta acontecendo neste momento no mundo, mais sim o que houve no continente Europeu no periode estimado de  1346 e 1357 durante a Pandemia na Peste bubônica(chamada de “Peste negra”) atraves do avanço dessa doença durante esse anos.
 
+
+
 1.4 Metodologia de Trabalho e de Desenvolvimento do Software
 
 O Padrão do projeto: 
@@ -35,4 +37,36 @@ O Padrão do projeto:
 O padrão de Projeto que mais atente o requisito é o Command(que é a implentação de um objeto em varias vezes)  com o State(A mudança do estado do Objeto).
 
 Modelagem do Projeto:
- 
+O software não tem  veridade e está conforme as informação estraidas de site referentes, para isso abaixo um modelo desse Software:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.5 Cronograma das Actividades
+
+
+
+Data inicial	Data final 	Item 
+27/03/20	 29/03/29	Corrigir e termina topico 1 e 2.
+		
+		
+		
