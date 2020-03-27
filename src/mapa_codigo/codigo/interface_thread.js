@@ -2,7 +2,7 @@ var banco = {
     dados:class sql {
         
         mapa = function(){
-            let initialCoordinates = [-15.3561,-51.2831]; // mapa do Brasil
+            let initialCoordinates = [43.2954326,0.883166]; // mapa do Brasil
                //latitude e a longitude
             var initialZoomLevel = 4;
 // create a map in the "map" div, set the view to a given place and zoom
