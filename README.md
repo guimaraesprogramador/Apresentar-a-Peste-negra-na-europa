@@ -93,7 +93,7 @@ O trabalho é divido por seccão em cada secção contém duas ou mais capitulos e ca
 ## 2.1 Descrição do Problema
 O software não é uma  verdade absoluta, mais sim, está conforme as informação estraidas de sites referentes, para isso abaixo um espoco desse Software:
 No Começo da projeção de cartografia, será exibido as informação que os dados imposto não são veridicos, a respeito da Pandemia de Peste negra.
-![Image](/documentos/imagens/peste negra em 1347_I.png)
+![Image](documentos/imagens/peste negra em 1347_I.png)
 
 
 
@@ -127,7 +127,7 @@ No Começo da projeção de cartografia, será exibido as informação que os dados im
 
 
 No começo vai apresentar um circulo vermenlho  e a legenda determinar os locais de  inicio da Pandemia da Peste bubônica, seguido da um historia reproduzida pela voz da maquina feminina, ela vai contar o que houve naquele tempo bem resumidamente.
-![Image](/documentos/imagens/peste negra em 1347_II.png)
+![Image](documentos/imagens/peste negra em 1347_II.png)
 
 
 
