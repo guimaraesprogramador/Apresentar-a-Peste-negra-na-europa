@@ -93,7 +93,7 @@ O trabalho é divido por seccão em cada secção contém duas ou mais capitulos e ca
 ## 2.1 Descrição do Problema
 O software não é uma  verdade absoluta, mais sim, está conforme as informação estraidas de sites referentes, para isso abaixo um espoco desse Software:
 No Começo da projeção de cartografia, será exibido as informação que os dados imposto não são veridicos, a respeito da Pandemia de Peste negra.
-![Image](documentos/imagens/peste negra em 1347_I.png)
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_I%20.png)
 
 
 
