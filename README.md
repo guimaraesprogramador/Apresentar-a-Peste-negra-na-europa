@@ -20,10 +20,10 @@ Esse software não é para espalhar o medo, mais sim, esclarecer  que o acontecien
 
 ## 1.3 Objetivo
 
-###1.3.1 Objetivo Geral
+### 1.3.1 Objetivo Geral
 Meu objetivo não é causa estranheza com a sociedade brasileiras e outras sociedades, mas sim falar a minha única opinião sobre o que está pode acontecer no Brasil, mediante fatos historico que aconteram no Continenete Europeu que podem caracteristar o que nos estamos vendo a cada dia.
 
-### 1.3.1 Objetivo espeficico 
+### 1.3.2 Objetivo espeficico 
 Meu motivo para a realização desse projeto pessoal, foi a grande confusação e o mau planejamento distribuido de renda para areas importantes como educação, saúde, transporte, desde os governos anteriores, para isso estou realizado esse projeto como o foco de não fala o que outros já dizem , mais sim,  tentar esclarer o que acontecer se não ter conciencia durante uma Pandemia.
 
 Sendo esse trabalho não tem foco na Pandemia de Codiv-19, mais sim o que houve no continente Europeu no periode estimado de  1346 e 1357 durante a Pandemia na Peste bubônica(chamada de “Peste negra”) atraves do avanço dessa doença naquela época.
