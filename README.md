@@ -8,7 +8,7 @@ Meu objetivo é demostrar que uma Pandemia pode começa rapidamente e pode acabar 
 
 O Software  foi realizado para que as pessoas tenha alguma noção da gravidade o que uma Pandemia o que ela  pode fazer, sendo estou separado em ordem numerica meus motivos para a realização de projeto:
 
-1 Como visto no final de 2019  em diante, presidente, governadores, prefeitos, primeiro ministro e autoridade superior que estão no planejamento, na estimando, falando cada vez mais, que as pessoas estão ficando doente, hostipais ficando cheio de pessoas passando mau, isso para mim é um pouco da realidade mostrada por isso que eu creio que mesmo estando em casa podemos ajuda de alguma forma.
+1. Como visto no final de 2019  em diante, presidente, governadores, prefeitos, primeiro ministro e autoridade superior que estão no planejamento, na estimando, falando cada vez mais, que as pessoas estão ficando doente, hostipais ficando cheio de pessoas passando mau, isso para mim é um pouco da realidade mostrada por isso que eu creio que mesmo estando em casa podemos ajuda de alguma forma.
 
 2. Por isso, minha expedativa que é que esse projeto possa, abre os olhos de algumas pessoas que não estão vendo o que pode acontencer se não cuidar das pessaos podemos demora até anos para passar a Pandemia.
 
@@ -40,7 +40,7 @@ O padrão de Projeto que mais atente o requisito é o Command(que é a implentação 
 Modelagem do Projeto:
 O método utilizado é ferramenta de modelagem Umbelho que utilizar o modelo UML com finalidade para as digrama de classe e sequencia.
 
-## 1.5 Cronograma das Actividades
+## 1.5 Cronograma das Atividades
 
 Data inicial | Data final | Item
 ------------ | -----------| -----------
@@ -148,9 +148,14 @@ Finalmente esse circulo vão expandir juntando os locais que a Pandemia se expalh
 ## 2.2 Principais envolvimentos e suas Caracteística 
 
 ### Utilizadores do Sistema 
-Esse sistema tem a proposta de não ter questões financeira, pois é um sistema volutario  voltado para qualquer tipo de pessoa que se interessa pelo assunto.
+1. Esse sistema tem a proposta de não ter questões financeira, pois é um sistema volutario  voltado para qualquer tipo de pessoa que se interessa pelo assunto.
 
-### Desenvolvimento 
+2. NA questão de qualidade proposta o sistema basea-se em uma analise de bechmarking que obteve-se um resultado baseado nas perspectivas de outros mapa de fidelidade, abaixo o arquivo em pdf desse resultado:
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/metodologias%20utilizadas/analise%20de%20bechmarking.pdf)
+### Desenvolvimento do Sistema
+#### Desenvolvedores
+Kévin Vieira Gomes Guimaraes.
+#### Informação da Pandemia da Peste negra
 
  	
 	               
