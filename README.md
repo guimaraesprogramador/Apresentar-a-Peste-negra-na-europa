@@ -150,8 +150,8 @@ Finalmente esse circulo vão expandir juntando os locais que a Pandemia se expalh
 ### Utilizadores do Sistema 
 1. Esse sistema tem a proposta de não ter questões financeira, pois é um sistema volutario  voltado para qualquer tipo de pessoa que se interessa pelo assunto.
 
-2. NA questão de qualidade proposta o sistema basea-se em uma analise de bechmarking que obteve-se um resultado baseado nas perspectivas de outros mapa de fidelidade, abaixo o arquivo em pdf desse resultado:
-![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/metodologias%20utilizadas/analise%20de%20bechmarking.pdf)
+2. NA questão de qualidade proposta o sistema basea-se em uma analise de bechmarking que obteve-se um resultado baseado nas perspectivas de outros mapa de fidelidade, abaixo o arquivo em jpg desse resultado:
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/analise-de-bechmarking.jpg)
 ### Desenvolvimento do Sistema
 #### Desenvolvedores
 Kévin Vieira Gomes Guimaraes.
