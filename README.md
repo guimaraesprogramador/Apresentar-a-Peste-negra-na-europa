@@ -127,7 +127,7 @@ No Começo da projeção de cartografia, será exibido as informação que os dados im
 
 
 No começo vai apresentar um circulo vermenlho  e a legenda determinar os locais de  inicio da Pandemia da Peste bubônica, seguido da um historia reproduzida pela voz da maquina feminina, ela vai contar o que houve naquele tempo bem resumidamente.
-![Image](documentos/imagens/peste negra em 1347_II.png)
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_II%20.png)
 
 
 
