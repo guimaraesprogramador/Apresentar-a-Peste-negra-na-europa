@@ -147,18 +147,30 @@ Finalmente esse circulo vão expandir juntando os locais que a Pandemia se expalh
 
 ## 2.2 Principais envolvimentos e suas Caracteística 
 
-### Utilizadores do Sistema 
+### 2.2.1 Utilizadores do Sistema 
 1. Esse sistema tem a proposta de não ter questões financeira, pois é um sistema volutario  voltado para qualquer tipo de pessoa que se interessa pelo assunto.
 
 2. NA questão de qualidade proposta o sistema basea-se em uma analise de bechmarking que obteve-se um resultado baseado nas perspectivas de outros mapa de fidelidade, abaixo o arquivo em jpg desse resultado:
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/analise-de-bechmarking.jpg)
-### Desenvolvimento do Sistema
+
+### 2.2.2 Desenvolvimento do Sistema
 #### Desenvolvedores
 Kévin Vieira Gomes Guimaraes.
 #### Informação da Pandemia da Peste negra
+Os dados filtrados e extraidos de autores de sites ou livros de referencia abaixo:
+[ Ensinar História - Joelza Ester Domingues](https://ensinarhistoriajoelza.com.br/linha-do-tempo/peste-negra-chega-a-europa-2/)
+Acesso no dia 30 de março de 2020.
 
- 	
-	               
-		
-		
+[7 - As grandes epidemias da história](http://books.scielo.org/id/8kf92/pdf/rezende-9788561673635-08.pdf)Acesso no dia 30 de março de 2020.
+
+## 2.3 Regras de Négocio
+O sistema tem algumas limitações como:
+
+1. Ele não abrange toda a informação proposta.
+
+2. Caso ele demore muito para reproduzir, Recomendo olhar  se sua internet está  boa para reproduzir vídeos, para isso olhei no Youtube se ela reproduzir qualquer tipo de vídeo.
+
+3.O desempenho da reprodução proposto é o minimo para computadores de Arquitetura de 32.
+
+4.
 		
