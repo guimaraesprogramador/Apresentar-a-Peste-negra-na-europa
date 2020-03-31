@@ -161,7 +161,8 @@ Os dados filtrados e extraidos de autores de sites ou livros de referencia abaix
 [ Ensinar História - Joelza Ester Domingues](https://ensinarhistoriajoelza.com.br/linha-do-tempo/peste-negra-chega-a-europa-2/)
 Acesso no dia 30 de março de 2020.
 
-[7 - As grandes epidemias da história](http://books.scielo.org/id/8kf92/pdf/rezende-9788561673635-08.pdf)Acesso no dia 30 de março de 2020.
+[7 - As grandes epidemias da história](http://books.scielo.org/id/8kf92/pdf/rezende-9788561673635-08.pdf)
+Acesso no dia 30 de março de 2020.
 
 ## 2.3 Regras de Négocio
 O sistema tem algumas limitações como:
@@ -176,4 +177,4 @@ O sistema tem algumas limitações como:
 # 3.Requisito do Sistema
 ## 3.1 Requisitos Funcionais 
 De acordo com os requisos funcionais do Software, apresentamos um diagrama de Caso de uso abaixo:
-![IMAGE]()		
+![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20caso%20de%20uso.png)		
