@@ -167,10 +167,13 @@ Acesso no dia 30 de março de 2020.
 O sistema tem algumas limitações como:
 
 1. Ele não abrange toda a informação proposta.
-
 2. Caso ele demore muito para reproduzir, Recomendo olhar  se sua internet está  boa para reproduzir vídeos, para isso olhei no Youtube se ela reproduzir qualquer tipo de vídeo.
-
 3.O desempenho da reprodução proposto é o minimo para computadores de Arquitetura de 32.
+4. Qualquer  informação ao dados do Usuario não são armazenados no software.
+5.O aumento da demanda pelo fornecimento pelo acesso ao software não é de responsabilidade pessoal do desenvolvedor, mas da empresa Microsoft responsavel pela hospegam gratuido desse site. 
+6. Para apoia na contagem de visitante usamos uma Api de contagem.
 
-4.
-		
+# 3.Requisito do Sistema
+## 3.1 Requisitos Funcionais 
+De acordo com os requisos funcionais do Software, apresentamos um diagrama de Caso de uso abaixo:
+![IMAGE]()		
