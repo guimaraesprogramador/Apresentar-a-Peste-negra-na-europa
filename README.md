@@ -91,7 +91,7 @@ O trabalho é divido por seccão em cada secção contém duas ou mais capitulos e ca
 # 2 Descrição Geral do Sistema
 
 ## 2.1 Descrição do Problema
-O software não é uma  verdade absoluta, mais sim, está conforme as informação estraidas de sites referentes, para isso abaixo um espoco desse Software:
+O software não é uma  verdade absoluta, mais sim, está conforme as informação extraidas de sites referentes, há abaixo um  espoco desse Software:
 No Começo da projeção de cartografia, será exibido as informação que os dados imposto não são veridicos, a respeito da Pandemia de Peste negra.
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_I%20.png)
 
@@ -178,3 +178,29 @@ O sistema tem algumas limitações como:
 ## 3.1 Requisitos Funcionais 
 De acordo com os requisos funcionais do Software, apresentamos um diagrama de Caso de uso abaixo:
 ![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20caso%20de%20uso.png)		
+
+### Nome do caso de Uso
+Exibicção dos fatores da historia.
+
+### Breve descrição 
+Representar a colocação dos fatos que precisam ser atribuidos para ser exibido a historia.
+### Actores envolvidos
+Interação de um usuario ou mais com o esclarecimento dos fatos, sendo a reprodução partical atraves da voz feminina no idioma portigues Brasileiro de um pessoa definida e a exibição de cada movimento filtrada que posso unir no final da apresetação.
+###  Pré-condiçoes
+1. Um ou mais usuario.
+2. Confirmação do termo de uso.
+### Sequência de Eventos
+1. Primeiramento o software carregar algunos modulo da internet.
+2. Quando o usuario entrar o software perguntar o usuario se ele aceita o termo de uso, em caso de confirmação ele carregar uma historia e executar. 
+3. No final da historia será exibido um circulo com cor vermelho demarcando o local falado.
+4. Vai repetir toda a vez o que o 3 verso até o final onde será reproduzido a uniao dos locais demarcado para visualizar a grande extenção da Pandemia da Peste negra.
+5. Por fim a voz feminina vai agradençe pela paciencia.
+### Pós-condiçoes 
+Representação em um mapa cartografio o espalhamneto da Pademia da Peste negra.
+### Excepçoes 
+Caso o Usuario não aceite o termo de uso não será reproduzido nada para não prejuicar o softwre.
+Caso o usuario fique em internet durante a exbicção da Pandemia, ele pode recomeça de novo, pois seus dados pessoais não são armazenados no software.
+### Observação 
+nenhuma.
+## 3.2 Requisitos não-funcionais 
+
