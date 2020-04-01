@@ -203,3 +203,4 @@ Caso o usuario fique em internet durante a exbicção da Pandemia, ele pode recome
 ### Observação 
 nenhuma.
 ## 3.2 Requisitos não-funcionais 
+![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/Requisito%20n%C3%A3o%20%20funcionais.png)
