@@ -92,7 +92,7 @@ O trabalho é divido por seccão em cada secção contém duas ou mais capitulos e ca
 
 ## 2.1 Descrição do Problema
 O software não é uma  verdade absoluta, mais sim, está conforme as informação extraidas de sites referentes, há abaixo um  espoco desse Software:
-No Começo da projeção de cartografia, será exibido as informação que os dados imposto não são veridicos, a respeito da Pandemia de Peste negra.
+No Começo da projeção de cartografia, será exibido as informação, que os dados imposto não são veridicos,mas tem a respeito da Pandemia de Peste negra.
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_I%20.png)
 
 
@@ -167,12 +167,12 @@ Acesso no dia 30 de março de 2020.
 ## 2.3 Regras de Négocio
 O sistema tem algumas limitações como:
 
-1. Ele não abrange toda a informação proposta.
-2. Caso ele demore muito para reproduzir, Recomendo olhar  se sua internet está  boa para reproduzir vídeos, para isso olhei no Youtube se ela reproduzir qualquer tipo de vídeo.
-3.O desempenho da reprodução proposto é o minimo para computadores de Arquitetura de 32.
-4. Qualquer  informação ao dados do Usuario não são armazenados no software.
+1. Ele não abrange toda a historia proposta da Pandemia da Peste bubônica.
+2. Caso ele demore muito para reproduzir, aconselho olhar se sua internet está  boa para reproduzir vídeos, para isso olhei no site do Youtube se ela demora reproduzir qualquer tipo de vídeo.
+3.O desempenho da reprodução proposto é adequado tentar não prejuicar a velocidade da sua internet.
+4. Qualquer dado que o Usuario tem, não é armazenado no software.
 5.O aumento da demanda pelo fornecimento pelo acesso ao software não é de responsabilidade pessoal do desenvolvedor, mas da empresa Microsoft responsavel pela hospegam gratuido desse site. 
-6. Para apoia na contagem de visitante usamos uma Api de contagem.
+6. Para apoia ao desenvolvedor no gosto do publico é anexado ao software um  uma  contagem de visitante para futuros projetos dentro de 24 horas.
 
 # 3.Requisito do Sistema
 ## 3.1 Requisitos Funcionais 
@@ -183,24 +183,26 @@ De acordo com os requisos funcionais do Software, apresentamos um diagrama de Ca
 Exibição dos fatores da historia.
 
 ### Breve descrição 
-Representar a colocação dos fatos que precisam ser atribuidos para ser exibido a historia.
+Representar dos locais que foram afetados no Continente Europeu pela Pandemia de Péste Bubônica antes do  seculo XIV descritos pela historia relatada.
 ### Actores envolvidos
-Interação de um usuario ou mais com o esclarecimento dos fatos, sendo a reprodução partical atraves da voz feminina no idioma portigues Brasileiro de um pessoa definida e a exibição de cada movimento filtrada que posso unir no final da apresetação.
+A ação do software em tentar esclarecer os fatos para ousuario, sendo a reprodução partical atraves da voz feminina no idioma portigues Brasileiro de um pessoa definida e a exibição de cada movimento filtrada que por fim possuir a união do locais afetados no final da apresetação.
 ###  Pré-condiçoes
 1. Um ou mais usuario.
-2. Confirmação do termo de uso.
+2. Confirmação do 
 ### Sequência de Eventos
-1. Primeiramento o software carregar algunos modulo da internet.
-2. Quando o usuario entrar o software perguntar o usuario se ele aceita o termo de uso, em caso de confirmação ele carregar uma historia e executar. 
+1. Primeiramento o software carregar algunos modulo da internet antes do usuario aceitar os dados impostos.
+2. Quando o usuario entrar o software perguntar o usuario se ele aceita os dados impostos, em caso de confirmação ele carregar uma historia e executar. 
 3. No final da historia será exibido um circulo com cor vermelho demarcando o local falado.
-4. Vai repetir toda a vez o que o 3 verso até o final onde será reproduzido a uniao dos locais demarcado para visualizar a grande extenção da Pandemia da Peste negra.
+4. Vai repetir toda a vez o 3 verso e no final onde será reproduzido a união dos locais demarcado para visualizar a grande extenção da Pandemia da Peste negra.
 5. Por fim a voz feminina vai agradençe pela paciencia.
 ### Pós-condiçoes 
 Representação em um mapa cartografio o espalhamneto da Pademia da Peste negra.
 ### Excepçoes 
-Caso o Usuario não aceite o termo de uso não será reproduzido nada para não prejuicar o softwre.
-Caso o usuario fique em internet durante a exbicção da Pandemia, ele pode recomeça de novo, pois seus dados pessoais não são armazenados no software.
+Caso o Usuario não aceite os dados impostos não será reproduzido nada para não prejuicar o softwre.
+Caso o usuario fique em internet durante a exbicção da Pandemia, poderá recomeça de novo, pois seus dados pessoais não são armazenados no software.
 ### Observação 
 nenhuma.
 ## 3.2 Requisitos não-funcionais 
 ![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/Requisito%20n%C3%A3o%20%20funcionais.png)
+# 4. Análise e Design
+## 4.1 Arquitectura do Sistema
