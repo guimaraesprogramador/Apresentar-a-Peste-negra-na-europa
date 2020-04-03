@@ -206,3 +206,5 @@ nenhuma.
 ![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/Requisito%20n%C3%A3o%20%20funcionais.png)
 # 4. Análise e Design
 ## 4.1 Arquitectura do Sistema
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20estado.png)
+## 4.2 Modelo do Domínio
