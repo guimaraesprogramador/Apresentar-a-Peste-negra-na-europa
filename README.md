@@ -207,3 +207,4 @@ Nenhuma.
 ## 4.1 Arquitetura do Sistema
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20estado.png)
 ## 4.2 Modelo do Domínio
+![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20classe.png)
