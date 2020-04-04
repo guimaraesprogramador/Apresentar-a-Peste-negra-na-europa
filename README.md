@@ -45,7 +45,8 @@ O método utilizado é ferramenta de modelagem Umbelho que utilizar o modelo UML c
 Data inicial | Data final | Item
 ------------ | -----------| -----------
 27/03/20     |	30/03/20| corrigir e termina tópico 1.
-30/03/20     |	04/01/20| corrigir e termina o tópico 2 e se possível 3.
+30/03/20     |	04/04/20| corrigir e termina o tópico 2 e se possível 3.
+04/04/20     |  08/04/20 | Terminar o tópico 4 e começa o código.
 
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
