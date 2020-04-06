@@ -35,10 +35,10 @@ Sendo esse trabalho não tem foco na Pandemia de Codiv-19, mais sim o que houve n
 
 O Padrão do projeto: 
  
-O padrão de Projeto que mais atente o requisito é o Command(que é a implantação de um objeto em várias vezes)  com o State(A mudança do estado do Objeto).
+O padrão de Projeto que mais atente o requisito é o State(A mudança do estado do Objeto).
 
 Modelagem do Projeto:
-O método utilizado é ferramenta de modelagem Umbelho que utilizar o modelo UML com finalidade para o diagrama de classe e sequencia.
+O método utilizado é ferramenta de modelagem Umbelho que utilizar o modelo UML com finalidade para o diagrama de classe, estado e caso de uso.
 
 ## 1.5 Cronograma das Atividades
 
@@ -158,10 +158,8 @@ Kévin Vieira Gomes Guimaraes.
 #### Informação da Pandemia da Peste negra
 Os dados filtrados e extraídos de autores de sites ou livros de referência abaixo:
 [ Ensinar História - Joelza Ester Domingues](https://ensinarhistoriajoelza.com.br/linha-do-tempo/peste-negra-chega-a-europa-2/)
-Acesso no dia 30 de março de 2020.
 
 [7 - As grandes epidemias da história](http://books.scielo.org/id/8kf92/pdf/rezende-9788561673635-08.pdf)
-Acesso no dia 30 de março de 2020.
 
 ## 2.3 Regras de Negocio
 O sistema tem algumas limitações como:
@@ -206,5 +204,42 @@ Nenhuma.
 # 4. Análise e Design
 ## 4.1 Arquitetura do Sistema
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20estado.png)
+### Explicação do Diagrama de estado.
+O software é bastante afetado pelo estado do que se inicia sendo assim descrido abaixo:
+
+1.  O software é ativado independo do usuário precisa dele ou não pois, já carregar os modulo necessário da aplicação e começar a trabalha praticamente os dados filtrados mais primeiramente ele promove um esclarecimento ao usuário suas finalidades, sendo usuário aceita-las ou recusa-las.
+
+2. Quando o software é recusado, o software não tem mais nada fidelidade ainda de ser utilizado. 
+
+3. Caso o software é aceito os termos impostos, é feito carregamento parcial dos dados já estabelecidos.
+
+4. É com andamento da reprodução da história fica cada vez mais acumulativo os dados impostos sendo finalidade quando não houver mais nenhum dado a ser trabalhado.
+
 ## 4.2 Modelo do Domínio
 ![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20classe.png)
+### Explicação do Diagrama de Classe 
+O software possui duas classes principais: voz e o mapa, mas uma classe intermediaria que é denominada ”mudar_estado”. 
+#### A classe “voz”
+Esse objeto tem como atributo a interface denominada “componente_voz” que é vincula com uma associação unilateral (não é preciso ter um usuário para uma voz existir) que contém os seguintes atributos:
+
+1. ”Gênero” Definido como feminino.
+2. ”Nome” Definido como “Patricia”.
+3. “autor” Definido como “Kévin Vieira Gomes Guimaraes”.
+4. “identidade” Definido como “Uma voz de computador”. 
+
+Seus atribuído são o caráter do personagem criada pelo software para fazer há transformação de texto ortográfico em som do idioma português Brasileiro.
+
+E ainda tem alguns métodos para realizar de cada atribuído da interface e também ela é constantemente observar e executada pela classe intermediaria para mandar a vez das duas classes principais.
+
+#### A classe “mapa”
+Esse objeto tem como o atribuído a interface denominada “componentes_exibição” que é vinculada com uma associação unilateral (não é preciso ter um usuário para um mapa existir) que contém os seguintes atributos:
+1. ”Ano” Definido como number(numero).
+2. “local” Definido como string(texto).
+3. “latitude” Definido como number(numero).
+4. “longitude” Definido como number(numero).
+
+Seus atribuídos são necessários para caracterizar tanto o mapa que reproduzido tanto para ajudar no conto da história apresentar pela classe “voz”.
+E seus métodos devem anexar as locais apresentar regulamente pela personagem criada.
+
+E ainda também ela é constantemente observar e executada pela classe intermediaria para mandar a vez das duas classes principais.
+
