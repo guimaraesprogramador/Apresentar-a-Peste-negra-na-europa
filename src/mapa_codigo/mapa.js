@@ -10,7 +10,7 @@ class mapa {
      var initialZoomLevel = 4;
 // create a map in the "map" div, set the view to a given place and zoom
     this.map = L.map('map').setView(initialCoordinates, initialZoomLevel);
-    console.log(this.map)
+    console.log(this.map);
     }
     inicial(){
 // add an OpenStreetMap tile layer
@@ -34,12 +34,11 @@ class mapa {
 }
 const m = new mapa();
 m.inicial();
-m.ponto_inicial(m.lant,m.long);
-// self.addEventListener("message",function(e){
-//     var data = e.data;
-//     switch(data){
-//         case "começar":
-//             self.postMessage("começando");
-//         break;
-//     }
-// })
+
+self.onmessage =function(ev){
+    switch(ev){
+        case "começo":
+        break;
+    }
+}
+// m.ponto_inicial(m.lant,m.long);
