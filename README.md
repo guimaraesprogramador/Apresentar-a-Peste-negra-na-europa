@@ -242,4 +242,6 @@ Seus atribuídos são necessários para caracterizar tanto o mapa que reproduzido t
 E seus métodos devem anexar as locais apresentar regulamente pela personagem criada.
 
 E ainda também ela é constantemente observar e executada pela classe intermediaria para mandar a vez das duas classes principais.
+## 4.3 Modelo de Dados
+### 4.3.1 Modelo Lógico da Base de Dados
 
