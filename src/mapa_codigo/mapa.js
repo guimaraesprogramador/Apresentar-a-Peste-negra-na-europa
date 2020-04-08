@@ -1,10 +1,11 @@
+
 class mapa {
     map = null;
     lant = 0;
     long = 0;
     constructor(){
-        this.lant = exbir.lantitude;
-        this.long = exbir.longitude;
+        this.lant = exibir.lantitude;
+        this.long = exibir.longitude;
         let initialCoordinates = [this.lant,this.long]; // mapa do Brasil
         //latitude e a longitude
      var initialZoomLevel = 4;
@@ -34,11 +35,13 @@ class mapa {
 }
 const m = new mapa();
 m.inicial();
-
-self.onmessage =function(ev){
+function exibição_circulos(){
+var booleano = true;
+onmessage = function(ev){
     switch(ev){
-        case "começo":
-        break;
+        case "exbir circulos  parte I":
+            m.ponto_inicial(m.lant,m.long);
+        return  booleano =  false;
     }
 }
-// m.ponto_inicial(m.lant,m.long);
+}
