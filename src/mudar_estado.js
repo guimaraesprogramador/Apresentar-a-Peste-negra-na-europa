@@ -11,14 +11,15 @@ if (window.Worker){
     {
             this.excutar_voz = executar;
             if(  this.excutar_voz == false && this.executar_mapa == false){
-                //while(this.executar_mapa == false){
-                     this.estado.postMessage("introdução completa"); 
-                     this.estado.onmessage = function(ev){
-                        this.executar_mapa = ev.data;
-                     }
-                   
-                //}
                
+                
+                    mensagem("introdução completa")
+                        this.estado.onmessage = function(ev){
+                            this.excutar_voz = ev.data;
+                         }
+                             this.estado.terminate();
+                
+                
             }
         
     }

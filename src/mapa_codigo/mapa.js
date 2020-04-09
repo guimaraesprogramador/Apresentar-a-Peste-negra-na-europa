@@ -35,13 +35,12 @@ class mapa {
 }
 const m = new mapa();
 m.inicial();
-function exibição_circulos(){
+function exibição_circulos(tipo){
 var booleano = true;
-onmessage = function(ev){
-    switch(ev){
+
+    switch(tipo){
         case "exbir circulos  parte I":
             m.ponto_inicial(m.lant,m.long);
         return  booleano =  false;
     }
-}
 }
