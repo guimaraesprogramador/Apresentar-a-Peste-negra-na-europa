@@ -18,7 +18,6 @@ class mapa {
      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
          attribution: '&copy; Contribuidores do <a href="http://osm.org/copyright">OpenStreetMap</a>'
      }).addTo(this.map);
-   
     }
     ponto_inicial(lantitude,longitude){
       var latlng =  L.latLng(lantitude,longitude);

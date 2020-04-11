@@ -1,0 +1,63 @@
+﻿{
+    "bloco":{
+        "lantitude":53.3178105,
+        "longitutde":-10.5492413
+    },
+    "gps":{
+        "parte_1":[{
+            "anos":{
+
+            },
+            "locais":{
+
+            },
+           "coordenadas":{
+
+           }
+        }],
+        "parte_2":[{
+            "anos":{
+
+            },
+            "locais":{
+
+            },
+           "coordenadas":{
+
+           }
+        }],
+        "parte_3":[{
+            "anos":{
+
+            },
+            "locais":{
+
+            },
+           "coordenadas":{
+
+           }
+        }],
+        "parte_4":[{
+            "anos":{
+
+            },
+            "locais":{
+
+            },
+           "coordenadas":{
+
+           }
+        }],
+        "parte_5":[{
+            "anos":{
+
+            },
+            "locais":{
+
+            },
+           "coordenadas":{
+
+           }
+        }]
+    }
+}

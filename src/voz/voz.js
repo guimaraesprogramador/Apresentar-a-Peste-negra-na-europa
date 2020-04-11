@@ -11,6 +11,7 @@ class voz{
         try{
             
             if(this.introdução == ""){
+                
                 var informações_atuação = {
                     autor:this.Autor(personagem.autor),
                     resposabilidade:personagem.Nome
@@ -37,27 +38,30 @@ class voz{
         }
     }
    Mudar_falar(falar){
-            var resposta = this.pessoa(personagem.Genero,personagem.identidade);
                 switch (falar.toString()){
                     case "introdução completa" :
-                        if (window.File && window.FileReader && window.FileList && window.Blob) {
-                            document.getElementById("bloco").disabled= true;
-                                // var parte_1_historia = 
-                                // var apresentação = 
-                                document.getElementById("texto").innerText = personagem.fala;
-                                personagem.fala = new SpeechSynthesisUtterance(apresentação);
-                              setTimeout(function(){
+                                // linha 1
+                                var historia = exibir.apresentar.executar_linhas();
+                                // linha 2 
+                                historia += exibir.apresentar.executar_linhas();
+                                // linha 3
+                                historia += exibir.apresentar.executar_linhas();
+                                // linha 4
+                                historia += exibir.apresentar.executar_linhas();
+                                // linha 5
+                                historia += exibir.apresentar.executar_linhas();
+                                // linha 6
+                                historia += exibir.apresentar.executar_linhas();
+                                personagem.fala = new SpeechSynthesisUtterance(historia);
+                                historia = exibir.apresentar.executar_linhas();
                                 window.speechSynthesis.speak(personagem.fala);
-                                personagem.fala = "";
-                              },2000)
-                        }
-
                             break;
         }
     }
         
     }
 const v = new voz();
+v.pessoa(personagem.Genero,personagem.identidade);
 function mensagem(tipo){
     
     switch(tipo){
