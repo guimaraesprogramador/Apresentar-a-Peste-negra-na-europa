@@ -26,12 +26,12 @@ var exibir = {
 }
 function gps(qual){
 var dados = null;
-var url = "src/historia/componentes_json.json";
+var url = "https://raw.githubusercontent.com/guimaraesprogramador/zonas_distancia/master/src/historia/componentes_json.json";
 var xhttp = new XMLHttpRequest();
 xhttp.open("GET", url, false);
 xhttp.send();
-var obj = JSON.parse(xhttp.responseText);
-
+var json = JSON.stringify(xhttp.responseText);
+var obj = JSON.parse(json);
 dados = [{anos,locais,lantitude,longitude}];
         obj.gps.forEach(function(value,key){
             if(key == qual){
