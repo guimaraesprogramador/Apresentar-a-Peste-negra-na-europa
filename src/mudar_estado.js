@@ -1,48 +1,61 @@
-if (window.Worker){  
-    class mudar{
+var worker_voz =  new Worker("/src/voz/voz.js");
+var worker_mapa = new Worker("/src/mudar_estado.js");
+class mudar{
         observar_voz= false;
         executar_mapa = false;
         excutar_voz = false;
         observar_mapa = false;
         constructor(){
-            this.estado = new Worker("src/voz/voz.js");
+           
         }
-    mudar_voz(executar)
-    {
-            this.excutar_voz = executar;
-            if(  this.excutar_voz == false && this.executar_mapa == false){
-               
+        mudar_voz(executar)
+        {  
+                this.excutar_voz = executar[0];
+                    if( this.executar_mapa == false){    
+                        switch(this.excutar_voz){
+                            case  "introdução completa":
+                                Translatotron(executar[1]);
+                            break;
+                            case "inicio":
+                                Translatotron(executar[1]);
+                                break;
+                        } 
+                        this.executar_mapa  = true;
+                    } 
+        }
+        mudar_mapa(observar)
+        {
+            this.observar_voz = observar[0]; 
+            if(this.executar_mapa == true){
+            switch(this.observar_voz){
+                case "inicio":
+
+                    break;
+            }
                 
-                    mensagem("introdução completa")
-                        this.estado.onmessage = function(ev){
-                            this.excutar_voz = ev.data;
-                         }
-                             this.estado.terminate();
+            }
                 
-                
+        }
+    
+    }
+    var  p = new mudar();
+    if (typeof(Worker) !== "undefined"){  
+            worker_voz.postMessage(["introdução",personagem]);
+            worker_voz.onmessage =function(event){
+                p.excutar_voz = event.data.resposta;
+                switch(p.excutar_voz){
+                    case "introdução completa":
+                        var dados = [p.excutar_voz,event.data.falar];
+                        p.mudar_voz(dados);
+                        worker_voz.postMessage("inicio",personagem);
+                        p.mudar_voz(dados);
+                    break;
+                    case "inicio":
+                        var dados = [p.excutar_voz,event.data.falar];
+                        worker_mapa.postMessage(["inicio"]);
+                        p.mudar_mapa(dados);
+                        break;
             }
         
-    }
-    mudar_mapa(observar)
-    {
-           this.observar_voz = observar; 
-           if(this.observar_voz == false && this.executar_mapa == true){
-            while(this.excutar_voz ==false){
-               this.estado.postMessage("exbir circulos  parte I");
-               this.excutar_voz =  exibição_circulos();
-            }
-
-           }
-            
-    }
-    }
-    const p = new mudar(); 
-    p.mudar_voz(false);   
-    function avança(){
-        var aceito = document.getElementById("sim").value;
-        if(aceito == "Aceito"){
-            p.mudar_mapa(false);
         }
     }
-    
-}

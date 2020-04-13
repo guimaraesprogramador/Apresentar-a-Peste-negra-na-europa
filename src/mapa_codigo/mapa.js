@@ -11,7 +11,6 @@ class mapa {
      var initialZoomLevel = 4;
 // create a map in the "map" div, set the view to a given place and zoom
     this.map = L.map('map').setView(initialCoordinates, initialZoomLevel);
-    console.log(this.map);
     }
     inicial(){
 // add an OpenStreetMap tile layer
@@ -34,12 +33,11 @@ class mapa {
 }
 const m = new mapa();
 m.inicial();
-function exibição_circulos(tipo){
-var booleano = true;
-
+self.addEventListener("message",event=>{
+    var tipo = event.data[0];
     switch(tipo){
-        case "exbir circulos  parte I":
+        case "inicio":
             m.ponto_inicial(m.lant,m.long);
-        return  booleano =  false;
+        break;
     }
-}
+})

@@ -5,3 +5,10 @@ var personagem = {
     identidade:" inteligência artificial",
     fala:""
 }
+
+ function Translatotron(texto){
+    var msg = new SpeechSynthesisUtterance(texto);
+    msg.lang = "pt-br";
+    msg.volume = 0.7;
+    window.speechSynthesis.speak(msg);
+}

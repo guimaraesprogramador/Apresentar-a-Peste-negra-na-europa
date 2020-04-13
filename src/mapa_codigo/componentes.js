@@ -10,9 +10,14 @@ var exibir = {
             this.segunda_linha,this.terceira_linha,
         this.quarta_linha, this.quinta_linha,
     this.sexta_linha];
-           var soma = 0;
-           var linha_executar = linhas[soma];
+           var linha_executar = linhas[0];
            linhas.shift();
+           if(linhas.length -1 == 4){
+               var partes = ["parte_1","parte_2","parte_3","parte_4","parte_5"];
+               for(var i =0;i<partes.length;i++ ){
+                   gps(partes[i].toString());
+               }
+           }
            return linha_executar;
         },
         primeira_parte:"Essa historia \n não tem relação direta \n  com a Pandemia de Codiv-19, \n mais sim com os relados",
@@ -35,13 +40,14 @@ var obj = JSON.parse(json);
 dados = [{anos,locais,lantitude,longitude}];
         obj.gps.forEach(function(value,key){
             if(key == qual){
-                dados.push({
-                    anos:value.anos,
-                    locais:value.locais,
-                    lantitude:value.coordenadas.lantitude,
-                    longitude:value.coordenadas.longitude
-                });
+                console.log(value);
+                // dados.push({
+                //     anos:value.anos,
+                //     locais:value.locais,
+                //     lantitude:value.coordenadas.lantitude,
+                //     longitude:value.coordenadas.longitude
+                // });
             }
         });
-return dados;
+//return dados;
 }

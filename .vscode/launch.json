@@ -16,10 +16,21 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "url": "http://localhost/index.html:8080",
+            "url": "http://localhost/index.html",
             "webRoot": "${workspaceFolder}",
-            "file": "${workspaceFolder}/index.html",
-            "firefoxExecutable": "browser.download.skipConfirmLaunchExecutable"
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "name": "Attach",
+            "type": "firefox",
+            "request": "attach"
+        },
+        {
+            "name": "Launch WebExtension",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "addonPath": "${workspaceFolder}"
         }
     ]
 }
