@@ -46,7 +46,8 @@ Data inicial | Data final | Item
 ------------ | -----------| -----------
 27/03/20     |	30/03/20| corrigir e termina tópico 1.
 30/03/20     |	04/04/20| corrigir e termina o tópico 2 e se possível 3.
-04/04/20     |  08/04/20 | Terminar o tópico 4 e começa o código.
+04/04/20     |  08/04/20 | Terminar o tópico 4.3.1 e começa o código.
+08/04/20     | 13/04/20  | desenvolver o código através de theads e corrigir algumas falta de interpretação.
 
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
@@ -91,7 +92,7 @@ O trabalho é divido por secção em cada secção contém duas ou mais capítulos e ca
 
 ## 2.1 Descrição do Problema
 O software não é uma verdade absoluta, mais sim, está conforme as informações extraídas de sites referentes, há abaixo um espoco desse Software:
-No Começo da projeção de cartografia, será exibido a informação, que os termos impostos não são verídicos, mas tem a respeito da Pandemia de Peste negra.
+No Começo da projeção de cartografia, será apresentado ao visitante a respeito da Pandemia de Peste negra.
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_I%20.png)
 
 
