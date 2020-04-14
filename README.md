@@ -52,8 +52,8 @@ Data inicial | Data final | Item
 17/04/20     | 19/04/20  | termina o problema de threads.
 20/04/20     | 22/04/20  | termina o círculos com as threads.
 23/04/20     | 25/04/20   | corrigir ou pensa de forma diferente olhando em código limpo.
-25/04/20     | 26/04/20  | olhar nos 3 fazer de teste performance o projeto. 
-Finalizar projeto :| 27/04/20| sujeito a alteração futuras.
+25/04/20     | 26/04/20  | olhar nos 3 sites fazer de teste performance o projeto. 
+Finalizar projeto: | 27/04/20| sujeito a alteração futuras.
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
 
