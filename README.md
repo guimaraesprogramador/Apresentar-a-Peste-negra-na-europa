@@ -47,8 +47,13 @@ Data inicial | Data final | Item
 27/03/20     |	30/03/20| corrigir e termina tópico 1.
 30/03/20     |	04/04/20| corrigir e termina o tópico 2 e se possível 3.
 04/04/20     |  08/04/20 | Terminar o tópico 4.3.1 e começa o código.
-08/04/20     | 13/04/20  | desenvolver o código através de theads e corrigir algumas falta de interpretação.
-
+08/04/20     | 13/04/20  | desenvolver o código através de threads e corrigir algumas falta de interpretação.
+14/04/20     | 17/04/20  | fazer diagrama de sequência para entender threads e ver o caso do Chrome não realizado a voz.
+17/04/20     | 19/04/20  | termina o problema de threads.
+20/04/20     | 22/04/20  | termina o círculos com as threads.
+23/04/20     | 25/04/20   | corrigir ou pensa de forma diferente olhando em código limpo.
+25/04/20     | 26/04/20  | olhar nos 3 fazer de teste performance o projeto. 
+Finalizar projeto :| 27/04/20| sujeito a alteração futuras.
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
 
