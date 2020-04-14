@@ -150,8 +150,11 @@ Finalmente esse círculo vão expandir juntando os locais que a Pandemia se espalh
 ### 2.2.1 Utilizadores do Sistema 
 1. Esse sistema tem a proposta de não ter questões financeira, pois é um sistema voluntário voltado para qualquer tipo de pessoa que se interessa pelo assunto.
 
-2. NA questão de qualidade proposta o sistema baseia-se em uma análise de benchmarking que obteve-se um resultado baseado nas perspectivas de outros mapa de fidelidade, abaixo a foto desse resultado:
+2. Na questão de qualidade proposta o sistema baseia-se em uma análise de benchmarking que se obteve um resultado baseado nas perspectivas de outros mapas de fidelidade, abaixo a foto desse resultado:
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/analise-de-bechmarking.jpg)
+
+Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20),abaixo a foto do deslocamento do projeto:
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/PARETO-pagina%20inicial.png) 
 
 ### 2.2.2 Desenvolvimento do Sistema
 #### Desenvolvedores
