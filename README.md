@@ -93,7 +93,7 @@ O trabalho é divido por secção em cada secção contém duas ou mais capítulos e ca
 ## 2.1 Descrição do Problema
 O software não é uma verdade absoluta, mais sim, está conforme as informações extraídas de sites referentes, há abaixo um espoco desse Software:
 No Começo da projeção de cartografia, será apresentado ao visitante a respeito da Pandemia de Peste negra.
-![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_I%20.png)
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_I.png)
 
 
 
