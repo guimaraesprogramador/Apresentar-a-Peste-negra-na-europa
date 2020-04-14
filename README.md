@@ -153,7 +153,7 @@ Finalmente esse círculo vão expandir juntando os locais que a Pandemia se espalh
 2. Na questão de qualidade proposta o sistema baseia-se em uma análise de benchmarking que se obteve um resultado baseado nas perspectivas de outros mapas de fidelidade, abaixo a foto desse resultado:
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/analise-de-bechmarking.jpg)
 
-Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20),abaixo a foto do deslocamento do projeto:
+Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20), abaixo a foto do deslocamento do projeto:
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/PARETO-pagina%20inicial.png) 
 
 ### 2.2.2 Desenvolvimento do Sistema
@@ -248,4 +248,4 @@ E seus métodos devem anexar as locais apresentar regulamente pela personagem cri
 E ainda também ela é constantemente observar e executada pela classe intermediaria para mandar a vez das duas classes principais.
 ## 4.3 Modelo de Dados
 ### 4.3.1 Modelo Lógico da Base de Dados
-
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20relacionamento%20de%20entidade.png)
