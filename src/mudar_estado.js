@@ -1,5 +1,5 @@
 var worker_voz =  new Worker("/src/voz/voz.js");
-var worker_mapa = new Worker("/src/mudar_estado.js");
+// var worker_mapa = new Worker("/src/mudar_estado.js");
 class mudar{
         observar_voz= false;
         executar_mapa = false;
@@ -47,8 +47,8 @@ class mudar{
                     case "introdução completa":
                         var dados = [p.excutar_voz,event.data.falar];
                         p.mudar_voz(dados);
-                        worker_voz.postMessage("inicio",personagem);
-                        p.mudar_voz(dados);
+                        worker_voz.terminate();
+                        worker_voz = null;
                     break;
                     case "inicio":
                         var dados = [p.excutar_voz,event.data.falar];
@@ -56,6 +56,5 @@ class mudar{
                         p.mudar_mapa(dados);
                         break;
             }
-        
         }
     }

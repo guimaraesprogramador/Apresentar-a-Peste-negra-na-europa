@@ -39,7 +39,7 @@ class voz{
                 switch (falar.toString()){
                     case "inicio" :
                                 // linha 1
-                                var historia =  historia + exibir.apresentar.executar_linhas();
+                                var historia =  historia + falar.apresentar.executar_linhas();
                                 // linha 2 
                                 historia =  historia + exibir.apresentar.executar_linhas();
                                 // linha 3

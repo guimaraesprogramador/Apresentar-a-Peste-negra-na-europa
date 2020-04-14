@@ -9,7 +9,7 @@ var exibir = {
             let linhas = [this.primeira_parte,
             this.segunda_linha,this.terceira_linha,
         this.quarta_linha, this.quinta_linha,
-    this.sexta_linha];
+        this.sexta_linha];
            var linha_executar = linhas[0];
            linhas.shift();
            if(linhas.length -1 == 4){
