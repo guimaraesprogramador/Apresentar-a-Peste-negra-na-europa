@@ -1,3 +1,4 @@
+ codigo comentado do mudar_estado.js
     // if (typeof(Worker) !== "undefined"){  
     //         
     //     //parte importante em teste
@@ -29,3 +30,27 @@
            
         
     // }
+
+codigo comentado do arquivo componentes.js
+// function gps(qual){
+// var dados = null;
+// var url = "https://raw.githubusercontent.com/guimaraesprogramador/zonas_distancia/master/src/historia/componentes_json.json";
+// var xhttp = new XMLHttpRequest();
+// xhttp.open("GET", url, false);
+// xhttp.send();
+// var json = JSON.stringify(xhttp.responseText);
+// var obj = JSON.parse(json);
+// dados = [{anos,locais,lantitude,longitude}];
+//         obj.gps.forEach(function(value,key){
+//             if(key == qual){
+//                 console.log(value);
+//                 // dados.push({
+//                 //     anos:value.anos,
+//                 //     locais:value.locais,
+//                 //     lantitude:value.coordenadas.lantitude,
+//                 //     longitude:value.coordenadas.longitude
+//                 // });
+//             }
+//         });
+// //return dados;
+// }
