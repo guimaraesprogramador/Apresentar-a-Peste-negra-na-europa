@@ -51,7 +51,7 @@ Data inicial | Data final | Item
 14/04/20     | 17/04/20  | fazer diagrama de sequência para entender threads e ver o caso do Chrome não realizado a voz.
 17/04/20     | 19/04/20  | termina o problema de threads.
 20/04/20     | 22/04/20  | termina o círculos com as threads.
-23/04/20     | 25/04/20   | corrigir ou pensa de forma diferente olhando em código limpo.
+23/04/20     | 25/04/20  | corrigir ou se o código é limpo. 
 25/04/20     | 26/04/20  | olhar nos 3 sites fazer de teste performance o projeto. 
 Finalizar projeto: | 27/04/20| sujeito a alteração futuras.
 ## 1.6 Organização do Trabalho
@@ -191,20 +191,19 @@ Exibição dos fatores da história.
 ### Breve descrição 
 Representar dos locais que foram afetados no Continente Europeu pela Pandemia de Peste Bubônica antes do século XIV descrito pela história relatada.
 ### Autores envolvidos
-A ação do software em tentar esclarecer os fatos para o usuário, sendo a reprodução parcial através da voz feminina no idioma português Brasileiro de uma pessoa definida e a exibição de cada movimento filtrada que por fim possuir a união dos locais afetados no final da apresentação.
+A ação do software em tentar esclarecer os fatos para o usuário, sendo a reprodução parcial através da voz parecida com o feminina no idioma português Brasileiro de uma pessoa definida e a exibição de cada movimento filtrada que por fim possuir a união dos locais afetados no final da apresentação.
 ###  Pré-condições
 1. Um ou mais usuário.
-2. Confirmação do termo imposto. 
 ### Sequência de Eventos
 1. Primeiramente o software vai carregar alguns modulo que precisa na internet antes do usuário aceitar os termos impostos.
-2. Quando o usuário entrar o software perguntar o usuário se ele aceita os termos impostos, em caso de confirmação ele carregar uma história e executar. 
+2. Quando o usuário entrar no software ele vai estabelecer os termos ao usuário se ele fica no software, o software vai entender que ele aceitou os termos impostos, em caso de confirmação ele carregar uma história e executar. 
 3. No final da história será exibido um círculo com cor vermelho demarcando o local falado.
 4. Vai repetir toda a vez os 3 versos e no final onde será reproduzido a união dos locais demarcado para visualizar a grande extensão da Pandemia da Peste negra.
 5. Por fim a voz feminina vai agradecer pela paciência.
 ### Pós-condições 
 Representação em um mapa cartográfico o espalhamento da Pandemia da Peste negra.
 ### Exceções 
-Caso o Usuário não aceite os termos impostos não será reproduzido nada para não prejudicar o software.
+Caso o Usuário não aceite os termos impostos em um certo intervalo de 5 segundos ele pode sair do software sem preocupação com seus dados pessoais.
 Caso o usuário fique em internet durante a exibição da Pandemia, poderá recomeça de novo, pois seus dados pessoais não são armazenados no software.
 ### Observação 
 Nenhuma.
@@ -229,7 +228,7 @@ O software é bastante afetado pelo estado do que se inicia sendo assim descrido 
 ### Explicação do Diagrama de Classe 
 O software possui duas classes principais: voz e o mapa, mas uma classe intermediaria que é denominada ”mudar_estado”. 
 #### A classe “voz”
-Esse objeto tem como composição a classe denominada “componente_voz” que é vincula com uma associação unilateral (que a classe “voz” não reconhecer a existência dessa classe) que contém os seguintes atributos:
+Esse objeto tem como composição a classe denominada “mudar_estado” que é vincula com uma associação unilateral (que a classe “voz” não reconhecer a existência da classe “componente_voz”) que contém os seguintes atributos:
 
 1. ”Gênero” Definido como parecido com feminino.
 2. ”Nome” Definido “Translatotron” criado pela empresa Google.
@@ -237,12 +236,13 @@ Esse objeto tem como composição a classe denominada “componente_voz” que é vincu
 4. “identidade” Definida como “inteligência artificial”. 
 
 
-Seus atribuído são o caráter do personagem criada pelo software para fazer há transformação de texto ortográfico em som do idioma português Brasileiro. E tem somente um método que é o “apresentar” que tem o atribuído “parte” como o valor de texto e retorna uma construção de frase do tipo texto
+Seus atribuído são o caráter do personagem criada pelo software para fazer há transformação de texto ortográfico em som do idioma português Brasileiro. E tem dois métodos que são:
+1.O “Roteiro” que tem o atribuído “parte” como o valor de texto e retorna uma construção de frase do tipo texto.
+2. A “threads” que não tem nenhuma variável que é um void(funções que não retorna nada).
 
 
- 
 #### A classe “mapa”
-Esse objeto tem como composição a classe denominada “componentes_exibição” que é vinculada com uma associação unilateral (que a classe “mapa” não reconhecer a existência dessa classe) que contém os seguintes atributos:
+Esse objeto tem como composição a classe denominada “mudar_estado” que é vinculada com uma associação unilateral (que a classe “mapa” não reconhecer a existência da classe “componentes_exibição”) que contém os seguintes atributos:
 1. ”Ano” Definido como number(real,inteiro,decimal e etc...).
 2. “local” Definido como string(texto).
 3. “latitude” Definido como number(real,inteiro,decimal e etc...).
@@ -250,8 +250,8 @@ Esse objeto tem como composição a classe denominada “componentes_exibição” que é
 
 E tem dois métodos que são:
 1.  ”coordenadas” que tem duas variáveis como: lang e long do tipo number(real,inteiro,decimal e etc...).
-2. “Roteiro” que tem somente uma variável como: ordem do tipo string(texto) que retorna uma string(texto).
-
+2. “threads” que não tem nenhuma variável que é um void(funções que não retorna nada).
+ 
 #### A classe intermediaria ”mudar_estado”
 Esse objeto é necessário para caracterizar tanto o mapa que reproduzido tanto para ajudar no conto da história apresentar pela classe “voz”.
 Ela é composta de dois métodos que são:
