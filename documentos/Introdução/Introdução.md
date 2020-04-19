@@ -51,7 +51,7 @@ Data inicial | Data final | Item
 30/03/20     |	04/04/20| corrigir e termina o tópico 2 e se possível 3.
 04/04/20     |  08/04/20 | Terminar o tópico 4.3.1 e começa o código.
 08/04/20     | 13/04/20  | desenvolver o código através de threads e corrigir algumas falta de interpretação.
-14/04/20     | 19/04/20   | fazer diagrama de sequência para entender threads e ver o caso do Chrome não realizado a voz, por fim termina o problema de threads.
+14/04/20     | 20/04/20   | fazer diagrama de sequência para entender threads e ver o caso do Chrome não realizado a voz, por fim termina o problema de threads.
 20/04/20     | 22/04/20  | termina o círculos com as threads.
 23/04/20     | 25/04/20  | corrigir ou se o código é limpo. 
 25/04/20     | 26/04/20  | olhar nos 3 sites fazer de teste performance o projeto. 
