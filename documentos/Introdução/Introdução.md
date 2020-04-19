@@ -59,5 +59,3 @@ Finalizar projeto: | 27/04/20| sujeito a alteração futuras.
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
 ***
-[https://raw.githubusercontent.com/google/material-design-icons/master/navigation/2x_web/ic_subdirectory_arrow_left_black_48dp.png>](https://github.com/guimaraesprogramador/zonas_distancia)
-
