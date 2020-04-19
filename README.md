@@ -173,10 +173,10 @@ Os dados filtrados e extraídos de autores de sites ou livros de referência abaix
 O sistema tem algumas limitações como:
 
 1. Ele não abrange toda a história proposta da Pandemia da Peste bubônica.
-2. Caso ele demore muito para reproduzir, aconselho olhar se sua internet está boa para reproduzir vídeos, para isso olhei no site do Youtube se ela demora reproduzir qualquer tipo de vídeo.
+2. Caso ele demore muito para reproduzir, aconselho olhar se sua internet está boa para reproduzir vídeos, para isso olhei em qualquer tipo de vídeo no site do Youtube.
 3.O desempenho da reprodução proposto é adequado tentar não prejudicar a velocidade da sua internet.
 4. Qualquer dado que o Usuário tem, não é armazenado no software.
-5.O aumento da demanda pelo fornecimento pelo acesso ao software não é de responsabilidade pessoal do desenvolvedor, mas da empresa Microsoft responsável pela hospedam gratuito desse site. 
+5.O aumento da demanda pelo fornecimento pelo acesso ao software não é de responsabilidade pessoal do desenvolvedor, mas da hospedagem da empresa Microsoft desse software. 
 6. Para apoia ao desenvolvedor no gosto do público é anexado ao software um uma contagem de visitante para futuros projetos.
 
 # 3.Requisito do Sistema
@@ -190,19 +190,19 @@ Exibição dos fatores da história.
 ### Breve descrição 
 Representar dos locais que foram afetados no Continente Europeu pela Pandemia de Peste Bubônica antes do século XIV descrito pela história relatada.
 ### Autores envolvidos
-A ação do software em tentar esclarecer os fatos para o usuário, sendo a reprodução parcial através da voz parecida com o feminina no idioma português Brasileiro de uma pessoa definida e a exibição de cada movimento filtrada que por fim possuir a união dos locais afetados no final da apresentação.
+A ação do software em tentar esclarecer os fatos para o usuário, sendo a reprodução parcial através da voz parecida com o feminino no idioma português Brasileiro de uma pessoa definida e a exibição de cada movimento filtrada que por fim possuir a união dos locais afetados no final da apresentação.
 ###  Pré-condições
 1. Um ou mais usuário.
 ### Sequência de Eventos
-1. Primeiramente o software vai carregar alguns modulo que precisa na internet antes do usuário aceitar os termos impostos.
-2. Quando o usuário entrar no software ele vai estabelecer os termos ao usuário se ele fica no software, o software vai entender que ele aceitou os termos impostos, em caso de confirmação ele carregar uma história e executar. 
-3. No final da história será exibido um círculo com cor vermelho demarcando o local falado.
-4. Vai repetir toda a vez os 3 versos e no final onde será reproduzido a união dos locais demarcado para visualizar a grande extensão da Pandemia da Peste negra.
-5. Por fim a voz feminina vai agradecer pela paciência.
+1. Primeiramente o software vai carregar alguns modulo que precisa da interne.
+2. Quando o usuário entrar no software, ele se apresentar e depois vai estabelecer os termos ao usuário se ele fica no software pelo menos 3 segundos, o software vai entender que ele aceitou os termos impostos.
+3. No final da cada história será exibido um círculo com cor vermelho demarcando o local falado.
+4. E no final onde será reproduzido a união dos locais demarcado para visualizar a grande extensão da Pandemia da Peste bubônica no continente europeu.
+5. Por fim a voz parecia com feminina vai agradecer pela paciência.
 ### Pós-condições 
 Representação em um mapa cartográfico o espalhamento da Pandemia da Peste negra.
 ### Exceções 
-Caso o Usuário não aceite os termos impostos em um certo intervalo de 5 segundos ele pode sair do software sem preocupação com seus dados pessoais.
+Caso o Usuário não aceite os termos impostos em um certo intervalo de 3 segundos ele pode sair do software sem preocupação com seus dados pessoais.
 Caso o usuário fique em internet durante a exibição da Pandemia, poderá recomeça de novo, pois seus dados pessoais não são armazenados no software.
 ### Observação 
 Nenhuma.
@@ -218,10 +218,9 @@ O software é bastante afetado pelo estado do que se inicia sendo assim descrido 
 
 2. Quando o software é recusado, o software não tem mais nada fidelidade ainda de ser utilizado. 
 
-3. Caso o software é aceito os termos impostos, é feito carregamento parcial dos dados já estabelecidos.
-
-4. É com andamento da reprodução da história fica cada vez mais acumulativo os dados impostos sendo finalidade quando não houver mais nenhum dado a ser trabalhado.
-
+3. Caso o software é aceito a apresentar os termos impostos.
+4.Depois de cada história apresentada é exibido a localidade referente a história contada.
+5. É por fim é exibir a união dessa localidade mostrada a extensão da Pandemia bubônica.
 ## 4.2 Modelo do Domínio
 ![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20classe.png)
 ### Explicação do Diagrama de Classe 
