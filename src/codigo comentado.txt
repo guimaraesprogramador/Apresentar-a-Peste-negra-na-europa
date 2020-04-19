@@ -1,36 +1,3 @@
- codigo comentado do mudar_estado.js
-    // if (typeof(Worker) !== "undefined"){  
-    //         
-    //     //parte importante em teste
-    //     // if(p.excutar_voz == "inicio"){
-    //     //     var worker_mapa = new Worker("/src/mudar_estado.js");
-    //     //     setInterval(function(){
-    //     //         switch(p.excutar_voz){
-    //     //             case "inicio":
-    //     //                 worker_voz = new Worker("/src/voz/voz.js");
-    //     //                 worker_mapa.postMessage(["inicio",personagem]);
-    //     //                 worker_voz.onmessage = function(event){
-    //     //                     p.observar_voz = event.data.resposta;
-    //     //                     p.mudar_voz([p.observar_voz,event.data.falar])
-    //     //                     worker_voz.terminate();
-    //     //                     worker_voz = null;
-    //     //                     p.observar_mapa = "primeira parte";
-    //     //                     p.excutar_voz = p.observar_mapa;
-    //     //                 }
-    //     //             break;
-    //     //             case "primeira parte":
-    //     //                 worker_mapa.postMessage([p.observar_mapa])
-    //     //                 worker_voz.onmessage = function(event){
-    //     //                     p.observar_voz = event.data.resposta;
-    //     //                 }
-    //     //                 break;
-    //     //         }
-    //     //     },3000)
-    //     // }
-           
-        
-    // }
-
 codigo comentado do arquivo componentes.js
 // function gps(qual){
 // var dados = null;
