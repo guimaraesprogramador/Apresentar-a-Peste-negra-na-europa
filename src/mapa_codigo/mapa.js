@@ -1,12 +1,9 @@
 
 class mapa {
     map = null;
-    lant = 0;
-    long = 0;
+    carregar = true;
     constructor(){
-        this.lant = exibir.lantitude;
-        this.long = exibir.longitude;
-        let initialCoordinates = [this.lant,this.long]; // mapa do Brasil
+        let initialCoordinates = [43.2945782,5.0843522]; // mapa do Brasil
         //latitude e a longitude
      var initialZoomLevel = 4;
 // create a map in the "map" div, set the view to a given place and zoom
@@ -32,12 +29,17 @@ class mapa {
     }
 }
 const m = new mapa();
-m.inicial();
+if(m.carregar == true){
+    m.carregar = false;
+    m.inicial();
+    s.mudar_voz([m.carregar])
+}
 self.addEventListener("message",event=>{
     var tipo = event.data[0];
     switch(tipo){
-        case "inicio":
+        case "abertura":
             m.ponto_inicial(m.lant,m.long);
+            postMessage({resposta:"primeira_parte_compelta"});
         break;
     }
 })
