@@ -21,7 +21,7 @@ class  componentes_voz {
             switch(parte){
                 case "abertura":
                     var linha ="Bem vindo " + "a projeção de cartografia " +"\n" +" a respeito" +
-                    "da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+
+                    "da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+"com"+ " o foco \n no Continente Europeu,"+"\n"+
                     "O  nome do responsável pelo projeto é " + this.autor + "\n"+
                     "Quem está falando  é o " + this.Nome+"\n"+
                     "Sou uma "+ this.identidade + " criada pela "+  "empresa Google" +"\n"+
@@ -32,16 +32,22 @@ class  componentes_voz {
                 case "introdução":
                    
                     var linha = {
-                        primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de Codiv-19, \n mais sim com \n os relados \n ",
-                        segunda_linha:" que aconteceu \n no tempo estimado de 1346 a 1353 \n durante a Pandemia da Peste Bubônica \n",
-                        terceira_linha: " (conhecida como peste negra), \n  sendo assim \n não me responsabilizo \n por qualquer informação \n",
-                        quarta_linha:" irregular dessa Pandemia \n pois, \n as informação são exclusivamente \n de site ou livros referentes na documentação.",
-                        quinta_linha:" Sendo assim, \n será realizado \n uma  projeção cartografica \n da Pandemia Peste Bubônica \n no tempo  estimado.",
-                        sexta_linha:" Obrigado \n pelo compreendimento."
+                        primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de Covid-19, \n mais sim \n os relados ",
+                        segunda_linha:" que aconteceram \n naquela época \n durante \n a Idade Média \n",
+                        terceira_linha: "sendo assim \n não me responsabilizo \n por qualquer informação \n",
+                        quarta_linha:" incorreta dessa Pandemia \n pois, \n as informação são exclusivamente \n do site ou livro referentes na documentação.",
+                        quinta_linha:" Sendo assim, \n será realizado \n uma projeção cartografica \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
+                        sexta_linha:"Caso queria \n o contado de  WhatsApp e o E-mail está na documentação. \n",
+                        setima_linha:"Caso queria assistir a projeção, \n não saia desta página após \n três segundos desta divulgação. \n",
+                        oitava_linha:"Sendo assim obrigado pelo compreendimento."
                     }
                     texto = linha.primeira_parte + linha.segunda_linha +
                     linha.terceira_linha + linha.quarta_linha +
-                    linha.quinta_linha + linha.sexta_linha;
+                    linha.quinta_linha + linha.sexta_linha + linha.setima_linha +
+                    linha.oitava_linha; 
+                    break;
+            case "inicio":
+                
                     break;
             }
             return texto;
@@ -62,10 +68,10 @@ class  componentes_voz {
                         threads_voz.push(new Worker("src/voz/voz.js")); 
                         // conteude de  introdução
                         threads_voz.push(new Worker("src/voz/voz.js")); 
-                        // threads_voz.push(new Worker("src/voz/voz.js")); 
+                       // threads_voz.push(new Worker("src/voz/voz.js")); 
                         threads_voz[0].postMessage([sequencia_primeira_parte[0],this.Roteiro(sequencia_primeira_parte[0])]);
                            threads_voz[1].postMessage([sequencia_primeira_parte[1],this.Roteiro(sequencia_primeira_parte[1])]);
-                        // threads_voz[2].postMessage([sequencia_primeira_parte[2],this.Roteiro(sequencia_primeira_parte[2])]);
+                     //   threads_voz[2].postMessage([sequencia_primeira_parte[2],this.Roteiro(sequencia_primeira_parte[2])]);
                        
                             return new Promise((resolve,reject)=>{
                             threads_voz[0].onmessage = event=>{
@@ -86,7 +92,7 @@ class  componentes_voz {
                         //     this.fala  = event.data.resposta;
                         //      v.transmitir(resposta);
                         //      threads_voz[2].terminate();
-                        //      m.carregar = false;
+                        //      m.estado = false;
                         //      sequencia_primeira_parte.shift();
                         //      sequencia_primeira_parte.shift();
                         //     sequencia_primeira_parte.shift();

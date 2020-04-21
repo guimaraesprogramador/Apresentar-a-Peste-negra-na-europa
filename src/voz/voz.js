@@ -3,19 +3,26 @@ class voz {
     constructor(){ 
       
     }
-//   quem(){
-//         try{
-//             return c.texto;
-//         }catch(ev){
-//             console.log("Algo deu errado.");
-//         }
-//     }
- 
     transmitir(falar){
-    var msg = new SpeechSynthesisUtterance(falar);
+    var msg =  new SpeechSynthesisUtterance();
     msg.lang = "pt-br";
     msg.volume = 0.7;
-    window.speechSynthesis.speak(msg);
+    msg.text = falar;
+    var isChrome =  window.chrome == undefined ? false:true;
+    if(isChrome){
+        if(window.speechSynthesis !== undefined ){
+            
+            window.speechSynthesis.speak(msg);
+        }
+        else{
+            console.clear();
+            alert("por favor login na sua conta google. \n Caso não queria utilize Firefox ou Microsft Edge");
+        }
+    }
+    else
+        {
+        window.speechSynthesis.speak(msg);
+        }
     }
 }
 const v = new voz();

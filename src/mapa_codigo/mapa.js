@@ -1,9 +1,9 @@
 
 class mapa {
     map = null;
-    carregar = true;
+    estado= true;
     constructor(){
-        let initialCoordinates = [43.2945782,5.0843522]; // mapa do Brasil
+        let initialCoordinates = [43.2945782, 5.0843522]; // mapa do Brasil
         //latitude e a longitude
      var initialZoomLevel = 4;
 // create a map in the "map" div, set the view to a given place and zoom
@@ -29,17 +29,17 @@ class mapa {
     }
 }
 const m = new mapa();
-if(m.carregar == true){
-    m.carregar = false;
+if(m.estado== true){
+    m.estado = false;
     m.inicial();
-    s.mudar_voz([m.carregar])
+    s.mudar_voz([m.estado])
 }
 self.addEventListener("message",event=>{
     var tipo = event.data[0];
     switch(tipo){
-        case "abertura":
-            m.ponto_inicial(m.lant,m.long);
-            postMessage({resposta:"primeira_parte_compelta"});
+        case "ponto inicial":
+            m.ponto_inicial(43.2945782,5.0843522);
+            postMessage({resposta:"primeira_parte_completa"});
         break;
     }
 })

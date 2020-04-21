@@ -19,8 +19,12 @@ O software é bastante afetado pelo estado do que se inicia sendo assim descrido 
 ### Explicação do Diagrama de Classe 
 O software possui duas classes principais: voz e o mapa, mas uma classe intermediaria que é denominada ”mudar_estado”. 
 #### A classe “voz”
-Esse objeto tem como composição a classe denominada “mudar_estado” que é vincula com uma associação unilateral (que a classe “voz” não reconhecer a existência da classe “componente_voz”) que contém os seguintes atributos:
+Esse objeto tem como composição a classe denominada “mudar_estado” que contém somente um método:
 
+1.”Transmitir” que tem um variável denominada “falar” que é tipo string(texto) que é um void(funções que não retorna nada).
+
+#### A classe “componente_voz”
+Esse objeto é vinculado com uma associação unilateral (que a classe “mudar_estado” não reconhecer a existência dessa classe) que contém os seguintes atribuídos: 
 1. ”Gênero” Definido como parecido com feminino.
 2. ”Nome” Definido “Translatotron” criado pela empresa Google.
 3. “autor” Definido como “Kévin Vieira Gomes Guimaraes”.
@@ -33,16 +37,18 @@ Seus atribuído são o caráter do personagem criada pelo software para fazer há tr
 
 
 #### A classe “mapa”
-Esse objeto tem como composição a classe denominada “mudar_estado” que é vinculada com uma associação unilateral (que a classe “mapa” não reconhecer a existência da classe “componentes_exibição”) que contém os seguintes atributos:
+Esse objeto tem como composição a classe denominada “mudar_estado” que tem dois métodos que são:
+1.  ”coordenadas” que tem duas variáveis como: lang e long do tipo number(real,inteiro,decimal e etc...).
+2. “threads” que não tem nenhuma variável que é um void(funções que não retorna nada).
+E uma variável denominada “estado” definhada inicialmente com verdadeira (true).
+#### A classe “componentes_exibição”
+Esse objeto é vinculado com uma associação unilateral (que a classe “mudar_estado” não reconhecer a existência da classe “componentes_exibição”) que contém os seguintes atributos:
+
 1. ”Ano” Definido como number(real,inteiro,decimal e etc...).
 2. “local” Definido como string(texto).
 3. “latitude” Definido como number(real,inteiro,decimal e etc...).
 4. “longitude” Definido como number(real,inteiro,decimal e etc...).
 
-E tem dois métodos que são:
-1.  ”coordenadas” que tem duas variáveis como: lang e long do tipo number(real,inteiro,decimal e etc...).
-2. “threads” que não tem nenhuma variável que é um void(funções que não retorna nada).
- 
 #### A classe intermediaria ”mudar_estado”
 Esse objeto é necessário para caracterizar tanto o mapa que reproduzido tanto para ajudar no conto da história apresentar pela classe “voz”.
 Ela é composta de dois métodos que são:
