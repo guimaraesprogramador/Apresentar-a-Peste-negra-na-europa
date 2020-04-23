@@ -8,7 +8,6 @@ O digrama proposto abaixo é o de sequência seguindo a frase de ** ARISTÓTELES **
 ### Parte 1
 ![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%201.png)
 #### Descrição
-##### iniciando a projeção cartográfica.
 A classe “mapa” precisa primeira ter internet para carregar o mapa (bidimensional) e ela faz parte um arquivo html carregado (index.html).
 ***
 Depois disso ela encaminha diretamente para a método denominado “mudar_voz” da classe “mudar_estado” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” para a classe “mudar_estado”.
@@ -93,8 +92,9 @@ Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “th
 ### Parte 4
 ![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%204.png)
 #### Descrição
-** Transmissão para classe “componentes_voz”. **
+***
 Depois disso vai executar a duas última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true” até fazer a reprodução de todos os threads_voz.
+***
 ### observação
 O software é bastante afetado pelo estado do que se inicia sendo assim descrido abaixo:
 
