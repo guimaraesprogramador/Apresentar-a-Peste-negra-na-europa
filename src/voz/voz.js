@@ -30,16 +30,16 @@ self.addEventListener("message",ev=>{
     var tipo = ev.data[0];
     switch(tipo){
         case "abertura":
-           var abertura = ev.data[1];
-            postMessage({resposta:abertura});
+          c.Roteiro(tipo);
+          postMessage({resposte:tipo+" completo"});
        break;
        case "introdução":
-           var introdução = ev.data[1];
-           postMessage({resposta:introdução});
+            c.Roteiro(tipo);
+            postMessage({resposte:tipo+" completo"});
            break;
-        case "inicio":
-            var inicio =  ev.data[1];
-            postMessage({resposta:inicio});
+        case "parte_1":
+            c.Roteiro(tipo);
+            postMessage({resposte:tipo+" completo"});
             break;
     }
 });
