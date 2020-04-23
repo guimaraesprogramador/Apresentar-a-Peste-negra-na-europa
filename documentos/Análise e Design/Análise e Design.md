@@ -3,17 +3,133 @@
 ***
 # 4. Análise e Design
 ## 4.1 Arquitetura do Sistema
-![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20estado.png)
-### Explicação do Diagrama de estado.
+O digrama proposto abaixo é o de sequência seguindo a frase de ** ARISTÓTELES ** que é “o todo é maior que a soma das partes” foi dividido o conteúdo todo do digrama de sequência em 4 partes e suas descrições para facilidade a visualização e a leitura entre si.
+
+### Parte 1
+![IMAGE]()
+#### Descrição
+##### iniciando a projeção cartográfica.
+> Carregando dos componentes do mapa.
+A classe “mapa” precisa primeira ter internet para carregar o mapa (bidimensional) e ela faz parte um arquivo html carregado (index.html).
+***
+> Transmissão para classe ”mapa”.
+Depois disso ela encaminha diretamente para a método denominado “mudar_voz” da classe “mudar_estado” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” para a classe “mudar_estado”.
+***
+> Recebimento para classe “mudar_estado”.
+Na classe “mudar_estado” que vai encaminha quando terminar a classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Transmissão para classe “componentes_voz”.
+Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar três vez que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_voz.
+***
+> Recebimento para classe “componentes_voz”.
+>5 Quando retorna na última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_mapa” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
+***
+> Transmissão para classe “mudar_estado”.
+Na classe “mudar_estado” vai encaminha diretamente para classe “componentes_mapa” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Recebimento para classe “componentes_mapa”.
+Na classe “componentes_mapa” o método “threads()”que é um void(função que não retorna nada) tem um variável “threads_mapa” vai carregar um método da classe “mapa” que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_mapa.
+***
+
+
+
+
+
+### Parte 2
+![IMAGE]()
+#### Descrição
+
+> Continuação Recebimento da classe “componentes_mapa”. 
+Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false”.
+***
+> Transmissão para classe “mudar_estado”.
+Na classe “mudar_estado” que vai encaminha quando terminar a classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Recebimento para classe “mudar_estado”
+Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar cinco vezes que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_voz.
+***
+> Transmissão para classe “componentes_voz”.
+Quando retorna na última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
+***
+> Recebimento para classe “componentes_voz”.
+Na classe “mudar_estado”  vai encaminha diretamente para classe “componentes_mapa” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Transmissão para classe “componentes_mapa”.
+Na classe “componentes_mapa” o método “threads()”que é um void(função que não retorna nada) tem um variável “threads_mapa” vai carregar um método da classe “mapa” que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_mapa.
+*** 
+
+### Parte 3
+![IMAGE]()
+#### Descrição
+> Recebimento da classe “componentes_mapa” 
+Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” e para a classe “mudar_estado”.
+***
+> Transmissão para classe “mudar_estado”.
+ Na classe “mudar_estado” que vai encaminha quando terminar a classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Recebimento para classe “mudar_estado”. 
+Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_voz.
+***
+> Transmissão para classe “componentes_voz”.
+Quando retorna na última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_mapa” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
+***
+> Recebimento para classe “componentes_voz”.
+Na classe “mudar_estado”  vai encaminha diretamente para classe “componentes_mapa” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Transmissão para classe “componentes_mapa”.
+Na classe “componentes_mapa” o método “threads()”que é um void(função que não retorna nada) tem um variável “threads_mapa” vai carregar um método da classe “mapa” que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_mapa.
+*** 
+> Recebimento para classe “componentes_mapa”.
+Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” e para a classe “mudar_estado”.
+***
+> Transmissão para classe “mudar_estado”.
+Na classe “mudar_estado” que vai encaminha quando terminar a classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Recebimento para classe “mudar_estado”. 
+Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_voz.
+***
+> Transmissão para classe “componentes_voz”.
+Quando retorna na última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_mapa” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
+***
+> Recebimento para classe “componentes_voz”.
+Na classe “mudar_estado”  vai encaminha diretamente para classe “componentes_mapa” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Transmissão para classe “componentes_mapa”.
+Na classe “componentes_mapa” o método “threads()”que é um void(função que não retorna nada) tem um variável “threads_mapa” vai carregar um método da classe “mapa” que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_mapa, por fim vai finalizar a classe “mapa”.
+
+
+***
+> Recebimento para classe “componentes_mapa”.
+Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” para a classe “mudar_estado”, por fim vai finalizar a classe “componentes_mapa”.
+***
+> Transmissão para classe “mudar_estado”.
+Na classe “mudar_estado” que vai encaminha quando terminar a classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada).
+***
+> Recebimento para classe “mudar_estado”.
+Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar tres vez que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_voz.
+***
+> Transmissão para classe “componentes_voz”.
+Quando retorna na primeira ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_mapa” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
+***
+> Recebimento para classe “componentes_voz”.
+>1 Na classe “mudar_estado” vai encaminha diretamente para classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada), por fim vai finalizar classe “mudar_estado”.
+***
+>2 Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila).
+*** 
+### Parte 4
+![IMAGE]()
+#### Descrição
+> Transmissão para classe “componentes_voz”
+Depois disso vai executar a duas última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true” até fazer a reprodução de todos os threads_voz.
+### observação
 O software é bastante afetado pelo estado do que se inicia sendo assim descrido abaixo:
 
-1.  O software é ativado independo do usuário precisa dele ou não pois, já carregar os modulo necessário da aplicação e começar a trabalha praticamente os dados filtrados mais primeiramente ele promove um esclarecimento ao usuário suas finalidades, sendo usuário aceita-las ou recusa-las.
+1.  O software é ativado independo do usuário precisa dele ou não pois, já carregar os modulo necessário da aplicação e começar a trabalha praticamente os dados filtrados mais primeiramente ele promove um esclarecimento ao usuário suas finalidades, cabe o usuário aceite ou recuse. 
 
-2. Quando o software é recusado, o software não tem mais nada fidelidade ainda de ser utilizado. 
-
-3. Caso o software é aceito a apresentar os termos impostos.
+2. Caso o usuário aceito é esperado que fique na página em um curto intervalo de 3 segundos.
+3. Caso o usuário recuse, ele pode sair da página antes dos 3 segundos sem se preocupar com seus dados pessoais.
 4.Depois de cada história apresentada é exibido a localidade referente a história contada.
-5. É por fim é exibir a união dessa localidade mostrada a extensão da Pandemia bubônica.
+5. É por fim é exibir a união dessa localidade mostrada a extensão da Pandemia peste bubônica.
 ## 4.2 Modelo do Domínio
 ![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20classe.png)
 ### Explicação do Diagrama de Classe 
