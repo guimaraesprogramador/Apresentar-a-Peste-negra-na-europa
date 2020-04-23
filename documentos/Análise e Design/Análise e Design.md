@@ -61,48 +61,34 @@ Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “th
 ***
 Quando retorna na última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_mapa” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
 ***
-** Recebimento para classe “componentes_voz”. **
 Na classe “mudar_estado”  vai encaminha diretamente para classe “componentes_mapa” como o método denominado “threads()” que é um void(função que não retorna nada).
 ***
-** Transmissão para classe “componentes_mapa”. **
 Na classe “componentes_mapa” o método “threads()”que é um void(função que não retorna nada) tem um variável “threads_mapa” vai carregar um método da classe “mapa” que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_mapa.
 *** 
-** Recebimento para classe “componentes_mapa”. **
 Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” e para a classe “mudar_estado”.
 ***
-** Transmissão para classe “mudar_estado”. **
 Na classe “mudar_estado” que vai encaminha quando terminar a classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada).
 ***
-** Recebimento para classe “mudar_estado”. **
 Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_voz.
 ***
-** Transmissão para classe “componentes_voz”. **
 Quando retorna na última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_mapa” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
 ***
-** Recebimento para classe “componentes_voz”. **
 Na classe “mudar_estado”  vai encaminha diretamente para classe “componentes_mapa” como o método denominado “threads()” que é um void(função que não retorna nada).
 ***
-** Transmissão para classe “componentes_mapa”. **
 Na classe “componentes_mapa” o método “threads()”que é um void(função que não retorna nada) tem um variável “threads_mapa” vai carregar um método da classe “mapa” que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_mapa, por fim vai finalizar a classe “mapa”.
 
-
 ***
-** Recebimento para classe “componentes_mapa”. **
 Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” para a classe “mudar_estado”, por fim vai finalizar a classe “componentes_mapa”.
 ***
-> Transmissão para classe “mudar_estado”. **
 Na classe “mudar_estado” que vai encaminha quando terminar a classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada).
 ***
-** Recebimento para classe “mudar_estado”. **
 Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar tres vez que tem como retorno um array(ordem em fila) até fazer a reprodução de todos os threads_voz.
 ***
-** Transmissão para classe “componentes_voz”. **
 Quando retorna na primeira ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_mapa” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true”.
 ***
-** Recebimento para classe “componentes_voz”. **
->1 Na classe “mudar_estado” vai encaminha diretamente para classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada), por fim vai finalizar classe “mudar_estado”.
+Na classe “mudar_estado” vai encaminha diretamente para classe “componentes_voz” como o método denominado “threads()” que é um void(função que não retorna nada), por fim vai finalizar classe “mudar_estado”.
 ***
->2 Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila).
+Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila).
 *** 
 ### Parte 4
 ![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%204.png)
