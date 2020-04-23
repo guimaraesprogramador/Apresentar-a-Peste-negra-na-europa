@@ -6,7 +6,7 @@
 O digrama proposto abaixo é o de sequência seguindo a frase de ** ARISTÓTELES ** que é “o todo é maior que a soma das partes” foi dividido o conteúdo todo do digrama de sequência em 4 partes e suas descrições para facilidade a visualização e a leitura entre si.
 
 ### Parte 1
-![IMAGE]()
+![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%201.png)
 #### Descrição
 ##### iniciando a projeção cartográfica.
 > Carregando dos componentes do mapa.
@@ -36,7 +36,7 @@ Na classe “componentes_mapa” o método “threads()”que é um void(função que não re
 
 
 ### Parte 2
-![IMAGE]()
+![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%202.png)
 #### Descrição
 
 > Continuação Recebimento da classe “componentes_mapa”. 
@@ -59,7 +59,7 @@ Na classe “componentes_mapa” o método “threads()”que é um void(função que não re
 *** 
 
 ### Parte 3
-![IMAGE]()
+![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%203.png)
 #### Descrição
 > Recebimento da classe “componentes_mapa” 
 Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” e para a classe “mudar_estado”.
@@ -117,7 +117,7 @@ Quando retorna na primeira ordem da variável “threads_voz()”vai encaminhar diret
 >2 Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila).
 *** 
 ### Parte 4
-![IMAGE]()
+![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%204.png)
 #### Descrição
 > Transmissão para classe “componentes_voz”
 Depois disso vai executar a duas última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true” até fazer a reprodução de todos os threads_voz.
