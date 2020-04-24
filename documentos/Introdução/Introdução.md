@@ -54,8 +54,8 @@ Data inicial | Data final | Item
 14/04/20     | 20/04/20   | ver o caso do Chrome não realizado a voz. 
 20/04/20     | 23/04/20  | termina o círculos com as threads e fazer e terminar o diagrama de sequência para entender threads.
 23/04/20     | 25/04/20  | corrigir ou se o código é limpo. 
-25/04/20     | 26/04/20  | olhar nos 3 sites fazer de teste performance o projeto. 
-Finalizar projeto: | 27/04/20| sujeito a alteração futuras.
+26/04/20     | 27/04/20  | olhar nos 3 sites fazer de teste performance o projeto. 
+Finalizar projeto: | 28/04/20| sujeito a alteração futuras.
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
 ***
