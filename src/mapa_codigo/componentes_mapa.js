@@ -85,8 +85,8 @@ class componentes_mapa {
             let sequencia_primeira =[];
             let threads_mapa = []
             var caminho_mapa = "src/mapa_codigo/mapa.js";
-            if(sequencia.length == 0){
-               sequencia_primeira = ["abertura"];
+            if(sequencia_primeira.length == 0){
+               sequencia_primeira.push("abertura");
                threads_mapa.push(new Worker(caminho_mapa));
                threads_mapa[0].postMessage([ sequencia_primeira[0]]);
                return new Promise((resolve,reject)=>{

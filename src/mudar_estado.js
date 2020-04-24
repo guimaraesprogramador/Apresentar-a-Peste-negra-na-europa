@@ -6,7 +6,7 @@ class mudar {
         {          
                 if(mudança[0]==false){
                         c.theads().then(r=>{
-
+                                
                         }).catch(e=>{
                                 console.log("erro na thread de componentes_voz");
                         })
