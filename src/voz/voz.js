@@ -10,7 +10,7 @@ class voz {
     msg.text = falar;
     var isChrome =  window.chrome == undefined ? false:true;
     if(isChrome){
-        if(window.speechSynthesis !== undefined ){
+        if(window.speechSynthesis.speak != undefined ){
             
             window.speechSynthesis.speak(msg);
         }

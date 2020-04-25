@@ -89,7 +89,6 @@ class componentes_mapa {
                sequencia_primeira.push("abertura");
                threads_mapa.push(new Worker(caminho_mapa));
                threads_mapa[0].postMessage([ sequencia_primeira[0]]);
-               return new Promise((resolve,reject)=>{
                   threads_mapa[0].onmessage = event=>{
                      var resposta =  event.data.resposta == sequencia_primeira[0] +" completo"
                      ?false : true;
@@ -103,8 +102,6 @@ class componentes_mapa {
                        sequencia_segunda.pop();
                        s.mudar_voz([m.estado]);
                }
-
-               })
                
             }
             else if(sequencia_primeira[0] == "norte da Itália"){
