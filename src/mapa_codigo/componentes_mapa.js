@@ -88,10 +88,7 @@ class componentes_mapa {
             if(sequencia_primeira.length == 0){
                sequencia_primeira.push("abertura");
                threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ sequencia_primeira[0],{
-                  latitude:e.lantitude,
-                  longitude:e.longitude
-               }]);
+               threads_mapa[0].postMessage([ sequencia_primeira[0]]);
                   threads_mapa[0].onmessage = event=>{
                      var resposta =   event.data.resposta == sequencia_primeira[0]
                      ?false : true;
@@ -131,7 +128,8 @@ class componentes_mapa {
          } 
          else if(sequencia_primeira[0] =="toda a europa"){
             threads_mapa.push(new Worker(caminho_mapa));
-            threads_mapa[0].postMessage([ sequencia_primeira[0]]);
+            threads_mapa[0].postMessage([ sequencia_primeira[0],e.latitude,
+              e.longitude]);
             return new Promise((resolve,reject)=>{
                threads_mapa[0].onmessage = event=>{
                   var resposta =  event.data.resposta == sequencia_primeira[0]
