@@ -17,6 +17,6 @@ class mudar {
                 else this.mudar_voz(mudança[0]);
         }   
     }
-    const s = new mudar();
-
+const s = new mudar();
+if(m instanceof mapa)m.inicial();
     

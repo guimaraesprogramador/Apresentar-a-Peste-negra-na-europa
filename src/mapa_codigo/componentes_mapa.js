@@ -88,9 +88,12 @@ class componentes_mapa {
             if(sequencia_primeira.length == 0){
                sequencia_primeira.push("abertura");
                threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ sequencia_primeira[0]]);
+               threads_mapa[0].postMessage([ sequencia_primeira[0],{
+                  latitude:e.lantitude,
+                  longitude:e.longitude
+               }]);
                   threads_mapa[0].onmessage = event=>{
-                     var resposta =  event.data.resposta == sequencia_primeira[0] +" completo"
+                     var resposta =   event.data.resposta == sequencia_primeira[0]
                      ?false : true;
                        sequencia_primeira.pop();
                        let sequencia_segunda = ["norte da Itália"];
@@ -105,16 +108,19 @@ class componentes_mapa {
                
             }
             else if(sequencia_primeira[0] == "norte da Itália"){
+               e.Local = sequencia_primeira[0];
                threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ sequencia_primeira[0]]);
+               threads_mapa[0].postMessage([ sequencia_primeira[0],{
+                  latitude:e.latitude,
+                  longitude:e.longitude
+               }]);
                return new Promise((resolve,reject)=>{
                threads_mapa[0].onmessage = event=>{
-                  var resposta =  event.data.resposta == sequencia_primeira[0] +" completo"
+                  var resposta =  event.data.resposta == sequencia_primeira[0]
                      ?false : true;
                      sequencia_primeira.pop();
                      let sequencia_segunda = ["toda a europa"];
                      sequencia_primeira = sequencia_segunda.slice();
-                     threads_mapa[0].terminate();
                      threads_mapa[0] = null;
                      threads_mapa.pop();
                      m.estado = resposta;
@@ -128,9 +134,8 @@ class componentes_mapa {
             threads_mapa[0].postMessage([ sequencia_primeira[0]]);
             return new Promise((resolve,reject)=>{
                threads_mapa[0].onmessage = event=>{
-                  var resposta =  event.data.resposta == sequencia_primeira[0] +" completo"
-                     ?false : true;
-                     threads_mapa[0].terminate();
+                  var resposta =  event.data.resposta == sequencia_primeira[0]
+                     ? false : true;
                      threads_mapa[0] = null;
                      threads_mapa.pop();
                      m.estado = resposta;

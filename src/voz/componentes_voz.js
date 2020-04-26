@@ -43,7 +43,7 @@ class  componentes_voz {
                         quarta_linha:" incorreta dessa Pandemia \n pois, \n as informação são exclusivamente \n do site ou livro referentes na documentação.",
                         quinta_linha:" Sendo assim, \n será realizado \n uma projeção cartografica \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
                         sexta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
-                        setima_linha:"Para assistir a projeção, \n não saia desta página após \n três segundos desta divulgação. \n",
+                        setima_linha:"Para assistir a projeção, \n não saia desta página",
                         oitava_linha:"Sendo assim obrigado pelo compreendimento."
                     }
                     c.texto = linha.primeira_parte + linha.segunda_linha +
@@ -92,14 +92,14 @@ class  componentes_voz {
                            
                             threads_voz[0].onmessage = event=>{ 
                                 this.Roteiro(sequencia_primeira_parte[0]);    
-                                var resposta  = this.falar;                   
+                                var resposta  = c.falar;                    
                                     v.transmitir(resposta);               
                                     threads_voz[0] = null;
                                     threads_voz[1].postMessage([sequencia_primeira_parte[1]]);
                                 }
                             threads_voz[1].onmessage = event=>{
                                 this.Roteiro(sequencia_primeira_parte[1]);    
-                                var resposta  = this.falar;         
+                                var resposta  = c.falar;           
                                 v.transmitir(resposta);     
                                 threads_voz[1] = null;
                                 threads_voz[2].postMessage([sequencia_primeira_parte[2]]); 
@@ -114,8 +114,8 @@ class  componentes_voz {
                                     threads_voz.pop();
                                     sequencia_primeira_parte.shift();
                                     sequencia_primeira_parte.shift();
-                                    m.estado = true;
-                                    s.mudar_mapa([m.estado]);            
+                                   m.estado = true;
+                                    s.mudar_mapa([m.estado ]);            
                                 };
                             },200);
                            window.setTimeout(function(){
@@ -135,45 +135,45 @@ class  componentes_voz {
                           
                                 threads_voz[0].onmessage = event=>{
                                     this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = this.falar;  
+                                    var resposta  = c.falar;   
                                     v.transmitir(resposta);               
                                     threads_voz[0] = null;
                                     threads_voz[1].postMessage([sequencia_primeira_parte[0]]);
                                 }
                                 threads_voz[1].onmessage = event=>{
                                     this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = this.falar;    
+                                    var resposta  = c.falar;     
                                     v.transmitir(resposta);               
                                     threads_voz[1] = null;
                                     threads_voz[2].postMessage([sequencia_primeira_parte[0]]);
                                 }
                                 threads_voz[2].onmessage = event=>{
                                     this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = this.falar;  
+                                    var resposta  = c.falar;     
                                     v.transmitir(resposta);               
                                     threads_voz[2] = null;
                                     threads_voz[3].postMessage([sequencia_primeira_parte[0]]);
                                 }
                                 threads_voz[3].onmessage = event=>{
                                     this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = this.falar;  
+                                    var resposta  =c.falar;   
                                     v.transmitir(resposta);               
                                     threads_voz[3] = null;
                                     threads_voz[4].postMessage([sequencia_primeira_parte[0]]);
                                 }
                                 threads_voz[4].onmessage = event=>{
                                     this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = this.falar;  
+                                    var resposta  = c.falar;   
                                     v.transmitir(resposta);               
                                     threads_voz[4] = null;
                                     threads_voz.pop();
                                     threads_voz.pop();
                                     threads_voz.pop();
                                     threads_voz.pop();
+                                    m.estado  = true;
                                     sequencia_primeira_parte.push("parte_2");
                                     sequencia_primeira_parte.shift();
-                                    m.estado = true;
-                                    s.mudar_mapa([m.estado]);
+                                    s.mudar_mapa([m.estado ]);      
                                 }
 
                     }
