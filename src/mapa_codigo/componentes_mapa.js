@@ -145,6 +145,7 @@ class componentes_mapa {
          
        }catch(ev){
          console.log(ev);
+         v.IA.cancel();
        }
     }
 }

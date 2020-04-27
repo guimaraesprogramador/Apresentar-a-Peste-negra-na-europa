@@ -39,17 +39,14 @@ class  componentes_voz {
                     var linha = {
                         primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de Covid-19, \n mais sim \n os relados ",
                         segunda_linha:" que aconteceram \n naquela época \n durante \n a Idade Média \n",
-                        terceira_linha: "sendo assim \n não me responsabilizo \n por qualquer informação \n",
-                        quarta_linha:" incorreta dessa Pandemia \n pois, \n as informação são exclusivamente \n do site ou livro referentes na documentação.",
-                        quinta_linha:" Sendo assim, \n será realizado \n uma projeção cartografica \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
-                        sexta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
-                        setima_linha:"Para assistir a projeção, \n não saia desta página",
-                        oitava_linha:"Sendo assim obrigado pelo compreendimento."
+                        terceira_linha:" Sendo assim, \n será realizado \n uma projeção cartografica \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
+                        quarta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
+                        quinta_linha:"Para assistir a projeção, \n não saia desta página",
+                        sexta_linha:"Sendo assim obrigado pelo compreendimento."
                     }
                     c.texto = linha.primeira_parte + linha.segunda_linha +
                     linha.terceira_linha + linha.quarta_linha +
-                    linha.quinta_linha + linha.sexta_linha + linha.setima_linha +
-                    linha.oitava_linha; 
+                    linha.quinta_linha + linha.sexta_linha;
                     break;
             case "parte_1":
                 let linhas =[
@@ -60,13 +57,19 @@ class  componentes_voz {
                     "Depois a frota passou em Sicília \n que ficou  por três semanas ancorada \n com isso a bactéria ficou mais forte.",
                     "tanto que a frota foi expulsa de lá,\n e só conseguir ancorar no porto de Marselha no dia primeiro de novembro de 1347. "
                 ]   
-                let parte_1 = {
-                        index:0
+                c.texto = "";
+                linhas.forEach((value,index,array)=>{
+                    if(index == array.length -1){
+                        linhas.pop();
+                        linhas.pop();
+                        linhas.pop();
+                        linhas.pop();
+                          // reprodução a parte 1 completa
+                        break;
                     }
-                    var index =  parte_1.index;
-                    c.texto = linhas[index].toString();
-                    linhas.shift();
-                    linhas.length != 0 ?  linhas.length =  linhas.length  + 1 : linhas.length  = 0;
+                    else c.texto = c.texto +  value.toString();
+                })
+                   
                     break;
             }
         }catch(ev){
@@ -104,7 +107,7 @@ class  componentes_voz {
                                 threads_voz[1] = null;
                                 threads_voz[2].postMessage([sequencia_primeira_parte[2]]); 
                             }
-                            
+                            // reprodução a parte 1
                             var tempo = window.setInterval(function(){
                                 threads_voz[2].onmessage = event=>{    
                                     c.Roteiro(sequencia_primeira_parte[2]); 
@@ -122,66 +125,67 @@ class  componentes_voz {
                                 clearInterval(tempo);
                             },350)
                     }
-                    else if(sequencia_primeira_parte[0] == "parte_1")
-                    {
-                            threads_voz.pop();
-                            threads_voz.push(new Worker("src/voz/voz.js")); 
-                            threads_voz.push(new Worker("src/voz/voz.js")); 
-                            threads_voz.push(new Worker("src/voz/voz.js")); 
-                            threads_voz.push(new Worker("src/voz/voz.js")); 
-                            threads_voz.push(new Worker("src/voz/voz.js")); 
-                             // linha 1 ate 6
-                            threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
-                          
-                                threads_voz[0].onmessage = event=>{
-                                    this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = c.falar;   
-                                    v.transmitir(resposta);               
-                                    threads_voz[0] = null;
-                                    threads_voz[1].postMessage([sequencia_primeira_parte[0]]);
-                                }
-                                threads_voz[1].onmessage = event=>{
-                                    this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = c.falar;     
-                                    v.transmitir(resposta);               
-                                    threads_voz[1] = null;
-                                    threads_voz[2].postMessage([sequencia_primeira_parte[0]]);
-                                }
-                                threads_voz[2].onmessage = event=>{
-                                    this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = c.falar;     
-                                    v.transmitir(resposta);               
-                                    threads_voz[2] = null;
-                                    threads_voz[3].postMessage([sequencia_primeira_parte[0]]);
-                                }
-                                threads_voz[3].onmessage = event=>{
-                                    this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  =c.falar;   
-                                    v.transmitir(resposta);               
-                                    threads_voz[3] = null;
-                                    threads_voz[4].postMessage([sequencia_primeira_parte[0]]);
-                                }
-                                threads_voz[4].onmessage = event=>{
-                                    this.Roteiro(sequencia_primeira_parte[0])
-                                    var resposta  = c.falar;   
-                                    v.transmitir(resposta);               
-                                    threads_voz[4] = null;
-                                    threads_voz.pop();
-                                    threads_voz.pop();
-                                    threads_voz.pop();
-                                    threads_voz.pop();
-                                    m.estado  = true;
-                                    sequencia_primeira_parte.push("parte_2");
-                                    sequencia_primeira_parte.shift();
-                                    s.mudar_mapa([m.estado ]);      
-                                }
+                    // else if(sequencia_primeira_parte[0] == "parte_1")
+                    // {
+                    //         threads_voz.pop();
+                    //         threads_voz.push(new Worker("src/voz/voz.js")); 
+                    //         threads_voz.push(new Worker("src/voz/voz.js")); 
+                    //         threads_voz.push(new Worker("src/voz/voz.js")); 
+                    //         threads_voz.push(new Worker("src/voz/voz.js")); 
+                    //         threads_voz.push(new Worker("src/voz/voz.js")); 
 
-                    }
-                    else if(sequencia_primeira_parte[0] == "parte_2"){
-                        console.log(sequencia_primeira_parte.toString());
-                    }
+                    //         threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
+                          
+                    //             threads_voz[0].onmessage = event=>{
+                    //                 this.Roteiro(sequencia_primeira_parte[0])
+                    //                 var resposta  = c.falar;   
+                    //                 v.transmitir(resposta);               
+                    //                 threads_voz[0] = null;
+                    //                 threads_voz[1].postMessage([sequencia_primeira_parte[0]]);
+                    //             }
+                    //             threads_voz[1].onmessage = event=>{
+                    //                 this.Roteiro(sequencia_primeira_parte[0])
+                    //                 var resposta  = c.falar;     
+                    //                 v.transmitir(resposta);               
+                    //                 threads_voz[1] = null;
+                    //                 threads_voz[2].postMessage([sequencia_primeira_parte[0]]);
+                    //             }
+                    //             threads_voz[2].onmessage = event=>{
+                    //                 this.Roteiro(sequencia_primeira_parte[0])
+                    //                 var resposta  = c.falar;     
+                    //                 v.transmitir(resposta);               
+                    //                 threads_voz[2] = null;
+                    //                 threads_voz[3].postMessage([sequencia_primeira_parte[0]]);
+                    //             }
+                    //             threads_voz[3].onmessage = event=>{
+                    //                 this.Roteiro(sequencia_primeira_parte[0])
+                    //                 var resposta  =c.falar;   
+                    //                 v.transmitir(resposta);               
+                    //                 threads_voz[3] = null;
+                    //                 threads_voz[4].postMessage([sequencia_primeira_parte[0]]);
+                    //             }
+                    //             threads_voz[4].onmessage = event=>{
+                    //                 this.Roteiro(sequencia_primeira_parte[0])
+                    //                 var resposta  = c.falar;   
+                    //                 v.transmitir(resposta);               
+                    //                 threads_voz[4] = null;
+                    //                 threads_voz.pop();
+                    //                 threads_voz.pop();
+                    //                 threads_voz.pop();
+                    //                 threads_voz.pop();
+                    //                 m.estado  = true;
+                    //                 sequencia_primeira_parte.push("parte_2");
+                    //                 sequencia_primeira_parte.shift();
+                    //                 s.mudar_mapa([m.estado ]);      
+                    //             }
+
+                    // }
+                    // else if(sequencia_primeira_parte[0] == "parte_2"){
+                    //     console.log(sequencia_primeira_parte.toString());
+                    // }
             }catch(ev){
                 console.log(ev);
+                v.IA.cancel();
             }
           
         }

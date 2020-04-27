@@ -8,11 +8,11 @@ class voz {
     msg.lang = "pt-br";
     msg.volume = 0.7;
     msg.text = falar;
+    this.IA =  window.speechSynthesis;
     var isChrome =  window.chrome == undefined ? false:true;
     if(isChrome){
-        if(window.speechSynthesis.speak != undefined ){
-            
-            window.speechSynthesis.speak(msg);
+        if(this.IA.speak != undefined ){
+           this.IA.speak(msg);
         }
         else{
             console.clear();
@@ -21,7 +21,7 @@ class voz {
     }
     else
         {
-        window.speechSynthesis.speak(msg);
+      this.IA.speak(msg);
         }
     }
 }
