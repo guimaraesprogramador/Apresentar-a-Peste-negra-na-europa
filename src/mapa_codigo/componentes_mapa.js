@@ -1,5 +1,10 @@
 // dados primarios
 class componentes_mapa {
+   constructor(){
+        this.referencia;
+        this.eixo_principal_terra;
+        this.linha_imaginada;
+   }
      get ANO (){
         return this.ANO;
      }
@@ -7,52 +12,71 @@ class componentes_mapa {
         this.ANO = data;
      }
      get Local(){
-         return this.Local;
+         return this.referencia;
      }
      set Local(referencia){
-         this.Local = referencia;
+         this.referencia = referencia
      }
      get latitude(){
-        return this.lantitude;
+        return this.eixo_principal_terra;
      }
      set latitude(numero){
-        this.lantitude = numero;
+        this.eixo_principal_terra = numero;
      }
      get longitude(){
-        return this.longitude;
+        return  this.linha_imaginada;;
      }
      set longitude(numero){
-        this.longitude = numero;
+      this.linha_imaginada = numero;
      }
-    constructor(){
-        
-    }
     coordenadas(lant,long){
-       // porto de Marselha
-       let porto_Marselha= [lant,long];
-       // verifica a lantitude e longitude 
-       var radios = 0;
-       var metade = null;
-       let circulos_localizados = [];
-       var circulo = null;
-       var localização = this.Local == "porto de Marselha"? "porto de Marselha" : this.Local;
-       if(localização == this.Local){
-         metade =  Number.parseInt(240.6 /2);
-         while(radios <= metade)
-         {
-            radios = this.longitude == long && this.lantitude == lant
-            ? radios = radios + 5 :0;
-            circulo = L.circle(porto_Marselha).setRadius(radios).addTo(m.map);
-          }
-       }
-       else if(localização == "norte da Itália"){
-         let norte = [lant,long];
-        circulo = L.circle([norte[0],norte[1]],{
+       try{
+           /* 
+            // constante 
+            var radios = 0;
+            var metade = null;
+            // var circulos_localizados = [];
+            var circulo = null;
+
+            // verifica local
+            var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.referencia;
+            if(localização == e.Local){
+            // porto de Marselha
+            
+            
+            var marselha = L.circle([lant,long],{
+                        color:"red",
+                        fillColor: "#dc143c",
+                        fillOpacity: 0.5,
+                        radius: 5
+                     }).addTo(m.map);
+            console.log(marselha);
+            // m.map.addTo(marselha);
+            // console.log(marselha.getRadius());
+            // m.estado = false;
+            // e.referencia = "aumentar circulo";
+            // s.mudar_voz([m.estado]);
+            }
+            else if(localização =="aumentar circulo" ){
+            metade =  Number.parseInt(240.6 /2);
+            while(radios <= metade)
+            {
+               radios = this.longitude == long && this.lantitude == lant
+               ? radios = radios + 5 :0;
+               circulo = L.circle(porto_Marselha).setRadius(radios).addTo(m.map);
+               }
+               e.referencia = localização;
+               m.estado = false;
+               s.mudar_voz([m.estado]); 
+            }
+        else if(localização == "norte da Itália"){
+            // norte da Itália
+         circulo = L.circle([lant,long],{
          color:"red",
          fillColor: "#dc143c",
-       fillOpacity: 0.5,
-       radius: 5
-       }).addTo(this.map);
+         fillOpacity: 0.5,
+         radius: 5
+         }).addTo(this.map);
          radios = circulo.getRadius();
          metade = Math.trunc(301338 /2 );
          while(radios <= metade){
@@ -62,12 +86,15 @@ class componentes_mapa {
          }
          circulos_localizados.push(circulo);
          circulo = null;
-       }
-      else {
-        var area_europa = 10180000;
-        circulo  = circulos_localizados[0];
-        while(radios != area_europa)
-        {
+         m.estado = false;
+         s.mudar_voz([m.estado]); 
+         }
+         else {
+         // toda o continente europeu
+         var area_europa = 10180000;
+         circulo  = circulos_localizados[0];
+         while(radios != area_europa)
+         {
          if(radios == 5000000|| radios == 10090000){
             radios = this.longitude == long && this.lantitude == lant
             ? radios = radios + 90000 :radios;
@@ -76,77 +103,70 @@ class componentes_mapa {
             radios = this.longitude == long && this.lantitude == lant
             ? radios = radios + 1000000 :radios;
          }
-        circulo.setRadius(radios).addTo(this.map);
-        }
-      }
+         circulo.setRadius(radios).addTo(m.map);
+         }
+         m.estado = false;
+         s.mudar_voz([m.estado]); 
+         }*/
+       }catch(ev){
+          console.log(ev);
+       }
+      
     }
  theads(){
        try{
-            let sequencia_primeira =[];
             let threads_mapa = []
             var caminho_mapa = "src/mapa_codigo/mapa.js";
-            if(sequencia_primeira.length == 0){
-               sequencia_primeira.push("abertura");
+            if(e.Local == undefined){
+               e.referencia  = "ponto inicial";
                threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ sequencia_primeira[0]]);
+               threads_mapa[0].postMessage([ e.referencia]);
                   threads_mapa[0].onmessage = event=>{
-                     var resposta =   event.data.resposta == sequencia_primeira[0]
-                     ?false : true;
-                       sequencia_primeira.pop();
-                       let sequencia_segunda = ["norte da Itália"];
-                       sequencia_primeira = sequencia_segunda.slice();
-                       threads_mapa[0].terminate();
-                       threads_mapa[0] = null;
-                       threads_mapa.pop();
-                       m.estado = resposta;
-                       sequencia_segunda.pop();
-                       s.mudar_voz([m.estado]);
+                     e.coordenadas(event.data.dados[0],event.data.dados[1]);
+                     threads_mapa.pop();
                }
                
             }
-            else if(sequencia_primeira[0] == "norte da Itália"){
-               e.Local = sequencia_primeira[0];
+            else if(e.referencia == "aumentar circulo"){
+                threads_mapa.push(new Worker(caminho_mapa));
+               threads_mapa[0].postMessage([ e.referencia,e.latitude,
+                  e.longitude]);
+               threads_mapa[0].onmessage = event=>{
+                     e.referencia = "norte da Itália";
+                     e.coordenadas(event.data.dados[0],event.data.dados[1]);
+                     threads_mapa.pop();
+               }
+            }
+            else if(e.Local == "norte da Itália"){
                threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ sequencia_primeira[0],{
-                  latitude:e.latitude,
-                  longitude:e.longitude
-               }]);
-               return new Promise((resolve,reject)=>{
+               threads_mapa[0].postMessage([ e.referencia,e.latitude,
+                  e.longitude]);
                threads_mapa[0].onmessage = event=>{
-                  var resposta =  event.data.resposta == sequencia_primeira[0]
-                     ?false : true;
-                     sequencia_primeira.pop();
-                     let sequencia_segunda = ["toda a europa"];
-                     sequencia_primeira = sequencia_segunda.slice();
-                     threads_mapa[0] = null;
-                     threads_mapa.pop();
-                     m.estado = resposta;
-                     sequencia_segunda.pop();
-                     s.mudar_voz([m.estado]); 
+                  e.referencia = "toda a europa";
+                  e.coordenadas(event.data.dados[0],event.data.dados[1]);
+                  threads_mapa.pop();
                }
-            });
          } 
-         else if(sequencia_primeira[0] =="toda a europa"){
+         else if(e.Local =="toda a europa"){
             threads_mapa.push(new Worker(caminho_mapa));
-            threads_mapa[0].postMessage([ sequencia_primeira[0],e.latitude,
+            threads_mapa[0].postMessage([ e.referencia,e.latitude,
               e.longitude]);
-            return new Promise((resolve,reject)=>{
                threads_mapa[0].onmessage = event=>{
-                  var resposta =  event.data.resposta == sequencia_primeira[0]
-                     ? false : true;
-                     threads_mapa[0] = null;
+                  e.coordenadas(event.data.dados[0],event.data.dados[1]);
                      threads_mapa.pop();
-                     m.estado = resposta;
-                     s.mudar_voz([m.estado]);
                }
-            });
          }   
               
          
        }catch(ev){
          console.log(ev);
-         v.IA.cancel();
+         if(v.IA == undefined) console.log("sintese de fala não criada");
+         else  v.IA.cancel();
        }
     }
 }
 const e = new componentes_mapa();
+window.onbeforeunload = function(){
+   if(v.IA == undefined) console.log("sintese de fala não criada");
+   else v.IA.cancel();
+}

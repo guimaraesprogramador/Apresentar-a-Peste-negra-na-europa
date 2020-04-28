@@ -11,12 +11,12 @@ class voz {
     this.IA =  window.speechSynthesis;
     var isChrome =  window.chrome == undefined ? false:true;
     if(isChrome){
-        if(this.IA.speak != undefined ){
+        if(this.IA.speaking){
            this.IA.speak(msg);
         }
         else{
             console.clear();
-            alert("por favor login na sua conta google. \n Caso não queria utilize Firefox ou Microsft Edge");
+            alert("por favor Faça o login na conta google. \n  Se não utilize o Firefox ou Edge");
         }
     }
     else
