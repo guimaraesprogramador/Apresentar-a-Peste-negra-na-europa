@@ -1,6 +1,4 @@
-[![voltar](https://raw.githubusercontent.com/google/material-design-icons/master/navigation/2x_web/ic_subdirectory_arrow_left_black_48dp.png)](https://github.com/guimaraesprogramador/zonas_distancia) 
 
-***
 # 1. Introdução
 
 O Software não é a solução para problemas da Pandemia que está acontecendo no mundo, mais sim para mostrar que a força de uma Pandemia, pode demora passar se a gente não estive com cuidado que realmente precisa.
@@ -52,10 +50,12 @@ Data inicial | Data final | Item
 04/04/20     |  08/04/20 | Terminar o tópico 4.3.1 e começa o código.
 08/04/20     | 13/04/20  | desenvolver o código através de threads e corrigir algumas falta de interpretação.
 14/04/20     | 20/04/20   | ver o caso do Chrome não realizado a voz. 
-20/04/20     | 23/04/20  | termina o círculos com as threads e fazer e terminar o diagrama de sequência para entender threads.
-23/04/20     | 25/04/20  | corrigir ou se o código é limpo. 
-26/04/20     | 27/04/20  | olhar nos 3 sites fazer de teste performance o projeto. 
-Finalizar projeto: | 28/04/20| sujeito a alteração futuras.
+20/04/20     | 27/04/20  | termina o círculos com as threads e fazer e terminar o diagrama de sequência para entender threads.
+27/04/20     | 02/05/20  | corrigir ou se o código é limpo. 
+03/05/20     | 09/05/20  | olhar nos 3 sites fazer de teste performance o projeto. 
+Finalizar projeto: | 10/05/20| sujeito a alteração futuras.
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
 ***
+[![voltar](https://raw.githubusercontent.com/google/material-design-icons/master/navigation/2x_web/ic_subdirectory_arrow_left_black_48dp.png)](https://github.com/guimaraesprogramador/zonas_distancia) 
+
