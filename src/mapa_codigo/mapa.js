@@ -16,12 +16,12 @@ class mapa {
      s.mudar_voz([m.estado])
     }
     ponto_inicial(latitude,longitude){
-        var parte_1 = [parseInt(latitude), parseInt(longitude),"1348", "porto de Marselha"]
+        var parte_1 = [latitude, longitude,"1348", "porto de Marselha"]
         return parte_1;
     }
     circle(latitude,longitude,Local){
         if(Local != "porto de Marselha")
-        var posicao = [ latitude.toFixed(2),longitude.toFixed(2),"1349",Local];
+        var posicao = [ latitude,longitude,"1349",Local];
         return posicao;
     }
 }

@@ -4,26 +4,33 @@ class voz {
       
     }
     transmitir(falar){
-    var msg =  new SpeechSynthesisUtterance();
-    msg.lang = "pt-br";
-    msg.volume = 0.7;
-    msg.text = falar;
-    this.IA =  window.speechSynthesis;
-    var isChrome =  window.chrome == undefined ? false:true;
-    if(isChrome){
-        if(this.IA.speaking){
-           this.IA.speak(msg);
+    try{
+        var msg =  new SpeechSynthesisUtterance();
+        msg.lang = "pt-br";
+        msg.volume = 0.7;
+        msg.text = falar;
+        this.IA =  window.speechSynthesis;
+        var isChrome =  window.chrome == undefined ? false:true;
+        if(isChrome){
+            if(this.IA.speaking){
+               this.IA.speak(msg);
+            }
+            else{
+                console.clear();
+                window.onload = function(){
+                    alert("por favor Faça o login na conta google. \n  Se não utilize o Firefox ou Edge");
+                }
+            }
         }
-        else{
-            console.clear();
-            alert("por favor Faça o login na conta google. \n  Se não utilize o Firefox ou Edge");
+        else
+            {
+          this.IA.speak(msg);
+            }
+        }catch(ev){
+            console.error(ev);
+           // console.clear();
         }
-    }
-    else
-        {
-      this.IA.speak(msg);
-        }
-    }
+}
 }
 const v = new voz();
 self.addEventListener("message",ev=>{

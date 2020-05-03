@@ -31,64 +31,63 @@ class componentes_mapa {
      }
     coordenadas(lant,long){
        try{
-           /* 
+           
             // constante 
-            var radios = 0;
-            var metade = null;
-            // var circulos_localizados = [];
-            var circulo = null;
-
+            var radios = 5;
+            var metade;
+            var circulo;
             // verifica local
-            var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.referencia;
+            var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.Local;
             if(localização == e.Local){
             // porto de Marselha
-            
-            
-            var marselha = L.circle([lant,long],{
+            L.circle([lant,long],radios,{
                         color:"red",
                         fillColor: "#dc143c",
                         fillOpacity: 0.5,
-                        radius: 5
                      }).addTo(m.map);
-            console.log(marselha);
-            // m.map.addTo(marselha);
-            // console.log(marselha.getRadius());
-            // m.estado = false;
-            // e.referencia = "aumentar circulo";
+            e.eixo_principal_terra  = lant;
+            e.linha_imaginada = long;
+            m.estado = false;
+             e.referencia = "aumentar circulo";
             // s.mudar_voz([m.estado]);
             }
+            // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
-            metade =  Number.parseInt(240.6 /2);
-            while(radios <= metade)
-            {
-               radios = this.longitude == long && this.lantitude == lant
-               ? radios = radios + 5 :0;
-               circulo = L.circle(porto_Marselha).setRadius(radios).addTo(m.map);
+            radios =  radios + 163;
+            metade =  (2406/3.6);
+               while(radios != parseInt(metade))
+               {   
+                   // somando em 100 em 100
+                     radios = e.longitude == long && e.lantitude == lant
+                     ? radios = radios + 100:0;
+                  circulo = L.circle([lant,long]).setRadius(radios).addTo(m.map);
+                 
                }
-               e.referencia = localização;
-               m.estado = false;
-               s.mudar_voz([m.estado]); 
+            e.referencia = localização;
+            m.estado = false;
+            s.mudar_voz([m.estado]); 
             }
-        else if(localização == "norte da Itália"){
+         
+        //else if(localização == "norte da Itália"){
             // norte da Itália
-         circulo = L.circle([lant,long],{
-         color:"red",
-         fillColor: "#dc143c",
-         fillOpacity: 0.5,
-         radius: 5
-         }).addTo(this.map);
-         radios = circulo.getRadius();
-         metade = Math.trunc(301338 /2 );
-         while(radios <= metade){
+         /*resultado da distancia entre turm na itaiia com a cidade de Marselha na frança,
+         em inteiro abaixo:
+         */
+        /* var radios_Marselha = 668;
+        var resultado = parseInt(372.1 /3.6 );
+         radios = radios - 2;
+         while(radios !=  resultado){
+             // somando de 20 em 20
             radios = this.longitude == long && this.lantitude == lant
-            ? radios = radios + 10 :radios;
+            ? radios = radios + 20 :radios;
             circulo.setRadius(radios).addTo(m.map);
          }
-         circulos_localizados.push(circulo);
+         
          circulo = null;
          m.estado = false;
          s.mudar_voz([m.estado]); 
          }
+         
          else {
          // toda o continente europeu
          var area_europa = 10180000;
@@ -107,7 +106,9 @@ class componentes_mapa {
          }
          m.estado = false;
          s.mudar_voz([m.estado]); 
-         }*/
+         
+         }
+         /* fim da historia*/
        }catch(ev){
           console.log(ev);
        }
@@ -127,7 +128,8 @@ class componentes_mapa {
                }
                
             }
-            else if(e.referencia == "aumentar circulo"){
+           
+            else if(e.Local == "aumentar circulo"){
                 threads_mapa.push(new Worker(caminho_mapa));
                threads_mapa[0].postMessage([ e.referencia,e.latitude,
                   e.longitude]);
@@ -157,10 +159,9 @@ class componentes_mapa {
                }
          }   
               
-         
+         console.log(e.Local);
        }catch(ev){
-         console.log(ev);
-         if(v.IA == undefined) console.log("sintese de fala não criada");
+         if(v.IA == undefined)  console.error(ev);
          else  v.IA.cancel();
        }
     }

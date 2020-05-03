@@ -64,6 +64,9 @@ class  componentes_voz {
                 })
                    
                     break;
+                case "parte_2":
+                    let linhas = [];
+                break;
             }
         }catch(ev){
             console.log(ev);
@@ -84,7 +87,7 @@ class  componentes_voz {
                         /// começo da história
                         threads_voz.push(new Worker("src/voz/voz.js")); 
                         threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
-                           
+                            // abertura
                             threads_voz[0].onmessage = event=>{ 
                                 this.Roteiro(sequencia_primeira_parte[0]);    
                                 var resposta  = c.falar;                    
@@ -107,21 +110,27 @@ class  componentes_voz {
                                     v.transmitir(resposta);     
                                     threads_voz.pop();
                                     threads_voz.pop();
-                                    var tempo = window.setInterval(function(){
-                                        if(v.IA.pending == false){
+                                   
+                                    }
+                                    while(m.estado == false){
+                                        // se não tem reproduzindo e não tem fala para reproduzir.
+                                        if(v.IA.speaking == false && v.IA.pending == false ){
                                             m.estado = true;
-                                            s.mudar_mapa([m.estado ]);
+                                            s.mudar_mapa([m.estado]);
                                             c.texto =  "parte_2";
                                         }
+                                    /*var tempo = window.setInterval(function(){
+                                       
                                     },150);
                                    window.setTimeout(function(){
-                                       if( m.estado)clearInterval(tempo);
-                                    },450)
+                                       if(m.estado)clearInterval(tempo);
+                                    },450)*/
                                 };
                             
                     }
                     else if(c.falar == "parte_2"){
                         // reprodução parte 2
+                        threads_voz.pop();
                         console.log(c.falar);
                     }
                     else if(c.falar =="parte_3"){
@@ -133,8 +142,8 @@ class  componentes_voz {
                             console.log(c.falar);
                     }
             }catch(ev){
-                console.log(ev);
-                if(v.IA == undefined) console.log("sintese de fala não criada");
+                
+                if(v.IA == undefined) console.error(ev);
                 else v.IA.cancel();
             }
           
