@@ -11,7 +11,6 @@ class mudar {
                                         v.IA.pause();
                                         m.estado = true;
                                         s.mudar_mapa([m.estado]);
-                                        c.texto =  "parte_2";
                                         clearInterval(tempo);
                                 }
                         },2000);

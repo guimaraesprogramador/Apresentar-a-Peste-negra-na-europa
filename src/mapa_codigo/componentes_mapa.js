@@ -44,6 +44,7 @@ class componentes_mapa {
                         fillColor: "#dc143c",
                         fillOpacity: 0.5,
                      }).addTo(m.map);
+                     console.log(this.circulo);
             e.eixo_principal_terra  = lant;
             e.linha_imaginada = long;
             m.estado = false;

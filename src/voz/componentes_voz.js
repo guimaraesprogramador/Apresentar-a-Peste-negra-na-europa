@@ -65,8 +65,53 @@ class  componentes_voz {
                    
                     break;
                 case "parte_2":
-                   // let linhas = [];
+                   let linhas2 = [
+                        "O desembarque da frota foi liberado \n pelas autoridades no interesse das mercadorias valiosas que a frota tinha a bordo.",
+                        "Por causa da transmissão causada pelos ratos contaminados na frota, \n a cidade foi rapidamente contagiada pela bacté-ria, \n torna-se  uma das entradas de Pandemia  no continente europeu. \n",
+                        "Como consequência disso, a frota ficou muito tempo ancorada neste porto, \n  mas ninguém se aproximava dela \n embora estivesse com mercadorias valiosas e com sua tripulação morta.\n ",
+                        "Com isso a bactéria não parou mais, ficou mais forte com o clima mais frio e se \n desenvolveu na forma pulmonar. \n",
+                        "Depois de um ano a maioria da população de Marselha "
+                   ]
+                   c.texto = "";
+                   linhas2.forEach((value,index,array)=>{
+
+                    c.texto = c.texto +  value.toString();
+                 })
                 break;
+                case "parte_3-1":
+                    let linhas3_1 = [
+                        "morreu pela bactéria. \n",
+                        "Em 1349 a bactéria chegou na Itália pelo Norte. \n"
+                    ] 
+                    c.texto = "";
+                   linhas3_1.forEach((value,index,array)=>{
+
+                    c.texto = c.texto +  value.toString();
+                 })
+                    break;
+                case "parte_3-2":
+                        let linhas3_2 =[
+                            "e depois passou pelo centro,",
+                            "\n  por fim espalhou pelo Continente europeu. "
+                        ]
+                        c.texto = "";
+                        linhas3_2.forEach((value,index,array)=>{
+     
+                         c.texto = c.texto +  value.toString();
+                      })
+                    break;
+                case "parte_4":
+                    let linhas4 = [
+                        "Com isso essa bactéria matou um terço da população no Continente europeu até 1350. ",
+                        "Essa história foi elaborada de acordo com as informações dos historiadores, \n mais informação na documentação. ",
+                        "Caso deseje assistir novamente, \n aperte F5 ou atualize a página \n, então obrigado."
+                    ]
+                    c.texto = "";
+                    linhas4.forEach((value,index,array)=>{
+ 
+                     c.texto = c.texto +  value.toString();
+                  })
+                    break;
             }
         }catch(ev){
             console.log(ev);
@@ -89,14 +134,14 @@ class  componentes_voz {
                         threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
                             // abertura
                             threads_voz[0].onmessage = event=>{ 
-                                this.Roteiro(sequencia_primeira_parte[0]);    
+                                this.Roteiro(event.data.resposta);    
                                 var resposta  = c.falar;                    
                                     v.transmitir(resposta);               
                                     threads_voz[0] = null;
                                     threads_voz[1].postMessage([sequencia_primeira_parte[1]]);
                                 }
                             threads_voz[1].onmessage = event=>{
-                                this.Roteiro(sequencia_primeira_parte[1]);    
+                                this.Roteiro(event.data.resposta);    
                                 var resposta  = c.falar;           
                                 v.transmitir(resposta);     
                                 threads_voz[1] = null;
@@ -105,37 +150,39 @@ class  componentes_voz {
                             // reprodução a parte 1
                             
                                 threads_voz[2].onmessage = event=>{    
-                                    c.Roteiro(sequencia_primeira_parte[2]); 
+                                    c.Roteiro(event.data.resposta); 
                                     var resposta  = c.falar;   
                                     v.transmitir(resposta);     
                                     threads_voz.pop();
                                     threads_voz.pop();
                                     console.log(v.IA);
-                                    
-                                    // se não tem reproduzindo e não tem fala para reproduzir.
-                                        
-                                //     var tempo = window.setInterval(function(){
-                                //         
-                                        
-                                //     },2000);
-                                //    window.setTimeout(function(){
-                                //        if(m.estado)clearInterval(tempo);
-                                //     },3000)
+                                    c.texto =  "parte_2";
                                     }
-                                       
-                            
                     }
                     else if(c.falar == "parte_2"){
-                        // reprodução parte 2
+                        // remover a ultima thread da parte 1
                         threads_voz.pop();
-                        console.log(c.falar);
+                        // reprodução parte 2
+                        threads_voz.push(new Worker("src/voz/voz.js"));
+                        threads_voz[0].postMessage("parte_2"); 
+                        threads_voz[0].onmessage = event =>{
+                            c.Roteiro(event.data.resposta);
+                            var resposta = c.falar;
+                            v.IA.resume();
+                            v.transmitir(resposta); 
+                            c.texto =  "parte_3-1";
+                        }
                     }
-                    else if(c.falar =="parte_3"){
-                            // reprodução parte 2
+                    else if(c.falar =="parte_3-1"){
+                            // reprodução parte 3 primeira parte
                             console.log(c.falar);
                     }
+                    else if(c.falar == "parte_3-2"){
+                             // reprodução parte 3 segunda parte
+                             console.log(c.falar);
+                    }
                     else if(c.falar == "parte_4"){
-                            // reprodução parte 2
+                            // reprodução parte 4 
                             console.log(c.falar);
                     }
             }catch(ev){
