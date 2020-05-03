@@ -35,12 +35,11 @@ class componentes_mapa {
             // constante 
             var radios = 5;
             var metade;
-            var circulo;
             // verifica local
             var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.Local;
             if(localização == e.Local){
             // porto de Marselha
-            L.circle([lant,long],radios,{
+           this.circulo  = L.circle([lant,long],radios,{
                         color:"red",
                         fillColor: "#dc143c",
                         fillOpacity: 0.5,
@@ -54,40 +53,37 @@ class componentes_mapa {
             // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
             radios =  radios + 163;
-            metade =  (2406/3.6);
-               while(radios != parseInt(metade))
+            metade =  parseInt(2406/3.6);
+               while(radios != metade)
                {   
+                 this.circulo.setRadius(radios).addTo(m.map);
                    // somando em 100 em 100
                      radios = e.longitude == long && e.lantitude == lant
                      ? radios = radios + 100:0;
-                  circulo = L.circle([lant,long]).setRadius(radios).addTo(m.map);
-                 
                }
             e.referencia = localização;
             m.estado = false;
             s.mudar_voz([m.estado]); 
             }
          
-        //else if(localização == "norte da Itália"){
+        else if(localização == "norte da Itália"){
             // norte da Itália
          /*resultado da distancia entre turm na itaiia com a cidade de Marselha na frança,
-         em inteiro abaixo:
+         que é  372.1 km.
          */
-        /* var radios_Marselha = 668;
-        var resultado = parseInt(372.1 /3.6 );
+         // Conversão de km/h em m/s resultado em 1033 m/s.
+        var resultado = parseInt(3721 /3.6 );
          radios = radios - 2;
          while(radios !=  resultado){
              // somando de 20 em 20
             radios = this.longitude == long && this.lantitude == lant
             ? radios = radios + 20 :radios;
-            circulo.setRadius(radios).addTo(m.map);
+            this.circulo.setRadius(radios).addTo(m.map);
          }
-         
-         circulo = null;
          m.estado = false;
          s.mudar_voz([m.estado]); 
          }
-         
+         /*
          else {
          // toda o continente europeu
          var area_europa = 10180000;

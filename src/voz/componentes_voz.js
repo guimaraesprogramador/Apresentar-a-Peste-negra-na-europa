@@ -65,7 +65,7 @@ class  componentes_voz {
                    
                     break;
                 case "parte_2":
-                    let linhas = [];
+                   // let linhas = [];
                 break;
             }
         }catch(ev){
@@ -110,22 +110,19 @@ class  componentes_voz {
                                     v.transmitir(resposta);     
                                     threads_voz.pop();
                                     threads_voz.pop();
-                                   
+                                    console.log(v.IA);
+                                    
+                                    // se não tem reproduzindo e não tem fala para reproduzir.
+                                        
+                                //     var tempo = window.setInterval(function(){
+                                //         
+                                        
+                                //     },2000);
+                                //    window.setTimeout(function(){
+                                //        if(m.estado)clearInterval(tempo);
+                                //     },3000)
                                     }
-                                    while(m.estado == false){
-                                        // se não tem reproduzindo e não tem fala para reproduzir.
-                                        if(v.IA.speaking == false && v.IA.pending == false ){
-                                            m.estado = true;
-                                            s.mudar_mapa([m.estado]);
-                                            c.texto =  "parte_2";
-                                        }
-                                    /*var tempo = window.setInterval(function(){
                                        
-                                    },150);
-                                   window.setTimeout(function(){
-                                       if(m.estado)clearInterval(tempo);
-                                    },450)*/
-                                };
                             
                     }
                     else if(c.falar == "parte_2"){
