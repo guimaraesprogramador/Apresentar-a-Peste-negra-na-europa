@@ -6,7 +6,7 @@ class  componentes_voz {
         return "parecida com o Feminino";
     }
     get Nome(){
-        return "Sistema do navegador";
+        return "A voz desta página.";
     }
     get autor(){
         return "Kévin Vieira Gomes Guimaraes";
@@ -42,7 +42,7 @@ class  componentes_voz {
                         terceira_linha:" Sendo assim, \n será realizado \n uma projeção cartografica \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
                         quarta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
                         quinta_linha:"Para assistir a projeção, \n não saia desta página \n",
-                        sexta_linha:"Sendo assim obrigado pelo compreendimento."
+                        sexta_linha:"Sendo assim,\n obrigado pelo entendimento."
                     }
                     c.texto = linha.primeira_parte + linha.segunda_linha +
                     linha.terceira_linha + linha.quarta_linha +
