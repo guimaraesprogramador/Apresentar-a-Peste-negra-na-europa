@@ -16,9 +16,10 @@ class voz {
                this.IA.speak(msg);
             }
             else{
-                console.clear();
+                
                 window.onload = function(){
                     alert("por favor Faça o login na conta google. \n  Se não utilize o Firefox ou Edge");
+                    console.clear();
                 }
             }
         }
