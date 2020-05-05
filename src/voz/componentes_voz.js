@@ -134,15 +134,15 @@ class  componentes_voz {
                         threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
                             // abertura
                             threads_voz[0].onmessage = event=>{ 
-                                this.Roteiro(event.data.resposta);    
-                                var resposta  = c.falar;                    
+                               //this.Roteiro(event.data.resposta);    
+                                var resposta  = ""; //c.falar;                    
                                     v.transmitir(resposta);               
                                     threads_voz[0] = null;
                                     threads_voz[1].postMessage([sequencia_primeira_parte[1]]);
                                 }
                             threads_voz[1].onmessage = event=>{
-                                this.Roteiro(event.data.resposta);    
-                                var resposta  = c.falar;           
+                                //this.Roteiro(event.data.resposta);    
+                                var resposta  ="" //c.falar;           
                                 v.transmitir(resposta);     
                                 threads_voz[1] = null;
                                 threads_voz[2].postMessage([sequencia_primeira_parte[2]]); 
@@ -150,13 +150,11 @@ class  componentes_voz {
                             // reprodução a parte 1
                             
                                 threads_voz[2].onmessage = event=>{    
-                                    c.Roteiro(event.data.resposta); 
-                                    var resposta  = c.falar;   
+                                   //c.Roteiro(event.data.resposta); 
+                                   var resposta  = "1"; //c.falar;   
                                     v.transmitir(resposta);     
                                     threads_voz.pop();
                                     threads_voz.pop();
-                                    console.log(v.IA);
-                                    c.texto =  "parte_2";
                                     }
                     }
                     else if(c.falar == "parte_2"){
@@ -166,11 +164,11 @@ class  componentes_voz {
                         threads_voz.push(new Worker("src/voz/voz.js"));
                         threads_voz[0].postMessage("parte_2"); 
                         threads_voz[0].onmessage = event =>{
-                            c.Roteiro(event.data.resposta);
-                            var resposta = c.falar;
+                            //c.Roteiro(event.data.resposta);
+                            var resposta  = "2"; //c.falar;   
                             v.IA.resume();
                             v.transmitir(resposta); 
-                            c.texto =  "parte_3-1";
+                            //c.texto =  "parte_3-1";
                         }
                     }
                     else if(c.falar =="parte_3-1"){
