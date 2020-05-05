@@ -63,7 +63,7 @@ class componentes_mapa {
                }
             m.estado = false;
             e.referencia = "norte da Itália";
-            s.mudar_voz([m.estado]); 
+         //   s.mudar_voz([m.estado]); 
             
             }
          

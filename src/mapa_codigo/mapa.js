@@ -12,8 +12,7 @@ class mapa {
      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
          attribution: '&copy; Contribuidores do <a href="http://osm.org/copyright">OpenStreetMap</a>'
      }).addTo(this.map);
-     m.estado = false;
-     s.mudar_voz([m.estado])
+     
     }
     ponto_inicial(latitude,longitude){
         var parte_1 = [latitude, longitude,"1348", "porto de Marselha"]
