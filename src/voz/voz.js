@@ -10,23 +10,7 @@ class voz {
         msg.volume = 0.7;
         msg.text = falar;
         this.IA =  window.speechSynthesis;
-        var isChrome =  window.chrome == undefined ? false:true;
-        if(isChrome){
-            if(this.IA.speaking){
-               this.IA.speak(msg);
-            }
-            else{
-                
-                window.onload = function(){
-                    alert("por favor Faça o login na conta google. \n  Se não utilize o Firefox ou Edge");
-                    console.clear();
-                }
-            }
-        }
-        else
-            {
           this.IA.speak(msg);
-            }
         }catch(ev){
             console.error(ev);
            // console.clear();

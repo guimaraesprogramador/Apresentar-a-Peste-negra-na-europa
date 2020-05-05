@@ -28,5 +28,19 @@ class mudar {
         }   
     }
 const s = new mudar();
-if(m instanceof mapa)m.inicial();
-    
+m.inicial();
+window.onload = function(){
+        var isChrome =  window.chrome == undefined ? false:true;
+        if(isChrome){
+            if(window.speechSynthesis.speaking != this.undefined){
+                m.estado = false;
+                s.mudar_voz([m.estado])
+            }
+        }
+        else {
+            alert("por favor Faça o login na conta google. \n  Se não utilize o Firefox ou Edge");
+            console.clear();
+        
+        }
+    }
+       
