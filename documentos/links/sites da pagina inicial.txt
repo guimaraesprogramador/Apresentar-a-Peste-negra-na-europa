@@ -6,4 +6,12 @@ https://cdn.jsdelivr.net/npm/alasql@0.5
 
 https://braziljs.org/artigos/javascript-multi-threading-com-web-workers-2/
 
-https://www.ibm.com/developerworks/br/rational/library/content/RationalEdge/sep04/bell/index.html
+https://www.ibm.com/developerworks/br/rational/library/content/RationalEdge/sep04/bell/index.
+
+https://www.google.com/maps/place/Porto+Velho+de+Marselha/@43.2803051,5.2404128,11z/data=!4m8!1m2!2m1!1sporto+maritimo+de+marselha!3m4!1s0x12c9c0c6a1843729:0x7d3f3acf189dc3b1!8m2!3d43.2950303!4d5.3646265
+
+https://www.google.com/maps/place/Marselha,+Fran%C3%A7a/@43.280555,5.2404103,11z/data=!3m1!4b1!4m8!1m2!2m1!1sporto+maritimo+de+marselha!3m4!1s0x12c9bf4344da5333:0x40819a5fd970220!8m2!3d43.296482!4d5.36978
+
+http://lineadecodigo.com/javascript/area-de-un-circulo-en-javascript/
+
+https://www.youtube.com/watch?v=RGug1ja3SA8

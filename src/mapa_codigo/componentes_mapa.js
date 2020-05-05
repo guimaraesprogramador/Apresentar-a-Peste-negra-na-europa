@@ -37,33 +37,34 @@ class componentes_mapa {
             var metade;
             // verifica local
             var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.Local;
-            if(localização == e.Local){
+            if(localização == "porto de Marselha"){
             // porto de Marselha
            this.circulo  = L.circle([lant,long],radios,{
                         color:"red",
                         fillColor: "#dc143c",
                         fillOpacity: 0.5,
                      }).addTo(m.map);
+                     console.log(this.circulo);
             e.eixo_principal_terra  = lant;
             e.linha_imaginada = long;
             m.estado = false;
              e.referencia = "aumentar circulo";
-            // s.mudar_voz([m.estado]);
+            s.mudar_voz([m.estado]);
             }
             // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
-            radios =  radios + 163;
-            metade =  parseInt(2406/3.6);
-               while(radios != metade)
-               {   
-                 this.circulo.setRadius(radios).addTo(m.map);
-                   // somando em 100 em 100
-                     radios = e.longitude == long && e.lantitude == lant
-                     ? radios = radios + 100:0;
+               metade =  parseInt(2406*50)/100;
+               var num = 2;
+               while(radios < metade){
+                  var novo_raio = parseInt(Math.sqrt(num) * radios);
+                  radios = novo_raio;
+                  this.circulo.setRadius(radios)
+                  num = num +1;
                }
-            e.referencia = localização;
             m.estado = false;
+            e.referencia = "norte da Itália";
             s.mudar_voz([m.estado]); 
+            
             }
          
         else if(localização == "norte da Itália"){
@@ -71,17 +72,19 @@ class componentes_mapa {
          /*resultado da distancia entre turm na itaiia com a cidade de Marselha na frança,
          que é  372.1 km.
          */
-         // Conversão de km/h em m/s resultado em 1033 m/s.
-        var resultado = parseInt(3721 /3.6 );
+         metade = 3721;
+         var num = 2;
          radios = radios - 2;
-         while(radios !=  resultado){
+         while(radios <= metade){
              // somando de 20 em 20
-            radios = this.longitude == long && this.lantitude == lant
-            ? radios = radios + 20 :radios;
+            radios = radios + 20;
             this.circulo.setRadius(radios).addTo(m.map);
          }
          m.estado = false;
          s.mudar_voz([m.estado]); 
+         e.referencia = "toda a europa";
+         // latitude e longitude do norta da itália.
+
          }
          /*
          else {
@@ -115,9 +118,9 @@ class componentes_mapa {
             let threads_mapa = []
             var caminho_mapa = "src/mapa_codigo/mapa.js";
             if(e.Local == undefined){
-               e.referencia  = "ponto inicial";
+               e.referencia  = "porto de Marselha";
                threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ e.referencia]);
+               threads_mapa[0].postMessage([ e.Local]);
                   threads_mapa[0].onmessage = event=>{
                      e.coordenadas(event.data.dados[0],event.data.dados[1]);
                      threads_mapa.pop();
@@ -127,10 +130,9 @@ class componentes_mapa {
            
             else if(e.Local == "aumentar circulo"){
                 threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ e.referencia,e.latitude,
+               threads_mapa[0].postMessage([ e.Local,e.latitude,
                   e.longitude]);
                threads_mapa[0].onmessage = event=>{
-                     e.referencia = "norte da Itália";
                      e.coordenadas(event.data.dados[0],event.data.dados[1]);
                      threads_mapa.pop();
                }
@@ -140,14 +142,13 @@ class componentes_mapa {
                threads_mapa[0].postMessage([ e.referencia,e.latitude,
                   e.longitude]);
                threads_mapa[0].onmessage = event=>{
-                  e.referencia = "toda a europa";
                   e.coordenadas(event.data.dados[0],event.data.dados[1]);
                   threads_mapa.pop();
                }
          } 
          else if(e.Local =="toda a europa"){
             threads_mapa.push(new Worker(caminho_mapa));
-            threads_mapa[0].postMessage([ e.referencia,e.latitude,
+            threads_mapa[0].postMessage([ e.Local,e.latitude,
               e.longitude]);
                threads_mapa[0].onmessage = event=>{
                   e.coordenadas(event.data.dados[0],event.data.dados[1]);

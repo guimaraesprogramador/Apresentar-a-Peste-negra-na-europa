@@ -3,9 +3,9 @@ class mapa {
    constructor(){
 }
    inicial(){
-        let initialCoordinates = [43.2945782, 5.0843522]; // mapa do Brasil
+        let initialCoordinates = [43.3057267,5.39480918]; // cidade de marselha
         //latitude e a longitude
-     var initialZoomLevel = 4;
+     var initialZoomLevel = 13;
 // create a map in the "map" div, set the view to a given place and zoom
     this.map =  L.map("map").setView(initialCoordinates, initialZoomLevel);
 // add an OpenStreetMap tile layer
@@ -31,8 +31,8 @@ self.addEventListener("message",event=>{
     var tipo = event.data[0];
     var circulo  = null;
     switch(tipo){
-        case "ponto inicial":
-           var inicial = m.ponto_inicial(43.2945782,5.0843522);
+        case "porto de Marselha":
+           var inicial = m.ponto_inicial(43.30572678,5.39480918);
            postMessage({dados:inicial});
             self.close();
         break;
