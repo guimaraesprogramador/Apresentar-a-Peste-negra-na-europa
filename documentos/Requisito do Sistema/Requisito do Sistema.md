@@ -1,6 +1,3 @@
-[![voltar](https://raw.githubusercontent.com/google/material-design-icons/master/navigation/2x_web/ic_subdirectory_arrow_left_black_48dp.png)](https://github.com/guimaraesprogramador/zonas_distancia) 
-
-***
 # 3.Requisito do Sistema
 ## 3.1 Requisitos Funcionais 
 De acordo com os requisitos funcionais do Software, apresentamos um diagrama de Caso de uso abaixo:

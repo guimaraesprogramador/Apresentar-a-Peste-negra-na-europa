@@ -1,6 +1,3 @@
-[![voltar](https://raw.githubusercontent.com/google/material-design-icons/master/navigation/2x_web/ic_subdirectory_arrow_left_black_48dp.png)](https://github.com/guimaraesprogramador/zonas_distancia) 
-
-***
 # 2 Descrição Geral do Sistema
 
 ## 2.1 Descrição do Problema
@@ -48,4 +45,5 @@ O sistema tem algumas limitações como:
 5.O aumento da demanda pelo fornecimento pelo acesso ao software não é de responsabilidade pessoal do desenvolvedor, mas da hospedagem da empresa Microsoft desse software. 
 6. Para apoia ao desenvolvedor no gosto do público é anexado ao software um uma contagem de visitante para futuros projetos.
 ***
+[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/Descri%C3%A7%C3%A3o%20Geral%20do%20Sistema/Descri%C3%A7%C3%A3o%20Geral%20do%20Sistema.md ) &nbsp;                 &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md )
 
