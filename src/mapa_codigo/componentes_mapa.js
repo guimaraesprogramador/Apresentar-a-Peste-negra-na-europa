@@ -53,16 +53,17 @@ class componentes_mapa {
             }
             // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
-               metade =  parseInt(2406/50)/100;
-               while(radios <= metade)
-               { 
-                  if(radios != 630) radios = radios + 100;
-                  else radios = radios + 43;
-                 this.circulo.setRadius(radios).addTo(m.map);    
+               metade =  parseInt(2406*50)/100;
+               var num = 2;
+               while(radios < metade){
+                  var novo_raio = parseInt(Math.sqrt(num) * radios);
+                  radios = novo_raio;
+                  this.circulo.setRadius(radios)
+                  num = num +1;
                }
             m.estado = false;
             e.referencia = "norte da Itália";
-            //s.mudar_voz([m.estado]); 
+            s.mudar_voz([m.estado]); 
             
             }
          
@@ -71,8 +72,8 @@ class componentes_mapa {
          /*resultado da distancia entre turm na itaiia com a cidade de Marselha na frança,
          que é  372.1 km.
          */
-         // Conversão de km/h em m/s resultado em 1033 m/s.
-         metade = parseInt(3721 /3.6 );
+         metade = 3721;
+         var num = 2;
          radios = radios - 2;
          while(radios <= metade){
              // somando de 20 em 20
@@ -82,6 +83,8 @@ class componentes_mapa {
          m.estado = false;
          s.mudar_voz([m.estado]); 
          e.referencia = "toda a europa";
+         // latitude e longitude do norta da itália.
+
          }
          /*
          else {
