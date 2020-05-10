@@ -3,7 +3,7 @@ class mapa {
    constructor(){
 }
    inicial(){
-        let initialCoordinates = [43.3057267,5.39480918]; // cidade de marselha
+        let initialCoordinates = [43.280555,5.345467]; // cidade de marselha
         //latitude e a longitude
      var initialZoomLevel = 13;
 // create a map in the "map" div, set the view to a given place and zoom
@@ -19,9 +19,11 @@ class mapa {
         return parte_1;
     }
     circle(latitude,longitude,Local){
-        if(Local != "porto de Marselha")
-        var posicao = [ latitude,longitude,"1349",Local];
-        return posicao;
+        if(Local != "porto de Marselha"){
+            var posicao = [ latitude,longitude,"1349",Local];
+            return posicao;
+        }
+       
     }
 }
 
@@ -31,30 +33,16 @@ self.addEventListener("message",event=>{
     var circulo  = null;
     switch(tipo){
         case "porto de Marselha":
-           var inicial = m.ponto_inicial(43.30572678,5.39480918);
+           var inicial = m.ponto_inicial(43.2803051,5.3454696);
            postMessage({dados:inicial});
             self.close();
         break;
-        case "aumentar circulo":
-            var latitude = event.data[2];
-            var longitude = event.data[3];
+        default:
+            var latitude = event.data[1];
+            var longitude = event.data[2];
             circulo = m.circle(latitude,longitude,tipo);
             postMessage({dados:circulo});
             self.close();
-        break;
-        case "norte da Itália":
-            var latitude = event.data[2];
-            var longitude = event.data[3];
-            circulo = m.circle(latitude,longitude,tipo);
-            postMessage({dados:circulo});
-            self.close();
-        break;
-        case "toda a europa":
-            var latitude = event.data[2];
-            var longitude = event.data[3];
-            circulo = m.circle(latitude,longitude,tipo);
-            postMessage({dados:circulo});
-            self.close();
-        break;
+            break;
     }
 })

@@ -6,7 +6,7 @@ class  componentes_voz {
         return "parecida com o Feminino";
     }
     get Nome(){
-        return "A voz desta página.";
+        return " voz ";
     }
     get autor(){
         return "Kévin Vieira Gomes Guimaraes";
@@ -25,13 +25,13 @@ class  componentes_voz {
             
             switch(parte){
                 case "abertura":
-                    var linha ="Bem vindo " + "a projeção de cartografia " +"\n" +" a respeito" +
-                    "da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+"com"+ " o foco \n no Continente Europeu,"+"\n"+
+                    var linha ="Iniciando a sessão " + "a" +"\n" +" a respeito" +
+                    "da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+"sobre "+ " o \n  Continente Europeu,"+"\n"+
                     "O  nome do responsável pelo projeto é " + this.autor + "\n"+
-                    "Quem está falando  é o " + this.Nome+"\n"+
-                    "Sou uma "+ this.identidade +"\n"+
-                    "com uma voz " + this.Genero + "."+"\n"+
-                    "que " + " vai "+ "atuar " + "como "+ " guia " +" nesta projeção."
+                    "Sou uma "+ this.identidade +"\n"+" que usa uma " + this.Nome + "\n" + 
+                    this.Genero + "."+"\n"+
+                    "que " + " vai "+ "atuar " + "como "+ " guia " +" nesta projeção.";
+                    
                     c.texto = linha;
                     break;
                 case "introdução":
@@ -59,7 +59,6 @@ class  componentes_voz {
                 ]   
                 c.texto = "";
                 linhas.forEach((value,index,array)=>{
-
                    c.texto = c.texto +  value.toString();
                 })
                    
@@ -74,20 +73,18 @@ class  componentes_voz {
                    ]
                    c.texto = "";
                    linhas2.forEach((value,index,array)=>{
-
                     c.texto = c.texto +  value.toString();
-                 })
+                 });
+                break;
+                case "parte_2-1":
+                    let linhas2_1 = "morreu pela bactéria. \n";
+                    c.texto = "";
+                    c.texto = linhas2_1;
                 break;
                 case "parte_3-1":
-                    let linhas3_1 = [
-                        "morreu pela bactéria. \n",
-                        "Em 1349 a bactéria chegou na Itália pelo Norte. \n"
-                    ] 
+                    let linhas3_1 = "Em 1349 a bactéria chegou na Itália pelo Norte. \n";
                     c.texto = "";
-                   linhas3_1.forEach((value,index,array)=>{
-
-                    c.texto = c.texto +  value.toString();
-                 })
+                    c.texto = linhas3_1;
                     break;
                 case "parte_3-2":
                         let linhas3_2 =[
@@ -96,7 +93,6 @@ class  componentes_voz {
                         ]
                         c.texto = "";
                         linhas3_2.forEach((value,index,array)=>{
-     
                          c.texto = c.texto +  value.toString();
                       })
                     break;
@@ -108,7 +104,6 @@ class  componentes_voz {
                     ]
                     c.texto = "";
                     linhas4.forEach((value,index,array)=>{
- 
                      c.texto = c.texto +  value.toString();
                   })
                     break;
@@ -134,15 +129,15 @@ class  componentes_voz {
                         threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
                             // abertura
                             threads_voz[0].onmessage = event=>{ 
-                               //this.Roteiro(event.data.resposta);    
-                                var resposta  = ""; //c.falar;                    
+                                   // this.Roteiro(event.data.resposta);    
+                                    var resposta  =""; //c.falar;                   
                                     v.transmitir(resposta);               
                                     threads_voz[0] = null;
                                     threads_voz[1].postMessage([sequencia_primeira_parte[1]]);
                                 }
                             threads_voz[1].onmessage = event=>{
                                 //this.Roteiro(event.data.resposta);    
-                                var resposta  ="" //c.falar;           
+                                var resposta  =""; //c.falar;           
                                 v.transmitir(resposta);     
                                 threads_voz[1] = null;
                                 threads_voz[2].postMessage([sequencia_primeira_parte[2]]); 
@@ -150,8 +145,8 @@ class  componentes_voz {
                             // reprodução a parte 1
                             
                                 threads_voz[2].onmessage = event=>{    
-                                   //c.Roteiro(event.data.resposta); 
-                                   var resposta  = "1"; //c.falar;   
+                                   // c.Roteiro(event.data.resposta);
+                                    var resposta  =""; //c.falar;     
                                     v.transmitir(resposta);     
                                     threads_voz.pop();
                                     threads_voz.pop();
@@ -162,26 +157,70 @@ class  componentes_voz {
                         threads_voz.pop();
                         // reprodução parte 2
                         threads_voz.push(new Worker("src/voz/voz.js"));
-                        threads_voz[0].postMessage("parte_2"); 
+                        threads_voz[0].postMessage(c.falar); 
                         threads_voz[0].onmessage = event =>{
-                            //c.Roteiro(event.data.resposta);
-                            var resposta  = "2"; //c.falar;   
+                          //  c.Roteiro(event.data.resposta);
+                            var resposta  ="" //c.falar;     
                             v.IA.resume();
                             v.transmitir(resposta); 
-                            //c.texto =  "parte_3-1";
+                            this.proxima = "parte_2-1";
                         }
                     }
+                    else if(c.falar =="parte_2-1"){
+                        // remover a ultima thread de parte 2 inicial
+                        threads_voz.pop();
+                        // reprodução parte 2 primeira parte.
+                        threads_voz.push(new Worker("src/voz/voz.js"));
+                        threads_voz[0].postMessage(c.falar);
+                        threads_voz[0].onmessage = event =>{
+                           // c.Roteiro(event.data.resposta);
+                            var resposta  = ""//c.falar;     
+                            v.IA.resume();
+                            v.transmitir(resposta); 
+                            this.proxima = "parte_3-1";
+                        } 
+                    }
                     else if(c.falar =="parte_3-1"){
-                            // reprodução parte 3 primeira parte
-                            console.log(c.falar);
+                           // remover a ultima thread de parte 2-1
+                            threads_voz.pop();
+                             // reprodução parte 3 primeira parte
+                            threads_voz.push(new Worker("src/voz/voz.js"));
+                            threads_voz[0].postMessage(c.falar); 
+                            threads_voz[0].onmessage = event =>{
+                                //c.Roteiro(event.data.resposta);
+                                var resposta  ="" //c.falar;    
+                                v.IA.resume();
+                                v.transmitir(resposta); 
+                                this.proxima = "parte_3-2";
+                            }
                     }
                     else if(c.falar == "parte_3-2"){
-                             // reprodução parte 3 segunda parte
-                             console.log(c.falar);
+                            // remover a ultima thread de parte 3-1.
+                            threads_voz.pop();
+                            // reprodução parte 3 segunda parte
+                            threads_voz.push(new Worker("src/voz/voz.js"));
+                            threads_voz[0].postMessage(c.falar); 
+                            threads_voz[0].onmessage = event =>{
+                               // c.Roteiro(event.data.resposta);
+                                var resposta  = "";//c.falar;    
+                                v.IA.resume();
+                                v.transmitir(resposta); 
+                                this.proxima = "parte_4";
+                            }
                     }
                     else if(c.falar == "parte_4"){
+                            // remover a ultima thread de parte 3-2.
+                            threads_voz.pop();
                             // reprodução parte 4 
-                            console.log(c.falar);
+                            threads_voz.push(new Worker("src/voz/voz.js"));
+                            threads_voz[0].postMessage(c.falar); 
+                            threads_voz[0].onmessage = event =>{
+                                //c.Roteiro(event.data.resposta);
+                                var resposta  = "";//c.falar;  
+                                v.IA.resume(); 
+                                v.transmitir(resposta); 
+                                this.proxima = "acabou a exbição"
+                            }
                     }
             }catch(ev){
                 
