@@ -39,75 +39,76 @@ class componentes_mapa {
             var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.Local;
             if(localização == "porto de Marselha"){
             // porto de Marselha
-           this.circulo  = L.circle([lant,long],radios,{
+           this.porto_marselha  = L.circle([lant,long],radios,{
                         color:"red",
                         fillColor: "#dc143c",
                         fillOpacity: 0.5,
                      }).addTo(m.map);
-                     console.log(this.circulo);
-            e.eixo_principal_terra  = lant;
-            e.linha_imaginada = long;
-            m.estado = false;
-             e.referencia = "aumentar circulo";
-            s.mudar_voz([m.estado]);
+                     m.estado = false;
+                     e.referencia = "aumentar circulo";
+                     s.mudar_mapa([m.estado]); 
             }
             // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
-               metade =  parseInt(2406*50)/100;
-               var num = 2;
-               while(radios < metade){
-                  var novo_raio = parseInt(Math.sqrt(num) * radios);
-                  radios = novo_raio;
-                  this.circulo.setRadius(radios)
-                  num = num +1;
-               }
-            m.estado = false;
-            e.referencia = "norte da Itália";
-         //   s.mudar_voz([m.estado]); 
-            
+                     metade =  parseInt(2406*50)/100;
+                     var num = 2;
+                     while(radios < metade){
+                        var novo_raio = parseInt(Math.sqrt(num) * radios);
+                        radios = novo_raio;
+                        this.porto_marselha.setRadius(radios)
+                        num = num + 1;
+                     }
+                       m.estado = false;
+                       // nome da cidade a inicio Turim. 
+                       e.referencia = "inicio Turim";
+                       // latitude e longitude da Turim.
+                      e.eixo_principal_terra = 45.0702388;
+                      e.linha_imaginada = 7.6350677;
+                     s.mudar_mapa([m.estado]); 
             }
-         
-        else if(localização == "norte da Itália"){
-            // norte da Itália
-         /*resultado da distancia entre turm na itaiia com a cidade de Marselha na frança,
-         que é  372.1 km.
-         */
-         metade = 3721;
-         var num = 2;
-         radios = radios - 2;
-         while(radios <= metade){
-             // somando de 20 em 20
-            radios = radios + 20;
-            this.circulo.setRadius(radios).addTo(m.map);
+                  else if(localização == "inicio Turim"){
+                     // variavel referente do nome da cidade no norte da Itália. 
+                     this.turim = L.circle([lant,long],radios,{
+                        color:"red",
+                        fillColor: "#dc143c",
+                        fillOpacity: 0.5,
+                     }).addTo(m.map);
+                     console.log(this.turim);
+                     m.estado = false;
+                     e.referencia = "até o centro da itália";
+                     s.mudar_mapa([m.estado]); 
          }
-         m.estado = false;
-         s.mudar_voz([m.estado]); 
-         e.referencia = "toda a europa";
-         // latitude e longitude do norta da itália.
-
+         else if(localização == "até o centro da itália"){
+                     /* resultado da distancia entre Turm na itaiia 
+                     com a cidade de Terni na itaiia, que é  291.1 km.*/
+                     metade = parseInt(291.1 * 1000);
+                     var num = 2;
+                     while(radios <= metade){
+                        var novo_raio = parseInt(Math.sqrt(num) * radios);
+                        radios = novo_raio;
+                        this.turim.setRadius(radios)
+                        num = num + 1;
+                     }
+                     e.referencia = "toda a europa";
+                     m.estado = false;
+                     s.mudar_mapa([m.estado]); 
          }
-         /*
          else {
-         // toda o continente europeu
-         var area_europa = 10180000;
-         circulo  = circulos_localizados[0];
-         while(radios != area_europa)
-         {
-         if(radios == 5000000|| radios == 10090000){
-            radios = this.longitude == long && this.lantitude == lant
-            ? radios = radios + 90000 :radios;
+                     // toda o continente europeu
+                     var zona_contaminação = this.porto_marselha.getRadius() + 
+                     this.turim.getRadius();
+                     var num = 2;
+                     while(radios <= zona_contaminação){
+                        var novo_raio = parseInt(Math.sqrt(num) * radios);
+                        radios = novo_raio;
+                        this.porto_marselha.setRadius(radios)
+                        num = num + 1;
+                     }
+                     m.estado = false;
+                     s.mudar_voz([m.estado]); 
+                     e.referencia = "acabou a exbição";
          }
-         else{
-            radios = this.longitude == long && this.lantitude == lant
-            ? radios = radios + 1000000 :radios;
-         }
-         circulo.setRadius(radios).addTo(m.map);
-         }
-         m.estado = false;
-         s.mudar_voz([m.estado]); 
-         
-         }
-         /* fim da historia*/
+         /* Fim da historia*/
        }catch(ev){
           console.log(ev);
        }
@@ -127,36 +128,15 @@ class componentes_mapa {
                }
                
             }
-           
-            else if(e.Local == "aumentar circulo"){
-                threads_mapa.push(new Worker(caminho_mapa));
+           else if(e.Local != "acabou a exbição" ){
+               threads_mapa.push(new Worker(caminho_mapa));
                threads_mapa[0].postMessage([ e.Local,e.latitude,
                   e.longitude]);
                threads_mapa[0].onmessage = event=>{
                      e.coordenadas(event.data.dados[0],event.data.dados[1]);
                      threads_mapa.pop();
                }
-            }
-            else if(e.Local == "norte da Itália"){
-               threads_mapa.push(new Worker(caminho_mapa));
-               threads_mapa[0].postMessage([ e.referencia,e.latitude,
-                  e.longitude]);
-               threads_mapa[0].onmessage = event=>{
-                  e.coordenadas(event.data.dados[0],event.data.dados[1]);
-                  threads_mapa.pop();
-               }
-         } 
-         else if(e.Local =="toda a europa"){
-            threads_mapa.push(new Worker(caminho_mapa));
-            threads_mapa[0].postMessage([ e.Local,e.latitude,
-              e.longitude]);
-               threads_mapa[0].onmessage = event=>{
-                  e.coordenadas(event.data.dados[0],event.data.dados[1]);
-                     threads_mapa.pop();
-               }
-         }   
-              
-         console.log(e.Local);
+           }
        }catch(ev){
          if(v.IA == undefined)  console.error(ev);
          else  v.IA.cancel();
