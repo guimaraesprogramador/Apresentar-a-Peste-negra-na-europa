@@ -11,8 +11,8 @@ class voz {
         msg.text = falar;
         this.IA =  window.speechSynthesis;
         this.IA.speak(msg);
-        }catch(ev){
-            console.error(" Erro na sintese de voz");
+        }catch(e){
+            console.error("erro em algum lugar");
         }
 }
 }

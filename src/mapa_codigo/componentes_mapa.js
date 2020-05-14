@@ -97,7 +97,7 @@ class componentes_mapa {
                      // toda o continente europeu
                      var zona_contaminação = this.porto_marselha.getRadius() + 
                      this.turim.getRadius();
-                     var num = 2;
+                     /*var num = 2;
                      while(radios <= zona_contaminação){
                         var novo_raio = parseInt(Math.sqrt(num) * radios);
                         radios = novo_raio;
@@ -105,7 +105,7 @@ class componentes_mapa {
                         num = num + 1;
                      }
                      m.estado = false;
-                     s.mudar_voz([m.estado]); 
+                     s.mudar_voz([m.estado]); */
                      e.referencia = "acabou a exbição";
          }
          /* Fim da historia*/

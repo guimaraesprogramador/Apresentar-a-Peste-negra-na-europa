@@ -33,24 +33,27 @@ class mudar {
 const s = new mudar();
 m.inicial();
 window.onload = function(){
-        var isChrome =  window.chrome == undefined ? false:true;
-        if(isChrome){
-            if(window.speechSynthesis.speaking){
-                m.estado = false;
-                s.mudar_voz([m.estado])
-            }
-            else {
-                alert("por favor Faça o login na conta google. \n  Se não utilize o Firefox ou Edge");
+        function error(navegador){
+                alert("Utilize o Firefox ou Edge pois,  o " + navegador +
+                " no Desktop não funciona nesta página.");
                 console.clear();
-            
-            }
         }
-        else
+        var chrome=  L.Browser.chrome;
+        var internet_explore= L.Browser.ie;
+        var opera = L.Browser.mobileOpera;
+        if(chrome)
+        {
+            var numero_navegador = parseInt(navigator.appVersion.slice(91,112).slice(7));
+            if(numero_navegador != 70){
+               error("Chrome");
+            }
+        } 
+        else if(internet_explore) error("Internet Explorer");
+        else if(opera) error("Opera");
+        else 
         {
                 m.estado = false;
                 s.mudar_voz([m.estado])
-        }
-        
-       
+        }       
     }
        
