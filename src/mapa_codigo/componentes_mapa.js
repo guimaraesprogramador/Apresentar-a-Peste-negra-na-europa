@@ -38,77 +38,89 @@ class componentes_mapa {
             // verifica local
             var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.Local;
             if(localização == "porto de Marselha"){
-            // porto de Marselha
-           this.porto_marselha  = L.circle([lant,long],radios,{
-                        color:"red",
-                        fillColor: "#dc143c",
-                        fillOpacity: 0.5,
-                     }).addTo(m.map);
-                     m.estado = false;
-                     e.referencia = "aumentar circulo";
-                     s.mudar_mapa([m.estado]); 
+                  // porto de Marselha
+               this.porto_marselha  = L.circle([lant,long],radios,{
+                              color:"red",
+                              fillColor: "#dc143c",
+                              fillOpacity: 0.5,
+                           }).addTo(m.map);
+                           m.estado = false;
+                           e.referencia = "aumentar circulo";
+                           s.mudar_mapa([m.estado]); 
             }
             // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
-                     metade =  parseInt(2406*50)/100;
+                     // O resultado da subtração do zoom é 10.
+                     var diminir_zoom = m.map.getZoom() - 3;
+                     m.map.setZoom(diminir_zoom);
+                     var raiz = Math.sqrt(2406).toFixed(2);
+                     var metros = parseInt(raiz)*1000;
+                     metade =  parseInt(metros)/100;
                      var num = 2;
-                     while(radios < metade){
-                        var novo_raio = parseInt(Math.sqrt(num) * radios);
+                     while(radios <= metade){
+                        var novo_raio = parseInt((Math.sqrt(num)) * radios);
                         radios = novo_raio;
-                        this.porto_marselha.setRadius(radios)
-                        num = num + 1;
+                        this.porto_marselha.setRadius(radios);
                      }
                        m.estado = false;
-                       // nome da cidade a inicio Turim. 
+                     // referencia ao inicio em Turim na Itália.
                        e.referencia = "inicio Turim";
-                       // latitude e longitude da Turim.
-                      e.eixo_principal_terra = 45.0702388;
-                      e.linha_imaginada = 7.6350677;
+                     // Inicio na cidade Turim na Itália.
                      s.mudar_mapa([m.estado]); 
             }
                   else if(localização == "inicio Turim"){
-                     // variavel referente do nome da cidade no norte da Itália. 
-                     this.turim = L.circle([lant,long],radios,{
-                        color:"red",
-                        fillColor: "#dc143c",
-                        fillOpacity: 0.5,
-                     }).addTo(m.map);
-                     console.log(this.turim);
+                     // O resultado da subtração do zoom é 7.
+                     var diminir_zoom = m.map.getZoom() - 3;
+                     m.map.setZoom(diminir_zoom);
+                     /* resultado da distancia entre porto de Marselha na França 
+                     com a cidade de Turim na Itália, que é  370 km.*/
+                     metade = parseInt(370 * 1000);
+                     var num = 2;
+                     while(radios <= metade){
+                        var novo_raio = parseInt((Math.sqrt(num)) * radios);
+                        radios = novo_raio;
+                        this.porto_marselha.setRadius(radios);
+                     }
                      m.estado = false;
                      e.referencia = "até o centro da itália";
                      s.mudar_mapa([m.estado]); 
          }
          else if(localização == "até o centro da itália"){
-                     /* resultado da distancia entre Turm na itaiia 
-                     com a cidade de Terni na itaiia, que é  291.1 km.*/
+                     // O resultado da subtração do zoom é 4.
+                     var diminir_zoom = m.map.getZoom() - 3; 
+                     m.map.setZoom(diminir_zoom);
+                     /* resultado da distancia entre Turm na Itália
+                     com a cidade de Terni na Itália, que é  291.1 km.*/
                      metade = parseInt(291.1 * 1000);
+                    
                      var num = 2;
                      while(radios <= metade){
-                        var novo_raio = parseInt(Math.sqrt(num) * radios);
+                        var novo_raio = parseInt((Math.sqrt(num)) * radios);
                         radios = novo_raio;
-                        this.turim.setRadius(radios)
-                        num = num + 1;
+                        this.porto_marselha.setRadius(radios);
                      }
                      e.referencia = "toda a europa";
                      m.estado = false;
                      s.mudar_mapa([m.estado]); 
          }
          else {
-                     // toda o continente europeu
-                     var zona_contaminação = this.porto_marselha.getRadius() + 
-                     this.turim.getRadius();
-                     /*var num = 2;
-                     while(radios <= zona_contaminação){
-                        var novo_raio = parseInt(Math.sqrt(num) * radios);
+                     console.log(m.map.getZoom());
+                     //  A Área do Continente da Europa 10.180.000 km².
+                     var raiz = Math.sqrt(10180000).toFixed(2);
+                     var distancia = parseInt(raiz)*1000;
+                     var num = 2;
+                     while(radios <= distancia){
+                        var novo_raio = parseInt((Math.sqrt(num)) * radios);
                         radios = novo_raio;
-                        this.porto_marselha.setRadius(radios)
-                        num = num + 1;
+                        this.porto_marselha.setRadius(radios);
                      }
+                     
                      m.estado = false;
-                     s.mudar_voz([m.estado]); */
+                     s.mudar_voz([m.estado]); 
                      e.referencia = "acabou a exbição";
+                     /* Fim da historia*/
          }
-         /* Fim da historia*/
+         
        }catch(ev){
           console.log(ev);
        }

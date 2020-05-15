@@ -5,11 +5,18 @@ class voz {
     }
     transmitir(falar){
     try{
+        this.IA =  window.speechSynthesis;
         var msg =  new SpeechSynthesisUtterance();
-        msg.lang = "pt-br";
         msg.volume = 0.7;
         msg.text = falar;
-        this.IA =  window.speechSynthesis;
+        var voice = this.IA.getVoices();
+        for(var i = 0;i<voice.length;i++){
+            if(voice[i].lang == "pt"){
+                msg.voice = voice[i];
+                msg.lang = voice[i].lang;
+            }
+        }
+        
         this.IA.speak(msg);
         }catch(e){
             console.error("erro em algum lugar");
