@@ -1,21 +1,24 @@
-http://learnjsdata.com/read_data.html
 
+// repositorio do leaflet versão 0.77 em javascript
 https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js
 
-https://cdn.jsdelivr.net/npm/alasql@0.5
 
+// informação sobre web-workers em javascript
 https://braziljs.org/artigos/javascript-multi-threading-com-web-workers-2/
 
-https://www.ibm.com/developerworks/br/rational/library/content/RationalEdge/sep04/bell/index.
-
+// coordenadas de latitude e longitude do Porto de Marselha.
 https://www.google.com/maps/place/Porto+Velho+de+Marselha/@43.2803051,5.3454696,13z/data=!4m8!1m2!2m1!1sporto+maritimo+de+marselha!3m4!1s0x12c9c0c6a1843729:0x7d3f3acf189dc3b1!8m2!3d43.2950303!4d5.3646265
 
+// coordenadas de latitude e longitude do da cidade de Marselha
 https://www.google.com/maps/place/Marselha,+Fran%C3%A7a/@43.280555,5.345467,13z/data=!4m8!1m2!2m1!1sporto+maritimo+de+marselha!3m4!1s0x12c9bf4344da5333:0x40819a5fd970220!8m2!3d43.296482!4d5.36978
 
-http://lineadecodigo.com/javascript/area-de-un-circulo-en-javascript/
 
+// video sobre duplicar o raio do circulo
 https://www.youtube.com/watch?v=RGug1ja3SA8
 
-https://www.google.com/maps/place/Turim,+It%C3%A1lia/@45.0702388,7.6350677,13z/data=!4m5!3m4!1s0x47886d126418be25:0x8903f803d69c77bf!8m2!3d45.0706111!4d7.6863098
 
-https://www.google.com/maps/place/05100+Terni,+It%C3%A1lia/@42.5621381,12.5930615,13z/data=!4m13!1m7!3m6!1s0x12d4fe82448dd203:0xe22cf55c24635e6f!2zSXTDoWxpYQ!3b1!8m2!3d41.87194!4d12.56738!3m4!1s0x132efb44daf819f3:0x6be10bf1daf18dc2!8m2!3d42.5631958!4d12.6425171
+// informação importante sobre a divição na Europa e a Ásia.
+http://www.geografia.seed.pr.gov.br/modules/noticias/article.php?storyid=1020
+
+// informação sobre a Distância de Gibraltar GX11 1AA até Montes Urais
+https://www.google.com/search?client=ubuntu&ei=cLm-XvybKoKX0AaN86DIBg&q=distancia+ente+Gibraltar%2C+GX11+1AA%2C+Gibraltar++e+Montes+Urais%2C+R%C3%BAssia&oq=distancia+ente+Gibraltar%2C+GX11+1AA%2C+Gibraltar++e+Montes+Urais%2C+R%C3%BAssia&gs_lcp=CgZwc3ktYWIQAzIECCEQCjoECAAQR1CTCVjRDGCUFGgAcAF4AIAB-wGIAfADkgEDMi0ymAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=0ahUKEwj8k9_Im7bpAhWCC9QKHY05CGkQ4dUDCAw&uact=5

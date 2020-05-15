@@ -35,7 +35,7 @@ m.inicial();
 window.onload = function(){
         function error(navegador){
                 alert("Utilize o Firefox ou Edge pois,  o " + navegador +
-                " no Desktop não funciona nesta página.");
+                " ainda não funciona nesta página.");
                 console.clear();
         }
         var chrome=  L.Browser.chrome;

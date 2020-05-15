@@ -12,7 +12,14 @@ class mapa {
      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
          attribution: '&copy; Contribuidores do <a href="http://osm.org/copyright">OpenStreetMap</a>'
      }).addTo(this.map);
-     
+     var legend = L.control({ position: "bottomleft" });
+     legend.onAdd = function(map) {
+        var div = L.DomUtil.create("div", "legend");
+        div.innerHTML += "<h4>Legenda</h4>"; 
+        div.innerHTML += '<i style="background: #dc143c"></i><span>Peste bubônica</span><br>';
+        return div;
+     }
+     legend.addTo(this.map);
     }
     ponto_inicial(latitude,longitude){
         var parte_1 = [latitude, longitude,"1348", "porto de Marselha"]
