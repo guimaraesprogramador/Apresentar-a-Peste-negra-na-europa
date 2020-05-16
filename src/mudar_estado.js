@@ -12,14 +12,14 @@ class mudar {
                                         if(v.IA.pending == false && v.IA.speaking == false){
                                                 v.IA.pause();
                                                 m.estado = true;
-                                                c.texto = c.falar != undefined ? c.proxima  :"parte_2" ;
+                                                c.texto =  c.proxima;
                                                 console.log(c.falar);
                                                 s.mudar_voz([m.estado]);
                                                 clearInterval(tempo);
                                         }
                                 }
                         },2000);
-                }else s.mudar_mapa(mudança);                    
+                }else s.mudar_mapa(mudança);         
         }
         mudar_mapa(mudança)
         {

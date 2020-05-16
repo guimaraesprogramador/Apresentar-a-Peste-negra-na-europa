@@ -116,7 +116,7 @@ class componentes_mapa {
                      }
                      
                      m.estado = false;
-                     s.mudar_voz([m.estado]); 
+                     s.mudar_mapa([m.estado]); 
                      e.referencia = "acabou a exbição";
                      /* Fim da historia*/
          }
