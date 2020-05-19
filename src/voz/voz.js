@@ -9,6 +9,7 @@ class voz {
         var msg =  new SpeechSynthesisUtterance();
         msg.text = falar;
         msg.volume = 0.5;
+        msg.pitch = 1;
         this.IA.getVoices()[46];
         this.IA.speak(msg);
         }catch(e){
