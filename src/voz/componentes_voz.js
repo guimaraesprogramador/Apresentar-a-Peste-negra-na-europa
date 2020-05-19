@@ -3,16 +3,16 @@ class  componentes_voz {
         this.falar;
     }
     get Genero(){
-        return "parecida com o Feminino";
+        return "parecida com a voz humana";
     }
     get Nome(){
         return " voz ";
     }
     get autor(){
-        return "Kévin Vieira Gomes Guimaraes";
+        return " Kévin Vieira Gomes Guimaraes ";
     }
     get identidade(){
-        return "inteligência artificial";
+        return " inteligência artificial" ;
     }
     get texto(){
         return this.falar;
@@ -25,12 +25,12 @@ class  componentes_voz {
             
             switch(parte){
                 case "abertura":
-                    var linha ="Iniciando a sessão " + "a" +"\n" +" a respeito" +
-                    "da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+"sobre "+ " o \n  Continente Europeu,"+"\n"+
-                    "O  nome do responsável pelo projeto é " + this.autor + "\n"+
-                    "Sou uma "+ this.identidade +"\n"+" que usa uma " + this.Nome + "\n" + 
-                    this.Genero + "."+"\n"+
-                    "que " + " vai "+ "atuar " + "como "+ " guia " +" nesta projeção.";
+                    var linha =" Iniciando a sessão " + "\n" +" a respeito " +
+                    " da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+"sobre "+ " o \n  Continente Europeu,"+"\n"+
+                    " O  nome do responsável pelo projeto é " + this.autor + "\n"+
+                    " Sou uma "+ this.identidade +"\n"+" que usa uma " + this.Nome + "\n" + 
+                    "."+"\n"+
+                    " que " + " vai "+ "atuar " + "como "+ " guia " +" nesta projeção.";
                     
                     c.texto = linha;
                     break;
@@ -39,7 +39,7 @@ class  componentes_voz {
                     var linha = {
                         primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de Covid-19, \n mais sim \n os relados ",
                         segunda_linha:" que aconteceram \n naquela época \n durante \n a Idade Média \n",
-                        terceira_linha:" Sendo assim, \n será realizado \n uma projeção cartografica \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
+                        terceira_linha:" Sendo assim, \n será realizado \n uma exibição em um mapa \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
                         quarta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
                         quinta_linha:"Para assistir a projeção, \n não saia desta página \n",
                         sexta_linha:"Sendo assim,\n obrigado pelo entendimento."
@@ -98,8 +98,8 @@ class  componentes_voz {
                     break;
                 case "parte_4":
                     let linhas4 = [
-                        "Com isso essa bactéria matou um terço da população no Continente europeu até 1350. ",
-                        "Essa história foi elaborada de acordo com as informações dos historiadores, \n mais informação na documentação. ",
+                        "Com isso essa bactéria matou mais de  um terço da população no Continente europeu até 1350. ",
+                        "\n mais informação na documentação. ",
                         "Caso deseje assistir novamente, \n aperte F5 ou atualize a página \n, então obrigado."
                     ]
                     c.texto = "";
@@ -115,7 +115,7 @@ class  componentes_voz {
     }
   theads(){
             try{
-
+                
                     
                     let threads_voz = [];
                     if(c.falar == undefined){
@@ -150,6 +150,7 @@ class  componentes_voz {
                                     v.transmitir(resposta);     
                                     threads_voz.pop();
                                     threads_voz.pop();
+                                    this.proxima = "parte_2";
                                     }
                     }
                     else if(c.falar == "parte_2"){
@@ -157,7 +158,7 @@ class  componentes_voz {
                         threads_voz.pop();
                         // reprodução parte 2
                         threads_voz.push(new Worker("src/voz/voz.js"));
-                        threads_voz[0].postMessage(c.falar); 
+                        threads_voz[0].postMessage([c.falar]); 
                         threads_voz[0].onmessage = event =>{
                             c.Roteiro(event.data.resposta);
                             var resposta  = c.falar;     
@@ -171,7 +172,7 @@ class  componentes_voz {
                         threads_voz.pop();
                         // reprodução parte 2 primeira parte.
                         threads_voz.push(new Worker("src/voz/voz.js"));
-                        threads_voz[0].postMessage(c.falar);
+                        threads_voz[0].postMessage([c.falar]); 
                         threads_voz[0].onmessage = event =>{
                             c.Roteiro(event.data.resposta);
                             var resposta  = c.falar;     
@@ -185,7 +186,7 @@ class  componentes_voz {
                             threads_voz.pop();
                              // reprodução parte 3 primeira parte
                             threads_voz.push(new Worker("src/voz/voz.js"));
-                            threads_voz[0].postMessage(c.falar); 
+                            threads_voz[0].postMessage([c.falar]); 
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
                                 var resposta  = c.falar;    
@@ -199,7 +200,7 @@ class  componentes_voz {
                             threads_voz.pop();
                             // reprodução parte 3 segunda parte
                             threads_voz.push(new Worker("src/voz/voz.js"));
-                            threads_voz[0].postMessage(c.falar); 
+                            threads_voz[0].postMessage([c.falar]); 
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
                                 var resposta  = c.falar;    
@@ -213,13 +214,13 @@ class  componentes_voz {
                             threads_voz.pop();
                             // reprodução parte 4 
                             threads_voz.push(new Worker("src/voz/voz.js"));
-                            threads_voz[0].postMessage(c.falar); 
+                            threads_voz[0].postMessage([c.falar]); 
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
                                 var resposta  = c.falar;  
                                 v.IA.resume(); 
                                 v.transmitir(resposta); 
-                                this.proxima = "acabou a exbição"
+                                this.proxima = "acabou a exbição";
                             }
                     }
             }catch(ev){
