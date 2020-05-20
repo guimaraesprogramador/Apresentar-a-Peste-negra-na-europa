@@ -12,8 +12,8 @@ class mudar {
                                         if(v.IA.pending == false && v.IA.speaking == false){
                                                 v.IA.pause();
                                                 m.estado = true;
-                                                c.texto =  c.proxima;
-                                                console.log(c.falar);
+                                                c.texto = c.proxima;
+                                                console.log(c.texto);
                                                 s.mudar_voz([m.estado]);
                                                 clearInterval(tempo);
                                         }
@@ -33,40 +33,47 @@ class mudar {
 const s = new mudar();
 m.inicial();
 
+async function permissão_usuario(){
 
+            var numero_navegador = parseInt(navigator.appVersion.slice(91,112).slice(7));
+           
+            if(numero_navegador != 70){
+               
+                        this.permissão ={
+                                audio:true,
+                                video:false
+                        }
+                        
+                
+                        // conserta isso para terminar
+                        // var stream = await   navigator.mediaDevices.getUserMedia(this.permissão);
+                        // if(stream != undefined){
+                        //         m.estado = false;
+                        //         s.mudar_voz([m.estado]);
+                        // }
+                                
+                         
+                                
+                                
+                                       
+                                                       
+                      
+            }
+}
+var chrome=  L.Browser.chrome;
+if(chrome) permissão_usuario(); 
 window.onload = function(){
         function error(navegador){
                 alert("Utilize o Firefox ou Edge pois,  o " + navegador +
                 " ainda não funciona nesta página.");
                 console.clear();
         }
-
-        function Permissão_api_SpeechSynthesis()
-        {
-
-                Notification.requestPermission().then(p=>
-                {
-                        if(p == "granted")
-                        {
-                                m.estado = false;
-                                s.mudar_voz([m.estado])
-                        }
-                        
-                }).catch(erro=>{
-
-                })
-        }       
-        var chrome=  L.Browser.chrome;
+  
+        
         var internet_explore= L.Browser.ie;
         var opera = L.Browser.mobileOpera;
-        if(chrome)
-        {
-            var numero_navegador = parseInt(navigator.appVersion.slice(91,112).slice(7));
-            if(numero_navegador != 70){
-               Permissão_api_SpeechSynthesis();
-            }
-        } 
-        else if(internet_explore) error("Internet Explorer");
+        
+        if(internet_explore) error("Internet Explorer");
         else if(opera) error("Opera");
         else 
         {
@@ -74,4 +81,5 @@ window.onload = function(){
                 s.mudar_voz([m.estado])
         }       
     }
+
        
