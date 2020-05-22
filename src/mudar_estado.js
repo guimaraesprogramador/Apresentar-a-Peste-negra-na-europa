@@ -90,19 +90,24 @@ var chrome=  L.Browser.chrome;
 var opera = L.Browser.mobileOpera;
 if(chrome || opera)  permissão_usuario(); 
 else 
-        {
+{
 
-function error(navegador)
-                {
-                        alert("Utilize outro navegador pois,  o " + navegador +
-                        " ainda não funciona nesta página.");
-                        console.clear();
-                }
-var internet_explore= L.Browser.ie;
-var edge = L.Browser.ielt9;
-if(internet_explore) error("Internet Explorer");     
-else if(edge) error("Edge");
+        function error(navegador)
+                        {
+                                alert("Utilize outro navegador pois,  o " + navegador +
+                                " ainda não funciona nesta página.");
+                                console.clear();
+                        }
+        var internet_explore= L.Browser.ie;
+        var edge = L.Browser.ielt9;
+        if(internet_explore) error("Internet Explorer");     
+        else if(edge) error("Edge");
+        else 
+        {
+                m.estado = false;
+                s.mudar_voz([m.estado]);
         }
+}
 // modo tela cheia
 // var f11 = confirm("Deseja o modo tela cheia ?");
 // if(f11 == true){
