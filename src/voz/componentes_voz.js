@@ -38,8 +38,8 @@ class  componentes_voz {
                    
                     var linha = {
                         primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de coronavirus, \n mais sim \n os relados ",
-                        segunda_linha:" que aconteceram \n no século 14 \n durante \n a Idade Média \n",
-                        terceira_linha:" Sendo assim, \n será realizado \n uma apresentação de um mapa bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
+                        segunda_linha:" que aconteceram \n no século catorze \n durante \n a Idade Média \n",
+                        terceira_linha:" Sendo assim, \n será realizado \n uma apresentação de um mapa bidimensional da Pandemia Peste Bubônica \n no ano de 2020 \n ",
                         quarta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
                         quinta_linha:"Para assistir a projeção, \n não saia desta página \n",
                         sexta_linha:"Sendo assim,\n obrigado pelo entendimento."
@@ -129,16 +129,14 @@ class  componentes_voz {
                         threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
                             // abertura
                             threads_voz[0].onmessage = event=>{ 
-                                   this.Roteiro(event.data.resposta);    
-                                    var resposta  = c.falar;                   
-                                    v.transmitir(resposta);               
+                                   this.Roteiro(event.data.resposta);               
+                                   v.transmitir(c.falar);       
                                     threads_voz[0] = null;
                                     threads_voz[1].postMessage([sequencia_primeira_parte[1]]);
                                 }
                             threads_voz[1].onmessage = event=>{
-                                this.Roteiro(event.data.resposta);    
-                                var resposta  = c.falar;            
-                                v.transmitir(resposta);     
+                               this.Roteiro(event.data.resposta);               
+                               v.transmitir(c.falar);
                                 threads_voz[1] = null;
                                 threads_voz[2].postMessage([sequencia_primeira_parte[2]]); 
                             }
@@ -146,10 +144,10 @@ class  componentes_voz {
                             
                                 threads_voz[2].onmessage = event=>{    
                                     c.Roteiro(event.data.resposta);
-                                    var resposta  = c.falar;     
-                                    v.transmitir(resposta);     
+                                    v.transmitir(c.falar);        
                                     threads_voz.pop();
                                     threads_voz.pop();
+                                    this.proxima = "parte_2";
                                     }
                     }
                     else if(c.falar == "parte_2"){
@@ -160,9 +158,7 @@ class  componentes_voz {
                         threads_voz[0].postMessage([c.falar]); 
                         threads_voz[0].onmessage = event =>{
                             c.Roteiro(event.data.resposta);
-                            var resposta  = c.falar;     
-                            v.IA.resume();
-                            v.transmitir(resposta); 
+                            v.transmitir(c.falar);   
                             this.proxima = "parte_2-1";
                         }
                     }
@@ -174,9 +170,7 @@ class  componentes_voz {
                         threads_voz[0].postMessage([c.falar]); 
                         threads_voz[0].onmessage = event =>{
                             c.Roteiro(event.data.resposta);
-                            var resposta  = c.falar;     
-                            v.IA.resume();
-                            v.transmitir(resposta); 
+                            v.transmitir(c.falar);   
                             this.proxima = "parte_3-1";
                         } 
                     }
@@ -188,9 +182,7 @@ class  componentes_voz {
                             threads_voz[0].postMessage([c.falar]); 
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
-                                var resposta  = c.falar;    
-                                v.IA.resume();
-                                v.transmitir(resposta); 
+                                v.transmitir(c.falar);   
                                 this.proxima = "parte_3-2";
                             }
                     }
@@ -203,7 +195,6 @@ class  componentes_voz {
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
                                 var resposta  = c.falar;    
-                                v.IA.resume();
                                 v.transmitir(resposta); 
                                 this.proxima = "parte_4";
                             }
@@ -216,9 +207,7 @@ class  componentes_voz {
                             threads_voz[0].postMessage([c.falar]); 
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
-                                var resposta  = c.falar;  
-                                v.IA.resume(); 
-                                v.transmitir(resposta); 
+                                v.transmitir(c.falar);   
                                 this.proxima = "acabou a exbição";
                             }
                     }

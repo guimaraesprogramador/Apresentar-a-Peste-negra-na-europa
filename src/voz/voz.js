@@ -9,8 +9,8 @@ class voz {
         msg.text = falar;
         msg.volume = 0.5;
         msg.pitch = 1;
-         msg.lang = "pt-BR";
-         this.IA = window.speechSynthesis;
+        msg.lang = "pt-BR";
+        this.IA = window.speechSynthesis;
         this.IA.speak(msg);
         
         }catch(e){
