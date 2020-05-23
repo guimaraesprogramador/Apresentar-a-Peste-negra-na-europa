@@ -39,7 +39,7 @@ class  componentes_voz {
                     var linha = {
                         primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de coronavirus, \n mais sim \n os relados ",
                         segunda_linha:" que aconteceram \n no século catorze \n durante \n a Idade Média \n",
-                        terceira_linha:" Sendo assim, \n será realizado \n uma apresentação de um mapa bidimensional da Pandemia Peste Bubônica \n no ano de 2020 \n ",
+                        terceira_linha:" Sendo assim, \n será realizado \n uma apresentação de um mapa da Pandemia Peste Bubônica \n no ano de 2020  sobre o continente europeu \n ",
                         quarta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
                         quinta_linha:"Para assistir a projeção, \n não saia desta página \n",
                         sexta_linha:"Sendo assim,\n obrigado pelo entendimento."

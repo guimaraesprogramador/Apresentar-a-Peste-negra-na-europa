@@ -7,7 +7,7 @@ class voz {
     try{
         var msg =  new SpeechSynthesisUtterance();
         msg.text = falar;
-        msg.volume = 0.5;
+        msg.volume = 0.7;
         msg.pitch = 1;
         msg.lang = "pt-BR";
         this.IA = window.speechSynthesis;

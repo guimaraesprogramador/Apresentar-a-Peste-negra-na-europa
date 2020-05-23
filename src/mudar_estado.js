@@ -31,12 +31,12 @@ class mudar {
 const s = new mudar();
 m.inicial();
  
-async function permissão_usuario(){
+function permissão_usuario(tipo,boolaudio,boolvideo){
         
-      async  function audio_microfone(){
+     function audio(){
                 this.permissão ={
-                        audio:true,
-                        video:true
+                        audio:boolaudio,
+                        video:boolvideo
                 }
                navigator.mediaDevices.getUserMedia(this.permissão).then(stream=>{
                       var error =   stream.getAudioTracks()[0].label;
@@ -53,7 +53,7 @@ async function permissão_usuario(){
                                 return new AbortError("Erro em AbortError")
                          }
                          else if(error == "NotAllowedError"){
-                        return new NotAllowedError("Erro em NotAllowedError");
+                                return new NotAllowedError("Erro em NotAllowedError");
                          }
                          else if(error == "NotFoundError"){
                                 return new NotFoundError("Erro em NotFoundError");
@@ -61,7 +61,7 @@ async function permissão_usuario(){
                          else if(error == "NotReadableError"){
                                 return new NotReadableError("Erro em NotReadableError")
                          }
-                        
+                        console.log(stream); 
                         m.estado = false;
                         s.mudar_voz([m.estado]);
                 
@@ -70,25 +70,16 @@ async function permissão_usuario(){
         }
             var numero_navegador = parseInt(navigator.appVersion.slice(91,112).slice(7));
            
-            if(numero_navegador != 70){
-               
-                    
-                var stream =  await navigator.permissions.query({name:"microphone"});              
-                        if(stream.state == "granted"){
-                                audio_microfone()
-                        }
-                         else if(stream.state == "denied"){
-                                audio_microfone();
-                         }
-                         else {
-                                audio_microfone();
-                         }
-                
+            if(numero_navegador != 70)
+            {
+                         audio(); 
             }
 }
-var chrome=  L.Browser.chrome;
+var chrome = L.Browser.chrome;
 var opera = L.Browser.mobileOpera;
-if(chrome || opera)  permissão_usuario(); 
+if(chrome || opera){
+        permissão_usuario('microphone',true,false); 
+}
 else 
 {
 

@@ -20,7 +20,6 @@ class mapa {
         return div;
      }
      legend.addTo(this.map);
-     //var control  = L.control({position:""})
     }
     ponto_inicial(latitude,longitude){
         var parte_1 = [latitude, longitude,"1348", "porto de Marselha"]

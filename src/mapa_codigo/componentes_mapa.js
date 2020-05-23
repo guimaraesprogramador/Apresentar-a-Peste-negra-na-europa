@@ -103,7 +103,6 @@ class componentes_mapa {
                      s.mudar_mapa([m.estado]); 
          }
          else {
-                     console.log(m.map.getZoom());
                      //  A Área do Continente da Europa 10.180.000 km².
                      var raiz = Math.sqrt(10180000).toFixed(2);
                      var distancia = parseInt(raiz)*1000;
