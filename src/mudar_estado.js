@@ -60,8 +60,7 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                                    }
                                    else if(error == "NotReadableError"){
                                           return new NotReadableError("Erro em NotReadableError")
-                                   }
-                                  console.log(stream); 
+                                   } 
                                   m.estado = false;
                                   s.mudar_voz([m.estado]);
                           
@@ -72,7 +71,6 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
             if(numero_navegador != 70)
             {
                navigator.permissions.query({name:tipo}).then(r=>{
-                       console.log(r.state);
                        if(r.state == "granted")audio();
                })
                          
@@ -80,7 +78,9 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
 }
 var chrome = L.Browser.chrome;
 var opera = L.Browser.mobileOpera;
-if(chrome || opera){
+var android  = L.Browser.android;
+var android_anterior = L.Browser.android23;
+if(chrome || opera ||  android || android_anterior ){
         var ia32 = parseInt(navigator.platform.slice(8))
         if(ia32 == 86){
                 var div = document.createElement("div");
@@ -126,6 +126,10 @@ else
                         else {
                         alert("Utilize outro dispositivo pois,"+ " para assitir a apresentação ");
                         }
+                }
+                else{
+                        m.estado = false;
+                        s.mudar_voz([m.estado]);
                 }
              
         }
