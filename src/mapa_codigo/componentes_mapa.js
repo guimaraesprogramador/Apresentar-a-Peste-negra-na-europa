@@ -49,8 +49,8 @@ class componentes_mapa {
             }
             // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
-                     // O resultado da subtração do zoom é 10.
-                     var diminir_zoom = m.map.getZoom() - 3;
+                     // O resultado da subtração do zoom é 7.
+                     var diminir_zoom = m.map.getZoom() - 6;
                      m.map.setZoom(diminir_zoom);
                      var raiz = Math.sqrt(2406).toFixed(2);
                      var metros = parseInt(raiz)*1000;
@@ -68,8 +68,8 @@ class componentes_mapa {
                      s.mudar_mapa([m.estado]); 
             }
                   else if(localização == "inicio Turim"){
-                     // O resultado da subtração do zoom é 7.
-                     var diminir_zoom = m.map.getZoom() - 3;
+                     // O resultado da subtração do zoom é 5.
+                     var diminir_zoom = m.map.getZoom() - 2;
                      m.map.setZoom(diminir_zoom);
                      /* resultado da distancia entre porto de Marselha na França 
                      com a cidade de Turim na Itália, que é  370 km.*/
@@ -86,7 +86,7 @@ class componentes_mapa {
          }
          else if(localização == "até o centro da itália"){
                      // O resultado da subtração do zoom é 4.
-                     var diminir_zoom = m.map.getZoom() - 3; 
+                     var diminir_zoom = m.map.getZoom() - 1; 
                      m.map.setZoom(diminir_zoom);
                      /* resultado da distancia entre Turm na Itália
                      com a cidade de Terni na Itália, que é  291.1 km.*/
@@ -103,6 +103,9 @@ class componentes_mapa {
                      s.mudar_mapa([m.estado]); 
          }
          else {
+                     // O resultado da subtração do zoom é 3.
+                     var diminir_zoom = m.map.getZoom() - 1; 
+                     m.map.setZoom(diminir_zoom);
                      //  A Área do Continente da Europa 10.180.000 km².
                      var raiz = Math.sqrt(10180000).toFixed(2);
                      var distancia = parseInt(raiz)*1000;
