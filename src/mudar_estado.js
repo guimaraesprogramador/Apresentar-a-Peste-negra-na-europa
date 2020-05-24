@@ -80,7 +80,7 @@ var chrome = L.Browser.chrome;
 var opera = L.Browser.mobileOpera;
 var android  = L.Browser.android;
 var android_anterior = L.Browser.android23;
-if(chrome || opera ||  android || android_anterior ){
+if(chrome || opera){
         var ia32 = parseInt(navigator.platform.slice(8))
         if(ia32 == 86){
                 var div = document.createElement("div");
@@ -95,6 +95,13 @@ if(chrome || opera ||  android || android_anterior ){
                 }
         }
          else permissão_usuario('microphone',true,false);
+}
+else if(android || android_anterior )
+{
+        var div = document.createElement("div");
+        div.innerHTML += " Aviso importante  \n";
+        div.innerHTML += " A página ainda não funciona para Android ou ios";
+        alert(div.innerText);
 }
 else 
 {
