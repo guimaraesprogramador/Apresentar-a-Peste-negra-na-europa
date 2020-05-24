@@ -28,8 +28,8 @@ class  componentes_voz {
                     var linha =" Iniciando a sessão " + "\n" +" a respeito " +
                     " da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+"sobre "+ " o \n  Continente Europeu,"+"\n"+
                     " O  nome do responsável pelo projeto é " + this.autor + "\n"+
-                    " Sou uma "+ this.identidade +"\n"+" que usa uma " + this.Nome + "\n" + 
-                    "."+"\n"+
+                    " Sou uma "+ this.identidade +"\n"+" que usa uma " + this.Nome
+                    + this.Genero +"."+"\n"+
                     " que " + " vai "+ "atuar " + "como "+ " guia " +" nesta projeção.";
                     
                     c.texto = linha;
@@ -37,9 +37,9 @@ class  componentes_voz {
                 case "introdução":
                    
                     var linha = {
-                        primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de Covid-19, \n mais sim \n os relados ",
-                        segunda_linha:" que aconteceram \n naquela época \n durante \n a Idade Média \n",
-                        terceira_linha:" Sendo assim, \n será realizado \n uma exibição em um mapa \n bidimensional da Pandemia Peste Bubônica \n com o mapa de 2020 \n ",
+                        primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de coronavirus, \n mais sim \n os relados ",
+                        segunda_linha:" que aconteceram \n no século catorze \n durante \n a Idade Média \n",
+                        terceira_linha:" Sendo assim, \n será realizado \n uma apresentação de um mapa da Pandemia Peste Bubônica \n no ano de 2020  sobre o continente europeu \n ",
                         quarta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
                         quinta_linha:"Para assistir a projeção, \n não saia desta página \n",
                         sexta_linha:"Sendo assim,\n obrigado pelo entendimento."
@@ -50,7 +50,7 @@ class  componentes_voz {
                     break;
             case "parte_1":
                 let linhas =[
-                    "a peste bubônica é a doença \n causada pela bactéria que se encontrava em ratos contaminados. ",
+                    "a peste bubônica é uma doença \n causada pela bactéria que se encontrava em ratos contaminados. ",
                     "Seu surgimento ainda é bastante discutido, \n mas sabe-se que deu origem de um país \n na Ásia Central durante a Idade Média. ",
                     "A peste foi transportada principalmente pelas rotas marítimas da Ásia central \n como a frota genovesa \n com o destino ao continente europeu.  ",
                     "Sua primeira parada foi a cidade de Caffa, \n com o resultado a cidade foi \n sucumbida perante a peste.  ",
@@ -65,10 +65,10 @@ class  componentes_voz {
                     break;
                 case "parte_2":
                    let linhas2 = [
-                        "O desembarque da frota foi liberado \n pelas autoridades no interesse das mercadorias valiosas que a frota tinha a bordo.",
-                        "Por causa da transmissão causada pelos ratos contaminados na frota, \n a cidade foi rapidamente contagiada pela bacté-ria, \n torna-se  uma das entradas de Pandemia  no continente europeu. \n",
-                        "Como consequência disso, a frota ficou muito tempo ancorada neste porto, \n  mas ninguém se aproximava dela \n embora estivesse com mercadorias valiosas e com sua tripulação morta.\n ",
-                        "Com isso a bactéria não parou mais, ficou mais forte com o clima mais frio e se \n desenvolveu na forma pulmonar. \n",
+                        "O desembarque da frota foi liberado \n pelas autoridades no interesse das mercadorias valiosas que a frota tinha a bordo. ",
+                        " Por causa da transmissão causada pelos ratos contaminados na frota, \n a cidade foi rapidamente contagiada pela bactéria, \n torna-se  uma das entradas de Pandemia  no continente europeu. \n",
+                        " Como consequência disso, a frota ficou muito tempo ancorada neste porto, \n  mas ninguém se aproximava dela \n embora estivesse com mercadorias valiosas e com sua tripulação morta.\n ",
+                        " Com isso a bactéria não parou mais, ficou mais forte com o clima mais frio e se \n desenvolveu na forma pulmonar. \n",
                         "Depois de um ano a maioria da população de Marselha "
                    ]
                    c.texto = "";
@@ -129,16 +129,14 @@ class  componentes_voz {
                         threads_voz[0].postMessage([sequencia_primeira_parte[0]]);
                             // abertura
                             threads_voz[0].onmessage = event=>{ 
-                                   this.Roteiro(event.data.resposta);    
-                                    var resposta  = c.falar;                   
-                                    v.transmitir(resposta);               
+                                   this.Roteiro(event.data.resposta);               
+                                   v.transmitir(c.falar);       
                                     threads_voz[0] = null;
                                     threads_voz[1].postMessage([sequencia_primeira_parte[1]]);
                                 }
                             threads_voz[1].onmessage = event=>{
-                                this.Roteiro(event.data.resposta);    
-                                var resposta  = c.falar;            
-                                v.transmitir(resposta);     
+                               this.Roteiro(event.data.resposta);               
+                               v.transmitir(c.falar);
                                 threads_voz[1] = null;
                                 threads_voz[2].postMessage([sequencia_primeira_parte[2]]); 
                             }
@@ -146,8 +144,7 @@ class  componentes_voz {
                             
                                 threads_voz[2].onmessage = event=>{    
                                     c.Roteiro(event.data.resposta);
-                                    var resposta  = c.falar;     
-                                    v.transmitir(resposta);     
+                                    v.transmitir(c.falar);        
                                     threads_voz.pop();
                                     threads_voz.pop();
                                     this.proxima = "parte_2";
@@ -161,9 +158,7 @@ class  componentes_voz {
                         threads_voz[0].postMessage([c.falar]); 
                         threads_voz[0].onmessage = event =>{
                             c.Roteiro(event.data.resposta);
-                            var resposta  = c.falar;     
-                            v.IA.resume();
-                            v.transmitir(resposta); 
+                            v.transmitir(c.falar);   
                             this.proxima = "parte_2-1";
                         }
                     }
@@ -175,9 +170,7 @@ class  componentes_voz {
                         threads_voz[0].postMessage([c.falar]); 
                         threads_voz[0].onmessage = event =>{
                             c.Roteiro(event.data.resposta);
-                            var resposta  = c.falar;     
-                            v.IA.resume();
-                            v.transmitir(resposta); 
+                            v.transmitir(c.falar);   
                             this.proxima = "parte_3-1";
                         } 
                     }
@@ -189,9 +182,7 @@ class  componentes_voz {
                             threads_voz[0].postMessage([c.falar]); 
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
-                                var resposta  = c.falar;    
-                                v.IA.resume();
-                                v.transmitir(resposta); 
+                                v.transmitir(c.falar);   
                                 this.proxima = "parte_3-2";
                             }
                     }
@@ -204,7 +195,6 @@ class  componentes_voz {
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
                                 var resposta  = c.falar;    
-                                v.IA.resume();
                                 v.transmitir(resposta); 
                                 this.proxima = "parte_4";
                             }
@@ -217,9 +207,7 @@ class  componentes_voz {
                             threads_voz[0].postMessage([c.falar]); 
                             threads_voz[0].onmessage = event =>{
                                 c.Roteiro(event.data.resposta);
-                                var resposta  = c.falar;  
-                                v.IA.resume(); 
-                                v.transmitir(resposta); 
+                                v.transmitir(c.falar);   
                                 this.proxima = "acabou a exbição";
                             }
                     }

@@ -33,7 +33,7 @@ class componentes_mapa {
        try{
            
             // constante 
-            var radios = 5;
+            var radios = 200;
             var metade;
             // verifica local
             var localização = e.Local == "porto de Marselha"? "porto de Marselha" : e.Local;
@@ -46,7 +46,6 @@ class componentes_mapa {
                            }).addTo(m.map);
                            m.estado = false;
                            e.referencia = "aumentar circulo";
-                           s.mudar_mapa([m.estado]); 
             }
             // aumenta a contaminazação no porto de Marselha
             else if(localização =="aumentar circulo" ){
@@ -104,7 +103,6 @@ class componentes_mapa {
                      s.mudar_mapa([m.estado]); 
          }
          else {
-                     console.log(m.map.getZoom());
                      //  A Área do Continente da Europa 10.180.000 km².
                      var raiz = Math.sqrt(10180000).toFixed(2);
                      var distancia = parseInt(raiz)*1000;
@@ -116,8 +114,8 @@ class componentes_mapa {
                      }
                      
                      m.estado = false;
-                     s.mudar_mapa([m.estado]); 
                      e.referencia = "acabou a exbição";
+                     s.mudar_mapa([m.estado]); 
                      /* Fim da historia*/
          }
          
@@ -136,7 +134,7 @@ class componentes_mapa {
                threads_mapa[0].postMessage([ e.Local]);
                   threads_mapa[0].onmessage = event=>{
                      e.coordenadas(event.data.dados[0],event.data.dados[1]);
-                     threads_mapa.pop();
+                     s.mudar_mapa([m.estado]); 
                }
                
             }
@@ -146,7 +144,7 @@ class componentes_mapa {
                   e.longitude]);
                threads_mapa[0].onmessage = event=>{
                      e.coordenadas(event.data.dados[0],event.data.dados[1]);
-                     threads_mapa.pop();
+                     threads_mapa.pop()
                }
            }
        }catch(ev){

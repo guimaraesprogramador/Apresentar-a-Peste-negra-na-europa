@@ -1,5 +1,5 @@
 class mapa {
-   estado= true;
+   estado = true;
    constructor(){
 }
    inicial(){

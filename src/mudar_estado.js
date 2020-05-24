@@ -10,16 +10,14 @@ class mudar {
                                 if(v.IA == undefined)clearInterval(tempo);
                                 else if(v.IA != undefined){
                                         if(v.IA.pending == false && v.IA.speaking == false){
-                                                v.IA.pause();
                                                 m.estado = true;
-                                                c.texto =  c.proxima;
-                                                console.log(c.falar);
-                                                s.mudar_voz([m.estado]);
+                                                c.texto = c.proxima;
+                                                s.mudar_mapa([m.estado]);
                                                 clearInterval(tempo);
                                         }
                                 }
                         },2000);
-                }else s.mudar_mapa(mudança);         
+                }         
         }
         mudar_mapa(mudança)
         {
@@ -32,46 +30,103 @@ class mudar {
     }
 const s = new mudar();
 m.inicial();
-
-
-window.onload = function(){
-        function error(navegador){
-                alert("Utilize o Firefox ou Edge pois,  o " + navegador +
-                " ainda não funciona nesta página.");
-                console.clear();
-        }
-
-        function Permissão_api_SpeechSynthesis()
-        {
-
-                Notification.requestPermission().then(p=>
-                {
-                        if(p == "granted")
-                        {
-                                m.estado = false;
-                                s.mudar_voz([m.estado])
-                        }
-                        
-                }).catch(erro=>{
-
+ 
+function permissão_usuario(tipo,boolaudio,boolvideo){
+        
+     function audio(){
+                this.permissão ={
+                        audio:boolaudio,
+                        video:boolvideo
+                }
+               navigator.mediaDevices.getUserMedia(this.permissão).then(stream=>{
+                      var error =   stream.getAudioTracks()[0].label;
+                        if(error == "OverconstrainedError"){
+                                return new OverconstrainedError("Erro em OverconstrainedError");
+                         }
+                         else if(error == "SecurityError"){
+                                return new SecurityError("Erro em SecurityError");
+                         }
+                         else if(error == "TypeError"){
+                                return new TypeError("Erro em TypeError");
+                         }
+                         else if(error == "AbortError"){
+                                return new AbortError("Erro em AbortError")
+                         }
+                         else if(error == "NotAllowedError"){
+                                return new NotAllowedError("Erro em NotAllowedError");
+                         }
+                         else if(error == "NotFoundError"){
+                                return new NotFoundError("Erro em NotFoundError");
+                         }
+                         else if(error == "NotReadableError"){
+                                return new NotReadableError("Erro em NotReadableError")
+                         }
+                        console.log(stream); 
+                        m.estado = false;
+                        s.mudar_voz([m.estado]);
+                
                 })
-        }       
-        var chrome=  L.Browser.chrome;
-        var internet_explore= L.Browser.ie;
-        var opera = L.Browser.mobileOpera;
-        if(chrome)
-        {
+               
+        }
             var numero_navegador = parseInt(navigator.appVersion.slice(91,112).slice(7));
-            if(numero_navegador != 70){
-               Permissão_api_SpeechSynthesis();
+           
+            if(numero_navegador != 70)
+            {
+                         audio(); 
             }
-        } 
-        else if(internet_explore) error("Internet Explorer");
-        else if(opera) error("Opera");
+}
+var chrome = L.Browser.chrome;
+var opera = L.Browser.mobileOpera;
+if(chrome || opera){
+        permissão_usuario('microphone',true,false); 
+}
+else 
+{
+
+        function error(navegador)
+                        {
+                                alert("Utilize outro navegador pois,  o " + navegador +
+                                " ainda não funciona nesta página.");
+                                console.clear();
+                        }
+        var internet_explore= L.Browser.ie;
+        var edge = L.Browser.ielt9;
+        if(internet_explore) error("Internet Explorer");     
+        else if(edge) error("Edge");
         else 
         {
                 m.estado = false;
-                s.mudar_voz([m.estado])
-        }       
-    }
+                s.mudar_voz([m.estado]);
+        }
+}
+// modo tela cheia
+// var f11 = confirm("Deseja o modo tela cheia ?");
+// if(f11 == true){
+//      async function  full(){
+//         if(chrome){
+//                 document.documentElement.requestFullscreen();
+//         }
+//         else if( opera){
+//                 document.documentElement.webkitRequestFullscreen();
+//         }
+//                 }
+//         return new Promise((re))
+//         full();
+	
+// 	// if (element.requestFullscreen) {
+// 	// 	
+// 	// } else if (element.mozRequestFullScreen) {
+// 	// 	element.mozRequestFullScreen();
+// 	// } else if (element.webkitRequestFullscreen) {
+// 	// 	element.webkitRequestFullscreen();
+// 	// } else if (element.msRequestFullscreen) {
+// 	// 	element.msRequestFullscreen();
+// 	// }
+// }
+// else {
+//         alert("obrigado pela prefencia ");
+// }
+
+
+
        
