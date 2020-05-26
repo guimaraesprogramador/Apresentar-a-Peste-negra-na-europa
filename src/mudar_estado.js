@@ -29,7 +29,6 @@ class mudar {
         }   
     }
 const s = new mudar();
-m.inicial();
  
 function permissão_usuario(tipo,boolaudio,boolvideo){
         

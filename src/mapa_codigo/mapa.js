@@ -4,6 +4,7 @@ try{
 class mapa {
    estado = true;
    constructor(){
+       this.inicial();
 }
    inicial(){
         let initialCoordinates = [43.280555,5.345467]; // cidade de marselha
