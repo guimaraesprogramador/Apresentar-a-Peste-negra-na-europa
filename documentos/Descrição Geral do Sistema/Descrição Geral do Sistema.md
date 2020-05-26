@@ -2,18 +2,32 @@
 
 ## 2.1 Descrição do Problema
 O software não é uma verdade absoluta, mais sim, está conforme as informações extraídas de sites referentes, há abaixo um espoco desse Software:
-No Começo da projeção de cartografia, será apresentado ao visitante a respeito da Pandemia de Peste negra.
+No Começo da apresentação, será a respeito da Pandemia de Peste bubônica.
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_I.png)
 
 
 
 
 
-No começo vai apresentar um círculo vermelho e a legenda determinar os locais de início da Pandemia da Peste bubônica, seguido da uma história reproduzida pela voz da máquina feminina, ela vai contar o que houve naquele tempo bem resumidamente.
-![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_II%20.png)
+No começo vai apresentar um círculo vermelho e a legenda determinar os locais de início da Pandemia da Peste bubônica, seguido da uma história reproduzida pela voz da máquina feminina, ela vai contar o que houve naquele tempo bem resumidamente abaixo uma imagem ilustrando isso aproximadamente: 
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_II.PNG)
+
+Depois disso o círculo vai aumenta e juntamente área ao mesmo tempo, contando a apresentação na ordem descrita.
+***
+Abaixo uma imagem ilustrando isso aproximadamente: 
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_III.PNG)
+
+Depois disso o círculo vai aumenta e juntamente área ao mesmo tempo, contando a apresentação na ordem descrita.
+***
+Abaixo uma imagem ilustrando isso aproximadamente: 
+![Image]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_III.PNG)
+
+Depois disso o círculo vai aumenta e juntamente área ao mesmo tempo, contando a apresentação na ordem descrita.
+***
 
 Finalmente esse círculo vão expandir juntando os locais que a Pandemia se espalhou naquele tempo e a voz feminina vai finalizar mostrando o resultado de morte pela Pandemia e agradeço pela paciência.
-
+![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_IV.PNG)
+***
 
 ## 2.2 Principais envolvimentos e suas Característica 
 
