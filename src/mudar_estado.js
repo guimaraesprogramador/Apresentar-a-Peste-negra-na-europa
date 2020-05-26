@@ -74,7 +74,7 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                         else if(r.state == "denied")audio();
                         else if(r.state == "prompt"){
                                 alert("Para assistir é necessario o acesso ao microphone");
-                                audio();
+                                
                         }
                })
                          
