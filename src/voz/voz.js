@@ -1,3 +1,4 @@
+try{
 class voz {
     
     constructor(){ 
@@ -24,3 +25,6 @@ self.addEventListener("message",ev=>{
     postMessage({resposta:tipo});
     self.close();
 });
+}catch(ex){
+    console.error("erro na classe voz");
+}
