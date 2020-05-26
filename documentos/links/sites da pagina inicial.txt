@@ -22,3 +22,9 @@ http://www.geografia.seed.pr.gov.br/modules/noticias/article.php?storyid=1020
 
 // informação sobre a Distância de Gibraltar GX11 1AA até Montes Urais
 https://www.google.com/search?client=ubuntu&ei=cLm-XvybKoKX0AaN86DIBg&q=distancia+ente+Gibraltar%2C+GX11+1AA%2C+Gibraltar++e+Montes+Urais%2C+R%C3%BAssia&oq=distancia+ente+Gibraltar%2C+GX11+1AA%2C+Gibraltar++e+Montes+Urais%2C+R%C3%BAssia&gs_lcp=CgZwc3ktYWIQAzIECCEQCjoECAAQR1CTCVjRDGCUFGgAcAF4AIAB-wGIAfADkgEDMi0ymAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=0ahUKEwj8k9_Im7bpAhWCC9QKHY05CGkQ4dUDCAw&uact=5
+
+// pagespeed no link https://guimaraesprogramador.github.io/zonas_distancia/
+https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fguimaraesprogramador.github.io%2Fzonas_distancia%2F&tab=mobile
+
+// gtmetrix no link https://guimaraesprogramador.github.io/zonas_distancia/
+https://gtmetrix.com/reports/guimaraesprogramador.github.io/J1uriClh
