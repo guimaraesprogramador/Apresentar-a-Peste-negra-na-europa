@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2020-04-19T18:34:15" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
+<XMI verified="false" xmi.version="1.2" timestamp="2020-05-26T17:47:27" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -91,7 +91,6 @@
       <diagrams resolution="96">
        <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="diagrama de sequência" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="1317" canvaswidth="1034" localid="-1" snapcsgrid="0" showgrid="1" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="u6uxfW5xNOoV0" documentation="" showscope="1" snapgrid="1" showatts="1" type="3">
         <widgets>
-         <boxwidget width="100" showstereotype="1" x="-944" usesdiagramusefillcolor="0" y="-790" usesdiagramfillcolor="0" isinstance="0" localid="uMbBOEvfeusYo" fillcolor="#ffff00" height="80" linecolor="#000000" xmi.id="uPekxE1yiwbe7" autoresize="0" textcolor="#000000" usefillcolor="1" linewidth="0" font="Sans Serif,9,-1,0,50,0,0,0,0,0"/>
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-825" decon="0" showstereotype="1" y="75" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="u64WQ5hQecsNn" width="119" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="ulbfSJjArDc2L" autoresize="0" height="25" drawasactor="0"/>
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-375" decon="0" showstereotype="1" y="75" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="utOhrqoggTjhW" width="134" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="uHCfB3DLUYmGo" autoresize="1" height="25" drawasactor="0"/>
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-200" decon="0" showstereotype="1" y="75" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="ub25wtiGachqp" width="51" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="uwmIilJebYwYu" autoresize="1" height="25" drawasactor="0"/>
@@ -165,7 +164,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="u6uxfW5xNOoV0" uniqueid="uALUJZf9kTCPH" documentation=""/>
+  <docsettings viewid="u6uxfW5xNOoV0" uniqueid="uzbE1m0mhIhN1" documentation=""/>
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="836" id="Entity_Relationship_Model"/>

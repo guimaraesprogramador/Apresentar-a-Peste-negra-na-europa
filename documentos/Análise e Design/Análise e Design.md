@@ -1,5 +1,3 @@
-
-***
 # 4. Análise e Design
 ## 4.1 Arquitetura do Sistema
 O digrama proposto abaixo é o de sequência seguindo a frase de ** ARISTÓTELES ** que é “o todo é maior que a soma das partes” foi dividido o conteúdo todo do digrama de sequência em 4 partes e suas descrições para facilidade a visualização e a leitura entre si.
@@ -147,4 +145,6 @@ Ela é composta de dois métodos que são:
 E ainda também ela é constantemente em executada uma classe de cada vez para não ter problemas entre os objetos.
 ## 4.3 Modelo de Dados
 ### 4.3.1 Modelo Lógico da Base de Dados
-![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20relacionamento%20de%20entidade.png)
+***
+[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md) &nbsp;                 &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]()
+
