@@ -88,17 +88,13 @@ var chrome = L.Browser.chrome;
 var opera = L.Browser.mobileOpera;
 var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
 if(android)
-{
-        try{
-                permissão_usuario('microphone',true,false);    
-        }
-        catch(ev){
+{        
+                // Futuramente implentação do android ou ios.
                 var div = document.createElement("div");
                 div.innerHTML += " Aviso importante  \n";
                 div.innerHTML += " A página ainda não funciona para Android ou ios";
                 alert(div.innerText);
-        }
-        
+      
 }
 else if(chrome || opera){
         var ia32 = parseInt(navigator.platform.slice(8))
