@@ -1,5 +1,3 @@
-try{
-
 
 class mapa {
    estado = true;
@@ -57,6 +55,3 @@ self.addEventListener("message",event=>{
             break;
     }
 })
-}catch(ex){
-    console.error("erro na classe mapa");
-}
