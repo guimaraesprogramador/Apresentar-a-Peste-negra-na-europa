@@ -71,6 +71,10 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
             {
                navigator.permissions.query({name:tipo}).then(r=>{
                        if(r.state == "granted")audio();
+                        else if(r.state == "prompt")audio()
+                        else if(r.state == "denied"){
+                                alert("Para assistir é necessario o acesso ao microphone");
+                        }
                })
                          
             }
