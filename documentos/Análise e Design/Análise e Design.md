@@ -97,10 +97,12 @@ O software é bastante afetado pelo estado do que se inicia sendo assim descrido 
 
 1.  O software é ativado independo do usuário precisa dele ou não pois, já carregar os modulo necessário da aplicação e começar a trabalha praticamente os dados filtrados mais primeiramente ele promove um esclarecimento ao usuário suas finalidades, cabe o usuário aceite ou recuse. 
 
-2. Caso o usuário aceito é esperado que fique na página em um curto intervalo de 3 segundos.
-3. Caso o usuário recuse, ele pode sair da página antes dos 3 segundos sem se preocupar com seus dados pessoais.
+2. No caso do Chrome, o software precisa que o usuário aceitei o acesso ao microfone.
+3. Caso o usuário recuse, ele pode sair da página sem se preocupar com seus dados pessoais.
 4.Depois de cada história apresentada é exibido a localidade referente a história contada.
-5. É por fim é exibir a união dessa localidade mostrada a extensão da Pandemia peste bubônica.
+5. É por fim é exibir a extensão da Pandemia peste bubônica.
+6. Na parte 4 será exibido um bloco com o link do site da documentação;
+
 ## 4.2 Modelo do Domínio
 ![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20classe.png)
 ### Explicação do Diagrama de Classe 
@@ -132,10 +134,12 @@ E uma variável denominada “estado” definhada inicialmente com verdadeira (true).
 Esse objeto é vinculado com uma associação unilateral (que a classe “mudar_estado” não reconhecer a existência da classe “componentes_exibição”) que contém os seguintes atributos:
 
 1. ”Ano” Definido como number(real,inteiro,decimal e etc...).
-2. “local” Definido como string(texto).
-3. “latitude” Definido como number(real,inteiro,decimal e etc...).
-4. “longitude” Definido como number(real,inteiro,decimal e etc...).
-
+2. “local” Definido como string(texto), para ler o local de referência.
+3. “latitude” Definido como number(real,inteiro,decimal e etc...), para ler a latitude do mapa.
+4. “longitude” Definido como number(real,inteiro,decimal e etc...), para ler a longitude do mapa.
+5. “eixo_principal_terra” Definido como number(real,inteiro,decimal e etc...), para gravar a latitude do mapa.
+6. “linha_imaginada” Definido como number(real,inteiro,decimal e etc...), para gravar a longitude do mapa.
+7. “referencia” Definido como string(texto), para gravar o local de referência.
 #### A classe intermediaria ”mudar_estado”
 Esse objeto é necessário para caracterizar tanto o mapa que reproduzido tanto para ajudar no conto da história apresentar pela classe “voz”.
 Ela é composta de dois métodos que são:

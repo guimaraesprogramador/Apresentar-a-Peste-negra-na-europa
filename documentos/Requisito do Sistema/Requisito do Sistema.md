@@ -14,14 +14,14 @@ A ação do software em tentar esclarecer os fatos para o usuário, sendo a reprodu
 1. Um ou mais usuário.
 ### Sequência de Eventos
 1. Primeiramente o software vai carregar alguns modulo que precisa da interne.
-2. Quando o usuário entrar no software, ele se apresentar e depois vai estabelecer os termos ao usuário se ele fica no software pelo menos 3 segundos, o software vai entender que ele aceitou os termos impostos.
+2. Quando o usuário entrar no software, ele se apresentar e depois do apresentar, se usuário fica no software, o software vai entender que ele interessou sobre assunto.
 3. No final da cada história será exibido um círculo com cor vermelho demarcando o local falado.
-4. E no final onde será reproduzido a união dos locais demarcado para visualizar a grande extensão da Pandemia da Peste bubônica no continente europeu.
+4. E no final onde será reproduzido a grande extensão da Pandemia da Peste bubônica no continente europeu.
 5. Por fim a voz parecia com feminina vai agradecer pela paciência.
 ### Pós-condições 
-Representação em um mapa cartográfico o espalhamento da Pandemia da Peste negra.
+Representação em dá cartográfico no espalhamento da Pandemia da Peste bubônica.
 ### Exceções 
-Caso o Usuário não aceite os termos impostos em um certo intervalo de 3 segundos ele pode sair do software sem preocupação com seus dados pessoais.
+Caso o Usuário não aceite, ele pode sair do software sem preocupação com seus dados pessoais.
 Caso o usuário fique em internet durante a exibição da Pandemia, poderá recomeça de novo, pois seus dados pessoais não são armazenados no software.
 ### Observação 
 Nenhuma.

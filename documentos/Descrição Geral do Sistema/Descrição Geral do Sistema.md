@@ -25,8 +25,11 @@ Abaixo uma imagem ilustrando isso aproximadamente:
 Depois disso o círculo vai aumenta e juntamente área ao mesmo tempo, contando a apresentação na ordem descrita.
 ***
 
-Finalmente esse círculo vão expandir juntando os locais que a Pandemia se espalhou naquele tempo e a voz feminina vai finalizar mostrando o resultado de morte pela Pandemia e agradeço pela paciência.
+Finalmente esse círculo vão expandir juntando os locais que a Pandemia se espalhou, Abaixo uma imagem ilustrando isso aproximadamente:
 ![Image](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/peste%20negra%20em%201347_IV.PNG)
+
+A voz vai finalizar mostrando o resultado de morte pela Pandemia e agradeço pela paciência.
+
 ***
 
 ## 2.2 Principais envolvimentos e suas Característica 
