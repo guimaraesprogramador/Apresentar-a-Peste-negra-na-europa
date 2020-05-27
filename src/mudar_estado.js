@@ -89,12 +89,12 @@ var opera = L.Browser.mobileOpera;
 var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
 if(android)
 {        
-        permissão_usuario('microphone',true,false);
-                // // Futuramente implentação do android ou ios.
-                // var div = document.createElement("div");
-                // div.innerHTML += " Aviso importante  \n";
-                // div.innerHTML += " A página ainda não funciona para Android ou ios";
-                // alert(div.innerText);
+        
+                // Futuramente implentação do android ou ios.
+                var div = document.createElement("div");
+                div.innerHTML += " Aviso importante  \n";
+                div.innerHTML += " A página ainda não funciona para Android ou ios";
+                alert(div.innerText);
       
 }
 else if(chrome || opera){
