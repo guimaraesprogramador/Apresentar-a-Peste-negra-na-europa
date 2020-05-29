@@ -53,7 +53,7 @@ Data inicial | Data final | Item
 20/04/20     | 27/04/20  | termina o círculos com as threads e fazer e terminar o diagrama de sequência para entender threads.
 27/04/20     | 25/05/20  | corrigir ou se o código é limpo. 
 26/05/20     | 27/05/20  | olhar nos 3 sites fazer de teste performance o projeto. 
-Finalizar projeto: | 27/05/20| sujeito a alteração futuras.
+Finalizar projeto: | 30/05/20| sujeito a alteração futuras.
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
 ***
