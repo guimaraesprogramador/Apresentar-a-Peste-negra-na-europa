@@ -93,7 +93,7 @@ if(android)
                 // Futuramente implentação do android ou ios.
                 var div = document.createElement("div");
                 div.innerHTML += " Aviso importante  \n";
-                div.innerHTML += " A página ainda não funciona para Android ou ios";
+                div.innerHTML += " A página ainda não funciona para Android ou IOS.";
                 alert(div.innerText);
       
 }

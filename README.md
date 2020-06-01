@@ -13,7 +13,7 @@
 >6 [Testes](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Testes/Testes.md) 
 ***
 
-[**link da Apresentação**]( https://guimaraesprogramador.github.io/Apresentar-a-Peste-negra-na-europa./)
+[**Apresentação**]( https://guimaraesprogramador.github.io/Apresentar-a-Peste-negra-na-europa./)
 
 
 
