@@ -1,7 +1,7 @@
 # 3.Requisito do Sistema
 ## 3.1 Requisitos Funcionais 
 De acordo com os requisitos funcionais do Software, apresentamos um diagrama de Caso de uso abaixo:
-![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20caso%20de%20uso.png)		
+![IMAGE](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20caso%20de%20uso.png)		
 
 ### Nome do caso de Uso
 Exibição dos fatores da história.
@@ -26,6 +26,6 @@ Caso o usuário fique em internet durante a exibição da Pandemia, poderá recomeça
 ### Observação 
 Nenhuma.
 ## 3.2 Requisitos não-funcionais 
-![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/Requisito%20n%C3%A3o%20%20funcionais.png)
+![IMAGE](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/Requisito%20n%C3%A3o%20%20funcionais.png)
 ***
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md) [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/Implementa%C3%A7%C3%A3o/Implementa%C3%A7%C3%A3o.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md) [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Implementa%C3%A7%C3%A3o/Implementa%C3%A7%C3%A3o.md)

@@ -3,7 +3,7 @@
 O digrama proposto abaixo é o de sequência seguindo a frase de ** ARISTÓTELES ** que é “o todo é maior que a soma das partes” foi dividido o conteúdo todo do digrama de sequência em 4 partes e suas descrições para facilidade a visualização e a leitura entre si.
 
 ### Parte 1
-![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%201.png)
+![IMAGE]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%201.png)
 #### Descrição
 A classe “mapa” precisa primeira ter internet para carregar o mapa (bidimensional) e ela faz parte um arquivo html carregado (index.html).
 ***
@@ -30,7 +30,7 @@ Na classe “componentes_mapa” o método “threads()”que é um void(função que não re
 
 
 ### Parte 2
-![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%202.png)
+![IMAGE]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%202.png)
 #### Descrição
 ***
 Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false”.
@@ -47,7 +47,7 @@ Na classe “componentes_mapa” o método “threads()”que é um void(função que não re
 *** 
 
 ### Parte 3
-![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%203.png)
+![IMAGE]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%203.png)
 #### Descrição
 Quando a variável “threads_mapa()” retorna var encaminhar diretamente para classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “false” e para a classe “mudar_estado”.
 ***
@@ -87,7 +87,7 @@ Na classe “mudar_estado” vai encaminha diretamente para classe “componentes_voz”
 Na classe “componentes_voz” o método denominado “threads()”  tem  a variável “threads_voz()” vai carregar duas vezes que tem como retorno um array(ordem em fila).
 *** 
 ### Parte 4
-![IMAGE]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%204.png)
+![IMAGE]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20sequencia_parte%204.png)
 #### Descrição
 ***
 Depois disso vai executar a duas última ordem da variável “threads_voz()”vai encaminhar diretamente para a classe “mudar_estado” com o método denominado “mudar_voz” passando parâmetro de uma variável do tipo array(ordem em fila) que é um void(função que não retorna nada)como “true” até fazer a reprodução de todos os threads_voz.
@@ -104,7 +104,7 @@ O software é bastante afetado pelo estado do que se inicia sendo assim descrido 
 6. Na parte 4 será exibido um bloco com o link do site da documentação;
 
 ## 4.2 Modelo do Domínio
-![IMAGE](https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/imagens/diagrama%20de%20classe.png)
+![IMAGE](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20classe.png)
 ### Explicação do Diagrama de Classe 
 O software possui duas classes principais: voz e o mapa, mas uma classe intermediaria que é denominada ”mudar_estado”. 
 #### A classe “voz”
@@ -150,4 +150,4 @@ E ainda também ela é constantemente em executada uma classe de cada vez para não
 ## 4.3 Modelo de Dados
 ### 4.3.1 Modelo Lógico da Base de Dados
 ***
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )]( https://github.com/guimaraesprogramador/zonas_distancia/blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md) [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md) [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]()
