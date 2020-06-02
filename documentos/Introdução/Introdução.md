@@ -41,8 +41,8 @@ O padrão de Projeto que mais atente o requisito é o State(A mudança do estado do
 Modelagem do Projeto:
 O método utilizado é ferramenta de modelagem Umbelho que utilizar o modelo UML com finalidade para o diagrama de classe, estado e caso de uso.
 
-## 1.5 Cronograma das Atividades	
-
+## 1.5 Cronograma das Atividades
+### Etapa 1
 Data inicial | Data final | Item
 ------------ | -----------| -----------
 27/03/20     |	30/03/20| corrigir e termina tópico 1.
@@ -52,8 +52,11 @@ Data inicial | Data final | Item
 14/04/20     | 20/04/20   | ver o caso do Chrome não realizado a voz. 
 20/04/20     | 27/04/20  | termina o círculos com as threads e fazer e terminar o diagrama de sequência para entender threads.
 27/04/20     | 25/05/20  | corrigir ou se o código é limpo. 
-26/05/20     | 27/05/20  | olhar nos 3 sites fazer de teste performance o projeto. 
+26/05/20     | 27/05/20  | olhar nos 3 sites fazer de teste no projeto. 
 Finalizar projeto: | 02/06/20| sujeito a alteração futuras.
+### Etapa 2
+
+#### ainda sem data.
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
 ***

@@ -27,22 +27,22 @@ class  componentes_voz {
                 case "abertura":
                     var linha =" Iniciando a sessão " + "\n" +" a respeito " +
                     " da " + "Pandemia"+" de "+ "Peste "+ "bubônica," + "\n"+"sobre "+ " o \n  Continente Europeu,"+"\n"+
-                    " O  nome do responsável pelo projeto é " + this.autor + "\n"+
-                    " Sou uma "+ this.identidade +"\n"+" que usa uma " + this.Nome
+                    " o  nome do responsável pelo projeto é " + this.autor + "\n"+
+                    " sou uma "+ this.identidade +"\n"+" que usa uma " + this.Nome
                     + this.Genero +"."+"\n"+
-                    " que " + " vai "+ "atuar " + "como "+ " guia " +" nesta projeção.";
+                    " Que " + " vai "+ "atuar " + "como "+ " guia " +" nesta projeção.";
                     
                     c.texto = linha;
                     break;
                 case "introdução":
                    
                     var linha = {
-                        primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de coronavirus, \n mais sim \n os relados ",
+                        primeira_parte:"Essa história \n não tem relação direta \n  com a Pandemia de coronavírus, \n mais sim \n os relados ",
                         segunda_linha:" que aconteceram \n no século catorze \n durante \n a Idade Média \n",
                         terceira_linha:" Sendo assim, \n será realizado \n uma apresentação de um mapa da Pandemia Peste Bubônica \n no ano de 2020  sobre o continente europeu \n ",
-                        quarta_linha:"O contado\n do telefone e o E-mail está na documentação. \n",
+                        quarta_linha:"o contado\n do telefone e o E-mail está na documentação. \n",
                         quinta_linha:"Para assistir a projeção, \n não saia desta página \n",
-                        sexta_linha:"Sendo assim,\n obrigado pelo entendimento."
+                        sexta_linha:"sendo assim,\n obrigado pelo entendimento."
                     }
                     c.texto = linha.primeira_parte + linha.segunda_linha +
                     linha.terceira_linha + linha.quarta_linha +
@@ -61,7 +61,6 @@ class  componentes_voz {
                 linhas.forEach((value,index,array)=>{
                    c.texto = c.texto +  value.toString();
                 })
-                   
                     break;
                 case "parte_2":
                    let linhas2 = [
