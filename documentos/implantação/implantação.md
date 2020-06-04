@@ -1,16 +1,16 @@
-# 7 Implantação
+# 7 Implantaï¿½ï¿½o
 ## Objetivo:
 ### Geral:
-O objetivo foi menciona a importante que devemos ter em uma Pandemia para não se espalhe com muita frequência em território, pois como a Pandemia de Peste bubônica (conhecida como negra) que foi uma bactéria espalhada pelo continente Europeu durante o século catorze que dizimou mais de um terço da Europa.    
+O objetivo foi menciona a importante que devemos ter em uma Pandemia para nï¿½o se espalhe com muita frequï¿½ncia em territï¿½rio, pois como a Pandemia de Peste bubï¿½nica (conhecida como negra) que foi uma bactï¿½ria espalhada pelo continente Europeu durante o sï¿½culo catorze que dizimou mais de um terï¿½o da Europa.    
 ### Especifico:
-Apresentar na forma de apresentação oral e visual os elementos que compõem a Pandemia de Peste bubônica.
-## Manual de Implantação
-### Condições de hardware:
+Apresentar na forma de apresentaï¿½ï¿½o oral e visual os elementos que compï¿½em a Pandemia de Peste bubï¿½nica.
+## Manual de Implantaï¿½ï¿½o
+### Condiï¿½ï¿½es de hardware:
 **4 GB de RAM (pelo menos).**
 **2 cores (pelo menos).**
-#### Obs: Arquiteturas 32 podem sofre ruídos na apresentação oral.
-### Condições de software:
+#### Obs: Arquiteturas 32 podem sofre ruï¿½dos na apresentaï¿½ï¿½o oral.
+### Condiï¿½ï¿½es de software:
 **Navegador diferente do interenet Explorer, Egde.**
-#### Obs: Ainda não está funcionando para Android ou IOS.
+#### Obs: Ainda nï¿½o estï¿½ funcionando para Android ou IOS.
 ***
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/An%C3%A1lise%20e%20Design/An%C3%A1lise%20e%20Design.md)  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/An%C3%A1lise%20e%20Design/An%C3%A1lise%20e%20Design.md)  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]()

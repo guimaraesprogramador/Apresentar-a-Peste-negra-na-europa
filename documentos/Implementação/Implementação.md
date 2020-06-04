@@ -1,10 +1,10 @@
-# 5 Implantação
-As implantações do site referente a Pandemia de peste bubônica foram feitas baseada em site e livro referência em história de Pandemias, utilizam orientação a objeto e API de síntese de fala incluído no browser na linguagem “javascript” e também web workers que roda no backend dos browsers ajudando na performance da página.
-O padrão utilizado foi o State utilizando uma classe que compõem duas classes que não reconhecimento entre si, mas são manipuladas seu estado dependo da ordem na implementação na apresentação no site.
-Há também aquilo de configuração no github que é jekyll para sites estáticos.
-O código foi divido em parte para facilidade com a frase de Aristóteles:
-" O todo é maior que a soma das partes ".
-Não foi possível a implementação em todos os browsers pois, A API de Navegador no método getUserMedia() ,  abaixo uma tabela do dia 26 de março de 2020:
+# 5 Implantaï¿½ï¿½o
+As implantaï¿½ï¿½es do site referente a Pandemia de peste bubï¿½nica foram feitas baseada em site e livro referï¿½ncia em histï¿½ria de Pandemias, utilizam orientaï¿½ï¿½o a objeto e API de sï¿½ntese de fala incluï¿½do no browser na linguagem ï¿½javascriptï¿½ e tambï¿½m web workers que roda no backend dos browsers ajudando na performance da pï¿½gina.
+O padrï¿½o utilizado foi o State utilizando uma classe que compï¿½em duas classes que nï¿½o reconhecimento entre si, mas sï¿½o manipuladas seu estado dependo da ordem na implementaï¿½ï¿½o na apresentaï¿½ï¿½o no site.
+Hï¿½ tambï¿½m aquilo de configuraï¿½ï¿½o no github que ï¿½ jekyll para sites estï¿½ticos.
+O cï¿½digo foi divido em parte para facilidade com a frase de Aristï¿½teles:
+" O todo ï¿½ maior que a soma das partes ".
+Nï¿½o foi possï¿½vel a implementaï¿½ï¿½o em todos os browsers pois, A API de Navegador no mï¿½todo getUserMedia() ,  abaixo uma tabela do dia 26 de marï¿½o de 2020:
 ***
 Browser compatibility |getUserMedia | Secure context required 
 ----------------------| ------------|----------------------	
@@ -21,4 +21,4 @@ Browser compatibility |getUserMedia | Secure context required
 ![Safari on iOS](https://img.icons8.com/material-rounded/26/000000/adventures.png) Safari on iOS 	     |11 	        |?
 ![Samsung Internet](https://img.icons8.com/pastel-glyph/26/000000/internet.png) Samsung Internet     |6.0           |?
 ***
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/ Apresentar-a-Peste-negra-na-europa./blob/master/documentos/An%C3%A1lise%20e%20Design/An%C3%A1lise%20e%20Design.md)  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Testes/Testes.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/ Apresentar-a-Peste-negra-na-europa./blob/master/documentos/An%C3%A1lise%20e%20Design/An%C3%A1lise%20e%20Design.md)  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Testes/Testes.md)

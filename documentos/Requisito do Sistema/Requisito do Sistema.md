@@ -4,28 +4,28 @@ De acordo com os requisitos funcionais do Software, apresentamos um diagrama de 
 ![IMAGE](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20caso%20de%20uso.png)		
 
 ### Nome do caso de Uso
-Exibição dos fatores da história.
+Exibiï¿½ï¿½o dos fatores da histï¿½ria.
 
-### Breve descrição 
-Representar dos locais que foram afetados no Continente Europeu pela Pandemia de Peste Bubônica antes do século XIV descrito pela história relatada.
+### Breve descriï¿½ï¿½o 
+Representar dos locais que foram afetados no Continente Europeu pela Pandemia de Peste Bubï¿½nica antes do sï¿½culo XIV descrito pela histï¿½ria relatada.
 ### Autores envolvidos
-A ação do software em tentar esclarecer os fatos para o usuário, sendo a reprodução parcial através da voz parecida com o feminino no idioma português Brasileiro de uma pessoa definida e a exibição de cada movimento filtrada que por fim possuir a união dos locais afetados no final da apresentação.
-###  Pré-condições
-1. Um ou mais usuário.
-### Sequência de Eventos
+A aï¿½ï¿½o do software em tentar esclarecer os fatos para o usuï¿½rio, sendo a reproduï¿½ï¿½o parcial atravï¿½s da voz parecida com o feminino no idioma portuguï¿½s Brasileiro de uma pessoa definida e a exibiï¿½ï¿½o de cada movimento filtrada que por fim possuir a uniï¿½o dos locais afetados no final da apresentaï¿½ï¿½o.
+###  Prï¿½-condiï¿½ï¿½es
+1. Um ou mais usuï¿½rio.
+### Sequï¿½ncia de Eventos
 1. Primeiramente o software vai carregar alguns modulo que precisa da interne.
-2. Quando o usuário entrar no software, ele se apresentar e depois do apresentar, se usuário fica no software, o software vai entender que ele interessou sobre assunto.
-3. No final da cada história será exibido um círculo com cor vermelho demarcando o local falado.
-4. E no final onde será reproduzido a grande extensão da Pandemia da Peste bubônica no continente europeu.
-5. Por fim a voz parecia com feminina vai agradecer pela paciência.
-### Pós-condições 
-Representação em dá cartográfico no espalhamento da Pandemia da Peste bubônica.
-### Exceções 
-Caso o Usuário não aceite, ele pode sair do software sem preocupação com seus dados pessoais.
-Caso o usuário fique em internet durante a exibição da Pandemia, poderá recomeça de novo, pois seus dados pessoais não são armazenados no software.
-### Observação 
+2. Quando o usuï¿½rio entrar no software, ele se apresentar e depois do apresentar, se usuï¿½rio fica no software, o software vai entender que ele interessou sobre assunto.
+3. No final da cada histï¿½ria serï¿½ exibido um cï¿½rculo com cor vermelho demarcando o local falado.
+4. E no final onde serï¿½ reproduzido a grande extensï¿½o da Pandemia da Peste bubï¿½nica no continente europeu.
+5. Por fim a voz parecia com feminina vai agradecer pela paciï¿½ncia.
+### Pï¿½s-condiï¿½ï¿½es 
+Representaï¿½ï¿½o em dï¿½ cartogrï¿½fico no espalhamento da Pandemia da Peste bubï¿½nica.
+### Exceï¿½ï¿½es 
+Caso o Usuï¿½rio nï¿½o aceite, ele pode sair do software sem preocupaï¿½ï¿½o com seus dados pessoais.
+Caso o usuï¿½rio fique em internet durante a exibiï¿½ï¿½o da Pandemia, poderï¿½ recomeï¿½a de novo, pois seus dados pessoais nï¿½o sï¿½o armazenados no software.
+### Observaï¿½ï¿½o 
 Nenhuma.
-## 3.2 Requisitos não-funcionais 
+## 3.2 Requisitos nï¿½o-funcionais 
 ![IMAGE](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/Requisito%20n%C3%A3o%20%20funcionais.png)
 ***
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md) [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Implementa%C3%A7%C3%A3o/Implementa%C3%A7%C3%A3o.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Requisito%20do%20Sistema/Requisito%20do%20Sistema.md) [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Implementa%C3%A7%C3%A3o/Implementa%C3%A7%C3%A3o.md)

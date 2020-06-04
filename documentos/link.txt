@@ -6,3 +6,9 @@ https://www.google.com/maps/place/Teod%C3%B3sia/@45.052106,33.1369009,5z/data=!4
 
 // imagens de navio antigo
 https://img.icons8.com/ios-filled/26/000000/historic-ship.png
+
+// CARTOGRAFIA TEMÁTICA
+http://www.prppg.ufpr.br/site/ppggeografia/wp-content/uploads/sites/71/2018/03/cartografia-temtica.pdf
+
+// Leaflet Providers DEMO
+https://leaflet-extras.github.io/leaflet-providers/preview/

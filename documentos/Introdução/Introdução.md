@@ -1,63 +1,63 @@
 
-# 1. Introdução
+# 1. Introduï¿½ï¿½o
 
-O Software não é a solução para problemas da Pandemia que está acontecendo no mundo, mais sim para mostrar que a força de uma Pandemia, pode demora passar se a gente não estive com cuidado que realmente precisa.
+O Software nï¿½o ï¿½ a soluï¿½ï¿½o para problemas da Pandemia que estï¿½ acontecendo no mundo, mais sim para mostrar que a forï¿½a de uma Pandemia, pode demora passar se a gente nï¿½o estive com cuidado que realmente precisa.
 
-Meu objetivo é demostrar que uma Pandemia pode começa rapidamente e pode acabar sendo muito mais demorada com decorrer do tempo.
+Meu objetivo ï¿½ demostrar que uma Pandemia pode comeï¿½a rapidamente e pode acabar sendo muito mais demorada com decorrer do tempo.
 
 ## 1.1 justificativa
 
-O Software foi realizado para que as pessoas tenham alguma noção da gravidade o que uma Pandemia o que ela pode fazer, sendo estou separado em ordem numérica meus motivos para a realização de projeto:
+O Software foi realizado para que as pessoas tenham alguma noï¿½ï¿½o da gravidade o que uma Pandemia o que ela pode fazer, sendo estou separado em ordem numï¿½rica meus motivos para a realizaï¿½ï¿½o de projeto:
 
-1. Como visto no final de 2019 em diante, presidente, governadores, prefeitos, primeiro ministro e autoridade superior que estão no planejamento, na estimando, falando cada vez mais, que as pessoas estão ficando doente, hospitais ficando cheio de pessoas passando mau, isso para mim é um pouco da realidade mostrada por isso que eu creio que mesmo estando em casa podemos ajuda de alguma forma.
+1. Como visto no final de 2019 em diante, presidente, governadores, prefeitos, primeiro ministro e autoridade superior que estï¿½o no planejamento, na estimando, falando cada vez mais, que as pessoas estï¿½o ficando doente, hospitais ficando cheio de pessoas passando mau, isso para mim ï¿½ um pouco da realidade mostrada por isso que eu creio que mesmo estando em casa podemos ajuda de alguma forma.
 
-2. Por isso, minha expetativa que é que esse projeto possa, abre os olhos de algumas pessoas que não estão vendo o que pode acontecer se não cuidar das pessoas podemos demora até anos para passar a Pandemia.
+2. Por isso, minha expetativa que ï¿½ que esse projeto possa, abre os olhos de algumas pessoas que nï¿½o estï¿½o vendo o que pode acontecer se nï¿½o cuidar das pessoas podemos demora atï¿½ anos para passar a Pandemia.
 
 ## 1.2 O problema
 
-Hoje no dia 24 de março de 2020 que eu estou escrevendo esse texto, está acontecendo nas emissoras de televisão, na internet, e outros meios de comunicação muito mistura de informação que pode confundir as pessoas em saber o que certo ou que é errado, sendo assim estou com esse Software para conscientizar as pessoas que se não se cuidarem podem pagar um alto peço no futuro.
+Hoje no dia 24 de marï¿½o de 2020 que eu estou escrevendo esse texto, estï¿½ acontecendo nas emissoras de televisï¿½o, na internet, e outros meios de comunicaï¿½ï¿½o muito mistura de informaï¿½ï¿½o que pode confundir as pessoas em saber o que certo ou que ï¿½ errado, sendo assim estou com esse Software para conscientizar as pessoas que se nï¿½o se cuidarem podem pagar um alto peï¿½o no futuro.
 
-Esse software não é para espalhar o medo, mais sim, esclarecer que o acontecimento em uma Pandemia, no passando muito distante de 2020, que pode ajudar a ter alguma noção o que aconteceu no continental na Europeu.
+Esse software nï¿½o ï¿½ para espalhar o medo, mais sim, esclarecer que o acontecimento em uma Pandemia, no passando muito distante de 2020, que pode ajudar a ter alguma noï¿½ï¿½o o que aconteceu no continental na Europeu.
 
 ## 1.3 Objetivo
 
 ### 1.3.1 Objetivo Geral
-Meu objetivo não é causa estranheza com a sociedade brasileiras e outras sociedades, mas sim falar a minha única opinião sobre o que está pode acontecer no Brasil, mediante fatos históricos que aconteçam no Continente Europeu que podem caracterizar o que nós estamos vendo a cada dia.
+Meu objetivo nï¿½o ï¿½ causa estranheza com a sociedade brasileiras e outras sociedades, mas sim falar a minha ï¿½nica opiniï¿½o sobre o que estï¿½ pode acontecer no Brasil, mediante fatos histï¿½ricos que aconteï¿½am no Continente Europeu que podem caracterizar o que nï¿½s estamos vendo a cada dia.
 
 ### 1.3.2 Objetivo especifico 
-Meu motivo para a realização desse projeto pessoal, é uma grande confusão e o mau planejamento distribuído de renda para áreas importantes como educação, saúde, transporte, desde os governos anteriores, para isso estou realizado esse projeto como o foco de não fala o que outros já dizem, mais sim, tentar esclarecer o que acontecer se não ter consciência durante uma Pandemia.
+Meu motivo para a realizaï¿½ï¿½o desse projeto pessoal, ï¿½ uma grande confusï¿½o e o mau planejamento distribuï¿½do de renda para ï¿½reas importantes como educaï¿½ï¿½o, saï¿½de, transporte, desde os governos anteriores, para isso estou realizado esse projeto como o foco de nï¿½o fala o que outros jï¿½ dizem, mais sim, tentar esclarecer o que acontecer se nï¿½o ter consciï¿½ncia durante uma Pandemia.
 
-Sendo esse trabalho não tem foco na Pandemia de Codiv-19, mais sim o que houve no continente Europeu no período estimado de 1346 e 1357 durante a Pandemia na Peste bubônica (chamada de “Peste negra”) através do avanço dessa doença naquela época.
+Sendo esse trabalho nï¿½o tem foco na Pandemia de Codiv-19, mais sim o que houve no continente Europeu no perï¿½odo estimado de 1346 e 1357 durante a Pandemia na Peste bubï¿½nica (chamada de ï¿½Peste negraï¿½) atravï¿½s do avanï¿½o dessa doenï¿½a naquela ï¿½poca.
 
 
 
 
 ## 1.4 Metodologia de Trabalho e de Desenvolvimento do Software
 
-O Padrão do projeto: 
+O Padrï¿½o do projeto: 
  
-O padrão de Projeto que mais atente o requisito é o State(A mudança do estado do Objeto).
+O padrï¿½o de Projeto que mais atente o requisito ï¿½ o State(A mudanï¿½a do estado do Objeto).
 
 Modelagem do Projeto:
-O método utilizado é ferramenta de modelagem Umbelho que utilizar o modelo UML com finalidade para o diagrama de classe, estado e caso de uso.
+O mï¿½todo utilizado ï¿½ ferramenta de modelagem Umbelho que utilizar o modelo UML com finalidade para o diagrama de classe, estado e caso de uso.
 
 ## 1.5 Cronograma das Atividades
 ### Etapa 1
 Data inicial | Data final | Item
 ------------ | -----------| -----------
-27/03/20     |	30/03/20| corrigir e termina tópico 1.
-30/03/20     |	04/04/20| corrigir e termina o tópico 2 e se possível 3.
-04/04/20     |  08/04/20 | Terminar o tópico 4.3.1 e começa o código.
-08/04/20     | 13/04/20  | desenvolver o código através de threads e corrigir algumas falta de interpretação.
-14/04/20     | 20/04/20   | ver o caso do Chrome não realizado a voz. 
-20/04/20     | 27/04/20  | termina o círculos com as threads e fazer e terminar o diagrama de sequência para entender threads.
-27/04/20     | 25/05/20  | corrigir ou se o código é limpo. 
+27/03/20     |	30/03/20| corrigir e termina tï¿½pico 1.
+30/03/20     |	04/04/20| corrigir e termina o tï¿½pico 2 e se possï¿½vel 3.
+04/04/20     |  08/04/20 | Terminar o tï¿½pico 4.3.1 e comeï¿½a o cï¿½digo.
+08/04/20     | 13/04/20  | desenvolver o cï¿½digo atravï¿½s de threads e corrigir algumas falta de interpretaï¿½ï¿½o.
+14/04/20     | 20/04/20   | ver o caso do Chrome nï¿½o realizado a voz. 
+20/04/20     | 27/04/20  | termina o cï¿½rculos com as threads e fazer e terminar o diagrama de sequï¿½ncia para entender threads.
+27/04/20     | 25/05/20  | corrigir ou se o cï¿½digo ï¿½ limpo. 
 26/05/20     | 27/05/20  | olhar nos 3 sites fazer de teste no projeto. 
-Finalizar projeto: | 02/06/20| sujeito a alteração futuras.
+Finalizar projeto: | 02/06/20| sujeito a alteraï¿½ï¿½o futuras.
 ### Etapa 2
 
 #### ainda sem data.
-## 1.6 Organização do Trabalho
-O trabalho é divido por secção em cada secção contém duas ou mais capítulos e cada capitulo tem um ou mais subcapítulos.
+## 1.6 Organizaï¿½ï¿½o do Trabalho
+O trabalho ï¿½ divido por secï¿½ï¿½o em cada secï¿½ï¿½o contï¿½m duas ou mais capï¿½tulos e cada capitulo tem um ou mais subcapï¿½tulos.
 ***
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa.)  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Descri%C3%A7%C3%A3o%20Geral%20do%20Sistema/Descri%C3%A7%C3%A3o%20Geral%20do%20Sistema.md )
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa.)  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]( https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/Descri%C3%A7%C3%A3o%20Geral%20do%20Sistema/Descri%C3%A7%C3%A3o%20Geral%20do%20Sistema.md )
