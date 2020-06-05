@@ -12,3 +12,7 @@ http://www.prppg.ufpr.br/site/ppggeografia/wp-content/uploads/sites/71/2018/03/c
 
 // Leaflet Providers DEMO
 https://leaflet-extras.github.io/leaflet-providers/preview/
+
+// Linha tracejada
+https://img.icons8.com/dotty/26/000000/dashed-line.png
+
