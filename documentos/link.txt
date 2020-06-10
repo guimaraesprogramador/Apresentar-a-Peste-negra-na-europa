@@ -16,3 +16,12 @@ https://leaflet-extras.github.io/leaflet-providers/preview/
 // Linha tracejada
 https://img.icons8.com/dotty/26/000000/dashed-line.png
 
+// icone de pause 
+https://img.icons8.com/flat_round/26/000000/mute.png
+
+// icone de play
+https://img.icons8.com/flat_round/26/000000/youtube-play.png
+
+// icone de stop
+https://img.icons8.com/flat_round/26/000000/stop.png
+
