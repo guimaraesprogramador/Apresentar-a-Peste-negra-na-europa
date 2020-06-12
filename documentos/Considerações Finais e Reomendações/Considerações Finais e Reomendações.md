@@ -58,4 +58,4 @@ RESPONSIVE Play - by sergiolopes. [S. l.], 2020. Disponível em: http://sergiolo
 
 ***
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/An%C3%A1lise%20e%20Design/An%C3%A1lise%20e%20Design.md)  [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-right-2.png )]()
+[![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/An%C3%A1lise%20e%20Design/An%C3%A1lise%20e%20Design.md)  [![voltar](https://img.icons8.com/metro/24/000000/home.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./)
