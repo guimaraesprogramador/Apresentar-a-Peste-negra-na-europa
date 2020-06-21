@@ -1,0 +1,46 @@
+// Try edit message
+var num = 0
+class perguntas_peste_negra {
+  layourt() {
+    // construção do layourt
+    this.image = document.createElement('div')
+    this.image.textContent = 'Teste de conhecimento  \n '
+    this.image.id = 'quiz'
+    this.image.style.textAlign = 'center'
+    this.image.style.fontFamily = 'Times New Roman'
+    document.body.appendChild(this.image)
+    var altura = window.screenX
+    var largura = window.screenY
+    console.log(altura)
+    console.log(largura)
+    this.input_radio()
+    this.pergunta()
+  }
+  input_radio() {
+    this.inputs = []
+    this.inputs.push(document.createElement('input'))
+    this.inputs.push(document.createElement('input'))
+    this.inputs.push(document.createElement('input'))
+    this.inputs[0].type = 'radio'
+    this.inputs[0].id = 'pergunta1'
+    this.inputs[1].type = 'radio'
+    this.inputs[1].id = 'pergunta2'
+    this.inputs[2].type = 'radio'
+    this.inputs[2].id = 'pergunta3'
+    this.inputs.forEach((value, index, array) => {
+      document.getElementById('quiz').appendChild(value)
+    })
+  }
+  pergunta() {
+    var perguntas = [3]
+    if (num == 0) {
+      perguntas[0] = '<h3> perguntas </h3> <br> ' + '<h4>  </h4>'
+      var pergunta1 = document.getElementById('pergunta1')
+    }
+  }
+}
+var peste_negra = new perguntas_peste_negra()
+peste_negra.layourt()
+/*
+ */
+
