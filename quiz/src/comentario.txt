@@ -1,0 +1,42 @@
+
+class perguntar{
+
+  layort(){
+
+    this.div = document.createElement("div");
+    this.div.textContent = "Teste de Conhecimento \n ";
+    this.div.align = "center";
+    this.questões = document.createElement("h4");
+
+    this.questões.textContent = "A pesquisa ";
+    this.nome = "quiz-peste-negra";
+    this.radio =[
+    document.createElement("input"),
+    document.createElement("input"),
+    document.createElement("input")
+    ]
+    this.numero = 0;
+    this.radio[0].type = "radio";
+    this.radio[1].type = "radio";
+    this.radio[2].type = "radio";
+    this.radio[0].id = "quiz"+(this.numero++);
+    this.radio[1].id = "quiz"+ (this.numero++);
+    this.radio[2].id = "quiz" + (this.numero++);
+ 		 document.body.appendChild(this.div);
+     document.body.appendChild(this.questões);
+     document.body.appendChild(this.radio[0]);
+     document.body.appendChild(this.radio[1]);
+     document.body.appendChild(this.radio[2]);
+     
+  }
+  pergunta()
+  {
+   
+       if(this.numero == 0){
+      var quiz = [];
+      quiz.push(this.radio[0])
+    }
+  }
+}
+var questões = new perguntar();
+questões.layort();
