@@ -17,7 +17,7 @@
 >8 [Considerações Finais e Reomendações](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./tree/master/documentos/Considera%C3%A7%C3%B5es%20Finais%20e%20Reomenda%C3%A7%C3%B5es/Considera%C3%A7%C3%B5es%20Finais%20e%20Reomenda%C3%A7%C3%B5es.md) 
 ***
 
-[**Apresentação**]( https://guimaraesprogramador.github.io/Apresentar-a-Peste-negra-na-europa./)
+[**Apresentação**]( https://guimaraesprogramador.github.io/Apresentar-a-Peste-negra-na-europa/)
 
 
 
