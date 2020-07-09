@@ -2,13 +2,11 @@ class perguntar{
 
     layort(){
   
-      this.div = document.createElement("div");
-      this.div.textContent = "Teste de Conhecimento \n ";
-      this.div.align = "center";
+      
+        this.nome = "Teste de Conhecimento \n ";
       this.questões = document.createElement("h4");
   
       this.questões.textContent = "A pesquisa ";
-      this.nome = "quiz-peste-negra";
       this.radio =[
       document.createElement("input"),
       document.createElement("input"),
@@ -21,19 +19,22 @@ class perguntar{
       this.radio[0].id = "quiz"+(this.numero++);
       this.radio[1].id = "quiz"+ (this.numero++);
       this.radio[2].id = "quiz" + (this.numero++);
-       document.body.appendChild(this.div);
-       document.body.appendChild(this.questões);
-       document.body.appendChild(this.radio[0]);
-       document.body.appendChild(this.radio[1]);
-       document.body.appendChild(this.radio[2]);
-       
+       console.log(this.questões);
+      var quiz = L.control({ position: "bottomright" });
+      quiz.onAdd = function(map) {
+        var div = L.DomUtil.create("div", "quiz");
+        div.innerHTML += '<h4> '+questões.nome +' </h4>';  
+        console.log(div);
+        return div;
+      }
+      quiz.addTo(m.map);
     }
     pergunta()
     {
      
          if(window.ActiveXObject){
             var xhtml= new XMLHttpRequest();
-            xhtml.open("GET","../Apresentar-a-Peste-negra-na-europa/quiz/questões/perguntas.json",true);
+            xhtml.open("GET","./quiz/questões/perguntas.json",true);
             xhtml.onload = function(){
                 var users = JSON.parse(xhtml.responseText);
                 if(xhtml.readyState == 4  && xhtml.status == "200"){
@@ -58,4 +59,4 @@ class perguntar{
     }
   }
   var questões = new perguntar();
-  questões.layort();
+ questões.layort();

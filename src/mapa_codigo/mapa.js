@@ -7,13 +7,13 @@ class mapa {
    inicial(){
         let initialCoordinates = [43.280555,5.345467]; // cidade de marselha
         //latitude e a longitude
-     var initialZoomLevel = 13;
+     var initialZoomLevel = 5;
 // create a map in the "map" div, set the view to a given place and zoom
     this.map =  L.map("map").setView(initialCoordinates, initialZoomLevel);
 // add an OpenStreetMap tile layer
-     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-         attribution: '&copy; Contribuidores do <a href="http://osm.org/copyright">OpenStreetMap</a>'
-     }).addTo(this.map);
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+        attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(this.map);
      var legend = L.control({ position: "bottomleft" });
      legend.onAdd = function(map) {
         var div = L.DomUtil.create("div", "legend");
@@ -22,6 +22,7 @@ class mapa {
         return div;
      }
      legend.addTo(this.map);
+  
     }
     ponto_inicial(latitude,longitude){
         var parte_1 = [latitude, longitude,"1348", "porto de Marselha"]
