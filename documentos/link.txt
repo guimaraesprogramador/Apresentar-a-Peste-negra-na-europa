@@ -22,9 +22,19 @@ https://img.icons8.com/dotty/26/000000/dashed-line.png
 // icone de seta para esquerda youtube
 <img src="https://img.icons8.com/nolan/26/circled-left-2.png"/>
 
+
+
 // icone de play do youtube
 <img src="https://img.icons8.com/nolan/26/youtube-music.png"/>
 
 // icone de parar
 <img src="https://img.icons8.com/nolan/26/stop.png"/>
 
+// icone  de cadeado
+<img src"https://img.icons8.com/metro/26/000000/lock-2.png"/> 
+
+// icone de configurações
+<img src="https://img.icons8.com/metro/26/000000/settings.png"/>
+
+// icone de microfone
+<img src="https://img.icons8.com/android/26/000000/microphone.png"/>
