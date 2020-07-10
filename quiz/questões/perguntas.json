@@ -1,17 +1,17 @@
 {
     "perguntas":{
-        "1°":" A peste bubônica é uma ?",
-        "2°":"Segundo relato, qual foi inicio na Europa ?",
-        "3°":"Qual é a parte aproximada, da contaminação na Europa ?",
-        "4°":"Qual é a primeira cidade que a foto genovesa passou ?",
-        "5°":" Qual é o ano do fim da Contaminação  na Europa ?"
+        "primeira":"1º A peste bubônica é uma ?",
+        "segunda":"2º Segundo relato, qual foi inicio na Europa ?",
+        "terceira":"3º Qual é a parte aproximada, da contaminação na Europa ?",
+        "quarta":"4º Qual é a primeira cidade que a foto genovesa passou ?",
+        "quinta":"5º Qual é o ano do fim da Contaminação  na Europa ?"
     },
     "questão":{
         "multescola":{
-            "1°":["Bactéria","     Virus    ","Fungo"],
-            "3°":["1/3","1/2","1","3"],
-            "4°":["Marselha"," Sicília"," Caffa","Tumim"],
-            "5°":[1540,1350,1450,1347]
+            "primeira":["Bactéria","     Virus    ","Fungo"],
+            "segunda":["1/3","1/2","1","3"],
+            "terceira":["Marselha"," Sicília"," Caffa","Tumim"],
+            "quarta":[1540,1350,1450,1347]
         },
        "escolhaunica":"1347"
     }
