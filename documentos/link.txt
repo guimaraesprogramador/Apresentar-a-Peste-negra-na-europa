@@ -38,3 +38,15 @@ https://img.icons8.com/dotty/26/000000/dashed-line.png
 
 // icone de microfone
 <img src="https://img.icons8.com/android/26/000000/microphone.png"/>
+
+// diagrama de classe do quiz.
+http://www.plantuml.com/plantuml/uml/LOvB2W8n44JtTOeirP0Rk1ZGYxIc6IFvZDqTyCFStQ1kt1IrU5MyIOt4UicmP9dTCT4iLCX5TkTCglYak_NqlAfxmTTUM1hy8ksKkH1ygf7l2BKLnlhZ3oJ2Cqcas7IiBcRBPWkVwT74Hbk1x-S-XDq_Zebh74fl
+
+//diagrama de sequência inicial
+
+http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LN39J4mlIinDL4X9LIXEBImzl2elEJDH8JCl4qZbS74fPPIK56XeAkdQAGMdQkILvgOMvTlQ6cWgMIKd5XMbfYSM0TMcf5OWAyn9hCmlAW6ohHJWYY1YrbmEgNafGDi1
+
+//diagrama de sequência final
+
+http://www.plantuml.com/plantuml/uml/JOungiCm341tdq9uIeOFVquWPFWt-2TGOv4QRCkHvTAUfrklaOkL9ALa4eZtdZGMHT4QWr6lWU3FuomO4Hn1eQMkhpHvDCPULNFJsf_1_bEJQYJXuRUrtOGYDAE0JuxknkvZmpv21pSCBE3u8FfpAWjV0aMqNTuR3XsNxNGccMjIB42mL2gwFlai1domw9x_Fd3iUZDISZM6Dm00
+
