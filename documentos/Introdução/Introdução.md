@@ -54,9 +54,29 @@ Data inicial | Data final | Item
 27/04/20     | 25/05/20  | corrigir ou se o código é limpo. 
 26/05/20     | 27/05/20  | olhar nos 3 sites fazer de teste no projeto. 
 Finalizar projeto: | 02/06/20| sujeito a alteração futuras.
+
 ### Etapa 2
 
-#### Previsão para dia 15 de julho de 2020.
+#### Imagens da panilha da 80/20
+
+![IMAGEM1]();
+
+***
+
+![IMAGEM2]();
+
+***
+
+![IMAGEM3]();
+
+*** 
+
+##### Até o dia 15 de julho de 2020.
+
+### Etaoa 3
+
+##### Até o  dia 25 de julho de 2020.
+
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção contendo  duas ou mais capitulos e cada capitulo tem um ou mais subcaptulos.
 ***

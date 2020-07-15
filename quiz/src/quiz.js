@@ -4,9 +4,7 @@ class quizjs{
         this.nome = "Teste de Conhecimento";
         this.quiz = document.createElement("h3");
         this.quiz.id ="questão";
-          this.button = [document.createElement("input"),
-      document.createElement("input"),
-      document.createElement("input")];
+          this.button = [document.createElement("input")];
       this.form = document.createElement("form");
         this.radio =[
         document.createElement("input"),
@@ -24,12 +22,8 @@ class quizjs{
         this.radio[1].name = "quiz";
         this.radio[2].name = "quiz";
         this.button[0].type = "submit";
-        this.button[1].type = "submit";
-        this.button[2].type = "submit";
         this.button[0].id = this.button[0].type.toString() +"quiz"+(4);
-        this.button[1].id = this.button[1].type.toString() +"quiz"+(5);
-        this.button[2].id = this.button[2].type.toString() +"quiz"+(6);
-
+        
         this.problema;
         this.index;
         this.palavra;
@@ -105,8 +99,9 @@ class Carregardados{
             quiz.form.append(radio3);
             this.div.innerHTML += "<form  > "+
             quiz.form.innerText.toString(); +"</form> </br>";
-            index_radio = 1;
+            index_radio = 0;
 
+            quiz.button[index_radio].removeAttribute("value");   
             quiz.button[index_radio].setAttribute("value","Proxima");
 
 
@@ -114,8 +109,8 @@ class Carregardados{
             input[1] + quiz.button[index_radio].value + input[2] +
             quiz.button[index_radio].id + input[2] + "> "+ input[3];
 
-            this.div.innerHTML +=  "1/5";
-           quiz.index_input = 3;
+            this.div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
+            quiz.index_input = 3;
             console.log(this.div);
             break;
             };
