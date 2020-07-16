@@ -57,99 +57,59 @@ class quizjs{
   }
 class Carregardados{
 
+    escolharradio(radio){
+        var i = 0;
+        var erro  = 0;
+        while(i<radio.length){
+            if(radio[i].checked){
+            
+                if(radio[i].value == quiz.problema[1]){
+                    quiz.sucesso.push("acerto");
+                    quiz.numero = quiz.numero +1;   
+                    dados.http();
+                    
+                }
+            }
+            else erro = erro +1;
+            i = i +1;
+        }
+        if(quiz.sucesso.length == 0){
+            
+            if(erro == 3){
+                console.log(erro);
+                alert("marque uma opção pelo menos");
+            }
+            else{
+                quiz.fracasso.push("errado");
+                quiz.numero = quiz.numero +1;   
+                dados.http()
+            }
+        } 
+        console.clear();
+    }
     layort(){
 
 
-        var input = [ "<input type = "," value ="," id = "," </input>"," name = "];
-        this.quizlegenda = L.control({ position: "bottomright" });
+            
+            this.quizlegenda = L.control({ position: "bottomright" });
         this.quizlegenda.onAdd = function(map) {
-            var index_radio = 0;
+            
             this.div = L.DomUtil.create("div", "quiz");
             
             switch(quiz.numero){
             case 0:
-            this.div.innerHTML += '<h4> '+quiz.nome +' </h4>';
-            quiz.button[index_radio].setAttribute("value","Inicio");;
-            this.div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-            input[1] + quiz.button[index_radio].value + input[2] +
-            quiz.button[index_radio].id + input[2] + "> "+ input[3];
-            this.div.innerHTML += "</br>";
-            quiz.index_input = 1;
+            this.div.innerHTML += primeira_parte(this.div)
             break;
+
             case 1:
-            this.div.innerHTML += "<img src='"+quiz.img.src.toString() +"' "+
-            "id = "+ quiz.img.id+" />";
-            this.div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
-            quiz.input[0].setAttribute("value",quiz.problema[1]);
-            quiz.input[1].setAttribute("value",quiz.problema[2]);
-            quiz.input[2].setAttribute("value",quiz.problema[3]);
-
-            var radio1 =  input[0] + quiz.input[index_radio].type.toString() +
-            input[1] + quiz.input[index_radio].value +input[2] +
-            quiz.input[index_radio].id +input[4] + quiz.input[index_radio].name +" > "+
-            quiz.input[index_radio].value +input[3]+ " ";
-
-            index_radio = index_radio +1;
-
-            var radio2 =   input[0] + quiz.input[index_radio].type.toString() +
-            input[1] + quiz.input[index_radio].value +input[2] +
-            quiz.input[index_radio].id +input[4] + quiz.input[index_radio].name +" > "+
-            quiz.input[index_radio].value +input[3]+ " ";
-
-            index_radio = index_radio +1;
-
-            var radio3 =  input[0] + quiz.input[index_radio].type.toString() +
-            input[1] + quiz.input[index_radio].value +input[2] +
-            quiz.input[index_radio].id +input[4] + quiz.input[index_radio].name +" > "+
-            quiz.input[index_radio].value +input[3]+ " ";
-
-            quiz.form.append(radio1);
-            quiz.form.append(radio2);
-            quiz.form.append(radio3);
-            this.div.innerHTML += "<form action='/' id='form' > "+
-            quiz.form.innerText.toString(); +"</form> </br>";
-
-            index_radio = 0;
-
-            quiz.button[index_radio].removeAttribute("value");   
-            quiz.button[index_radio].setAttribute("value","Proxima");
-
-
-            this.div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-            input[1] + quiz.button[index_radio].value + input[2] +
-            quiz.button[index_radio].id + input[2] + "> "+ input[3];
-            
-            this.div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
-            quiz.index_input = 3;
-            
+            this.div.innerHTML += segunda_parte(this.div);
             break;
             case 2:
-            console.clear();
-            this.div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
-                                    // type
-            this.div.innerHTML += input[0] + quiz.input[quiz.index_input].type.toString() +
-            // value   
-            input[2] +
-            //id 
-            quiz.input[quiz.index_input].id +
-            // name
-            input[4] + quiz.input[quiz.index_input].name +" > "+
-            // </input>
-            quiz.input[quiz.index_input].value +input[3]+ " ";
-            
-            this.div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-            input[1] + quiz.button[index_radio].value + input[2] +
-            quiz.button[index_radio].id + input[2] 
-            
-            + "> "+ input[3];
-            
-            this.div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
-            this.div.children[2].style.left = "1%";
-            this.div.children[3].style.left = "5%";
-            quiz.index_input = 2;
-            
+            this.div.innerHTML += terceira_parte(this.div);
             break;
+            
             case 3:
+            this.div.innerHTML += quarta_parte(this.div);
 
             break;
             };
@@ -173,34 +133,7 @@ class Carregardados{
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev){
                
                 var radio = document.getElementsByName("quiz");
-                var i = 0;
-                var erro  = 0;
-                while(i<3){
-                    if(radio[i].checked){
-                    
-                        if(radio[i].value == quiz.problema[1]){
-                            quiz.sucesso.push("acerto");
-                            quiz.numero = quiz.numero +1;   
-                            dados.http();
-                            
-                        }
-                    }
-                    else erro = erro +1;
-                    i = i +1;
-                }
-                if(quiz.sucesso.length == 0){
-                    
-                    if(erro == 3){
-                        console.log(erro);
-                        alert("marque uma opção pelo menos");
-                    }
-                    else{
-                        quiz.fracasso.push("errado");
-                        quiz.numero = quiz.numero +1;   
-                        dados.http()
-                    }
-                } 
-                console.clear();
+                dados.escolharradio(radio);
             }
             
         }
@@ -210,14 +143,14 @@ class Carregardados{
             {
                 var texto = document.getElementsByName("quiz");
 
-                if(texto[0].innerText == quiz.problema[1]){
+                if(texto[0].value == quiz.problema[1]){
                     quiz.sucesso.push("acerto");
                             quiz.numero = quiz.numero +1;   
                             dados.http();
                 }
-                else if(quiz.sucesso.length == 0){
+                else if(quiz.sucesso.length != 2){
                     
-                    if(texto[0].innerText === ""){
+                    if(texto[0].value == ""){
                         alert("preeenchar o texto");
                     }
                     else{
@@ -228,6 +161,10 @@ class Carregardados{
                 } 
                 
             }
+        }
+        else if(quiz.numero = 3){
+            var radio = document.getElementsByName("quiz");
+            dados.escolharradio(radio);
         }
     }
   http()
@@ -258,6 +195,15 @@ class Carregardados{
                             quiz.problema = [
                                 users.perguntas.segunda,
                                 users.perguntas.escolhaunica
+                            ]
+                            break;
+                            case 3:
+                            quiz.problema = [
+                                users.perguntas.terceira,
+                                users.questão.multescola.segunda[0],
+                                users.questão.multescola.segunda[1],
+                                users.questão.multescola.segunda[2],
+                                users.questão.multescola.segunda[3]
                             ]
                             break;
                         }
