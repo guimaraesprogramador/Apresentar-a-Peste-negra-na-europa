@@ -18,8 +18,9 @@ body {
   }
   .quiz h4{
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
     color: #000000;
+    position: relative;
   }
   .quiz #textquiz1{
     text-align: center;
@@ -43,8 +44,7 @@ body {
    position: relative;
   }
  .quiz #numero{
-   position: relative;
-   left: 50%;
+   position: relative;  
  }
   .legend {
     padding: 6px 8px;

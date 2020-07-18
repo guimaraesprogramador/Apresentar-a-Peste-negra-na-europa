@@ -46,7 +46,7 @@ class quizjs{
         return this.index;
     }
     set numero(t){
-         this.index = t;
+         this.numero = t;
     }
     get problema (){
         return this.palavra;
@@ -65,7 +65,7 @@ class Carregardados{
             
                 if(radio[i].value == quiz.problema[1]){
                     quiz.sucesso.push("acerto");
-                    quiz.numero = quiz.numero +1;   
+                    quiz.numero = quiz.numero + 1;   
                     dados.http();
                     
                 }
@@ -73,18 +73,14 @@ class Carregardados{
             else erro = erro +1;
             i = i +1;
         }
-        if(quiz.sucesso.length == 0){
-            
-            if(erro == 3){
-                console.log(erro);
+        if(erro == radio.length){
                 alert("marque uma opção pelo menos");
-            }
-            else{
-                quiz.fracasso.push("errado");
-                quiz.numero = quiz.numero +1;   
-                dados.http()
-            }
         } 
+        else{
+            quiz.fracasso.push("errado");
+            quiz.numero = quiz.numero + 1;   
+            dados.http()
+        }
         console.clear();
     }
     layort(){
@@ -96,7 +92,7 @@ class Carregardados{
             
             this.div = L.DomUtil.create("div", "quiz");
             
-            switch(quiz.numero){
+            switch(quiz.index){
             case 0:
             this.div.innerHTML += primeira_parte(this.div)
             break;
@@ -112,21 +108,26 @@ class Carregardados{
             this.div.innerHTML += quarta_parte(this.div);
 
             break;
+            case 4:
+
+            this.div.innerHTML += quinta_parte(this.div);
+            
+            break;
             };
             return this.div;
         }
 
         this.quizlegenda.addTo(m.map);
         
-        if(quiz.numero == 0){
+        if(quiz.index == 0){
             
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev){
-                quiz.numero = quiz.numero +1;
+                quiz.index = quiz.numero + 1;
                 dados.http();    
             }
             
         }
-        else if(quiz.numero == 1) 
+        else if(quiz.index == 1) 
         {
             
             
@@ -137,7 +138,7 @@ class Carregardados{
             }
             
         }
-        else if(quiz.numero == 2)
+        else if(quiz.index == 2)
         {
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
@@ -162,9 +163,19 @@ class Carregardados{
                 
             }
         }
-        else if(quiz.numero = 3){
+        else if(quiz.index = 3){
+            this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
+            {
+                var radio = document.getElementsByName("quiz");
+                dados.escolharradio(radio);
+            }   
+        }
+        else if(quiz.index == 4){
+            this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
+            {
             var radio = document.getElementsByName("quiz");
             dados.escolharradio(radio);
+            }
         }
     }
   http()
@@ -204,6 +215,15 @@ class Carregardados{
                                 users.questão.multescola.segunda[1],
                                 users.questão.multescola.segunda[2],
                                 users.questão.multescola.segunda[3]
+                            ]
+                            break;
+                            case 4:
+                            quiz.problema = [
+                                users.perguntas.quarta,
+                                users.questão.multescola.terceira[0],
+                                users.questão.multescola.terceira[1],
+                                users.questão.multescola.terceira[2],
+                                users.questão.multescola.terceira[3]
                             ]
                             break;
                         }
