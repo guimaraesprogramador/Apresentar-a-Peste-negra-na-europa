@@ -12,7 +12,6 @@ class quizjs{
         document.createElement("input"),
         document.createElement("input")
         ]
-        this.numero;
         this.input[0].type = "radio";
         this.input[1].type = "radio";
         this.input[2].type = "radio"
@@ -41,12 +40,16 @@ class quizjs{
         this.index_input;
         this.sucesso  = [];
         this.fracasso = [];
+        this.canvas = document.createElement("canvas");
+        this.canvas.width = 100;
+        this.canvas.height = 100;
+        this.canvas.getContext("2d");
     }
     get numero(){
         return this.index;
     }
     set numero(t){
-         this.numero = t;
+         this.index = t;
     }
     get problema (){
         return this.palavra;
@@ -65,7 +68,7 @@ class Carregardados{
             
                 if(radio[i].value == quiz.problema[1]){
                     quiz.sucesso.push("acerto");
-                    quiz.numero = quiz.numero + 1;   
+                    quiz.index = quiz.index + 1;   
                     dados.http();
                     
                 }
@@ -78,10 +81,10 @@ class Carregardados{
         } 
         else{
             quiz.fracasso.push("errado");
-            quiz.numero = quiz.numero + 1;   
+            quiz.index = quiz.index + 1;   
             dados.http()
         }
-        console.clear();
+        
     }
     layort(){
 
@@ -113,21 +116,30 @@ class Carregardados{
             this.div.innerHTML += quinta_parte(this.div);
             
             break;
+            case 5:
+
+            this.div.innerHTML += sexta_parte(this.div);
+            
+            break;
+            case 6:
+
+            this.div.innerHTML += resultado(this.div);
+            break;
             };
             return this.div;
         }
 
         this.quizlegenda.addTo(m.map);
         
-        if(quiz.index == 0){
+        if(quiz.numero == 0){
             
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev){
-                quiz.index = quiz.numero + 1;
+                quiz.index = quiz.index + 1;
                 dados.http();    
             }
             
         }
-        else if(quiz.index == 1) 
+        else if(quiz.numero == 1) 
         {
             
             
@@ -138,7 +150,7 @@ class Carregardados{
             }
             
         }
-        else if(quiz.index == 2)
+        else if(quiz.numero == 2)
         {
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
@@ -146,7 +158,7 @@ class Carregardados{
 
                 if(texto[0].value == quiz.problema[1]){
                     quiz.sucesso.push("acerto");
-                            quiz.numero = quiz.numero +1;   
+                            quiz.index = quiz.index + 1;   
                             dados.http();
                 }
                 else if(quiz.sucesso.length != 2){
@@ -156,25 +168,32 @@ class Carregardados{
                     }
                     else{
                         quiz.fracasso.push("errado");
-                        quiz.numero = quiz.numero +1;   
+                        quiz.index = quiz.index + 1;   
                         dados.http()
                     }
                 } 
                 
             }
         }
-        else if(quiz.index = 3){
+        else if(quiz.numero == 3){
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
                 var radio = document.getElementsByName("quiz");
                 dados.escolharradio(radio);
             }   
         }
-        else if(quiz.index == 4){
+        else if(quiz.numero == 4){
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
             var radio = document.getElementsByName("quiz");
             dados.escolharradio(radio);
+            }
+        }
+        else if(quiz.numero == 5){
+            this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
+            {
+                var radio = document.getElementsByName("quiz");
+                dados.escolharradio(radio);
             }
         }
     }
@@ -224,6 +243,15 @@ class Carregardados{
                                 users.questão.multescola.terceira[1],
                                 users.questão.multescola.terceira[2],
                                 users.questão.multescola.terceira[3]
+                            ]
+                            break;
+                            case 5:
+                            quiz.problema = [
+                                users.perguntas.quinta,
+                                users.questão.multescola.quarta[0],
+                                users.questão.multescola.quarta[1],
+                                users.questão.multescola.quarta[2],
+                                users.questão.multescola.quarta[3]
                             ]
                             break;
                         }

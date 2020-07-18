@@ -10,6 +10,7 @@ function primeira_parte(div){
     div.innerHTML += "</br>";
     quiz.index_input = 1;
 
+    div.children[0].style.fontSize = "13px";
     return div.innerHTML.toString();
 }
 function segunda_parte(div){
@@ -57,8 +58,11 @@ function segunda_parte(div){
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
     quiz.index_input = 3;
-    console.log(div.children)
-    div.children[4].style.left = "55%"
+
+    div.children[4].style.left = "55%";
+
+    div.children[0].style.fontSize = "13px";
+
     return div.innerHTML.toString();
 } 
 function terceira_parte(div){
@@ -84,7 +88,10 @@ function terceira_parte(div){
     div.children[2].style.left = "1%";
     div.children[3].style.left = "5%";
     quiz.index_input = 2;
+
+    div.children[0].style.fontSize = "13px";
     
+
     return div.innerHTML.toString();
 }
 function quarta_parte(div){
@@ -147,7 +154,8 @@ function quarta_parte(div){
     div.children[3].style.left = "65%";
     div.children[1].style.marginBottom =  "  5%";
     quiz.index_input = 2;
-    
+    div.children[0].style.fontSize = "11px";
+
     return div.innerHTML.toString();
 }
 function quinta_parte(div){
@@ -207,12 +215,109 @@ function quinta_parte(div){
     quiz.button[index_radio].id + input[2] + "> "+ input[3];
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
+    
     div.children[3].style.left = "65%";
+    
     div.children[1].style.marginBottom =  "  5%";
+    
     quiz.index_input = 2;
-    console.log(div.children);
+
+    div.children[0].style.fontSize = "11px";
+
     return div.innerHTML.toString();
 }
 function sexta_parte(div){
+    quiz.form.innerHTML = "";
+    div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
+    quiz.input[0].setAttribute("value",quiz.problema[1]);
+    quiz.input[1].setAttribute("value",quiz.problema[2]);
+    quiz.input[2].setAttribute("value",quiz.problema[3]);
+    quiz.input[3].setAttribute("value",quiz.problema[4]);
 
+    var input1 =  input[0] + quiz.input[index_radio].type.toString() +
+    input[1] + quiz.input[index_radio].value +input[2] +
+    quiz.input[index_radio].id +input[4] + quiz.input[index_radio].name +" > "+
+    quiz.input[index_radio].value +input[3]+ "</br> ";
+
+    index_radio = index_radio +1;
+
+    var input2 =   input[0] + quiz.input[index_radio].type.toString() +
+    input[1] + quiz.input[index_radio].value +input[2] +
+    quiz.input[index_radio].id +input[4] + quiz.input[index_radio].name +" > "+
+    quiz.input[index_radio].value +input[3]+ "</br> ";
+
+    index_radio = index_radio +1;
+
+    var input3 =  input[0] + quiz.input[index_radio].type.toString() +
+    input[1] + quiz.input[index_radio].value +input[2] +
+    quiz.input[index_radio].id +input[4] + quiz.input[index_radio].name +" > "+
+    quiz.input[index_radio].value +input[3]+ "</br> ";
+
+    index_radio = index_radio +1;
+
+    quiz.input[index_radio].removeAttribute("type");
+
+    quiz.input[index_radio].setAttribute("type","radio");    
+    
+    var input4 =  input[0] + quiz.input[index_radio].type.toString() +
+    input[1] + quiz.input[index_radio].value +input[2] +
+    quiz.input[index_radio].id +input[4] + quiz.input[index_radio].name +" > "+
+    quiz.input[index_radio].value +input[3]+ " ";
+
+    quiz.form.append(input1);
+    quiz.form.append(input2);
+    quiz.form.append(input3);
+    quiz.form.append(input4);
+    div.innerHTML += "<form action='/' id='form' > "+
+    quiz.form.innerText.toString(); +"</form> </br>";
+
+    index_radio = 0;
+
+    quiz.button[index_radio].removeAttribute("value");   
+    quiz.button[index_radio].setAttribute("value","Proxima");
+
+
+    div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
+    input[1] + quiz.button[index_radio].value + input[2] +
+    quiz.button[index_radio].id + input[2] + "> "+ input[3];
+    
+    div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
+    
+    div.children[3].style.left = "65%";
+    
+    div.children[1].style.marginBottom =  "  5%";
+    
+    quiz.index_input = 2;
+
+    div.children[0].style.fontSize = "11px";
+
+    return div.innerHTML.toString();
+}
+function resultado(div){
+quiz.nome = "";
+quiz.nome = "Pontuação:";
+div.innerHTML += '<h4> '+ quiz.nome +' </h4> ';
+var total_fracasso = quiz.fracasso.length;
+var total_sucesso = quiz.sucesso.length;
+var calculofracasso = (total_fracasso *100)/5;
+var calculosucesso = (total_sucesso*100)/5;
+var data = [
+    {
+        value: calculofracasso,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+    },
+    {
+        value: calculosucesso,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+    }
+];
+// var chart = new Chart(canvas).Pie(data);
+
+div.innerHTML += quiz.canvas.innerHTML.toString();
+
+return div.innerHTML.toString(); 
 }
