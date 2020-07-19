@@ -301,23 +301,13 @@ var total_fracasso = quiz.fracasso.length;
 var total_sucesso = quiz.sucesso.length;
 var calculofracasso = (total_fracasso *100)/5;
 var calculosucesso = (total_sucesso*100)/5;
-var data = [
-    {
-        value: calculofracasso,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
-    },
-    {
-        value: calculosucesso,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
-    }
-];
-// var chart = new Chart(canvas).Pie(data);
-
-div.innerHTML += quiz.canvas.innerHTML.toString();
+quiz.button[index_radio].removeAttribute("value");   
+    quiz.button[index_radio].setAttribute("value","Resultado");
+div.innerHTML +=" <h3> "+ "Acertos: "+ calculosucesso +" %"+" </h3> ";
+div.innerHTML += " <h3> "+ "Errados: "+ calculofracasso +" %" +" </h3> ";
+div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
+input[1] + quiz.button[index_radio].value + input[2] +
+quiz.button[index_radio].id + input[2] + "> "+ input[3];
 
 return div.innerHTML.toString(); 
 }

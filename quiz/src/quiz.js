@@ -60,13 +60,13 @@ class quizjs{
   }
 class Carregardados{
 
-    escolharradio(radio){
+    escolharradio(radio,resposta){
         var i = 0;
         var erro  = 0;
         while(i<radio.length){
             if(radio[i].checked){
             
-                if(radio[i].value == quiz.problema[1]){
+                if(radio[i].value == resposta){
                     quiz.sucesso.push("acerto");
                     quiz.index = quiz.index + 1;   
                     dados.http();
@@ -76,15 +76,15 @@ class Carregardados{
             else erro = erro +1;
             i = i +1;
         }
-        if(erro == radio.length){
-                alert("marque uma opção pelo menos");
-        } 
-        else{
-            quiz.fracasso.push("errado");
-            quiz.index = quiz.index + 1;   
-            dados.http()
+        if(quiz.sucesso.length != quiz.numero - 1)
+        {
+            if(erro == radio.length)alert("marque uma opção pelo menos");
+            else{
+                quiz.fracasso.push("errado");
+                quiz.index = quiz.index + 1;   
+                dados.http();
+            }
         }
-        
     }
     layort(){
 
@@ -146,7 +146,7 @@ class Carregardados{
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev){
                
                 var radio = document.getElementsByName("quiz");
-                dados.escolharradio(radio);
+                dados.escolharradio(radio,quiz.problema[1]);
             }
             
         }
@@ -155,7 +155,7 @@ class Carregardados{
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
                 var texto = document.getElementsByName("quiz");
-
+                
                 if(texto[0].value == quiz.problema[1]){
                     quiz.sucesso.push("acerto");
                             quiz.index = quiz.index + 1;   
@@ -179,22 +179,29 @@ class Carregardados{
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
                 var radio = document.getElementsByName("quiz");
-                dados.escolharradio(radio);
+                dados.escolharradio(radio,quiz.problema[2]);
             }   
         }
         else if(quiz.numero == 4){
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
             var radio = document.getElementsByName("quiz");
-            dados.escolharradio(radio);
+            dados.escolharradio(radio,quiz.problema[1]);
             }
         }
         else if(quiz.numero == 5){
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
                 var radio = document.getElementsByName("quiz");
-                dados.escolharradio(radio);
+                dados.escolharradio(radio,quiz.problema[4]);
             }
+        }
+        else if(quiz.numero == 6){
+            // this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
+            // {
+            //     quiz.index = 0;
+            //     dados.http();
+            // }
         }
     }
   http()
@@ -207,7 +214,8 @@ class Carregardados{
                 this.layort();
             }
             else{
-                this.quizlegenda.removeFrom(m.map);
+
+                dados.quizlegenda.removeFrom(m.map);
                 var xhtml= new XMLHttpRequest();
                 xhtml.open("GET","./quiz/questões/perguntas.json",true);
                 xhtml.onload = function(){
@@ -224,7 +232,7 @@ class Carregardados{
                             case 2:
                             quiz.problema = [
                                 users.perguntas.segunda,
-                                users.perguntas.escolhaunica
+                                users.questão.escolhaunica
                             ]
                             break;
                             case 3:
