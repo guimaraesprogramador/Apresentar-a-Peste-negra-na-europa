@@ -1,5 +1,6 @@
 var index_radio = 0;
 var input = [ "<input type = "," value ="," id = "," </input>"," name = "];
+
 function primeira_parte(div){
 
     div.innerHTML += '<h4> '+quiz.nome +' </h4>';
@@ -13,6 +14,7 @@ function primeira_parte(div){
     div.children[0].style.fontSize = "13px";
     return div.innerHTML.toString();
 }
+
 function segunda_parte(div){
 
     div.innerHTML += "<img src='"+quiz.img.src.toString() +"' "+
@@ -65,6 +67,7 @@ function segunda_parte(div){
 
     return div.innerHTML.toString();
 } 
+
 function terceira_parte(div){
     div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
                             // type
@@ -89,11 +92,12 @@ function terceira_parte(div){
     div.children[3].style.left = "5%";
     quiz.index_input = 2;
 
-    div.children[0].style.fontSize = "13px";
+    div.children[0].style.fontSize = "11px";
     
 
     return div.innerHTML.toString();
 }
+
 function quarta_parte(div){
 
     quiz.form.innerHTML = "";
@@ -158,6 +162,7 @@ function quarta_parte(div){
 
     return div.innerHTML.toString();
 }
+
 function quinta_parte(div){
 
     quiz.form.innerHTML = "";
@@ -226,6 +231,7 @@ function quinta_parte(div){
 
     return div.innerHTML.toString();
 }
+
 function sexta_parte(div){
     quiz.form.innerHTML = "";
     div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
@@ -293,6 +299,7 @@ function sexta_parte(div){
 
     return div.innerHTML.toString();
 }
+
 function resultado(div){
 quiz.nome = "";
 quiz.nome = "Pontuação:";
@@ -302,12 +309,17 @@ var total_sucesso = quiz.sucesso.length;
 var calculofracasso = (total_fracasso *100)/5;
 var calculosucesso = (total_sucesso*100)/5;
 quiz.button[index_radio].removeAttribute("value");   
-    quiz.button[index_radio].setAttribute("value","Resultado");
+quiz.button[index_radio].setAttribute("value","Recomeçar");
+
 div.innerHTML +=" <h3> "+ "Acertos: "+ calculosucesso +" %"+" </h3> ";
 div.innerHTML += " <h3> "+ "Errados: "+ calculofracasso +" %" +" </h3> ";
 div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
 input[1] + quiz.button[index_radio].value + input[2] +
 quiz.button[index_radio].id + input[2] + "> "+ input[3];
+
+div.innerHTML += "<span id = 'numero' > "+ (quiz.numero - 1)+"/5"+" </span>";
+
+
 
 return div.innerHTML.toString(); 
 }

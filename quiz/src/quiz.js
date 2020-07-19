@@ -61,30 +61,32 @@ class quizjs{
 class Carregardados{
 
     escolharradio(radio,resposta){
-        var i = 0;
-        var erro  = 0;
-        while(i<radio.length){
-            if(radio[i].checked){
+        var checked = true;
+        var i = 0
+        radio.forEach((value,index,array)=>{
             
-                if(radio[i].value == resposta){
-                    quiz.sucesso.push("acerto");
-                    quiz.index = quiz.index + 1;   
-                    dados.http();
-                    
+            if(array[index].checked){
+                if(array[index].value == resposta){
+                    checked = false;
                 }
+                
             }
-            else erro = erro +1;
             i = i +1;
+        })
+        if(checked){
+            
+            // se não é a resposta certa
+            if(i == radio.length)return checked;
         }
-        if(quiz.sucesso.length != quiz.numero - 1)
+        
+        else
         {
-            if(erro == radio.length)alert("marque uma opção pelo menos");
-            else{
-                quiz.fracasso.push("errado");
-                quiz.index = quiz.index + 1;   
-                dados.http();
-            }
-        }
+            quiz.sucesso.push("acerto");
+            quiz.index = quiz.index + 1;   
+            dados.http();
+            return checked;
+           }
+         
     }
     layort(){
 
@@ -126,6 +128,7 @@ class Carregardados{
             this.div.innerHTML += resultado(this.div);
             break;
             };
+            
             return this.div;
         }
 
@@ -142,11 +145,16 @@ class Carregardados{
         else if(quiz.numero == 1) 
         {
             
-            
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev){
-               
+                              
                 var radio = document.getElementsByName("quiz");
-                dados.escolharradio(radio,quiz.problema[1]);
+               var verificar =  dados.escolharradio(radio,quiz.problema[1]);
+               if(verificar == true){
+                quiz.fracasso.push("errado");
+                quiz.index = quiz.index + 1;   
+                dados.http();
+
+               }
             }
             
         }
@@ -178,22 +186,44 @@ class Carregardados{
         else if(quiz.numero == 3){
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
+                
                 var radio = document.getElementsByName("quiz");
-                dados.escolharradio(radio,quiz.problema[2]);
+               var verificar =  dados.escolharradio(radio,quiz.problema[2]);
+               if(verificar == true){
+                quiz.fracasso.push("errado");
+                quiz.index = quiz.index + 1;   
+                dados.http();
+
+               }
+               
             }   
         }
         else if(quiz.numero == 4){
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
             var radio = document.getElementsByName("quiz");
-            dados.escolharradio(radio,quiz.problema[1]);
+            var verificar =  dados.escolharradio(radio,quiz.problema[1]);
+            if(verificar == true){
+            quiz.fracasso.push("errado");
+            quiz.index = quiz.index + 1;   
+            dados.http();
+
+                }    
             }
         }
         else if(quiz.numero == 5){
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
                 var radio = document.getElementsByName("quiz");
-                dados.escolharradio(radio,quiz.problema[4]);
+                
+               var verificar =  dados.escolharradio(radio,quiz.problema[2]);
+               if(verificar == true){
+                quiz.fracasso.push("errado");
+                quiz.index = quiz.index + 1;   
+                dados.http();
+
+               }
+            
             }
         }
         else if(quiz.numero == 6){
