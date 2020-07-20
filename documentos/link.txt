@@ -50,3 +50,5 @@ http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LN39J4mlIinDL4X9LIXEBIm
 
 http://www.plantuml.com/plantuml/uml/JOungiCm341tdq9uIeOFVquWPFWt-2TGOv4QRCkHvTAUfrklaOkL9ALa4eZtdZGMHT4QWr6lWU3FuomO4Hn1eQMkhpHvDCPULNFJsf_1_bEJQYJXuRUrtOGYDAE0JuxknkvZmpv21pSCBE3u8FfpAWjV0aMqNTuR3XsNxNGccMjIB42mL2gwFlai1domw9x_Fd3iUZDISZM6Dm00
 
+// diagrama de class de icones
+http://www.plantuml.com/plantuml/uml/NOmn3W91201xNh6bckmFBEud5t8G9O4Z0Sx6-7TNrygA8SEmP67KOGebfTn8y1Pes8ZRffZv0TbyvuIv3ouaN--IvI7uXBwxCVG7gWUyVcSUn3RSTwupmjDvUFZ_qAwzNsO02-zqcBu1

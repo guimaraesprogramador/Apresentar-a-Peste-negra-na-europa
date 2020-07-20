@@ -14,14 +14,15 @@ class mapa {
     L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
         attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
-     var legend = L.control({ position: "bottomleft" });
-     legend.onAdd = function(map) {
+    this.legend = L.control({ position: "bottomleft" });
+     this.legend.onAdd = function(map) {
         var div = L.DomUtil.create("div", "legend");
         div.innerHTML += "<h4>Legenda</h4>"; 
         div.innerHTML += '<i style="background: #dc143c"></i><span>Peste bubônica</span><br>';
         return div;
      }
-     legend.addTo(this.map);
+     this.legend.addTo(this.map);
+     this.map.off("move");
   
     }
     ponto_inicial(latitude,longitude){

@@ -12,7 +12,7 @@ class mudar {
                                         if(v.IA.pending == false && v.IA.speaking == false){
                                                 m.estado = true;
                                                 c.texto = c.proxima;
-                                                s.mudar_mapa([m.estado]);
+                                                s.mudar_mapa([m.estado,c.texto]);
                                                 clearInterval(tempo);
                                         }
                                 }
@@ -24,6 +24,8 @@ class mudar {
                 if(mudança[0] == true)
                 {
                         e.theads();
+                        o.texto = mudança[1];
+                        o.ordem_contada();
                 }
                 else s.mudar_voz(mudança);    
         }   
@@ -84,70 +86,73 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                 s.mudar_voz([m.estado]);
             }
 }
-var chrome = L.Browser.chrome;
-var opera = L.Browser.mobileOpera;
-var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
-if(android)
-{        
-        
-                // Futuramente implentação do android ou ios.
-                var div = document.createElement("div");
-                div.innerHTML += " Aviso importante  \n";
-                div.innerHTML += " A página ainda não funciona para Android ou IOS.";
-                alert(div.innerText);
-      
-}
-else if(chrome || opera){
-        var ia32 = parseInt(navigator.platform.slice(8))
-        if(ia32 == 86){
-                var div = document.createElement("div");
-                div.innerHTML += " Aviso importante  \n"
-                div.innerHTML  += "No "+ " navegador Chorme ou Chormium " + "o sistema  "+navigator.platform.slice(0,6) +
-                  "ainda não funciona nesta página. "+" \n";
-                div.id = "aviso";
-                var aviso = confirm(div.innerText);
-                if(aviso == true){
-                        alert("Utilize outro dispositivo pois, este " + navigator.platform.slice(0,6) +
-                        " ainda não funciona nesta página.");
-                }
+if(navigator.onLine){
+        var chrome = L.Browser.chrome;
+        var opera = L.Browser.mobileOpera;
+        var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
+        if(android)
+        {        
+                
+                        // Futuramente implentação do android ou ios.
+                        var div = document.createElement("div");
+                        div.innerHTML += " Aviso importante  \n";
+                        div.innerHTML += " A página ainda não funciona para Android ou IOS.";
+                        alert(div.innerText);
+              
         }
-         else permissão_usuario('microphone',true,false);
-}
-else 
-{
-
-        function error(navegador)
-                        {
-                                alert("Utilize outro navegador pois,  o " + navegador +
-                                " ainda não funciona nesta página.");
-                                console.clear();
-                        }
-        var internet_explore = L.Browser.ie ||  L.Browser.ie6	|| L.Browser.ie7;
-        var edge = L.Browser.ielt9;
-        if(internet_explore) error("Internet Explorer");     
-        else if(edge) error("Edge");
-        else 
-        {
+        else if(chrome || opera){
                 var ia32 = parseInt(navigator.platform.slice(8))
                 if(ia32 == 86){
                         var div = document.createElement("div");
                         div.innerHTML += " Aviso importante  \n"
-                        div.innerHTML  += "No "+  navigator.platform.slice(0,6) + " pode ocasionar, "+" \n";
-                        div.innerHTML += " um ruido bastate agudo na apresentação desta animação.";
+                        div.innerHTML  += "No "+ " navegador Chorme ou Chormium " + "o sistema  "+navigator.platform.slice(0,6) +
+                          "ainda não funciona nesta página. "+" \n";
                         div.id = "aviso";
                         var aviso = confirm(div.innerText);
                         if(aviso == true){
+                                alert("Utilize outro dispositivo pois, este " + navigator.platform.slice(0,6) +
+                                " ainda não funciona nesta página.");
+                        }
+                }
+                 else permissão_usuario('microphone',true,false);
+        }
+        else 
+        {
+        
+                function error(navegador)
+                                {
+                                        alert("Utilize outro navegador pois,  o " + navegador +
+                                        " ainda não funciona nesta página.");
+                                        console.clear();
+                                }
+                var internet_explore = L.Browser.ie ||  L.Browser.ie6	|| L.Browser.ie7;
+                var edge = L.Browser.ielt9;
+                if(internet_explore) error("Internet Explorer");     
+                else if(edge) error("Edge");
+                else 
+                {
+                        var ia32 = parseInt(navigator.platform.slice(8))
+                        if(ia32 == 86){
+                                var div = document.createElement("div");
+                                div.innerHTML += " Aviso importante  \n"
+                                div.innerHTML  += "No "+  navigator.platform.slice(0,6) + " pode ocasionar, "+" \n";
+                                div.innerHTML += " um ruido bastate agudo na apresentação desta animação.";
+                                div.id = "aviso";
+                                var aviso = confirm(div.innerText);
+                                if(aviso == true){
+                                        m.estado = false;
+                                        s.mudar_voz([m.estado]);
+                                }
+                                else {
+                                alert("Utilize outro dispositivo pois,"+ " para assitir a apresentação ");
+                                }
+                        }
+                        else{
                                 m.estado = false;
                                 s.mudar_voz([m.estado]);
                         }
-                        else {
-                        alert("Utilize outro dispositivo pois,"+ " para assitir a apresentação ");
-                        }
+                     
                 }
-                else{
-                        m.estado = false;
-                        s.mudar_voz([m.estado]);
-                }
-             
         }
 }
+else alert("Sua internet não esta funcionado nesta página");
