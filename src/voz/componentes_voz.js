@@ -229,8 +229,3 @@ class  componentes_voz {
         
 }
 const c = new componentes_voz();
-window.onbeforeunload = function(){
-    if(v.IA == undefined) console.log("sintese de fala não criada");
-    else v.IA.cancel();
-}
- 

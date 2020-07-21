@@ -6,13 +6,16 @@ class mudar {
         {          
                 if(mudança[0]==false){
                         c.theads();
+                        
                         var tempo = window.setInterval(function(){
                                 if(v.IA == undefined)clearInterval(tempo);
                                 else if(v.IA != undefined){
                                         if(v.IA.pending == false && v.IA.speaking == false){
                                                 m.estado = true;
                                                 c.texto = c.proxima;
-                                                s.mudar_mapa([m.estado,c.texto]);
+                                                o.texto = c.proxima;
+                                                o.ordem_contada();
+                                                s.mudar_mapa([m.estado]);
                                                 clearInterval(tempo);
                                         }
                                 }
@@ -24,8 +27,7 @@ class mudar {
                 if(mudança[0] == true)
                 {
                         e.theads();
-                        o.texto = mudança[1];
-                        o.ordem_contada();
+                        
                 }
                 else s.mudar_voz(mudança);    
         }   
@@ -156,3 +158,12 @@ if(navigator.onLine){
         }
 }
 else alert("Sua internet não esta funcionado nesta página");
+window.onbeforeunload = function(){
+        if(v.IA == undefined) console.log("sintese de fala não criada");
+        else v.IA.cancel();
+    }
+    window.onload = function(){
+        if(v.IA == undefined) console.log("sintese de fala não criada");
+        else v.IA.cancel();
+    }
+    

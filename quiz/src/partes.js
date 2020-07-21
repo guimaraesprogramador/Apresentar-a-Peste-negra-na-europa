@@ -302,6 +302,7 @@ function sexta_parte(div){
 
 function resultado(div){
 quiz.nome = "";
+quiz.form.innerHTML = "";
 quiz.nome = "Pontuação:";
 div.innerHTML += '<h4> '+ quiz.nome +' </h4> ';
 var total_fracasso = quiz.fracasso.length;
@@ -317,8 +318,8 @@ div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
 input[1] + quiz.button[index_radio].value + input[2] +
 quiz.button[index_radio].id + input[2] + "> "+ input[3];
 
-div.innerHTML += "<span id = 'numero' > "+ (quiz.numero - 1)+"/5"+" </span>";
-
+quiz.index_input = 3;
+quiz.nome = "Teste de Conhecimento";
 
 
 return div.innerHTML.toString(); 

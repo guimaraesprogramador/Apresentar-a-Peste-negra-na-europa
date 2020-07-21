@@ -231,11 +231,12 @@ class Carregardados{
             }
         }
         else if(quiz.numero == 6){
-            // this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
-            // {
-            //     quiz.index = 0;
-            //     dados.http();
-            // }
+            
+            this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
+            {
+                quiz.index = 0;
+                dados.http();
+            }
         }
     }
   http()

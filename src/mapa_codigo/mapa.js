@@ -22,7 +22,6 @@ class mapa {
         return div;
      }
      this.legend.addTo(this.map);
-     this.map.off("move");
   
     }
     ponto_inicial(latitude,longitude){
