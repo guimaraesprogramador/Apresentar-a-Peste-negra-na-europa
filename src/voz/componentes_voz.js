@@ -47,6 +47,8 @@ class  componentes_voz {
                     c.texto = linha.primeira_parte + linha.segunda_linha +
                     linha.terceira_linha + linha.quarta_linha +
                     linha.quinta_linha + linha.sexta_linha;
+                    o.nome = parte;
+                    o.ordem_contada();
                     break;
             case "parte_1":
                 let linhas =[
@@ -59,8 +61,21 @@ class  componentes_voz {
                 ]   
                 c.texto = "";
                 linhas.forEach((value,index,array)=>{
+                    //  localizção de Caffa 
+                    if(index == 3){
+
+                    }
+                    // localizção de Sicília 
+                    else if(index == 4){
+
+                    }
+                    // localizção de porto de marselha 
+                    else if(index == 5){
+
+                    }
                    c.texto = c.texto +  value.toString();
                 })
+                
                     break;
                 case "parte_2":
                    let linhas2 = [
@@ -105,15 +120,15 @@ class  componentes_voz {
                     linhas4.forEach((value,index,array)=>{
                      c.texto = c.texto +  value.toString();
                     });
-                  var legend_1 = L.control({ position: "bottomright" });
-                    legend_1.onAdd = function(map) {
-                            var link = new URL("https://github.com/guimaraesprogramador/zonas_distancia");
-                            var div = L.DomUtil.create("div", "link");
-                            div.innerHTML  += "<h4> link da documentação abaixo: </h4>";
-                            div.innerHTML += "<span>  "+ link.href.toString() + "</span><br>";
-                        return div;
-                    }
-                    legend_1.addTo(m.map);
+                //   var legend_1 = L.control({ position: "bottomright" });
+                //     legend_1.onAdd = function(map) {
+                //             var link = new URL("https://github.com/guimaraesprogramador/zonas_distancia");
+                //             var div = L.DomUtil.create("div", "link");
+                //             div.innerHTML  += "<h4> link da documentação abaixo: </h4>";
+                //             div.innerHTML += "<span>  "+ link.href.toString() + "</span><br>";
+                //         return div;
+                //     }
+                //     legend_1.addTo(m.map);
                     break;
             }
         }catch(ev){

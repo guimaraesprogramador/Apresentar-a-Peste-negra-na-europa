@@ -13,8 +13,6 @@ class mudar {
                                         if(v.IA.pending == false && v.IA.speaking == false){
                                                 m.estado = true;
                                                 c.texto = c.proxima;
-                                                o.texto = c.proxima;
-                                                o.ordem_contada();
                                                 s.mudar_mapa([m.estado]);
                                                 clearInterval(tempo);
                                         }
@@ -165,5 +163,5 @@ window.onbeforeunload = function(){
     window.onload = function(){
         if(v.IA == undefined) console.log("sintese de fala não criada");
         else v.IA.cancel();
-    }
+}
     

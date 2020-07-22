@@ -21,18 +21,15 @@ class  ordem  extends contado_historia{
         super();
     }
     ordem_contada(){
-       if(this.nome != undefined){
-           this.navio = document.createElement("img");
+        this.navio = document.createElement("img");
            this.navio.src = "./documentos/imagens/etapa 2/historic-ship.png";
            this.navio.alt = "navio";
            this.linha_trajetoria = document.createElement("img");
-           this.linha_trajetoria.src =  "./documentos/imagens/etapa 2/Linha tracejada.png";
+           this.linha_trajetoria.src =  "https://img.icons8.com/dotty/26/000000/dashed-line.png";
            this.linha_trajetoria.alt  = "Linha trajetoria";
            this.controle_volume =[ 
             // play   
             document.createElement("img"),
-           //pause 
-           document.createElement("img"),
            // stop
            document.createElement("img"),
            // voltar
@@ -42,9 +39,6 @@ class  ordem  extends contado_historia{
 
            
            function play(index){
-
-           }
-           function pause(index){
 
            }
            function stop(index){
@@ -58,42 +52,37 @@ class  ordem  extends contado_historia{
             }
             this.controle_volume[0].src = "https://img.icons8.com/nolan/26/youtube-music.png";
             this.controle_volume[0].alt = "play";
-            this.controle_volume[0].onclick = play(this.valor);
-           switch(this.nome){
+            this.controle_volume[0].onclick = play(o.valor);
+            // stop
+            this.controle_volume[1].src = "https://img.icons8.com/nolan/26/stop.png"
+            this.controle_volume[1].alt = "stop";
+           
+            // this.controle_volume[1].onclick =stop(o.valor);
+            
+            // seta para voltar 
+            this.controle_volume[2].src = "https://img.icons8.com/nolan/26/circled-right-2.png";
+            this.controle_volume[2].alt = "voltar";
+           
+            // this.controle_volume[2].onclick = voltar((o.valor = o.valor -1));
+            
+            // seta para avança
+            this.controle_volume[3].src = "https://img.icons8.com/nolan/26/circled-left-2.png"; 
+            this.controle_volume[3].alt = "avançar";
+           // this.controle_volume[3].onclick = avançar((o.valor = o.valor +1));
+            
+           var div = m.legend._container;
+                div.innerHTML += "<i >" + " " +  o.navio.outerHTML.toString() + 
+                                " " + "</i><span> "+ "Navio" + "</span></br> ";
+                div.innerHTML += "<i >" + " " +  o.linha_trajetoria.outerHTML.toString() + 
+                                " " + "</i><span> "+ "Linha" + "</span></br> ";
+               // div.innerHTML += o.controle_volume[0].outerHTML.toString();
+           switch(o.nome){
+               case "introdução":
+                
+                   break;
                case "parte_2":
-                    m.legend.removeFrom(m.map);
                     
-                    this.legend = L.control({ position: "bottomleft" });
-                    this.legend.onAdd = function(map) {
-                        var div = L.DomUtil.create("div", "legend");
-                        div.innerHTML += "<h4>Legenda</h4>"; 
-                        div.innerHTML += '<i style="background: #dc143c"></i><span>Peste bubônica</span><br>';
-                        div.innerHTML += '<i >'+' <img src='+ this.navio.src.toString() + " alt= "+
-                        this.navio.alt.toString()  + "</i> <span> "+ "Navio" + "</span><br>";
-                        div.innerHTML += '<i >'+' <img src='+ this.linha_trajetoria.src.toString() + " alt= "+
-                        this.linha_trajetoria.alt.toString()  + "</i> <span> "+ "Linha trajetoria" + "</span><br>";
-
-                        return div;
-                    }
                     
-                   
-
-                    this.legend.addTo(m.map);
-                    this.control = L.control({ position: "bottomleft" });
-                    this.control.onAdd = function(map) {
-                        var div = L.DomUtil.create("div", "audio");
-                        div.innerHTML +=  controle_volume[0].innerHTML.toString(); 
-                        // play 
-                        div.innerHTML += '<i >'+' <img src='+ this.controle_volume[0].src.toString() + " alt= "+
-                        this.controle_volume[0].alt.toString()  + "> ";
-                        // pause
-                        div.innerHTML += '<i >'+' <img src='+ this.controle_volume[1].src.toString() + " alt= "+
-                        this.controle_volume[1].alt.toString()  + "> ";
-                        
-                        return div;
-                    }
-                    this.control.onAdd(m.map);
-
                    break;
                 case "parte_2-1":
                     break;
@@ -106,9 +95,9 @@ class  ordem  extends contado_historia{
                 default:
                     break;
            }
-       }
+        }
         
-        
-    }
+    
 }
 const o = new ordem();
+o.ordem_contada();

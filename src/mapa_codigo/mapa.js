@@ -18,7 +18,7 @@ class mapa {
      this.legend.onAdd = function(map) {
         var div = L.DomUtil.create("div", "legend");
         div.innerHTML += "<h4>Legenda</h4>"; 
-        div.innerHTML += '<i style="background: #dc143c"></i><span>Peste bubônica</span><br>';
+        div.innerHTML += '<i style="background: #dc143c"></i><span>Peste bubônica</span></br> ';
         return div;
      }
      this.legend.addTo(this.map);
