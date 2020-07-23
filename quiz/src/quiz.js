@@ -40,10 +40,6 @@ class quizjs{
         this.index_input;
         this.sucesso  = [];
         this.fracasso = [];
-        this.canvas = document.createElement("canvas");
-        this.canvas.width = 100;
-        this.canvas.height = 100;
-        this.canvas.getContext("2d");
     }
     get numero(){
         return this.index;
@@ -234,7 +230,7 @@ class Carregardados{
             
             this.quizlegenda.div.children[quiz.index_input].onclick = function(ev)
             {
-                quiz.index = 0;
+                quiz.index = quiz.numero - quiz.index;
                 dados.http();
             }
         }

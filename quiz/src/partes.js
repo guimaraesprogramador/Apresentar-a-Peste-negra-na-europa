@@ -70,6 +70,7 @@ function segunda_parte(div){
 
 function terceira_parte(div){
     div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
+    
                             // type
     div.innerHTML += input[0] + quiz.input[quiz.index_input].type.toString() +
     // value   
@@ -79,7 +80,12 @@ function terceira_parte(div){
     // name
     input[4] + quiz.input[quiz.index_input].name +" > "+
     // </input>
-    quiz.input[quiz.index_input].value +input[3]+ " ";
+    input[3]+ " ";
+    if(dados.quizlegenda.div.children[1].type == "radio"){
+        dados.quizlegenda.div.children[1].removeAttribute("type");
+        dados.quizlegenda.div.children[1].setAttribute("type","text");    
+        dados.quizlegenda.div.children[1].removeAttribute("value");
+    }
     
     div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
     input[1] + quiz.button[index_radio].value + input[2] +
@@ -320,7 +326,9 @@ quiz.button[index_radio].id + input[2] + "> "+ input[3];
 
 quiz.index_input = 3;
 quiz.nome = "Teste de Conhecimento";
-
-
+while(quiz.sucesso.length >0)quiz.sucesso.pop();
+while(quiz.fracasso.length >0) quiz.fracasso.pop();
+console.log(index_radio); 
+   
 return div.innerHTML.toString(); 
 }
