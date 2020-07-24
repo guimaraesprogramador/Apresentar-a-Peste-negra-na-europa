@@ -4,10 +4,10 @@ var input = [ "<input type = "," value ="," id = "," </input>"," name = "];
 function primeira_parte(div){
 
     div.innerHTML += '<h4> '+quiz.nome +' </h4>';
-    quiz.button[ index_radio].setAttribute("value","Inicio");;
-    div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-    input[1] + quiz.button[index_radio].value + input[2] +
-    quiz.button[index_radio].id + input[2] + "> "+ input[3];
+    quiz.button[ index_radio].setAttribute("value","Inicio");
+
+    div.innerHTML += quiz.button[index_radio].outerHTML.toString();
+    
     div.innerHTML += "</br>";
     quiz.index_input = 1;
 
@@ -71,27 +71,14 @@ function segunda_parte(div){
 function terceira_parte(div){
     div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
     
-                            // type
-    div.innerHTML += input[0] + quiz.input[quiz.index_input].type.toString() +
-    // value   
-    input[2] +
-    //id 
-    quiz.input[quiz.index_input].id +
-    // name
-    input[4] + quiz.input[quiz.index_input].name +" > "+
-    // </input>
-    input[3]+ " ";
+    div.innerHTML += quiz.input[quiz.index_input].outerHTML.toString();
+        
     if(dados.quizlegenda.div.children[1].type == "radio"){
         dados.quizlegenda.div.children[1].removeAttribute("type");
         dados.quizlegenda.div.children[1].setAttribute("type","text");    
         dados.quizlegenda.div.children[1].removeAttribute("value");
     }
-    
-    div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-    input[1] + quiz.button[index_radio].value + input[2] +
-    quiz.button[index_radio].id + input[2] 
-    
-    + "> "+ input[3];
+    div.innerHTML += quiz.button[index_radio].outerHTML.toString();
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
     div.children[2].style.left = "1%";
@@ -156,9 +143,7 @@ function quarta_parte(div){
     quiz.button[index_radio].setAttribute("value","Proxima");
 
 
-    div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-    input[1] + quiz.button[index_radio].value + input[2] +
-    quiz.button[index_radio].id + input[2] + "> "+ input[3];
+    div.innerHTML += quiz.button[index_radio].outerHTML.toString();
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
     div.children[3].style.left = "65%";
@@ -221,9 +206,7 @@ function quinta_parte(div){
     quiz.button[index_radio].setAttribute("value","Proxima");
 
 
-    div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-    input[1] + quiz.button[index_radio].value + input[2] +
-    quiz.button[index_radio].id + input[2] + "> "+ input[3];
+    div.innerHTML += quiz.button[index_radio].outerHTML.toString();
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
     
@@ -289,9 +272,7 @@ function sexta_parte(div){
     quiz.button[index_radio].setAttribute("value","Proxima");
 
 
-    div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-    input[1] + quiz.button[index_radio].value + input[2] +
-    quiz.button[index_radio].id + input[2] + "> "+ input[3];
+    div.innerHTML += quiz.button[index_radio].outerHTML.toString();
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";
     
@@ -320,15 +301,14 @@ quiz.button[index_radio].setAttribute("value","Recomeçar");
 
 div.innerHTML +=" <h3> "+ "Acertos: "+ calculosucesso +" %"+" </h3> ";
 div.innerHTML += " <h3> "+ "Errados: "+ calculofracasso +" %" +" </h3> ";
-div.innerHTML += input[0] + quiz.button[index_radio].type.toString() +
-input[1] + quiz.button[index_radio].value + input[2] +
-quiz.button[index_radio].id + input[2] + "> "+ input[3];
+div.innerHTML += quiz.button[index_radio].outerHTML.toString();
+
 
 quiz.index_input = 3;
 quiz.nome = "Teste de Conhecimento";
 while(quiz.sucesso.length >0)quiz.sucesso.pop();
 while(quiz.fracasso.length >0) quiz.fracasso.pop();
-console.log(index_radio); 
+ 
    
 return div.innerHTML.toString(); 
 }

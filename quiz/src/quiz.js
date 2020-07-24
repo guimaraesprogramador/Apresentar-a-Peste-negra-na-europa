@@ -188,7 +188,7 @@ class Carregardados{
             {
                 
                 var radio = document.querySelectorAll("input[name=quiz]:checked");
-               var verificar =  dados.escolharradio(radio,quiz.problema[2]);
+               var verificar =  dados.escolharradio(radio,quiz.problema[3]);
                if(verificar == true){
                 quiz.fracasso.push("errado");
                 quiz.index = quiz.index + 1;   

@@ -63,14 +63,22 @@ class  componentes_voz {
                 linhas.forEach((value,index,array)=>{
                     //  localizção de Caffa 
                     if(index == 3){
-
+                        o.valor = index;
+                        o.nome = parte;
+                        o.ordem_contada();
                     }
                     // localizção de Sicília 
                     else if(index == 4){
+                        o.valor = index;
+                        o.nome = parte;
+                        o.ordem_contada();
 
                     }
                     // localizção de porto de marselha 
                     else if(index == 5){
+                        o.valor = index;
+                        o.nome = parte;
+                        o.ordem_contada();
 
                     }
                    c.texto = c.texto +  value.toString();
