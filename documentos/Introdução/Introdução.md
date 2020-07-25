@@ -55,7 +55,7 @@ Data inicial | Data final | Item
 26/05/20     | 27/05/20  | olhar nos 3 sites fazer de teste no projeto. 
 Finalizar projeto: | 02/06/20| sujeito a alteração futuras.
 
-### Etapa 2
+### Etapa 2 Completa
 
 #### Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20), abaixo a foto do deslocamento do projeto:
 
