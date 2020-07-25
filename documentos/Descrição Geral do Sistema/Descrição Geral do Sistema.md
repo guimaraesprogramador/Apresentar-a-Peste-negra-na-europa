@@ -17,7 +17,7 @@ A Contaminição de uma Pandemia depende principalmente da pessoas na presevaç�
 Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20), abaixo a foto do deslocamento do projeto:
 ![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/PARETO-pagina%20inicial.png) 
 
-#### Etapa 2 
+#### Etapa 2 Completa
 Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20), abaixo a foto do deslocamento do projeto:
 ![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial%20-1.png)
 
@@ -29,6 +29,8 @@ Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20),
 
 ![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial5.png)
 
+
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial6.png)
 
 ##### no dia 25 de julho de 2020
 
