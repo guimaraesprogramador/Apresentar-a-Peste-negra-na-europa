@@ -149,3 +149,11 @@ class componentes_mapa {
     }
 }
 const e = new componentes_mapa();
+window.onbeforeunload = function(){
+   if(v.IA == undefined) console.log("sintese de fala não criada");
+   else v.IA.cancel();
+}
+window.onload = function(){
+   if(v.IA == undefined) console.log("sintese de fala não criada");
+   else v.IA.cancel();
+}

@@ -47,8 +47,7 @@ class  componentes_voz {
                     c.texto = linha.primeira_parte + linha.segunda_linha +
                     linha.terceira_linha + linha.quarta_linha +
                     linha.quinta_linha + linha.sexta_linha;
-                    o.nome = parte;
-                    o.ordem_contada();
+
                     break;
             case "parte_1":
                 let linhas =[
@@ -61,26 +60,7 @@ class  componentes_voz {
                 ]   
                 c.texto = "";
                 linhas.forEach((value,index,array)=>{
-                    //  localizção de Caffa 
-                    if(index == 3){
-                        o.valor = index;
-                        o.nome = parte;
-                        o.ordem_contada();
-                    }
-                    // localizção de Sicília 
-                    else if(index == 4){
-                        o.valor = index;
-                        o.nome = parte;
-                        o.ordem_contada();
-
-                    }
-                    // localizção de porto de marselha 
-                    else if(index == 5){
-                        o.valor = index;
-                        o.nome = parte;
-                        o.ordem_contada();
-
-                    }
+                    
                    c.texto = c.texto +  value.toString();
                 })
                 
@@ -121,8 +101,8 @@ class  componentes_voz {
                 case "parte_4":
                     let linhas4 = [
                         "Com isso essa bactéria matou mais de  um terço da população no Continente europeu até 1350. ",
-                        "\n mais informação na documentação. ",
-                        "Caso deseje assistir novamente, \n aperte F5 ou atualize a página \n, então obrigado."
+                        " \n mais informação na documentação. ",
+                        " Caso deseje assistir novamente, \n aperte F5 ou atualize a página \n, então obrigado."
                     ]
                     c.texto = "";
                     linhas4.forEach((value,index,array)=>{
@@ -252,3 +232,11 @@ class  componentes_voz {
         
 }
 const c = new componentes_voz();
+window.onbeforeunload = function(){
+    if(v.IA == undefined) console.log("sintese de fala não criada");
+    else v.IA.cancel();
+}
+window.onload = function(){
+    if(v.IA == undefined) console.log("sintese de fala não criada");
+    else v.IA.cancel();
+}

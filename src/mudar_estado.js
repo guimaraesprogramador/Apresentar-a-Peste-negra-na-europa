@@ -100,7 +100,7 @@ if(navigator.onLine){
                         alert(div.innerText);
               
         }
-        else if(chrome || opera){
+        else if(chrome){
                 var ia32 = parseInt(navigator.platform.slice(8))
                 if(ia32 == 86){
                         var div = document.createElement("div");
@@ -112,6 +112,7 @@ if(navigator.onLine){
                         if(aviso == true){
                                 alert("Utilize outro dispositivo pois, este " + navigator.platform.slice(0,6) +
                                 " ainda não funciona nesta página.");
+                                
                         }
                 }
                  else permissão_usuario('microphone',true,false);
@@ -136,7 +137,7 @@ if(navigator.onLine){
                                 var div = document.createElement("div");
                                 div.innerHTML += " Aviso importante  \n"
                                 div.innerHTML  += "No "+  navigator.platform.slice(0,6) + " pode ocasionar, "+" \n";
-                                div.innerHTML += " um ruido bastate agudo na apresentação desta animação.";
+                                div.innerHTML += " um ruido bastate agudo na apresentação desta animação e travamento em alguns componentes.";
                                 div.id = "aviso";
                                 var aviso = confirm(div.innerText);
                                 if(aviso == true){
@@ -156,12 +157,5 @@ if(navigator.onLine){
         }
 }
 else alert("Sua internet não esta funcionado nesta página");
-window.onbeforeunload = function(){
-        if(v.IA == undefined) console.log("sintese de fala não criada");
-        else v.IA.cancel();
-    }
-    window.onload = function(){
-        if(v.IA == undefined) console.log("sintese de fala não criada");
-        else v.IA.cancel();
-}
+
     

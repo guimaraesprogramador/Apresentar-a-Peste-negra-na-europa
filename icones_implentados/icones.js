@@ -85,63 +85,54 @@ class  ordem  extends contado_historia{
                var linha = L.icon({
                    iconUrl:"https://img.icons8.com/dotty/26/000000/dashed-line.png"
                })
-           switch(o.nome){
-               case "introdução":
-               var div = m.legend._container;
-               div.innerHTML += "<i >" + " " +  o.navio.outerHTML.toString() + 
-                               " " + "</i><span> "+ "Navio" + "</span></br> ";
-               div.innerHTML += "<i >" + " " +  o.linha_trajetoria.outerHTML.toString() + 
-                               " " + "</i><span> "+ "Linha" + "</span></br> ";
-          
-               this.controle = L.control({ position: "topleft" });
-               this.controle.onAdd = function(map){
-                   this.div = L.DomUtil.create("div", "audio");
-                   this.div.innerHTML += o.controle_volume.voltar.image.outerHTML.toString();
-                   this.div.innerHTML += o.controle_volume.play.image.outerHTML.toString();
-                   this.div.innerHTML += o.controle_volume.stop.image.outerHTML.toString();
-                   this.div.innerHTML += o.controle_volume.avançar.image.outerHTML.toString();
-                   return this.div;
-               }
-               this.controle.addTo(m.map);
-                   
-                   break;
-                case "parte_1":
-                switch(o.valor){
-                    case 3:
-                    L.marker([pontos[0][0],pontos[0][1]],{icon:myIcon}).addTo(m.map);
-                    break;
-                    case 4:
-                    this.p1 = new  L.marker([pontos[0][0],pontos[0][1]],{icon:myIcon});
-                    this.p2 = new L.marker([pontos[1][0],pontos[1][1]],{icon:myIcon});
-                    var poligon = L.polygon(pontos,{icon:linha});
-                    this.layerGroup = L.layerGroup([this.p1,this.p2, poligon]);
-                    this.layerGroup.addTo(m.map);
-                    break;
-                    case 5:
-                    pontos.push([43.280555,5.345467]);
-                    this.p3 = new  L.marker([pontos[2][0],pontos[2][1]],{icon:myIcon});
-                    var poligon = L.polygon(pontos,{icon:linha});
-                    this.layerGroup.addLayer(this.p3);
-                    this.layerGroup = L.layerGroup([this.p1,this.p2, poligon]);
-                    this.layerGroup.addTo(m.map);
-                    break;
+               if(o.nome == undefined){
+                var div = m.legend._container;
+                div.innerHTML += "<i >" + " " +  o.navio.outerHTML.toString() + 
+                                " " + "</i><span> "+ "Navio" + "</span></br> ";
+                div.innerHTML += "<i >" + " " +  o.linha_trajetoria.outerHTML.toString() + 
+                                " " + "</i><span> "+ "Linha" + "</span></br> ";
+           
+                this.controle = L.control({ position: "topleft" });
+                this.controle.onAdd = function(map){
+                    this.div = L.DomUtil.create("div", "audio");
+                    this.div.innerHTML += o.controle_volume.voltar.image.outerHTML.toString();
+                    this.div.innerHTML += o.controle_volume.play.image.outerHTML.toString();
+                    this.div.innerHTML += o.controle_volume.stop.image.outerHTML.toString();
+                    this.div.innerHTML += o.controle_volume.avançar.image.outerHTML.toString();
+                    return this.div;
                 }
-                break;
-               case "parte_2":
-                    
-                    
-                   break;
-                case "parte_2-1":
-                    break;
-                case "parte_3-1":
-                    break;
-               case "parte_3-2":
-                    break;
-                case "parte_4":
-                    break
-                default:
-                    break;
-           }
+                this.controle.addTo(m.map);
+                    o.nome = "parte 1";
+                    o.valor = 3;
+                    var tempo = window.setInterval(function(){
+                            switch(o.valor){
+                                case 3:
+                                L.marker([pontos[0][0],pontos[0][1]],{icon:myIcon}).addTo(m.map);
+                                o.valor++;
+                                break;
+                                case 4:
+                                this.p1 = new  L.marker([pontos[0][0],pontos[0][1]],{icon:myIcon});
+                                this.p2 = new L.marker([pontos[1][0],pontos[1][1]],{icon:myIcon});
+                                var poligon = L.polygon(pontos,{icon:linha});
+                                this.layerGroup = L.layerGroup([this.p1,this.p2, poligon]);
+                                this.layerGroup.addTo(m.map);
+                                o.valor++;
+                                break;
+                                case 5:
+                                pontos.push([43.280555,5.345467]);
+                                this.p3 = new  L.marker([pontos[2][0],pontos[2][1]],{icon:myIcon});
+                                var poligon = L.polygon(pontos,{icon:linha});
+                                this.layerGroup.addLayer(this.p3);
+                                this.layerGroup = L.layerGroup([this.p1,this.p2, poligon]);
+                                this.layerGroup.addTo(m.map);
+                                clearInterval(tempo);
+                                break;
+                            
+
+                       }
+                       },1000)        
+               }
+               
         if(o.controle != undefined){
                 // voltar
                 o.controle.div.children[0].onclick = function(){
