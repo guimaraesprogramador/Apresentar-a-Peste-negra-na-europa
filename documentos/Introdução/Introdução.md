@@ -57,25 +57,40 @@ Finalizar projeto: | 02/06/20| sujeito a alteração futuras.
 
 ### Etapa 2
 
-#### Imagens da panilha da 80/20
+#### Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20), abaixo a foto do deslocamento do projeto:
 
-![IMAGEM1]();
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial%20-1.png)
 
-***
-
-![IMAGEM2]();
 
 ***
 
-![IMAGEM3]();
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial%202.png)
+
+***
+
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial3.jpg)
 
 *** 
 
-##### Até o dia 15 de julho de 2020.
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial4.png)
+
+
+***
+
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial5.png)
+
+
+***
+
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial6.png)
+
+
+***
+##### no o dia 25 de julho de 2020.
 
 ### Etaoa 3
 
-##### Até o  dia 25 de julho de 2020.
+##### Até o  dia 30 de julho de 2020.
 
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção contendo  duas ou mais capitulos e cada capitulo tem um ou mais subcaptulos.
