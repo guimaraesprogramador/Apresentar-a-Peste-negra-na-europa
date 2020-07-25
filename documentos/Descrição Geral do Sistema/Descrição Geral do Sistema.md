@@ -1,33 +1,7 @@
 ﻿# 2 Descrição Geral do Sistema
-
-## 2.1 Descrição do Problema
-A Contaminição de uma Pandemia depende principalmente da pessoas na presevação dos seus familiares queridos sendo, é importante monitoria a velocidade e a distancia aonde se concentra os individos inocentes para pré um realidade exta que podemos entrada durante a Pandemia de Coronavírus(codiv-19), com isso entamos trazendo um apresentação de uma Pandemia de peste bubônica abaixo:
-
-![Parte 1]()
-
-![Parte 2]()
-
-![Parte 3]()
-
-![Parte 4]()
-
-![Parte 5]()
-
-![Parte 6]()
-
-![Parte 7]()
-
-![Parte 8]()
-
-![Parte 9]()
-
-![Parte 10]()
-
-![Parte 11]()
-
-![Parte 12]()
-
-![Parte 13]()
+***
+### 2.1 Descrição do Problema
+A Contaminição de uma Pandemia depende principalmente da pessoas na presevação dos seus familiares queridos sendo, é importante monitoria a velocidade e a distancia aonde se concentra os individos inocentes para pré um realidade exta que podemos entrada durante a Pandemia de Coronavírus(codiv-19), sendo assim não podem se negligentes com nós mesmos é não olhamos que nos antepassados passaram para que não aja novamente o que nós estamos sofreto, como isso apresentado mediante um cartografia uma aparesentação de como foi a peste bubônica focada no Continente Europeu.
 
 ***
 
@@ -44,6 +18,19 @@ Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20),
 ![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/PARETO-pagina%20inicial.png) 
 
 #### Etapa 2 
+Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20), abaixo a foto do deslocamento do projeto:
+![Image]()
+
+![Image]()
+
+![Image]()
+
+![Image]()
+
+![Image]()
+
+![Image]()
+### no dia 25 de julho de 2020
 
 ### 2.2.2 Desenvolvimento do Sistema
 ####  Desenvolvedores

@@ -35,7 +35,7 @@ class quizjs{
         this.palavra;
         this.img = document.createElement("img");
 
-        this.img.src = "./documentos/imagens/etapa 2/PIXNIO-842805-725x473.png";
+        this.img.src = "../Apresentar-a-Peste-negra-na-europa/documentos/imagens/etapa 2/PIXNIO-842805-725x473.png";
         this.img.id = "imagens1";
         this.index_input;
         this.sucesso  = [];
@@ -248,7 +248,7 @@ class Carregardados{
 
                 dados.quizlegenda.removeFrom(m.map);
                 var xhtml= new XMLHttpRequest();
-                xhtml.open("GET","./quiz/questões/perguntas.json",true);
+                xhtml.open("GET","../Apresentar-a-Peste-negra-na-europa/quiz/questões/perguntas.json",true);
                 xhtml.onload = function(){
                     
                     if(xhtml.readyState == 4  && xhtml.status == "200"){

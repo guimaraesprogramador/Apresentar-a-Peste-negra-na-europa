@@ -157,4 +157,4 @@ class  ordem  extends contado_historia{
     
 }
 const o = new ordem();
-o.ordem_contada();
+//o.ordem_contada();
