@@ -19,19 +19,22 @@ Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20),
 
 #### Etapa 2 
 Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20), abaixo a foto do deslocamento do projeto:
-![Image]()
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial%20-1.png)
 
-![Image]()
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial%202.png)
 
-![Image]()
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial3.jpg)
 
-![Image]()
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial4.png)
 
-![Image]()
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/k%C3%A9vin/documentos/metodologias%20utilizadas/Etapa%202/Imagens%20da%20planilha%20de%20pareto/PARETO-pagina%20inicial5.png)
 
-![Image]()
-### no dia 25 de julho de 2020
 
+##### no dia 25 de julho de 2020
+
+#### Etapa 3
+
+##### até o dia 30 de julho de 2020
 ### 2.2.2 Desenvolvimento do Sistema
 ####  Desenvolvedores
 Kévin Vieira Gomes Guimaraes.
