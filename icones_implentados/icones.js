@@ -86,7 +86,7 @@ class  ordem  extends contado_historia{
                    iconUrl:"https://img.icons8.com/dotty/26/000000/dashed-line.png"
                })
                if(o.nome == undefined){
-            var tempo = window.setInterval(function(){
+           
                 var div = m.legend._container;
                 div.innerHTML += "<i >" + " " +  o.navio.outerHTML.toString() + 
                                 " " + "</i><span> "+ "Navio" + "</span></br> ";
@@ -105,10 +105,9 @@ class  ordem  extends contado_historia{
                 this.controle.addTo(m.map);
                 o.nome = "parte 1";
                 o.valor = 3;
-                clearInterval(tempo)
-            },700);
+            }
+                else{
                 
-                    var tempo2 = window.setInterval(function(){
                             switch(o.valor){
                                 case 3:
                                 L.marker([pontos[0][0],pontos[0][1]],{icon:myIcon}).addTo(m.map);
@@ -121,8 +120,6 @@ class  ordem  extends contado_historia{
                                 this.layerGroup = L.layerGroup([this.p1,this.p2, poligon]);
                                 this.layerGroup.addTo(m.map);
                                 o.valor++;
-                                break;
-                                case 5:
                                 pontos.push([43.280555,5.345467]);
                                 this.p3 = new  L.marker([pontos[2][0],pontos[2][1]],{icon:myIcon});
                                 var poligon = L.polygon(pontos,{icon:linha});
@@ -133,32 +130,33 @@ class  ordem  extends contado_historia{
                                 break;
                             
 
-                       }
-                       },3000)        
+                       }      
+                    }
+                    if(o.controle != undefined){
+                        // voltar
+                        o.controle.div.children[0].onclick = function(){
+                            voltar();
+                            }
+                        // play
+                        o.controle.div.children[1].onclick = function(){
+                            play();
+                        }
+                        // stop
+                        o.controle.div.children[2].onclick = function(){
+                            stop();
+                        }
+                        // avançar
+                        o.controle.div.children[3].onclick = function(){
+                            avançar();
+                        }
+                }
                }
                
-        if(o.controle != undefined){
-                // voltar
-                o.controle.div.children[0].onclick = function(){
-                    voltar();
-                    }
-                // play
-                o.controle.div.children[1].onclick = function(){
-                    play();
-                }
-                // stop
-                o.controle.div.children[2].onclick = function(){
-                    stop();
-                }
-                // avançar
-                o.controle.div.children[3].onclick = function(){
-                    avançar();
-                }
-        }
+       
          
         }
         
     
-}
 const o = new ordem();
-//o.ordem_contada();
+o.ordem_contada();
+
