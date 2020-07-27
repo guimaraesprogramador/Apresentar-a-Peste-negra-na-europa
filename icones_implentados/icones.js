@@ -86,6 +86,7 @@ class  ordem  extends contado_historia{
                    iconUrl:"https://img.icons8.com/dotty/26/000000/dashed-line.png"
                })
                if(o.nome == undefined){
+            var tempo = window.setInterval(function(){
                 var div = m.legend._container;
                 div.innerHTML += "<i >" + " " +  o.navio.outerHTML.toString() + 
                                 " " + "</i><span> "+ "Navio" + "</span></br> ";
@@ -102,9 +103,12 @@ class  ordem  extends contado_historia{
                     return this.div;
                 }
                 this.controle.addTo(m.map);
-                    o.nome = "parte 1";
-                    o.valor = 3;
-                    var tempo = window.setInterval(function(){
+                o.nome = "parte 1";
+                o.valor = 3;
+                clearInterval(tempo)
+            },700);
+                
+                    var tempo2 = window.setInterval(function(){
                             switch(o.valor){
                                 case 3:
                                 L.marker([pontos[0][0],pontos[0][1]],{icon:myIcon}).addTo(m.map);
@@ -125,12 +129,12 @@ class  ordem  extends contado_historia{
                                 this.layerGroup.addLayer(this.p3);
                                 this.layerGroup = L.layerGroup([this.p1,this.p2, poligon]);
                                 this.layerGroup.addTo(m.map);
-                                clearInterval(tempo);
+                                clearInterval(tempo2);
                                 break;
                             
 
                        }
-                       },1000)        
+                       },3000)        
                }
                
         if(o.controle != undefined){

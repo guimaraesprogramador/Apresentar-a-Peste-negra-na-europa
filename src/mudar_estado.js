@@ -75,7 +75,25 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                        if(r.state == "granted")audio();
                         else if(r.state == "denied")audio();
                         else if(r.state == "prompt"){
-                                alert("Para assistir é necessario o acesso ao microfone.");
+                                var cadeado , microfone,setting;
+                                cadeado = document.createElement("img");
+                                cadeado.src = "https://img.icons8.com/metro/26/000000/lock-2.png";
+                                microfone =  document.createElement("img");
+                                microfone.src = "https://img.icons8.com/android/26/000000/microphone.png";
+                                setting = document.createElement("img");
+                                setting.src = "https://img.icons8.com/metro/26/000000/settings.png";
+
+                                var permissão_microphone = "<h3> Para assistir é necessario o acesso ao microfone. "+
+                                "Para isso pode seguir o Exemplo abaixo: "+" </h3> " +
+                                "\n 1° No link da página, no lado esqurdo tem um botão tem click e depois click na imagem abaixo: <br>"+
+                                cadeado.outerHTML.toString() + " <br> "+ "\n 2° De um click essa imagem acima, depois click na imagem abaixo:      <br>"+
+                                setting.outerHTML.toString() + "<br>" + "\n 3° De um click nesta imagem acima em seguia cick em  permite na imagem abaixo: <br>"+
+                                microfone.outerHTML.toString();
+                                Swal.fire({
+                                        icon:'error',
+                                        title:"Oops...",
+                                        html:permissão_microphone.toString()
+                                })
                                 
                         }
                })
@@ -97,7 +115,11 @@ if(navigator.onLine){
                         var div = document.createElement("div");
                         div.innerHTML += " Aviso importante  \n";
                         div.innerHTML += " A página ainda não funciona para Android ou IOS.";
-                        alert(div.innerText);
+                        Swal.fire({
+                                icon:'error',
+                                title:"Oops...",
+                                html:div.outerHTML.toString()
+                        });
               
         }
         else if(chrome){
@@ -122,8 +144,13 @@ if(navigator.onLine){
         
                 function error(navegador)
                                 {
-                                        alert("Utilize outro navegador pois,  o " + navegador +
-                                        " ainda não funciona nesta página.");
+                                        Swal.fire({
+                                                icon:'error',
+                                                title:"Oops...",
+                                                html:"Utilize outro navegador pois,  o " + navegador +
+                                                " ainda não funciona nesta página."
+                                        });
+                                        
                                         console.clear();
                                 }
                 var internet_explore = L.Browser.ie ||  L.Browser.ie6	|| L.Browser.ie7;
@@ -140,13 +167,28 @@ if(navigator.onLine){
                                 div.innerHTML += " um ruido bastate agudo na apresentação desta animação e travamento em alguns componentes.";
                                 div.id = "aviso";
                                 var aviso = confirm(div.innerText);
-                                if(aviso == true){
-                                        m.estado = false;
-                                        s.mudar_voz([m.estado]);
-                                }
-                                else {
-                                alert("Utilize outro dispositivo pois,"+ " para assitir a apresentação ");
-                                }
+                                Swal.fire({icon: 'warning',
+                                showCancelButton: true,
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: 'Yes ',
+                                        html:div.outerHTML.toString(),
+                                        reverseButtons: true
+                                }).then((result=>{
+                                        if (result.value) {
+                                                m.estado = false;
+                                                s.mudar_voz([m.estado]);
+                                        }
+                                        else if( result.dismiss === Swal.DismissReason.cancel){
+                                                Swal.fire(
+                                                        "Melhor escolhar",
+                                                        "Utilize outro dispositivo pois,"+ " para assitir a apresentação ",
+                                                        'success'
+                                                );
+                                        }
+                                }))
+                                
+                                
                         }
                         else{
                                 m.estado = false;
@@ -156,6 +198,11 @@ if(navigator.onLine){
                 }
         }
 }
-else alert("Sua internet não esta funcionado nesta página");
+else{
+        Swal.fire({icon: 'warning',
+                title:"Oops...",
+                text:"Sua internet não esta funcionado nesta página"
+        });
+}
 
     

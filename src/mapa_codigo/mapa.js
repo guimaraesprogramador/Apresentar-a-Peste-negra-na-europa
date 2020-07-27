@@ -7,7 +7,7 @@ class mapa {
    inicial(){
         let initialCoordinates = [43.280555,5.345467]; // cidade de marselha
         //latitude e a longitude
-     var initialZoomLevel = 5;
+     var initialZoomLevel = 4;
 // create a map in the "map" div, set the view to a given place and zoom
     this.map =  L.map("map").setView(initialCoordinates, initialZoomLevel);
 // add an OpenStreetMap tile layer

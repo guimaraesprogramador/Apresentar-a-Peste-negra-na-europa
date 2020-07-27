@@ -6,12 +6,12 @@ class voz {
     }
     transmitir(falar){
     try{
-        var msg =  new SpeechSynthesisUtterance();
-        msg.text = falar;
-        msg.volume = 0.7;
-        msg.lang = "pt-BR";
+        this.msg =  new SpeechSynthesisUtterance();
+        this.msg.text = falar;
+        this.msg.volume = 0.7;
+        this.msg.lang = "pt-BR";
         this.IA = window.speechSynthesis;
-        this.IA.speak(msg);
+        this.IA.speak(this.msg);
         
         }catch(e){
             console.error("erro em algum lugar");
