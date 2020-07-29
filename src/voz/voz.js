@@ -10,16 +10,33 @@ class voz {
         this.msg.text = falar;
         this.msg.volume = 0.7;
         this.msg.lang = "pt-BR";
+        this.msg.rate = 1.5;
         this.IA = window.speechSynthesis;
         this.IA.speak(this.msg);
         this.msg.onstart = function(ev){
-            var string  =ev.utterance.text;
-            console.log(string.indexOf("Caffa"));
+            var string  = ev.utterance.text;
+           
             if(string.indexOf("Caffa") !=  -1){
                 o.ordem_contada();
             }
-            else if(string.indexOf("desembarque") !=  -1){
+            o.texto.push([string,v.IA]);
+        }
+        this.msg.onerror = function(){
+           
+            Swal.fire({
+                icon:'error',
+                title:"Oops...",
+                text:"Desculpe o incômodo, estamos trabalhando para conserta o problema"
+            });
+            location.reload(true);
+        }
+        this.msg.onend = function(ev){
+            var inicio = ev.utterance.text;
+            if(inicio.lastIndexOf("Sicília")!= -1){
                 o.ordem_contada();
+            }
+            if( inicio.lastIndexOf("1347") != -1){
+                    o.ordem_contada();
             }
         }
         }catch(e){
