@@ -2,7 +2,10 @@
 
 class contado_historia{
     constructor(){
-        this.texto = [];
+        this.texto = {
+            voltar:[],
+            avançar:[]
+        };
         this.numero;
         this.navio = document.createElement("img");
            this.navio.src = "https://img.icons8.com/ios-filled/26/000000/historic-ship.png";
@@ -78,25 +81,63 @@ class  ordem  extends contado_historia{
               }
               function voltar(){
                   if(v.IA != undefined){
-                    o.nome.forEach((value,keys,array)=>{
-                       var atual =  array[keys][1];
-                        var posicao_anterior = keys - 1;
-                        var frase_nova;
-                        var nova_ia = array[keys][1];
-                        if(posicao_anterior >0){
-                            atual.cancel();
-                            frase_nova = array[posicao_anterior][0];
-                            nova_ia.speak(new SpeechSynthesisUtterance(frase_nova));
-                            v.msg.text = "";
-                            
+                    o.nome.voltar.forEach((value,keys,array)=>{
+                        var index = array.length == 1 ? keys : array.length -1;
+                        array[index][1].cancel();
+                        if(array.length == 0)console.clear();
+                        else {
+                            var posicao_anterior = array[index-1];
+                            if(posicao_anterior == undefined){
+                                c.texto = undefined;
+                                o.nome.voltar.pop();
+                                location.reload(true);
+                            }
+                            else{
+                                
+                                if(posicao_anterior.length >0){
+                                   
+                                   var texto_atual =  c.proxima;
+                                   var verifica;
+                                       var nova_parte = texto_atual.replace("parte_","");
+                                       var antes_trassinho = Number.parseInt(texto_atual.replace("parte_",""));
+                                       var traço = nova_parte.replace(antes_trassinho+"_","");
+                                    if(texto_atual.indexOf(antes_trassinho.toString()+traço)!= -1){
+                                       switch(nova_parte){
+                                           case "2_1":
+                                            c.texto = "parte_" + antes_trassinho.toString();
+                                            break;
+                                            case "3_1":
+                                            c.texto = "parte_" + (antes_trassinho - 1).toString();
+                                            break;
+                                            case "3_2":
+                                                c.texto = "parte_" + (Number.parseInt(traço) - 1).toString();
+                                            break;
+                                            case "4":
+                                                c.texto = "parte_" + (antes_trassinho - 1).toString() + "_2";
+                                                
+                                            break;
+                                       }
+                                       c.Roteiro(c.texto);
+                                       verifica = c.texto;
+                                    }
+                                       
+                                       while(o.nome.voltar.length != index)o.nome.voltar.pop();
+                                       
+                                       v.msg.text = "";
+                                       if(verifica == undefined){
+                                        v.transmitir(posicao_anterior[0]);
+                                       }
+                                       else{
+                                        v.transmitir(verifica);
+                                       }
+                                       
+                                      
+
+                                  
+                                }
+                            }    
                         }
-                        else if(posicao_anterior == 0){
-                            atual.cancel();
-                            frase_nova = array[posicao_anterior][0];
-                            nova_ia.speak(new SpeechSynthesisUtterance(frase_nova));
-                            v.msg.text = "";
-                            
-                        }
+                        
                     
                 })
                     

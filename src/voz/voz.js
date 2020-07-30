@@ -19,7 +19,7 @@ class voz {
             if(string.indexOf("Caffa") !=  -1){
                 o.ordem_contada();
             }
-            o.texto.push([string,v.IA]);
+            o.texto.voltar.push([string,v.IA]);
         }
         this.msg.onerror = function(){
            
