@@ -90,7 +90,10 @@ Finalizar projeto: | 02/06/20| sujeito a alteração futuras.
 
 ### Etaoa 3
 
-##### Até o  dia 30 de julho de 2020.
+#####  Esboço do projeto parecdo com o original em gif:
+![Image]()
+
+##### Até o  dia 31 de julho de 2020.
 
 ## 1.6 Organização do Trabalho
 O trabalho é divido por secção contendo  duas ou mais capitulos e cada capitulo tem um ou mais subcaptulos.
