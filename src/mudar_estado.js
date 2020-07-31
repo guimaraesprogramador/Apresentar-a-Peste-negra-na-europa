@@ -147,16 +147,15 @@ if(navigator.onLine){
                 var ia32 = parseInt(navigator.platform.slice(8))
                 if(ia32 == 86){
                         var div = document.createElement("div");
-                        div.innerHTML += " Aviso importante  \n"
+                        div.innerHTML += "<h2> Aviso importante  </h2> <br>"
                         div.innerHTML  += "No "+ " navegador Chorme ou Chormium " + "o sistema  "+navigator.platform.slice(0,6) +
-                          "ainda não funciona nesta página. "+" \n";
+                          "ainda não funciona nesta página. "+" <br>";
                         div.id = "aviso";
-                        var aviso = confirm(div.innerText);
-                        if(aviso == true){
-                                alert("Utilize outro dispositivo pois, este " + navigator.platform.slice(0,6) +
-                                " ainda não funciona nesta página.");
-                                
-                        }
+                        Swal.fire({
+                                icon: 'warning',
+                                html:div.outerHTML.toString()
+                        });
+                      
                 }
                  else permissão_usuario('microphone',true,false);
         }
