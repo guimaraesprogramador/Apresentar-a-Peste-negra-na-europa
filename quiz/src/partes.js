@@ -78,6 +78,7 @@ function terceira_parte(div){
         dados.quizlegenda.div.children[1].setAttribute("type","text");    
         dados.quizlegenda.div.children[1].removeAttribute("value");
     }
+    dados.quizlegenda.div.children[1].style.padding = "2% 2% 2% 2%";
     div.innerHTML += quiz.button[index_radio].outerHTML.toString();
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";

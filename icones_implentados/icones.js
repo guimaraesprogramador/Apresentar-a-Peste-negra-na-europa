@@ -11,7 +11,7 @@ class contado_historia{
            this.navio.src = "https://img.icons8.com/ios-filled/26/000000/historic-ship.png";
            this.navio.alt = "navio";
            this.linha_trajetoria = document.createElement("img");
-           this.linha_trajetoria.src =  "https://img.icons8.com/dotty/26/000000/dashed-line.png";
+           this.linha_trajetoria.src =  "https://img.icons8.com/ultraviolet/26/000000/line.png";
            this.linha_trajetoria.alt  = "Linha trajetoria";
            this.controle_volume ={
                play:{
@@ -33,11 +33,10 @@ class contado_historia{
             
             this.controle_volume.play.image.src = "https://img.icons8.com/nolan/26/youtube-music.png";
             this.controle_volume.play.image.alt = "play";
-            //this.controle_volume.play.image.setAttribute("onclick","play()");
                     // stop
             this.controle_volume.stop.image.src = "https://img.icons8.com/nolan/26/stop.png"
             this.controle_volume.stop.image.alt = "stop";
-
+            this.controle_volume.stop.image.setAttribute("onclick","stop()");
             
             // seta para voltar 
             this.controle_volume.voltar.image.src = "https://img.icons8.com/nolan/26/circled-right-2.png";
@@ -68,85 +67,7 @@ class  ordem  extends contado_historia{
     }
     ordem_contada(){
    
-        function play(){
-            
-            if(v.IA != undefined){
-                v.IA.resume();
-            }
-              }
-              function stop(){
-                if(v.IA != undefined){
-                    v.IA.pause();
-                }
-              }
-              function voltar(){
-                  if(v.IA != undefined){
-                    o.nome.voltar.forEach((value,keys,array)=>{
-                        var index = array.length == 1 ? keys : array.length -1;
-                        array[index][1].cancel();
-                        if(array.length == 0)console.clear();
-                        else {
-                            var posicao_anterior = array[index-1];
-                            if(posicao_anterior == undefined){
-                                c.texto = undefined;
-                                o.nome.voltar.pop();
-                                location.reload(true);
-                            }
-                            else{
-                                
-                                if(posicao_anterior.length >0){
-                                   
-                                   var texto_atual =  c.proxima;
-                                   var verifica;
-                                       var nova_parte = texto_atual.replace("parte_","");
-                                       var antes_trassinho = Number.parseInt(texto_atual.replace("parte_",""));
-                                       var traço = nova_parte.replace(antes_trassinho+"_","");
-                                    if(texto_atual.indexOf(antes_trassinho.toString()+traço)!= -1){
-                                       switch(nova_parte){
-                                           case "2_1":
-                                            c.texto = "parte_" + antes_trassinho.toString();
-                                            break;
-                                            case "3_1":
-                                            c.texto = "parte_" + (antes_trassinho - 1).toString();
-                                            break;
-                                            case "3_2":
-                                                c.texto = "parte_" + (Number.parseInt(traço) - 1).toString();
-                                            break;
-                                            case "4":
-                                                c.texto = "parte_" + (antes_trassinho - 1).toString() + "_2";
-                                                
-                                            break;
-                                       }
-                                       c.Roteiro(c.texto);
-                                       verifica = c.texto;
-                                    }
-                                       
-                                       while(o.nome.voltar.length != index)o.nome.voltar.pop();
-                                       
-                                       v.msg.text = "";
-                                       if(verifica == undefined){
-                                        v.transmitir(posicao_anterior[0]);
-                                       }
-                                       else{
-                                        v.transmitir(verifica);
-                                       }
-                                       
-                                      
-
-                                  
-                                }
-                            }    
-                        }
-                        
-                    
-                })
-                    
-                  }
-                
-               }
-               function avançar(){
-   
-               }
+     
                var pontos = [
                 [45.052106,33.1369009],
                 [38.2365903,12.8096511]
@@ -164,16 +85,16 @@ class  ordem  extends contado_historia{
                                 case undefined:
                                     var div = m.legend._container;
                                     div.innerHTML += "<i >" + " " +  o.navio.outerHTML.toString() + 
-                                                    " " + "</i><span> "+ "Frota genevosa" + "</span></br> ";
+                                                    " " + "</i><span> "+ "Frota genovesa" + "</span></br> ";
                                     div.innerHTML += "<i >" + " " +  o.linha_trajetoria.outerHTML.toString() + 
                                                     " " + "</i><span> "+ "Trajetoria" + "</span></br> ";
                                
                                     this.controle = L.control({ position: "topleft" });
                                     this.controle.onAdd = function(map){
                                         this.div = L.DomUtil.create("div", "audio");
-                                        this.div.innerHTML += o.controle_volume.avançar.image.outerHTML.toString();
-                                        this.div.innerHTML += o.controle_volume.play.image.outerHTML.toString();
-                                        this.div.innerHTML += o.controle_volume.stop.image.outerHTML.toString();
+                                        this.div.innerHTML += o.controle_volume.avançar.image.outerHTML.toString() + "<br>";
+                                        this.div.innerHTML += o.controle_volume.play.image.outerHTML.toString()+ "<br>";
+                                        this.div.innerHTML += o.controle_volume.stop.image.outerHTML.toString()+ "<br>";
                       
                                         this.div.innerHTML += o.controle_volume.voltar.image.outerHTML.toString();
                                         return this.div;
@@ -208,15 +129,15 @@ class  ordem  extends contado_historia{
                     }
                     if(o.controle != undefined){
                         // avançar
-                        o.controle.div.children[3].onclick = function(){
+                        o.controle.div.children[6].onclick = function(){
                             avançar();
                             }
                         // play
-                        o.controle.div.children[1].onclick = function(){
+                        o.controle.div.children[2].onclick = function(){
                             play();
                         }
                         // stop
-                        o.controle.div.children[2].onclick = function(){
+                        o.controle.div.children[4].onclick = function(){
                             stop();
                         }
                         // voltar

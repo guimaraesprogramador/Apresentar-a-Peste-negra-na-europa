@@ -56,7 +56,7 @@ class  componentes_voz {
                     "A peste foi transportada principalmente pelas rotas marítimas da Ásia central \n como a frota genovesa \n com o destino ao continente europeu.  ",
                     "Sua primeira parada foi a cidade de Caffa, \n com o resultado a cidade foi \n sucumbida perante a peste.  ",
                     "Depois de Caffa, \n a frota passou em Sicília  que ficou  por três semanas ancorada \n com isso a bactéria ficou mais forte.  ",
-                    "até a frota for expulsa de lá,\n e só conseguir ancorar no porto de Marselha no dia primeiro de novembro de 1347. "
+                    "até a frota for expulsa de lá,\n e só conseguiu ancorar no porto de Marselha no dia primeiro de novembro de 1347. "
                 ]   
                 c.texto = "";
                 linhas.forEach((value,index,array)=>{
@@ -69,7 +69,7 @@ class  componentes_voz {
                    let linhas2 = [
                         "O desembarque da frota foi liberado \n pelas autoridades no interesse das mercadorias valiosas que a frota tinha a bordo. ",
                         " Por causa da transmissão causada pelos ratos contaminados na frota, \n a cidade foi rapidamente contagiada pela bactéria, \n torna-se  uma das entradas de Pandemia  no continente europeu. \n",
-                        " Como consequência disso, a frota ficou muito tempo ancorada neste porto, \n  mas ninguém se aproximava dela \n embora estivesse com mercadorias valiosas e com sua tripulação morta.\n ",
+                        " Como consequência disso, \n a frota ficou muito tempo ancorada neste porto, \n  mas ninguém se aproximava dela \n embora estivesse com mercadorias valiosas e com sua tripulação morta.\n ",
                         " Com isso a bactéria não parou mais, ficou mais forte com o clima mais frio e se \n desenvolveu na forma pulmonar. \n",
                         "Depois de um ano a maioria da população de Marselha "
                    ]
