@@ -71,9 +71,30 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
            
             if(numero_navegador != 70)
             {
+            function modo_tela(){
+                Swal.fire({
+                        title:"Deseja tela no máximo ?",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes'
+                }).then((result)=>{
+                        if (result.value) {
+                                document.body.requestFullscreen();
+                        }
+                })
+                    
+            }
                navigator.permissions.query({name:tipo}).then(r=>{
-                       if(r.state == "granted")audio();
-                        else if(r.state == "denied")audio();
+                       if(r.state == "granted"){
+                        modo_tela();
+                        audio();
+                       }
+                        else if(r.state == "denied"){
+                        modo_tela();
+                        audio();
+                        }
                         else if(r.state == "prompt"){
                                 var cadeado , microfone,setting;
                                 cadeado = document.createElement("img");
