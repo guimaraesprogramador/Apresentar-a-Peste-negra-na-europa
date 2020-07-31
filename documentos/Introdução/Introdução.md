@@ -88,10 +88,11 @@ Finalizar projeto: | 02/06/20| sujeito a alteração futuras.
 ***
 ##### no o dia 25 de julho de 2020.
 
-### Etaoa 3
+### Etaoa 3 Completa
 
 #####  Esboço do projeto parecdo com o original em gif:
-![Image]()
+
+![Image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/imagens/etapa%202/esbo%C3%A7o.gif)
 
 ##### Até o  dia 31 de julho de 2020.
 
