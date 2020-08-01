@@ -186,7 +186,6 @@ if(navigator.onLine){
                                 div.innerHTML  += "No "+  navigator.platform.slice(0,6) + " pode ocasionar, "+" \n";
                                 div.innerHTML += " um ruido bastate agudo na apresentação desta animação e travamento em alguns componentes.";
                                 div.id = "aviso";
-                                var aviso = confirm(div.innerText);
                                 Swal.fire({icon: 'warning',
                                 showCancelButton: true,
                                 confirmButtonColor: '#3085d6',
