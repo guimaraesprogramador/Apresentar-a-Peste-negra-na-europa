@@ -56,6 +56,10 @@ SITECHECK. [S. l.], 2020. Disponível em: https://sitecheck.sucuri.net/results/h
 
 RESPONSIVE Play - by sergiolopes. [S. l.], 2020. Disponível em: http://sergiolopes.github.io/responsive-play/. Acesso em: 1 jun. 2020.
 
+CARTOGRAFIA TEMÁTICA. [S. l.], 2018. Disponível em: http://www.prppg.ufpr.br/site/ppggeografia/wp-content/uploads/sites/71/2018/03/cartografia-temtica.pdf. Acesso em: 31 jul. 2020.
+
+LEAFLET-PROVIDERS. [S. l.], 31 jul. 2017. Disponível em: https://leaflet-extras.github.io/leaflet-providers/preview/. Acesso em: 31 jul. 2020.
+
 ***
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
 [![voltar](https://img.icons8.com/material-sharp/24/000000/circled-left-2.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/An%C3%A1lise%20e%20Design/An%C3%A1lise%20e%20Design.md)  [![voltar](https://img.icons8.com/metro/24/000000/home.png )](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./)

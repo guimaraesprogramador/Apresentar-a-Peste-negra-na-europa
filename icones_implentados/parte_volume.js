@@ -125,7 +125,6 @@ function avançar()
                         
                            while(o.nome.avançar.length != 0)o.nome.avançar.pop();
                            
-                          console.log(c.falar);
                            if(verifica != undefined){
                             c.proxima = c.falar;
                             c.Roteiro(c.falar);

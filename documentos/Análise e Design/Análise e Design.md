@@ -89,8 +89,27 @@ O software é bastante afetado pelo estado do que se inicia sendo assim descrido
 3. Caso o usuário recuse, ele pode sair da página sem se preocupar com seus dados pessoais.
 4.Depois de cada história apresentada é exibido a localidade referente a estória contada.
 5. Por fim é exibir a extensão da Pandemia peste bubônica.
-6. Na parte 4 será exibido um bloco com o link do site da documentação;
+6. Na parte 4 será exibido um bloco com o link do site da documentação.
 
+7. Existem um carregando paralelo no arquivo "quiz" que permite interação com o usuário que utilizar um arquivo json na forma assicrona, abaixo um diagrama de sequência ilustrado o inicio:
+
+![iMAGE](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/imagens/etapa%202/diagrama%20de%20sequ%C3%AAncia-inicial%20do%20quiz.png)
+
+ Isso se repetir quandas veses necessaria de acordo com as questões impostas e por fim ela termina assim com o diagrama de sequência abaixo: 
+ 
+![image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/imagens/etapa%202/diagrama%20de%20sequ%C3%AAncia-final%20do%20quiz.png)
+ 
+ 
+8. Também um carregamento paralelo no arquvio "icones" que permite 
+um animação e interação de controle de volume com o usuário quase ao mesmo tempo, abaixo um diagrama de classe:
+ 
+ ![image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/imagens/etapa%202/diagrama%20de%20class%20de%20icones.png)
+
+Com isso foi possivel manipular a história contada para que usuário tenha mais disponibilidade em usa e abusa do software e foi feito também um diagrama de sequência  do arquivo abaixo:
+
+![image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/imagens/etapa%202/Diagrama%20de%20Sequ%C3%AAncia%20Cont%C3%ADnua%20dos%20icones.png)
+
+ 
 ## 4.2 Modelo do Domonio
 ![IMAGE](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./blob/master/documentos/imagens/diagrama%20de%20classe.png)
 ### Explicação do Diagrama de Classe 
