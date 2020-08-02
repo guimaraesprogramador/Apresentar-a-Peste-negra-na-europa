@@ -99,6 +99,10 @@ O software é bastante afetado pelo estado do que se inicia sendo assim descrido
  
 ![image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/imagens/etapa%202/diagrama%20de%20sequ%C3%AAncia-final%20do%20quiz.png)
  
+ É por fim foi feito um diagrama de class representação o quiz abaixo:
+ 
+ ![image](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa/blob/master/documentos/imagens/etapa%202/diagrama%20de%20class%20do%20quiz.png)
+ 
  
 8. Também um carregamento paralelo no arquvio "icones" que permite 
 um animação e interação de controle de volume com o usuário quase ao mesmo tempo, abaixo um diagrama de classe:
