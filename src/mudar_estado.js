@@ -96,7 +96,7 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                                    }
                                    else if(error == "NotReadableError"){
                                           return new NotReadableError("Erro em NotReadableError")
-                                   } 
+                                   }
                                   m.estado = false;
                                   s.mudar_voz([m.estado]);
                           
@@ -117,25 +117,40 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                         audio();
                         }
                         else if(r.state == "prompt"){
-                                var cadeado , microfone,setting;
+                                function popout(){
+                                        navigator.mediaDevices.getUserMedia({ audio: true }).then(function(stream){
+                                                modo_tela();
+                                                audio();
+                                        }).catch(err=>{
+
+                                        })
+                                }
+                                var cadeado , microfone,setting, popout_audio;
                                 cadeado = document.createElement("img");
                                 cadeado.src = "https://img.icons8.com/metro/26/000000/lock-2.png";
                                 microfone =  document.createElement("img");
                                 microfone.src = "https://img.icons8.com/android/26/000000/microphone.png";
                                 setting = document.createElement("img");
                                 setting.src = "https://img.icons8.com/metro/26/000000/settings.png";
+                                popout_audio = document.createElement("p")
+                                popout_audio.textContent  = " Permitir Microfone";
+                                popout_audio.id ="microfone";
 
                                 var permissão_microphone = "<h3> Para assistir é necessario o acesso ao microfone. "+
                                 "Para isso pode seguir o Exemplo abaixo: "+" </h3> " +
                                 "\n 1° No link da página, no lado esqurdo tem um botão tem click e depois click na imagem abaixo: <br>"+
                                 cadeado.outerHTML.toString() + " <br> "+ "\n 2° De um click essa imagem acima, depois click na imagem abaixo:      <br>"+
                                 setting.outerHTML.toString() + "<br>" + "\n 3° De um click nesta imagem acima em seguia cick em  permite na imagem abaixo: <br>"+
-                                microfone.outerHTML.toString();
+                                microfone.outerHTML.toString() +"<br>"+ " ou " +" <br> "+
+                                popout_audio.outerHTML.toString(); 
                                 Swal.fire({
                                         icon:'warning',
                                         title:"Oops...",
                                         html:permissão_microphone.toString()
                                 })
+                                document.getElementById("microfone").onclick = function(){
+                                        popout();
+                                }
                                 
                         }
                })

@@ -108,15 +108,7 @@ class  componentes_voz {
                     linhas4.forEach((value,index,array)=>{
                      c.texto = c.texto +  value.toString();
                     });
-                //   var legend_1 = L.control({ position: "bottomright" });
-                //     legend_1.onAdd = function(map) {
-                //             var link = new URL("https://github.com/guimaraesprogramador/zonas_distancia");
-                //             var div = L.DomUtil.create("div", "link");
-                //             div.innerHTML  += "<h4> link da documentação abaixo: </h4>";
-                //             div.innerHTML += "<span>  "+ link.href.toString() + "</span><br>";
-                //         return div;
-                //     }
-                //     legend_1.addTo(m.map);
+               
                     break;
             }
         }catch(ev){

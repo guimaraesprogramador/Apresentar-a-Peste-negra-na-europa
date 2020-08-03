@@ -106,9 +106,11 @@ body {
     color: #555;
     left: 5%;
     margin-left: 1;
-    bottom: 
 }
 .audio img{
   cursor: pointer;
   position: relative;
+}
+#microfone{
+  cursor: pointer;
 }
