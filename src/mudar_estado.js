@@ -32,6 +32,41 @@ class mudar {
     }
 const s = new mudar();
 m.inicial();
+function modo_tela(){
+        Swal.fire({
+                title:"Deseja tela no máximo ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes'
+        }).then((result)=>{
+                var elem = document.documentElement;
+                if (result.value) {
+                        if (elem.requestFullscreen) {
+                                elem.requestFullscreen();
+                                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                                elem.mozRequestFullScreen();
+                                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                                elem.webkitRequestFullscreen();
+                                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                                elem.msRequestFullscreen();
+                                }
+                }
+                else if( result.dismiss === Swal.DismissReason.cancel){
+                        if (document.exitFullscreen) {
+                                document.exitFullscreen();
+                                } else if (document.mozCancelFullScreen) {
+                                document.mozCancelFullScreen();
+                                } else if (document.webkitExitFullscreen) {
+                                document.webkitExitFullscreen();
+                                } else if (document.msExitFullscreen) {
+                                document.msExitFullscreen();
+                                }
+                }
+        })
+            
+    }
 function permissão_usuario(tipo,boolaudio,boolvideo){
         
    function audio(){
@@ -71,41 +106,7 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
            
             if(numero_navegador != 70)
             {
-            function modo_tela(){
-                Swal.fire({
-                        title:"Deseja tela no máximo ?",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes'
-                }).then((result)=>{
-                        var elem = document.documentElement;
-                        if (result.value) {
-                                if (elem.requestFullscreen) {
-                                        elem.requestFullscreen();
-                                        } else if (elem.mozRequestFullScreen) { /* Firefox */
-                                        elem.mozRequestFullScreen();
-                                        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                                        elem.webkitRequestFullscreen();
-                                        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                                        elem.msRequestFullscreen();
-                                        }
-                        }
-                        else if( result.dismiss === Swal.DismissReason.cancel){
-                                if (document.exitFullscreen) {
-                                        document.exitFullscreen();
-                                        } else if (document.mozCancelFullScreen) {
-                                        document.mozCancelFullScreen();
-                                        } else if (document.webkitExitFullscreen) {
-                                        document.webkitExitFullscreen();
-                                        } else if (document.msExitFullscreen) {
-                                        document.msExitFullscreen();
-                                        }
-                        }
-                })
-                    
-            }
+            
                navigator.permissions.query({name:tipo}).then(r=>{
                        if(r.state == "granted"){
                         modo_tela();
@@ -141,13 +142,14 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                          
             }
             else {
+                modo_tela();
                 m.estado = false;
                 s.mudar_voz([m.estado]);
             }
 }
 if(navigator.onLine){
         var chrome = L.Browser.chrome;
-        var opera = L.Browser.Opera;
+        var opera = L.Browser.mobileOpera;
         var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
         if(android)
         {        
@@ -163,7 +165,7 @@ if(navigator.onLine){
                         });
               
         }
-        else if(chrome){
+        else if(chrome ||  opera){
                 var ia32 = parseInt(navigator.platform.slice(8))
                 if(ia32 == 86){
                         var div = document.createElement("div");
@@ -179,6 +181,7 @@ if(navigator.onLine){
                 }
                  else permissão_usuario('microphone',true,false);
         }
+
         else 
         {
         
@@ -215,7 +218,9 @@ if(navigator.onLine){
                                         reverseButtons: true
                                 }).then((result=>{
                                         if (result.value) {
-                                                permissão_usuario('microphone',true,false);
+                                                modo_tela();
+                                                m.estado = false;
+                                                s.mudar_voz([m.estado]);
                                         }
                                         else if( result.dismiss === Swal.DismissReason.cancel){
                                                 Swal.fire(
@@ -228,9 +233,11 @@ if(navigator.onLine){
                                 
                                 
                         }
-                        else{
-                                
-                                permissão_usuario('microphone',true,false);
+                        
+                        else{      
+                                modo_tela();
+                                m.estado = false;
+                                s.mudar_voz([m.estado]);
                         }
                      
                 }
