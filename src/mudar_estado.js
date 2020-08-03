@@ -80,8 +80,28 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                         cancelButtonColor: '#d33',
                         confirmButtonText: 'Yes'
                 }).then((result)=>{
+                        var elem = document.documentElement;
                         if (result.value) {
-                                document.body.requestFullscreen();
+                                if (elem.requestFullscreen) {
+                                        elem.requestFullscreen();
+                                        } else if (elem.mozRequestFullScreen) { /* Firefox */
+                                        elem.mozRequestFullScreen();
+                                        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                                        elem.webkitRequestFullscreen();
+                                        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                                        elem.msRequestFullscreen();
+                                        }
+                        }
+                        else if( result.dismiss === Swal.DismissReason.cancel){
+                                if (document.exitFullscreen) {
+                                        document.exitFullscreen();
+                                        } else if (document.mozCancelFullScreen) {
+                                        document.mozCancelFullScreen();
+                                        } else if (document.webkitExitFullscreen) {
+                                        document.webkitExitFullscreen();
+                                        } else if (document.msExitFullscreen) {
+                                        document.msExitFullscreen();
+                                        }
                         }
                 })
                     
@@ -111,7 +131,7 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
                                 setting.outerHTML.toString() + "<br>" + "\n 3° De um click nesta imagem acima em seguia cick em  permite na imagem abaixo: <br>"+
                                 microfone.outerHTML.toString();
                                 Swal.fire({
-                                        icon:'error',
+                                        icon:'warning',
                                         title:"Oops...",
                                         html:permissão_microphone.toString()
                                 })
