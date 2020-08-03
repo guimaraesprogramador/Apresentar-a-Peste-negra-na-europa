@@ -147,7 +147,7 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
 }
 if(navigator.onLine){
         var chrome = L.Browser.chrome;
-        var opera = L.Browser.mobileOpera;
+        var opera = L.Browser.Opera;
         var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
         if(android)
         {        
@@ -215,8 +215,7 @@ if(navigator.onLine){
                                         reverseButtons: true
                                 }).then((result=>{
                                         if (result.value) {
-                                                m.estado = false;
-                                                s.mudar_voz([m.estado]);
+                                                permissão_usuario('microphone',true,false);
                                         }
                                         else if( result.dismiss === Swal.DismissReason.cancel){
                                                 Swal.fire(
@@ -230,8 +229,8 @@ if(navigator.onLine){
                                 
                         }
                         else{
-                                m.estado = false;
-                                s.mudar_voz([m.estado]);
+                                
+                                permissão_usuario('microphone',true,false);
                         }
                      
                 }
