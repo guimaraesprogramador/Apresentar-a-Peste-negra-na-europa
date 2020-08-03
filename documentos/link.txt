@@ -57,3 +57,6 @@ yVsgNtwmnWuPqEqpS0
 // Diagrama de Sequência Contínua dos icones
 http://www.plantuml.com/plantuml/uml/TP0nJaCn44HxdsBa9b1yIeeKKIIu0GU8LjyZOidh3Lx_51m9YLFaOXY-14L8EIDxtixilKlhYvRGSo_4SvRN9Yf8n0lVbij7dRFWoMg_VDPb-ER8irKwGhIMg8UXkYIvku-OTeYhjCCnUxUMvQ6QCcuJEvlcAZYn6BvDf246dY1apbO5AjcnAAZu9-ainLf4kC6OfbrSyrQOL8bRq6ShH_c3_LwI95ozntIxmmtk-kTgZ10sZIVstDPMYNZ4cUzqq5tWOrx-h3kwgs0JzgnfqV85
 
+// fullsrceen
+https://www.w3schools.com/jsref/met_element_requestfullscreen.asp
+
