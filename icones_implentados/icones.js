@@ -11,7 +11,7 @@ class contado_historia{
            this.navio.src = "https://img.icons8.com/ios-filled/26/000000/historic-ship.png";
            this.navio.alt = "navio";
            this.linha_trajetoria = document.createElement("img");
-           this.linha_trajetoria.src =  "https://img.icons8.com/ultraviolet/26/000000/line.png";
+           this.linha_trajetoria.src =  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAAnElEQVRIie3VsQ2DMBBG4WfWoKZFTAASUpZhH+YBdkBiAiSmMGmiCDkk+OyzlIJX/ld85cHd31RNBeXYuXOmjlgGML2L6UFvhBzYsGY4nk0ahJa5WXQhDyQe8kTiIAESDgmRMCgAkUOBiAyKQPyhSMQPUkCuISXkN6SIfIeUkXMoAfIJJULA/Ud2f7yQlYxaCzmvHDuqqUgH3Al7AnY7fbNbm15mAAAAAElFTkSuQmCC";
            this.linha_trajetoria.alt  = "Linha trajetoria";
            this.controle_volume ={
                play:{
