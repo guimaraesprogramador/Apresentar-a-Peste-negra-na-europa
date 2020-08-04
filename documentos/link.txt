@@ -14,7 +14,7 @@ http://www.prppg.ufpr.br/site/ppggeografia/wp-content/uploads/sites/71/2018/03/c
 https://leaflet-extras.github.io/leaflet-providers/preview/
 
 // Linha 
-<img src="https://img.icons8.com/ultraviolet/26/000000/line.png"/>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAAnElEQVRIie3VsQ2DMBBG4WfWoKZFTAASUpZhH+YBdkBiAiSmMGmiCDkk+OyzlIJX/ld85cHd31RNBeXYuXOmjlgGML2L6UFvhBzYsGY4nk0ahJa5WXQhDyQe8kTiIAESDgmRMCgAkUOBiAyKQPyhSMQPUkCuISXkN6SIfIeUkXMoAfIJJULA/Ud2f7yQlYxaCzmvHDuqqUgH3Al7AnY7fbNbm15mAAAAAElFTkSuQmCC">
 
 // icone de seta para direita youtube
 <img src="https://img.icons8.com/nolan/26/circled-right-2.png"/>

@@ -77,7 +77,7 @@ class  ordem  extends contado_historia{
                    iconUrl:"https://img.icons8.com/ios-filled/26/000000/historic-ship.png"
                });
                var linha = L.icon({
-                   iconUrl:"https://img.icons8.com/dotty/26/000000/dashed-line.png"
+                   iconUrl:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAAnElEQVRIie3VsQ2DMBBG4WfWoKZFTAASUpZhH+YBdkBiAiSmMGmiCDkk+OyzlIJX/ld85cHd31RNBeXYuXOmjlgGML2L6UFvhBzYsGY4nk0ahJa5WXQhDyQe8kTiIAESDgmRMCgAkUOBiAyKQPyhSMQPUkCuISXkN6SIfIeUkXMoAfIJJULA/Ud2f7yQlYxaCzmvHDuqqUgH3Al7AnY7fbNbm15mAAAAAElFTkSuQmCC"
                })
          
                 
