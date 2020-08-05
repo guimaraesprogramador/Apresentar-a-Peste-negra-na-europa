@@ -168,18 +168,45 @@ if(navigator.onLine){
         var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
         if(android)
         {        
-                
+                        var cordova = document.createElement("script");
+                        cordova.src = "../Apresentar-a-Peste-negra-na-europa/src/android/cordova_stub.js";
+                        cordova.type= "text/javascript";
+                        cordova.charset = "utf-8";
+                        document.body.append(cordova);
                         // Futuramente implentação do android ou ios.
                         var div = document.createElement("div");
                         div.innerHTML += " Aviso importante  \n";
-                        div.innerHTML += " A página ainda não funciona para Android ou IOS.";
+                        div.innerHTML += " A página ainda em teste  para Android.";
+                        modo_tela(); 
                         Swal.fire({
-                                icon:'error',
+                                icon:'warning',
                                 title:"Oops...",
+                                showCancelButton: true,
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: 'Yes ',
                                 html:div.outerHTML.toString()
-                        });
-              
+                        }).then((result=>{
+                              
+                                if (result.value) {
+                                       
+                                        function onDeviceReady() {
+                                                navigator.mediaDevices.getUserMedia({ audio: true }).then(function(stream){
+                                                        
+                                                        m.estado = false;
+                                                        s.mudar_voz([m.estado]);
+                                                }).catch(err=>{
+                                                      
+                                                })
+                                        }
+                                        document.addEventListener("deviceready", onDeviceReady, false);
+                                }
+                                   
+                       
+                        })
+                )
         }
+        
         else if(chrome ||  opera){
                 var ia32 = parseInt(navigator.platform.slice(8))
                 if(ia32 == 86){
@@ -257,6 +284,7 @@ if(navigator.onLine){
                      
                 }
         }
+        
 }
 else{
         Swal.fire({icon: 'warning',
