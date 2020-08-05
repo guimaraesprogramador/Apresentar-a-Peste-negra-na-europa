@@ -173,11 +173,12 @@ if(navigator.onLine){
                         cordova.type= "text/javascript";
                         cordova.charset = "utf-8";
                         document.body.append(cordova);
-                        // Futuramente implentação do android ou ios.
+                        function onDeviceReady() {
+                                // Futuramente implentação do android ou ios.
                         var div = document.createElement("div");
                         div.innerHTML += " Aviso importante  \n";
                         div.innerHTML += " A página ainda em teste  para Android.";
-                        modo_tela(); 
+                        modo_tela();    
                         Swal.fire({
                                 icon:'warning',
                                 title:"Oops...",
@@ -187,24 +188,26 @@ if(navigator.onLine){
                                 confirmButtonText: 'Yes ',
                                 html:div.outerHTML.toString()
                         }).then((result=>{
-                              
                                 if (result.value) {
-                                       
-                                        function onDeviceReady() {
-                                                navigator.mediaDevices.getUserMedia({ audio: true }).then(function(stream){
-                                                        
-                                                        m.estado = false;
-                                                        s.mudar_voz([m.estado]);
-                                                }).catch(err=>{
-                                                      
-                                                })
-                                        }
-                                        document.addEventListener("deviceready", onDeviceReady, false);
-                                }
+                                        navigator.mediaDevices.getUserMedia({ audio: true }).then(function(stream){
+                                        
+                                                m.estado = false;
+                                                s.mudar_voz([m.estado]);
+                                        }).catch(err=>{
+                                              
+                                        })
+                                }            
+                                        
+                                
+                        }))
+                }
+                        
+                        
+                        
+                        document.addEventListener("deviceready", onDeviceReady, false);                                    
+                              
                                    
                        
-                        })
-                )
         }
         
         else if(chrome ||  opera){
