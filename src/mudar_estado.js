@@ -168,45 +168,19 @@ if(navigator.onLine){
         var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
         if(android)
         {        
-                        var cordova = document.createElement("script");
-                        cordova.src = "../Apresentar-a-Peste-negra-na-europa/src/android/cordova_stub.js";
-                        cordova.type= "text/javascript";
-                        cordova.charset = "utf-8";
-                        document.body.append(cordova);
-                        function onDeviceReady() {
+                    
+                        
                                 // Futuramente implentação do android ou ios.
                         var div = document.createElement("div");
-                        div.innerHTML += " Aviso importante  \n";
-                        div.innerHTML += " A página ainda em teste  para Android.";
+                        div.innerHTML += " Aviso importante  <br>";
+                        div.innerHTML += " A página ainda não esta funcionado  para Android ou IOS.";
                         modo_tela();    
                         Swal.fire({
                                 icon:'warning',
                                 title:"Oops...",
-                                showCancelButton: true,
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Yes ',
                                 html:div.outerHTML.toString()
-                        }).then((result=>{
-                                if (result.value) {
-                                        navigator.mediaDevices.getUserMedia({ audio: true }).then(function(stream){
-                                        
-                                                m.estado = false;
-                                                s.mudar_voz([m.estado]);
-                                        }).catch(err=>{
-                                              
-                                        })
-                                }            
-                                        
-                                
-                        }))
-                }
-                        
-                        
-                        
-                        document.addEventListener("deviceready", onDeviceReady, false);                                    
-                              
-                                   
+                        });
+                          
                        
         }
         
