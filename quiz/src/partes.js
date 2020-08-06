@@ -71,12 +71,12 @@ function segunda_parte(div){
 function terceira_parte(div){
     div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
     
-    div.innerHTML += quiz.input[quiz.index_input].outerHTML.toString();
-    console.log(dados.quizlegenda.div.children[1].style);
-    if(dados.quizlegenda.div.children[1].type == "radio"){
-        dados.quizlegenda.div.children[1].removeAttribute("type");
-        dados.quizlegenda.div.children[1].setAttribute("type","text");    
-        dados.quizlegenda.div.children[1].removeAttribute("value");
+    div.innerHTML +=  "<form >" +quiz.input[quiz.index_input].outerHTML.toString() +
+    "</form>";
+    if(dados.quizlegenda.div.children[1][0].type == "radio"){
+        dados.quizlegenda.div.children[1][0].removeAttribute("type");
+        dados.quizlegenda.div.children[1][0].setAttribute("type","text");    
+        dados.quizlegenda.div.children[1][0].removeAttribute("value");
     }
     
 

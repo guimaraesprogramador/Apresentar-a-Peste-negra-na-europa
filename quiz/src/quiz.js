@@ -248,7 +248,7 @@ class Carregardados{
 
                 dados.quizlegenda.removeFrom(m.map);
                 var xhtml= new XMLHttpRequest();
-                xhtml.open("GET","./quiz/questões/perguntas.json",true);
+                xhtml.open("GET","../Apresentar-a-Peste-negra-na-europa/quiz/questões/perguntas.json",true);
                 xhtml.onload = function(){
                     
                     if(xhtml.readyState == 4  && xhtml.status == "200"){
