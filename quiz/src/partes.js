@@ -72,13 +72,14 @@ function terceira_parte(div){
     div.innerHTML += '<h4> '+ quiz.problema[0] +' </h4> ';
     
     div.innerHTML += quiz.input[quiz.index_input].outerHTML.toString();
-        
+    console.log(dados.quizlegenda.div.children[1].style);
     if(dados.quizlegenda.div.children[1].type == "radio"){
         dados.quizlegenda.div.children[1].removeAttribute("type");
         dados.quizlegenda.div.children[1].setAttribute("type","text");    
         dados.quizlegenda.div.children[1].removeAttribute("value");
     }
-    dados.quizlegenda.div.children[1].style.padding = "2% 2% 2% 2%";
+    
+
     div.innerHTML += quiz.button[index_radio].outerHTML.toString();
     
     div.innerHTML += "<span id = 'numero' > "+ quiz.numero+"/5"+" </span>";

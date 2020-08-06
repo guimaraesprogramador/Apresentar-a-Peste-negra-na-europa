@@ -168,18 +168,19 @@ if(navigator.onLine){
         var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
         if(android)
         {        
-                    
+                
+                
+                 // Futuramente implentação do android ou ios.
+                 var div = document.createElement("div");
+                 div.innerHTML += " Aviso importante  <br>";
+                 div.innerHTML += " A página ainda não esta funcionado  para Android ou IOS.";
+                 
+                 Swal.fire({
+                         icon:'warning',
+                         title:"Oops...",
+                         html:div.outerHTML.toString()
+                 });
                         
-                                // Futuramente implentação do android ou ios.
-                        var div = document.createElement("div");
-                        div.innerHTML += " Aviso importante  <br>";
-                        div.innerHTML += " A página ainda não esta funcionado  para Android ou IOS.";
-                        modo_tela();    
-                        Swal.fire({
-                                icon:'warning',
-                                title:"Oops...",
-                                html:div.outerHTML.toString()
-                        });
                           
                        
         }
