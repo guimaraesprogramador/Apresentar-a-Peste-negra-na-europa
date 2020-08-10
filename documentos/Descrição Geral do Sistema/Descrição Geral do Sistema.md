@@ -20,7 +20,10 @@ Na questão de desenvolvimento é utilizado a planilha da lei de Pareto (80/20),
 
 ### 2.2.2 Desenvolvimento do Sistema
 ####  Desenvolvedores
-Kévin Vieira Gomes Guimaraes.
+
+**Nome:**Kévin Vieira Gomes Guimaraes.
+**email:** guimaraesprogramador@gmail.com
+**celular**:(33)98864-1909
 #### Informação da Pandemia da Peste negra
 Os dados filtrados e extrados de autores de sites ou livros de referência abaixo:
 
