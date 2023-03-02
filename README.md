@@ -14,7 +14,7 @@
 ***
 >7 [implantação](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./tree/master/documentos/implanta%C3%A7%C3%A3o/implanta%C3%A7%C3%A3o.md)
 ***
->8 [Considerações Finais e Reomendações](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./tree/master/documentos/Considera%C3%A7%C3%B5es%20Finais%20e%20Reomenda%C3%A7%C3%B5es/Considera%C3%A7%C3%B5es%20Finais%20e%20Reomenda%C3%A7%C3%B5es.md) 
+>8 [Considerações Finais e Recomendações](https://github.com/guimaraesprogramador/Apresentar-a-Peste-negra-na-europa./tree/master/documentos/Considera%C3%A7%C3%B5es%20Finais%20e%20Reomenda%C3%A7%C3%B5es/Considera%C3%A7%C3%B5es%20Finais%20e%20Reomenda%C3%A7%C3%B5es.md) 
 ***
 
 
