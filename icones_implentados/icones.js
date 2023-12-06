@@ -154,10 +154,12 @@ class  ordem  extends contado_historia{
     
 const o = new ordem();
 o.ordem_contada();
-window.onload = function(){
+document.addEventListener("DOMContentLoaded",function(evento){
     if(v.IA == undefined) console.log("sintese de fala não criada");
     else {
         v.IA.cancel();
-        location.reload(true);
     }
+})
+window.onload = function(){
+    if(v.IA != undefined)location.reload(true);
 }
