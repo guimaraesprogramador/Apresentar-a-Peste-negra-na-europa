@@ -67,10 +67,9 @@ function modo_tela(){
         })
             
     }
-function permissão_usuario_mobile(tipo,boolvideo,boolvideo){
+function permissão_usuario_mobile(tipo){
         navigator.permissions.query({name:tipo}).then(r=>{
                if(r.state == "granted" || r.state == 'prompt'){
-                modo_tela();
                 m.estado = false;
                 s.mudar_voz([m.estado]);
                }
@@ -191,7 +190,7 @@ if(navigator.onLine){
                 
                 
                  // Futuramente implentação do android ou ios.
-                permissão_usuario_mobile('microphone',true,false); 
+                permissão_usuario_mobile('microphone'); 
                           
                        
         }
