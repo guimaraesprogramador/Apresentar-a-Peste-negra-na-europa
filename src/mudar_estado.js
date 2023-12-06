@@ -67,6 +67,26 @@ function modo_tela(){
         })
             
     }
+function permissão_usuario_mobile(tipo,boolvideo,boolvideo){
+        navigator.permissions.query({name:tipo}).then(r=>{
+               if(r.state == "granted" || r.state == 'prompt'){
+                modo_tela();
+                m.estado = false;
+                s.mudar_voz([m.estado]);
+               }
+               else {
+                var div = document.createElement("div");
+                 div.innerHTML += " Aviso importante  <br>";
+                 div.innerHTML += " A página não vai funciona sem permitir o microfone do seu dispositivo";
+                 
+                 Swal.fire({
+                         icon:'warning',
+                         title:"Oops...",
+                         html:div.outerHTML.toString()
+                 });
+               }
+        })
+        }
 function permissão_usuario(tipo,boolaudio,boolvideo){
         
    function audio(){
@@ -171,16 +191,7 @@ if(navigator.onLine){
                 
                 
                  // Futuramente implentação do android ou ios.
-                 var div = document.createElement("div");
-                 div.innerHTML += " Aviso importante  <br>";
-                 div.innerHTML += " A página ainda não esta funcionado  para Android ou IOS.";
-                 
-                 Swal.fire({
-                         icon:'warning',
-                         title:"Oops...",
-                         html:div.outerHTML.toString()
-                 });
-                        
+                permissão_usuario_mobile('microphone',true,false); 
                           
                        
         }
