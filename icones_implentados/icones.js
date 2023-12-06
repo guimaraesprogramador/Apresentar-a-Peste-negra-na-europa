@@ -156,6 +156,8 @@ const o = new ordem();
 o.ordem_contada();
 window.onload = function(){
     if(v.IA == undefined) console.log("sintese de fala não criada");
-    else v.IA.cancel();
-    location.reload(true);
+    else {
+        v.IA.cancel();
+        location.reload(true);
+    }
 }
