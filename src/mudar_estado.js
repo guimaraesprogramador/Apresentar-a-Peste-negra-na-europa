@@ -70,9 +70,42 @@ function modo_tela(){
 function permissão_usuario_mobile(tipo){
         navigator.permissions.query({name:tipo}).then(r=>{
                if(r.state == "granted" || r.state == 'prompt'){
-                v.rate = 1.3;
-                m.estado = false;
-                s.mudar_voz([m.estado]);
+                function audio_somente(){
+                        this.permissão ={
+                                audio:true,
+                                video:false
+                        }
+                                navigator.mediaDevices.getUserMedia(this.permissão).then(stream=>{
+                                        var error =   stream.getAudioTracks()[0].label;
+                                          if(error == "OverconstrainedError"){
+                                                  return new OverconstrainedError("Erro em OverconstrainedError");
+                                           }
+                                           else if(error == "SecurityError"){
+                                                  return new SecurityError("Erro em SecurityError");
+                                           }
+                                           else if(error == "TypeError"){
+                                                  return new TypeError("Erro em TypeError");
+                                           }
+                                           else if(error == "AbortError"){
+                                                  return new AbortError("Erro em AbortError")
+                                           }
+                                           else if(error == "NotAllowedError"){
+                                                  return new NotAllowedError("Erro em NotAllowedError");
+                                           }
+                                           else if(error == "NotFoundError"){
+                                                  return new NotFoundError("Erro em NotFoundError");
+                                           }
+                                           else if(error == "NotReadableError"){
+                                                  return new NotReadableError("Erro em NotReadableError")
+                                           }
+                                          v.rate = 1.3;
+                                          m.estado = false;
+                                          s.mudar_voz([m.estado]);
+                                  
+                                  })
+                }        
+                
+                audio_somente();
                }
                else {
                 var div = document.createElement("div");
