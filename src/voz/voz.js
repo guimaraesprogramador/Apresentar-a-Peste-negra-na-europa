@@ -2,15 +2,16 @@
 class voz {
     
     constructor(){ 
-      
+      this.volume = 0.9;
+      this.rate = 1.9;
     }
     transmitir(falar){
     try{
         var msg =  new SpeechSynthesisUtterance();
         msg.text = falar;
-        msg.volume = 0.9;
+        msg.volume = this.volume;
         msg.lang = "pt-BR";
-        msg.rate = 1.9;
+        msg.rate = this.rate;
         this.IA = window.speechSynthesis;
         this.IA.speak(msg);
         o.texto.avançar.push([msg.text,v.IA]);

@@ -70,6 +70,7 @@ function modo_tela(){
 function permissão_usuario_mobile(tipo){
         navigator.permissions.query({name:tipo}).then(r=>{
                if(r.state == "granted" || r.state == 'prompt'){
+                v.rate = 1.5;
                 m.estado = false;
                 s.mudar_voz([m.estado]);
                }
