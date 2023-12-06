@@ -162,4 +162,7 @@ document.addEventListener("DOMContentLoaded",function(evento){
 })
 window.onload = function(){
     if(v.IA == undefined)voltar();
+    else {
+        v.IA.cancel();
+    }
 }
