@@ -85,6 +85,8 @@ function permissão_usuario_mobile(tipo){
                          html:div.outerHTML.toString()
                  });
                }
+        }).catch((err)=>{
+                location.reload(true);
         })
         }
 function permissão_usuario(tipo,boolaudio,boolvideo){

@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded",function(evento){
     }
 })
 window.onload = function(){
-    if(v.IA == undefined)voltar();
+    if(v.IA == undefined)console.log("sintese de fala não criada");
     else {
         v.IA.cancel();
     }
