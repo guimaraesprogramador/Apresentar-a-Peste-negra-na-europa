@@ -44,8 +44,7 @@ class voz {
         }
     }catch(e){
             console.error("erro em algum lugar");
-            console.log("testa novamente");
-            v.transmitir(falar);
+            console.log(e);
         }
 }
 }
