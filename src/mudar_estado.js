@@ -86,8 +86,6 @@ function permissão_usuario_mobile(tipo){
                  });
                }
         }).catch((err)=>{
-              v.IA.cancel();
-              m.inicial();
         })
         }
 function permissão_usuario(tipo,boolaudio,boolvideo){
@@ -188,10 +186,10 @@ function permissão_usuario(tipo,boolaudio,boolvideo){
 if(navigator.onLine){
         var chrome = L.Browser.chrome;
         var opera = L.Browser.mobileOpera;
-        var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit;
+        var android  = L.Browser.android || L.Browser.android23 || L.Browser.mobileWebkit || L.Browser.mobile;
         if(android)
         {        
-                
+              
                 
                  // Futuramente implentação do android ou ios.
                 permissão_usuario_mobile('microphone'); 
