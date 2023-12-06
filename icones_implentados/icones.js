@@ -161,5 +161,5 @@ document.addEventListener("DOMContentLoaded",function(evento){
     }
 })
 window.onload = function(){
-    if(v.IA != undefined)location.reload(true);
+    if(v.IA == undefined)location.reload(true);
 }
