@@ -86,7 +86,8 @@ function permissão_usuario_mobile(tipo){
                  });
                }
         }).catch((err)=>{
-                location.reload(true);
+              v.IA.cancel();
+              m.inicial();
         })
         }
 function permissão_usuario(tipo,boolaudio,boolvideo){
