@@ -6,7 +6,8 @@ class voz {
       this.rate = 1.9;
     }
     transmitir(falar){
-    try{
+    try
+    {
         var msg =  new SpeechSynthesisUtterance();
         msg.text = falar;
         msg.volume = this.volume;
@@ -41,8 +42,10 @@ class voz {
                     o.ordem_contada();
             }
         }
-        }catch(e){
+    }catch(e){
             console.error("erro em algum lugar");
+            console.log("testa novamente");
+            v.transmitir(falar);
         }
 }
 }
